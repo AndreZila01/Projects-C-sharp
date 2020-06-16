@@ -8,7 +8,7 @@
   I send my programms on <ins><a href="https://en.wikipedia.org/wiki/GitHub"<i>GitHub</ins></a></s> if you or someone need the project 
   you can use is free and available.
   
-  <h1>Thanks for using my programs :-)</h1>
-  <h3><ins>André Custódio</ins></h3>
+  <h3>Thanks for using my programs :-)
   
+  <h5><a href="https://github.com/AndreZila01">André Custódio</a>
 </html>
