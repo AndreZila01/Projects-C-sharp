@@ -10,5 +10,5 @@
   
   <h3>Thanks for using my programs :-)
   
-  <h5><a href="https://github.com/AndreZila01">André Custódio</a>
+  <h5><i><a href="https://github.com/AndreZila01">André Custódio</a><i>
 </html>
