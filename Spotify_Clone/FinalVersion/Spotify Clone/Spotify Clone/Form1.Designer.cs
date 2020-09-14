@@ -32,6 +32,7 @@
 			System.Windows.Forms.TrackBar trackBar1;
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.pnlTop = new System.Windows.Forms.Panel();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pE_minimizar = new System.Windows.Forms.PictureBox();
 			this.pE_Close = new System.Windows.Forms.PictureBox();
 			this.panel2 = new System.Windows.Forms.Panel();
@@ -42,6 +43,7 @@
 			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
 			this.pictureEdit3 = new System.Windows.Forms.PictureBox();
 			this.pnlControlo = new System.Windows.Forms.Panel();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.labelControl2 = new System.Windows.Forms.Label();
 			this.labelControl4 = new System.Windows.Forms.Label();
 			this.PBC = new System.Windows.Forms.ProgressBar();
@@ -62,6 +64,7 @@
 			trackBar1 = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).BeginInit();
 			this.pnlTop.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -70,6 +73,7 @@
 			this.pnlPlayList.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3)).BeginInit();
 			this.pnlControlo.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Repit)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Next)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_previous)).BeginInit();
@@ -83,20 +87,31 @@
 			// 
 			trackBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
 			resources.ApplyResources(trackBar1, "trackBar1");
+			trackBar1.CausesValidation = false;
 			trackBar1.Cursor = System.Windows.Forms.Cursors.Default;
 			trackBar1.Name = "trackBar1";
 			trackBar1.TabStop = false;
 			trackBar1.Value = 5;
+			trackBar1.Click += new System.EventHandler(this.trackBar1_Click);
 			trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
 			// 
 			// pnlTop
 			// 
 			this.pnlTop.BackColor = System.Drawing.Color.CadetBlue;
+			this.pnlTop.Controls.Add(this.pictureBox1);
 			this.pnlTop.Controls.Add(this.pE_minimizar);
 			this.pnlTop.Controls.Add(this.pE_Close);
 			resources.ApplyResources(this.pnlTop, "pnlTop");
 			this.pnlTop.Name = "pnlTop";
 			this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::Spotify_Clone.Properties.Resources.full_screen;
+			resources.ApplyResources(this.pictureBox1, "pictureBox1");
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// pE_minimizar
 			// 
@@ -173,6 +188,7 @@
 			// pnlControlo
 			// 
 			this.pnlControlo.BackColor = System.Drawing.Color.CadetBlue;
+			this.pnlControlo.Controls.Add(this.pictureBox2);
 			this.pnlControlo.Controls.Add(this.labelControl2);
 			this.pnlControlo.Controls.Add(trackBar1);
 			this.pnlControlo.Controls.Add(this.labelControl4);
@@ -184,6 +200,14 @@
 			this.pnlControlo.Controls.Add(this.pE_Random);
 			resources.ApplyResources(this.pnlControlo, "pnlControlo");
 			this.pnlControlo.Name = "pnlControlo";
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.Image = global::Spotify_Clone.Properties.Resources.info;
+			resources.ApplyResources(this.pictureBox2, "pictureBox2");
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.TabStop = false;
+			this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
 			// 
 			// labelControl2
 			// 
@@ -309,9 +333,9 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).EndInit();
 			this.pnlTop.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).EndInit();
 			this.panel2.ResumeLayout(false);
@@ -320,6 +344,7 @@
 			this.pnlPlayList.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3)).EndInit();
 			this.pnlControlo.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Repit)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Next)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_previous)).EndInit();
@@ -361,6 +386,8 @@
 		private System.Windows.Forms.ToolStripMenuItem TSMIAdd;
 		private System.Windows.Forms.ToolStripMenuItem TSMIEditPlayList;
 		private System.Windows.Forms.Timer timer2;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox pictureBox2;
 	}
 }
 
