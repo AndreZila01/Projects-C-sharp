@@ -56,7 +56,6 @@
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			this.cmsMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.TSMIRemove = new System.Windows.Forms.ToolStripMenuItem();
-			this.TSMIAdd = new System.Windows.Forms.ToolStripMenuItem();
 			this.TSMIEditPlayList = new System.Windows.Forms.ToolStripMenuItem();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -287,7 +286,6 @@
 			// 
 			this.cmsMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSMIRemove,
-            this.TSMIAdd,
             this.TSMIEditPlayList});
 			this.cmsMenuStrip.Name = "contextMenuStrip1";
 			resources.ApplyResources(this.cmsMenuStrip, "cmsMenuStrip");
@@ -298,13 +296,6 @@
 			this.TSMIRemove.Name = "TSMIRemove";
 			resources.ApplyResources(this.TSMIRemove, "TSMIRemove");
 			this.TSMIRemove.Click += new System.EventHandler(this.removeThePlayListToolStripMenuItem_Click);
-			// 
-			// TSMIAdd
-			// 
-			this.TSMIAdd.Image = global::Spotify_Clone.Properties.Resources.iconfinder_00_ELASTOFONT_STORE_READY_music_2703070;
-			this.TSMIAdd.Name = "TSMIAdd";
-			resources.ApplyResources(this.TSMIAdd, "TSMIAdd");
-			this.TSMIAdd.Click += new System.EventHandler(this.addMusicToolStripMenuItem_Click);
 			// 
 			// TSMIEditPlayList
 			// 
@@ -385,7 +376,6 @@
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.Timer timer1;
 		private System.Windows.Forms.ToolStripMenuItem TSMIRemove;
-		private System.Windows.Forms.ToolStripMenuItem TSMIAdd;
 		private System.Windows.Forms.ToolStripMenuItem TSMIEditPlayList;
 		private System.Windows.Forms.Timer timer2;
 		private System.Windows.Forms.PictureBox pictureBox1;

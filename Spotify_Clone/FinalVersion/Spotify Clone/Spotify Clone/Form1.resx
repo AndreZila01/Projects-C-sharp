@@ -761,12 +761,6 @@
   <data name="TSMIRemove.Text" xml:space="preserve">
     <value>Remove the PlayList</value>
   </data>
-  <data name="TSMIAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="TSMIAdd.Text" xml:space="preserve">
-    <value>Add Music</value>
-  </data>
   <data name="TSMIEditPlayList.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
   </data>
@@ -774,7 +768,7 @@
     <value>Edit PlayList</value>
   </data>
   <data name="cmsMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 70</value>
+    <value>181, 48</value>
   </data>
   <data name="&gt;&gt;cmsMenuStrip.Name" xml:space="preserve">
     <value>cmsMenuStrip</value>
@@ -1398,12 +1392,6 @@
     <value>TSMIRemove</value>
   </data>
   <data name="&gt;&gt;TSMIRemove.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TSMIAdd.Name" xml:space="preserve">
-    <value>TSMIAdd</value>
-  </data>
-  <data name="&gt;&gt;TSMIAdd.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TSMIEditPlayList.Name" xml:space="preserve">
