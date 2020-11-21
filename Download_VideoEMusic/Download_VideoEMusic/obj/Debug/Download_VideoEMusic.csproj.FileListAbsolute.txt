@@ -1,0 +1,58 @@
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Download_VideoEMusic.exe.config
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Download_VideoEMusic.exe
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Download_VideoEMusic.pdb
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\libvideo.dll
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\MediaToolkit.dll
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Newtonsoft.Json.dll
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\YoutubeExtractor.dll
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Newtonsoft.Json.xml
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\YoutubeExtractor.xml
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Interop.WMPLib.dll
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\AxInterop.WMPLib.dll
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csprojAssemblyReference.cache
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Interop.WMPLib.dll
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\AxInterop.WMPLib.dll
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.ResolveComReference.cache
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.Form2.resources
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.Form1.resources
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.Properties.Resources.resources
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.GenerateResource.cache
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.CoreCompileInputs.cache
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.CopyComplete
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.exe
+F:\Aux Projects\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.pdb
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Download_VideoEMusic.exe.config
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Download_VideoEMusic.exe
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Download_VideoEMusic.pdb
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\libvideo.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\MediaToolkit.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\YoutubeExtractor.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\YoutubeExtractor.xml
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Interop.WMPLib.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Interop.WMPLib.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.ResolveComReference.cache
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.Form2.resources
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.Form1.resources
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.Properties.Resources.resources
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.GenerateResource.cache
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.CopyComplete
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.exe
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.pdb
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Buffers.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Memory.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Buffers.xml
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Memory.xml
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\andre\source\repos\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csprojAssemblyReference.cache
