@@ -1,20 +1,16 @@
 ﻿using FolderSelect;
 using MediaToolkit;
-using Microsoft.SqlServer.Server;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VideoLibrary;
@@ -127,6 +123,7 @@ namespace Download_VideoEMusic
 				}
 				catch (Exception ex)
 				{
+					icn.Visible = false;
 					MessageBox.Show("" + ex.Message);
 				}
 			}
@@ -207,7 +204,8 @@ namespace Download_VideoEMusic
 			}
 			catch (Exception EX)
 			{
-				MessageBox.Show("" + EX, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				icn.Visible = false;
+				MessageBox.Show("" + EX.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
 		}
@@ -299,6 +297,7 @@ namespace Download_VideoEMusic
 					}
 					catch (Exception ex)
 					{
+						icn.Visible = false;
 						MessageBox.Show("" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
 					break;
@@ -310,6 +309,7 @@ namespace Download_VideoEMusic
 					}
 					catch (Exception ex)
 					{
+						icn.Visible = false;
 						MessageBox.Show("" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
 					break;
@@ -325,6 +325,7 @@ namespace Download_VideoEMusic
 					}
 					catch (Exception ex)
 					{
+						icn.Visible = false;
 						MessageBox.Show("" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
 					break;
@@ -335,6 +336,7 @@ namespace Download_VideoEMusic
 					}
 					catch (Exception ex)
 					{
+						icn.Visible = false;
 						MessageBox.Show("" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
 					break;
@@ -383,14 +385,24 @@ namespace Download_VideoEMusic
 								DownloadAux();
 							}
 						}
-						if (comboBox1.Tag.ToString() != ".mp4" && !chkAudio.Checked)
-							File.Delete($"{textBox1.Text + @"\" + downloadInfo.FullName}");
-
-
 					}
-					catch
+					catch (Exception ex)
 					{
+						if (MessageBox.Show("\"   "+ex.Message + "\"  \r\nError in the download, if you like transfer the music/video, click in button \"Yes\". If you dont like transfer click in button \"No\"", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+						{
+							DownloadAux();
+						}
+					}
 
+				aqui:
+					await Task.Delay(100000000);
+
+					if (File.Exists(textBox1.Text + @"\" + FULLname + comboBox1.Tag.ToString()))
+						icn.Visible = true;
+					else
+					{
+						await Task.Delay(100000000);
+						goto aqui;
 					}
 
 					if (chkNotification.Checked)
@@ -398,15 +410,23 @@ namespace Download_VideoEMusic
 						icn.Visible = true;
 						icn.ShowBalloonTip(1500, "Download Completed", "" + FULLname + ", can listening in this moment!!", ToolTipIcon.Info); icn.Tag = textBox1.Text;
 					}
-					if (icn.Tag.ToString() == "True")
+					if (icn.Tag.ToString() != "")
 					{
 						path = textBox1.Text + @"\" + FULLname + comboBox1.Tag.ToString();
 						music.Name = FULLname; music.Tip = comboBox1.Tag.ToString(); music.Paths = textBox1.Text; music.Link = TxtUrl.Text; if (path != string.Empty) music.PathsMusic = path;
 						ListofMusic.Add(music);
+
+						if (comboBox1.Tag.ToString() != ".mp4" && !chkAudio.Checked)
+							File.Delete($"{textBox1.Text + @"\" + FULLname + ".mp4"}");
 					}
+
+					TxtUrl.Text = string.Empty;
+					icn.Tag = "";
+
 				}
 				catch (Exception ex)
 				{
+					icn.Visible = false;
 					MessageBox.Show("" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 				TxtUrl.Text = string.Empty;
@@ -417,21 +437,31 @@ namespace Download_VideoEMusic
 
 		private async void DownloadAux()
 		{
-			var youtube = YouTube.Default;
-			var video = await youtube.GetVideoAsync(TxtUrl.Text);
-			File.WriteAllBytes(textBox1.Text + @"\" + video.FullName, await video.GetBytesAsync());
-			var inputFile = new MediaToolkit.Model.MediaFile { Filename = textBox1.Text + @"\" + video.FullName };
-			FULLname = video.FullName.Replace(".mp4", "");
-			if (comboBox1.Tag.ToString() != ".mp4")
+			try
 			{
-				var outputFile = new MediaToolkit.Model.MediaFile { Filename = $"{textBox1.Text + @"\" + FULLname}" + comboBox1.Tag.ToString() };
-				string path = textBox1.Text + @"\" + FULLname + comboBox1.Tag.ToString();
-				using (var enging = new Engine())
+				String link = TxtUrl.Text;
+				TxtUrl.Text = link;
+				var youtube = YouTube.Default;
+				var video = await youtube.GetVideoAsync(TxtUrl.Text);
+				File.WriteAllBytes(textBox1.Text + @"\" + video.FullName, await video.GetBytesAsync());
+				var inputFile = new MediaToolkit.Model.MediaFile { Filename = textBox1.Text + @"\" + video.FullName };
+				FULLname = video.FullName.Replace(".mp4", "");
+				if (comboBox1.Tag.ToString() != ".mp4")
 				{
-					enging.GetMetadata(inputFile);
-					enging.Convert(inputFile, outputFile);
+					var outputFile = new MediaToolkit.Model.MediaFile { Filename = $"{textBox1.Text + @"\" + FULLname}" + comboBox1.Tag.ToString() };
+					string path = textBox1.Text + @"\" + FULLname + comboBox1.Tag.ToString();
+					using (var enging = new Engine())
+					{
+						enging.GetMetadata(inputFile);
+						enging.Convert(inputFile, outputFile);
+					}
+					File.Delete($"{textBox1.Text + @"\" + video.FullName}");
 				}
-				File.Delete($"{textBox1.Text + @"\" + video.FullName}");
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show("The video/music, Cannot do download!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				icn.Visible = false;
 			}
 		}
 
@@ -457,7 +487,7 @@ namespace Download_VideoEMusic
 			}
 			catch
 			{
-				MessageBox.Show("");
+				MessageBox.Show("File dont found!!\nCreate new file, where are save the configurations", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 			}
 
@@ -585,23 +615,31 @@ namespace Download_VideoEMusic
 			}
 			catch
 			{
-
+				icn.Visible = false;
 			}
 
 		}
 
 		private void update()
 		{
-			Config.AutoRun = ckbAuto.Checked;
-			Config.Notification = chkNotification.Checked;
-			Config.CheckedAudio = chkAudio.Checked;
-			Config.Paths = textBox1.Text;
+			try
+			{
+				Config.AutoRun = ckbAuto.Checked;
+				Config.Notification = chkNotification.Checked;
+				Config.CheckedAudio = chkAudio.Checked;
+				Config.Paths = textBox1.Text;
 
-			ListConfig.Clear();
-			ListConfig.Add(Config);
+				ListConfig.Clear();
+				ListConfig.Add(Config);
 
-			string json = JsonConvert.SerializeObject(ListConfig);
-			File.WriteAllText(Environment.CurrentDirectory + "\\Paths.json", json);
+				string json = JsonConvert.SerializeObject(ListConfig);
+				File.WriteAllText(Environment.CurrentDirectory + "\\Paths.json", json);
+			}
+			catch (Exception ex)
+			{
+				icn.Visible = false;
+				MessageBox.Show("" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 
 
 		}
