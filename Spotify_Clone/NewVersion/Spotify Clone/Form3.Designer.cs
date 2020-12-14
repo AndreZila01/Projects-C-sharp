@@ -64,7 +64,7 @@
 			this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(800, 450);
 			this.axWindowsMediaPlayer1.TabIndex = 0;
 			this.axWindowsMediaPlayer1.Tag = "expand";
-			this.axWindowsMediaPlayer1.DoubleClickEvent += new AxWMPLib._WMPOCXEvents_DoubleClickEventHandler(this.axWindowsMediaPlayer1_DoubleClickEvent);
+			this.axWindowsMediaPlayer1.ClickEvent += new AxWMPLib._WMPOCXEvents_ClickEventHandler(this.axWindowsMediaPlayer1_ClickEvent);
 			// 
 			// Video
 			// 
@@ -79,6 +79,7 @@
 			this.MinimizeBox = false;
 			this.Name = "Video";
 			this.ShowIcon = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Load += new System.EventHandler(this.Form3_Load);
 			this.SizeChanged += new System.EventHandler(this.Form3_SizeChanged);
 			this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Video_MouseClick);

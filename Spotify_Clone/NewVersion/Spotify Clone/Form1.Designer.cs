@@ -102,7 +102,7 @@
 			this.pnlTop.Controls.Add(this.pE_Close);
 			resources.ApplyResources(this.pnlTop, "pnlTop");
 			this.pnlTop.Name = "pnlTop";
-			this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
+			this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
 			// 
 			// pictureBox1
 			// 
@@ -258,6 +258,7 @@
 			this.pE_PauseaPlay.Image = global::Spotify_Clone.Properties.Resources.play;
 			this.pE_PauseaPlay.Name = "pE_PauseaPlay";
 			this.pE_PauseaPlay.TabStop = false;
+			this.pE_PauseaPlay.Tag = "0";
 			this.pE_PauseaPlay.Click += new System.EventHandler(this.pE_PauseaPlay_Click);
 			// 
 			// pE_Random
