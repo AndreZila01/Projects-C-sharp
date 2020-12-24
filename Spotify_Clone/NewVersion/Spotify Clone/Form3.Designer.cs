@@ -82,7 +82,6 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Load += new System.EventHandler(this.Form3_Load);
 			this.SizeChanged += new System.EventHandler(this.Form3_SizeChanged);
-			this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Video_MouseClick);
 			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.ResumeLayout(false);
 

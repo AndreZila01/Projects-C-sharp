@@ -60,6 +60,7 @@
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.timer2 = new System.Windows.Forms.Timer(this.components);
+			this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
 			trackBar1 = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).BeginInit();
 			this.pnlTop.SuspendLayout();
@@ -102,7 +103,7 @@
 			this.pnlTop.Controls.Add(this.pE_Close);
 			resources.ApplyResources(this.pnlTop, "pnlTop");
 			this.pnlTop.Name = "pnlTop";
-			this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
+			this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
 			// 
 			// pictureBox1
 			// 
@@ -381,6 +382,7 @@
 		private System.Windows.Forms.Timer timer2;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.ComponentModel.BackgroundWorker backgroundWorker2;
 	}
 }
 
