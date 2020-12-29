@@ -59,7 +59,6 @@ C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\obj\Debug\Spotify Clone.
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\obj\Debug\Spotify Clone.csproj.CoreCompileInputs.cache
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\obj\Debug\Spotify Clone.csproj.CopyComplete
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\obj\Debug\Spotify Clone.pdb
-C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\obj\Debug\Spotify Clone.csprojAssemblyReference.cache
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\bin\Debug\Spotify Clone.exe.config
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\bin\Debug\Spotify Clone.exe.manifest
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\bin\Debug\Spotify Clone.application
