@@ -1,0 +1,9 @@
+C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\bin\Debug\Jogo da Cobra, Aventura.exe.config
+C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\bin\Debug\Jogo da Cobra, Aventura.exe
+C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\bin\Debug\Jogo da Cobra, Aventura.pdb
+C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.csprojAssemblyReference.cache
+C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo_da_Cobra__Aventura.Form1.resources
+C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo_da_Cobra__Aventura.Properties.Resources.resources
+C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.csproj.GenerateResource.cache
+C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.exe
+C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.pdb
