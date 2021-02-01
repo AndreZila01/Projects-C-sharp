@@ -1888,7 +1888,7 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Spotify</value>
+    <value>Spotify Clone</value>
   </data>
   <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
     <value>backgroundWorker1</value>
