@@ -1,0 +1,10 @@
+C:\Users\André Custódio\source\repos\Encriptação_E_Desencriptação\Encriptação_E_Desencriptação\bin\Debug\Encriptação_E_Desencriptação.exe.config
+C:\Users\André Custódio\source\repos\Encriptação_E_Desencriptação\Encriptação_E_Desencriptação\bin\Debug\Encriptação_E_Desencriptação.exe
+C:\Users\André Custódio\source\repos\Encriptação_E_Desencriptação\Encriptação_E_Desencriptação\bin\Debug\Encriptação_E_Desencriptação.pdb
+C:\Users\André Custódio\source\repos\Encriptação_E_Desencriptação\Encriptação_E_Desencriptação\obj\Debug\Encriptação_E_Desencriptação.csprojAssemblyReference.cache
+C:\Users\André Custódio\source\repos\Encriptação_E_Desencriptação\Encriptação_E_Desencriptação\obj\Debug\Encriptação_E_Desencriptação.Form1.resources
+C:\Users\André Custódio\source\repos\Encriptação_E_Desencriptação\Encriptação_E_Desencriptação\obj\Debug\Encriptação_E_Desencriptação.Properties.Resources.resources
+C:\Users\André Custódio\source\repos\Encriptação_E_Desencriptação\Encriptação_E_Desencriptação\obj\Debug\Encriptação_E_Desencriptação.csproj.GenerateResource.cache
+C:\Users\André Custódio\source\repos\Encriptação_E_Desencriptação\Encriptação_E_Desencriptação\obj\Debug\Encriptação_E_Desencriptação.csproj.CoreCompileInputs.cache
+C:\Users\André Custódio\source\repos\Encriptação_E_Desencriptação\Encriptação_E_Desencriptação\obj\Debug\Encriptação_E_Desencriptação.exe
+C:\Users\André Custódio\source\repos\Encriptação_E_Desencriptação\Encriptação_E_Desencriptação\obj\Debug\Encriptação_E_Desencriptação.pdb
