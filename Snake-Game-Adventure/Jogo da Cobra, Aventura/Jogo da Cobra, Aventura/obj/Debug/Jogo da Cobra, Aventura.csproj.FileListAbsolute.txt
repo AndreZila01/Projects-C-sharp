@@ -7,3 +7,12 @@ C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra
 C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.csproj.GenerateResource.cache
 C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.exe
 C:\Users\Andre Custodio\Desktop\11 ano\PSI\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\bin\Debug\Jogo da Cobra, Aventura.exe.config
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\bin\Debug\Jogo da Cobra, Aventura.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\bin\Debug\Jogo da Cobra, Aventura.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo_da_Cobra__Aventura.Form1.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo_da_Cobra__Aventura.Properties.Resources.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.csproj.GenerateResource.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.pdb

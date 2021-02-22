@@ -187,7 +187,7 @@ namespace Jogo_da_Cobra__Aventura
 
 			if (Fcomida >= 50 && lvl == 10)
 			{
-				MessageBox.Show("Parabéns, \n O Sr. é um excelente jogador!!!");
+				MessageBox.Show("Congratulations, \n You won the game!!!");
 				this.Close();
 			}
 
@@ -202,7 +202,7 @@ namespace Jogo_da_Cobra__Aventura
 
 			InitializeComponent();
 
-			cobra.Add(new Point(10, 10));//vai dizer que tem adicionar as 9 coordenadas no cobra;
+			cobra.Add(new Point(10, 10));
 			DirCobra.X = 0;
 			DirCobra.Y = 0;
 
@@ -231,12 +231,12 @@ namespace Jogo_da_Cobra__Aventura
 
 					p -= dr;
 
-					c = 790 - p;//comprimento
+					c = 790 - p;
 
 				
 
 				Random Y = new Random();
-				int d = Y.Next(30, 400);//altura
+				int d = Y.Next(30, 400);
 
 				int dt = 0;
 
@@ -270,7 +270,7 @@ namespace Jogo_da_Cobra__Aventura
 					}
 				}
 
-				//MessageBox.Show("X: " + d + "   Y:" + c);
+				
 
 				DesenhaRectangulo(obstaculosx[a], obstaculosy[a], Color.Gray);
 			}
@@ -286,7 +286,7 @@ namespace Jogo_da_Cobra__Aventura
 
 			foreach (Point ponto in cobra)
 			{
-				DesenhaRectangulo(ponto.X, ponto.Y, Cor);//vai a função e desenha a cobra
+				DesenhaRectangulo(ponto.X, ponto.Y, Cor);
 			}
 			if (obstaculosx[0] != 0)
 			{
@@ -313,20 +313,13 @@ namespace Jogo_da_Cobra__Aventura
 					}
 					else
 					{
-						int a = 780;//comprimento
+						int a = 780;
 
 						porta.X = a;
 					}
 
 					Random Y = new Random();
-					int d = Y.Next(10, 380);//altura
-
-					//if (this.Height > 50)
-					//{
-					//	MessageBox.Show("" + this.Height);
-					//}
-
-					//pula para o paint ?!? Como?!?
+					int d = Y.Next(10, 380);
 
 
 					int dt = 0;
@@ -341,14 +334,6 @@ namespace Jogo_da_Cobra__Aventura
 
 				for (int s = 0; s <= 11; s++)
 				{
-					//Identar Ctrl+K+d
-
-					//if (s == 5 || s == 6 || s == 7)
-					//{
-					//	PontEncontrar[s, 0] = porta.X;
-					//	PontEncontrar[0, s] = porta.Y;
-					//}
-
 					if (s != 0 && s != 1 && s != 2 && s != 10 && s != 11)
 					{
 						portay[s] = porta.Y;
@@ -369,7 +354,7 @@ namespace Jogo_da_Cobra__Aventura
 				{
 					if (s == 3 || s == 4 || s == 8 || s == 9)
 					{
-						DesenhaRectangulo(portax[s], portay[s], Color.Brown);//voltar para o metodo anterior ctrl + -
+						DesenhaRectangulo(portax[s], portay[s], Color.Brown);
 
 						if (s == 4 || s == 8)
 						{
@@ -380,9 +365,6 @@ namespace Jogo_da_Cobra__Aventura
 						}
 
 					}
-
-					//Identar Ctrl+K+d
-
 					porta.Y += 10;
 				}
 				aux++;
@@ -398,7 +380,7 @@ namespace Jogo_da_Cobra__Aventura
 			g.Dispose();
 		}
 
-		private void CriaComida()//cria a comida
+		private void CriaComida()
 		{
 
 			if ((Fcomida <= 10 && lvl == 1) || (Fcomida <= 15 && lvl == 2) || (Fcomida <= 20 && lvl == 3) || (Fcomida <= 20 && lvl == 4) || (Fcomida <= 23 && lvl == 5) || (Fcomida <= 25 && lvl == 6) || (Fcomida <= 28 && lvl == 7) || (Fcomida <= 29 && lvl == 8) || (Fcomida <= 29 && lvl == 9) || (Fcomida <= 50 && lvl == 10))
@@ -440,8 +422,6 @@ namespace Jogo_da_Cobra__Aventura
 		private void GameLoop(object sender, System.EventArgs e)
 		{
 			Atualiza();
-
-			// Força a que o form atualize!
 			Invalidate();
 		}
 
@@ -452,7 +432,6 @@ namespace Jogo_da_Cobra__Aventura
 			this.Width = 816;
 			this.Height = 489;
 
-			// Novo ponto com a direção da cobra a seguir
 			Point newHeadPosition = new Point(cobra[0].X + DirCobra.X, cobra[0].Y + DirCobra.Y);
 
 			{
@@ -507,12 +486,12 @@ namespace Jogo_da_Cobra__Aventura
 				}
 			}
 
-			this.Text = "Pontos: " + comidacomida + "           Lvl:" + lvl + "             Falta " + (Faltacomida - (Fcomida - 1)) + " frutas";
+			this.Text = "Points: " + comidacomida + "           Lvl:" + lvl + "             Left " + (Faltacomida - (Fcomida - 1)) + " fruit";
 			
 			if (naoapareca == false && (newHeadPosition.X < 0 || newHeadPosition.X > 790 || newHeadPosition.Y < 0 || newHeadPosition.Y > 440))
 			{
 				timer1.Enabled = false;
-				MessageBox.Show("\"Ai a minha cabeça\" \nCOLISÃO com a parede!!!!");
+				MessageBox.Show("\"Ai my head\" \nCollision with wall!!!!");
 				Application.Exit();
 			}
 
@@ -521,7 +500,7 @@ namespace Jogo_da_Cobra__Aventura
 				if (naoapareca == false && (newHeadPosition.X == cobra[i].X && newHeadPosition.Y == cobra[i].Y))//quando a cabeça é igual ao corpo, entra
 				{
 					timer1.Enabled = false;
-					MessageBox.Show("\"Ai a minha cauda\" \nCOLISÃO com o corpo ou cauda!!!!");
+					MessageBox.Show("\"Ai my tail\" \nCollision with your body!!!!");
 					Application.Exit();
 				}
 			}
@@ -531,25 +510,20 @@ namespace Jogo_da_Cobra__Aventura
 				if (naoapareca == false && (portay[3] == newHeadPosition.Y && portax[3] == newHeadPosition.X) || (portay[4] == newHeadPosition.Y && portax[4] == newHeadPosition.X) || (portay[8] == newHeadPosition.Y && portax[8] == newHeadPosition.X) || (portay[9] == newHeadPosition.Y && portax[9] == newHeadPosition.X) || (portax[1] == 10 && (portay[4] == newHeadPosition.Y && portax[4] - 10 == newHeadPosition.X)) || (portax[1] == 10 && (portay[8] == newHeadPosition.Y && portax[8] - 10 == newHeadPosition.X)) || (portax[1] != 10 && (portay[4] == newHeadPosition.Y && portax[4] + 10 == newHeadPosition.X)) || (portax[1] != 10 && (portay[8] == newHeadPosition.Y && portax[8] + 10 == newHeadPosition.X)))
 				{
 					timer1.Enabled = false;
-					MessageBox.Show("COLISÃO com o portão!!!!");
+					MessageBox.Show("Collision with door!!!!");
 					Application.Exit();
 				}
 
 			}
 
-			// Insere a nova posição da cabeça da cobra na lista
 			cobra.Insert(0, newHeadPosition);
 
-			// Remove o último elemento
 			cobra.RemoveAt(cobra.Count - 1);
 
-			// Verifica se encontrou comida
 			if (cobra[0].X == comida.X && cobra[0].Y == comida.Y)
 			{
-				// Adiciona o novo elemento à cobra
 				cobra.Add(new Point(comida.X, comida.Y));
 
-				// Cria uma nova posição da comida
 				CriaComida();
 			}
 
@@ -557,7 +531,7 @@ namespace Jogo_da_Cobra__Aventura
 			{
 				naoapareca = true;
 				timer1.Enabled = false;
-				MessageBox.Show("Clique nas seguintes teclas ou setas!!!\n \"p\" serve para parar o Tempo\n\"a\" || seta da esquerda -> Cobra para a esquerda\n \"s\" || seta para baixo -> Cobra desce \n\"d\" || seta para a direita -> Cobra para a direita \n\"w\" || seta para cima -> Cobra sobe ");
+				MessageBox.Show("Click in buttons of your keyboard!!!\n \"p\" stop time\n\"a\" || left arrow -> Snake go toleft\n \"s\" || down arrow -> snake go down \n\"d\" || arrow right -> Snake go to right \n\"w\" || Arrow uo -> Snake up ");
 				descobre();
 			}
 			if (obstaculosx[0] != 0)
@@ -567,7 +541,7 @@ namespace Jogo_da_Cobra__Aventura
 					if (newHeadPosition.X == obstaculosx[g] && newHeadPosition.Y == obstaculosy[g])
 					{
 						timer1.Enabled = false;
-						MessageBox.Show("COLISÃO os muros!!!!");
+						MessageBox.Show("Collision with wall!!!!");
 						Application.Exit();
 					}
 				}
