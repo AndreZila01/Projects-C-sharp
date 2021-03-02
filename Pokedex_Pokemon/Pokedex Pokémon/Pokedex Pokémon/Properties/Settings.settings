@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Pokedex_Pokémon.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="bug" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://img.rankedboost.com/wp-content/plugins/pokemon_go_tier_list_usermang/assets/roles/Bug.png</Value>
+    </Setting>
+    <Setting Name="dark" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/0/0e/Dark.png/revision/latest/scale-to-width-down/340?cb=20161013132800</Value>
+    </Setting>
+    <Setting Name="dragon" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/c/c7/Dragon.png/revision/latest/scale-to-width-down/340?cb=20161013132807</Value>
+    </Setting>
+    <Setting Name="eletric" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/2/2f/Electric.png/revision/latest/top-crop/width/220/height/220?cb=20161013132813</Value>
+    </Setting>
+    <Setting Name="fairy" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/4/43/Fairy.png/revision/latest/scale-to-width-down/340?cb=20161013132820</Value>
+    </Setting>
+    <Setting Name="fighting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/3/30/Fighting.png/revision/latest/top-crop/width/300/height/300?cb=20161013132827</Value>
+    </Setting>
+    <Setting Name="fire" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/3/30/Fire.png/revision/latest/scale-to-width-down/340?cb=20161013132833</Value>
+    </Setting>
+    <Setting Name="flying" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://img.rankedboost.com/wp-content/uploads/2019/11/Flying-Type-Pokemon-Sword-and-Shield.png</Value>
+    </Setting>
+    <Setting Name="ghost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://img.rankedboost.com/wp-content/plugins/pokemon_go_tier_list_usermang/assets/roles/Ghost.png</Value>
+    </Setting>
+    <Setting Name="grass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png/revision/latest/top-crop/width/220/height/220?cb=20161013132855</Value>
+    </Setting>
+    <Setting Name="ground" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/0/0b/Rock.png/revision/latest/top-crop/width/300/height/300?cb=20161013133022</Value>
+    </Setting>
+    <Setting Name="ice" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://l2pbomb.com/wp-content/uploads/2019/03/Skier-Medal-Pokemon-Go.png</Value>
+    </Setting>
+    <Setting Name="normal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/f/fb/Normal.png/revision/latest/scale-to-width-down/64?cb=20161013132914</Value>
+    </Setting>
+    <Setting Name="poison" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/0/05/Poison.png/revision/latest/top-crop/width/220/height/220?cb=20161013133014</Value>
+    </Setting>
+    <Setting Name="psychic" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://img.rankedboost.com/wp-content/plugins/pokemon_go_tier_list_usermang/assets/roles/Psychic.png</Value>
+    </Setting>
+    <Setting Name="rock" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/0/0b/Rock.png/revision/latest/top-crop/width/300/height/300?cb=20161013133022</Value>
+    </Setting>
+    <Setting Name="steel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://img.rankedboost.com/wp-content/plugins/pokemon_go_tier_list_usermang/assets/roles/Steel.png</Value>
+    </Setting>
+    <Setting Name="water" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/9/9d/Water.png/revision/latest?cb=20161013133222</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

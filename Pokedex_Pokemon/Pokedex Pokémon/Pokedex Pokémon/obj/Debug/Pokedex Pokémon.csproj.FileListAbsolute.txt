@@ -1,0 +1,27 @@
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Pokedex Pokémon.exe.config
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Pokedex Pokémon.exe
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Pokedex Pokémon.pdb
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csprojAssemblyReference.cache
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex_Pokémon.Form1.resources
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex_Pokémon.Properties.Resources.resources
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.GenerateResource.cache
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.CoreCompileInputs.cache
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.exe
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.pdb
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Microsoft.VisualStudio.OLE.Interop.xml
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.CopyComplete
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex_Pokémon.frmMenssageBox.resources
+C:\Users\André Custódio\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex_Pokémon.FormAuxVertical.resources
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Pokedex Pokémon.exe.config
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Pokedex Pokémon.exe
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Pokedex Pokémon.pdb
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Microsoft.VisualStudio.OLE.Interop.xml
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex_Pokémon.Form1.resources
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex_Pokémon.Properties.Resources.resources
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.GenerateResource.cache
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.CopyComplete
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.exe
+C:\Users\andre\source\repos\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.pdb
