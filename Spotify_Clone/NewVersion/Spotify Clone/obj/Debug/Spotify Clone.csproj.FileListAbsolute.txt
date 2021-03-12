@@ -66,4 +66,3 @@ C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\bin\Debug\Spotify Clone.
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\obj\Debug\Spotify Clone.exe.manifest
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\obj\Debug\Spotify Clone.application
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\obj\Debug\Spotify Clone.exe
-C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\obj\Debug\Spotify Clone.csprojAssemblyReference.cache

@@ -11,7 +11,7 @@
   <p>
   <br>
   <a href=""><!--https://github.com/AndreZila01/Projects-C-sharp/tree/master/Spotify_Clone/NewVersion--->
-  <img src="https://ibb.co/CbwW1z3"  align="left"></a>
+  <img src="https://github.com/AndreZila01/Projects-C-sharp/tree/master/Spotify_Clone/NewVersion/Fotos/#1.png"  align="left"></a>
     In start off application
   
   <br>

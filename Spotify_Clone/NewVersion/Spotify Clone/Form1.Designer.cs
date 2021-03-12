@@ -36,7 +36,6 @@
 			this.pE_minimizar = new System.Windows.Forms.PictureBox();
 			this.pE_Close = new System.Windows.Forms.PictureBox();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
 			this.pnlPrincipal = new System.Windows.Forms.Panel();
 			this.PainelControl1 = new System.Windows.Forms.Panel();
 			this.pnlPlayList = new System.Windows.Forms.Panel();
@@ -61,6 +60,7 @@
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.timer2 = new System.Windows.Forms.Timer(this.components);
 			this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
 			trackBar1 = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).BeginInit();
 			this.pnlTop.SuspendLayout();
@@ -68,7 +68,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).BeginInit();
 			this.panel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.PainelControl1.SuspendLayout();
 			this.pnlPlayList.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3)).BeginInit();
@@ -81,6 +80,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pE_Random)).BeginInit();
 			this.pnlConteudo.SuspendLayout();
 			this.cmsMenuStrip.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// trackBar1
@@ -140,14 +140,6 @@
 			this.panel2.Controls.Add(this.pnlPrincipal);
 			resources.ApplyResources(this.panel2, "panel2");
 			this.panel2.Name = "panel2";
-			// 
-			// axWindowsMediaPlayer1
-			// 
-			resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
-			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-			this.axWindowsMediaPlayer1.TabStop = false;
-			this.axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
 			// 
 			// pnlPrincipal
 			// 
@@ -318,6 +310,14 @@
 			// 
 			this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
 			// 
+			// axWindowsMediaPlayer1
+			// 
+			resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
+			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+			this.axWindowsMediaPlayer1.TabStop = false;
+			this.axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
+			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
@@ -334,7 +334,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).EndInit();
 			this.panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.PainelControl1.ResumeLayout(false);
 			this.pnlPlayList.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3)).EndInit();
@@ -347,6 +346,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pE_Random)).EndInit();
 			this.pnlConteudo.ResumeLayout(false);
 			this.cmsMenuStrip.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
