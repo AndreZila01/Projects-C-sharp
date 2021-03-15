@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Trabalho_de_Avaliação_B.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<style type="text/css">
+		.auto-style11 {
+			width: 62px;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style1">
+				<tr>
+					<td class="auto-style9">
+						<asp:Image ID="Image1" runat="server" Height="74px" ImageUrl="~/output-onlinepngtools.png" Width="135px" />
+					</td>
+					<td class="auto-style10">
+						<asp:TextBox ID="TextBox1" runat="server" Height="32px" Width="571px"></asp:TextBox>
+					</td>
+					<td class="auto-style11">
+						<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" Width="127px" />
+						<asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+					</td>
+				</tr>
+				<tr>
+					<td class="auto-style9">
+						<asp:Menu ID="Menu1" runat="server" OnMenuItemClick="Menu1_MenuItemClick">
+							<Items>
+								<asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/FrmHome.aspx"></asp:MenuItem>
+								<asp:MenuItem Text="Médicos" Value="Médicos">
+									<asp:MenuItem Text="Manutenção Médicos" Value="Manutenção Médicos" NavigateUrl="~/FrmManutencao.aspx"></asp:MenuItem>
+									<asp:MenuItem Text="Consultar Médicos" Value="Consultar Médicos" NavigateUrl="~/FrmConsultaMed.aspx"></asp:MenuItem>
+								</asp:MenuItem>
+								<asp:MenuItem Text="Pacientes" Value="Pacientes">
+									<asp:MenuItem Text="Registar Consultas " Value="Registar Consultas "></asp:MenuItem>
+									<asp:MenuItem Text="Consultar Consultas" Value="Consultar Consultas"></asp:MenuItem>
+								</asp:MenuItem>
+								<asp:MenuItem Text="Consultas" Value="Consultas"></asp:MenuItem>
+							</Items>
+							<StaticMenuItemStyle VerticalPadding="5px" />
+							<StaticMenuStyle HorizontalPadding="25px" VerticalPadding="25px" />
+						</asp:Menu>
+					</td>
+					<td colspan="2" rowspan="2">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        			</td>
+				</tr>
+				<tr>
+					<td class="auto-style8">
+
+						<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+
+					</td>
+				</tr>
+			</table>
+        </div>
+    </form>
+</body>
+</html>
