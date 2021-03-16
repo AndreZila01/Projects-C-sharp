@@ -12,30 +12,40 @@ namespace Trabalho_de_Avaliação_B
 	{
 		SqlConnection liga = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB; DataBase=L1949_; Integrated Security=True");
 		SqlCommand command = new SqlCommand();
+		SqlDataReader dr;
 		protected void Page_Load(object sender, EventArgs e)
 		{
 
 		}
 
-		protected void Button2_Click(object sender, EventArgs e)
+		protected void btn_click(object sender, EventArgs e)
 		{
-			liga.Open();
-			SqlDataReader dr;
-			try
+			if (txtUser.Text != "" && txtPassword.Text != "")
 			{
-				command.CommandText = "Select * From tbl_Login where Usern='" + TextBox2.Text + "' and Passw='" + TextBox3.Text + "'";
-				dr = command.ExecuteReader();
-
-				if (dr.Read())
+				command.Connection = liga;
+				liga.Open();
+				try
 				{
-					Session["user"] = TextBox2.Text;
-					Session["Password"] = TextBox3.Text;
-					Response.Redirect("FrmWelcome.aspx");
+					command.CommandText = "Select * fROM tbl_Login  where Usern='" + txtUser.Text + "' and Passw='" + txtPassword.Text + "'";
+					dr = command.ExecuteReader();
+					if (dr.Read())
+					{
+						liga.Close();
+						Response.Redirect("FrmHome.aspx");
+					}
+					else
+						Response.Write("<script>alert('Error: Errou a password ou username\nTente Novamente')</script>");
 				}
+				catch (Exception ex)
+				{
+					Response.Write("<script>alert('Error: " + ex.Message + "')</script>");
+					//this.RegisterClientScriptBlock(typeof(string), "key", string.Format("alert('{0}');", ex.Message), true);
+					//ClientScript.RegisterClientScriptBlock(this.GetType(), "{Error}", "alert('{" + ex + "}'); ", true);
+				}
+				liga.Close();
+				txtPassword.Text = string.Empty;
+				txtUser.Text = string.Empty;
 			}
-			catch { }
-			liga.Close();
-			//Select * From tbl_Login where Usern='JosePedro' and Passw='123'
 		}
 	}
 }

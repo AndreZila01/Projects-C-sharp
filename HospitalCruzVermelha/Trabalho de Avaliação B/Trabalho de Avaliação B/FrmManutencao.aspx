@@ -48,7 +48,7 @@
 			<asp:BoundField DataField="Telefone" HeaderText="Telefone" SortExpression="Telefone"/>
 		</Columns>
 	</asp:GridView>
-	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:L1949_ConnectionString %>" SelectCommand="SELECT [NumMed], [NomeMed], [Especialidade], [Sexo], [NumOrdemMed], [Telefone] FROM [Tbl_Medicos]" DeleteCommand="Delete Tbl_Medicos where NumMed=@NumMed"></asp:SqlDataSource>
+	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:L1949_ConnectionString %>" SelectCommand="SELECT [NumMed], [NomeMed], [Especialidade], [Sexo], [NumOrdemMed], [Telefone] FROM [Tbl_Medicos]" DeleteCommand="Delete Tbl_Medicos where NumMed=@NumMed" UpdateCommand="Update Tbl_Medicos set NomeMed=@NomeMed, Especialidade=@Especialidade, Sexo=@Sexo, NumOrdemMed=@NumOrdemMed, Telefone=@Telefone where NumMed=@NumMed"></asp:SqlDataSource>
 	<asp:Panel ID="Panel1" runat="server" Visible="false">
 		<table class="auto-style12">
 			<tr>

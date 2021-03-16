@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="Trabalho_de_Avaliação_B.Login" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+	<style>
+		.body {
+			background-color: #d8f5ff
+		}
+	</style>
+	<title>Login</title>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body class="body">
+	<form id="form1" runat="server">
+		<div>
+			<asp:Panel ID="Panel1" runat="server" Height="71px">
+				<asp:Image ID="Image1" runat="server" Height="68px" ImageUrl="~/output-onlinepngtools.png" Width="140px" />
+
+
+			</asp:Panel>
+			<br />
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+				<p>
+				</p>
+			</asp:ContentPlaceHolder>
+		</div>
+	</form>
+</body>
+</html>

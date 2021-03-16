@@ -75,8 +75,22 @@
 			<td class="auto-style13"></td>
 			<td colspan="2" class="auto-style17"></td>
 			<td colspan="2" class="auto-style15">
-				<asp:GridView ID="GridView2" runat="server" Width="394px">
+				<asp:GridView ID="GridView2" runat="server" Width="415px" AutoGenerateColumns="False" DataKeyNames="NumCons" DataSourceID="SqlDataSource3">
+					<Columns>
+						<asp:BoundField DataField="NumCons" HeaderText="NumCons" InsertVisible="False" ReadOnly="True" SortExpression="NumCons" />
+						<asp:BoundField DataField="DataCons" HeaderText="DataCons" SortExpression="DataCons" />
+						<asp:BoundField DataField="NomeMed" HeaderText="Nome Medico" SortExpression="NomeMed" />
+						<asp:BoundField DataField="NomePac" HeaderText="Nome Paciente" SortExpression="NomePac" />
+						<asp:BoundField DataField="ValorCon" DataFormatString="{0:###.##}€" HeaderText="ValorCon" SortExpression="ValorCon" />
+						<asp:BoundField DataField="MotivoDaConsulta" HeaderText="MotivoDaConsulta" SortExpression="MotivoDaConsulta" />
+						<asp:BoundField DataField="ResultadoMed" HeaderText="ResultadoMed" SortExpression="ResultadoMed" />
+					</Columns>
 				</asp:GridView>
+				<asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:L1949_ConnectionString %>" SelectCommand="SELECT [NumCons], [DataCons], Tbl_Medicos.NomeMed, Tbl_Pacientes.NomePac, [ValorCon], [MotivoDaConsulta], [ResultadoMed] FROM [Tbl_Consulta], Tbl_Medicos, Tbl_Pacientes WHERE NMed=Tbl_Medicos.NumMed and (NMed = @NumMed) and NPac=Tbl_Pacientes.NumPac">
+					<SelectParameters>
+						<asp:ControlParameter ControlID="GridView1" Name="NumMed" PropertyName="SelectedValue" Type="Int32" />
+					</SelectParameters>
+				</asp:SqlDataSource>
 			</td>
 			<td class="auto-style13"></td>
 		</tr>

@@ -26,7 +26,6 @@ namespace Trabalho_de_Avaliação_B
 		{
 			command.Connection = liga;
 			liga.Open();
-			SqlDataReader dr;
 			try
 			{
 				command.CommandText = "Insert into Tbl_Medicos (NomeMed, Especialidade, Sexo, NumOrdemMed, Telefone) values('" + txtNome.Text + "','" + txtEspe.Text + "', '"+txtSexo.Text+"', '"+txtN.Text+"', '"+txtFone.Text+"')";
@@ -35,7 +34,7 @@ namespace Trabalho_de_Avaliação_B
 				
 			}
 			catch(Exception ex) {
-				ClientScript.RegisterClientScriptBlock(this.GetType(), "{Error}", "alert('{"+ex+"}'); ", true);
+				Response.Write("<script>alert('Error: " + ex.Message + "')</script>");
 
 			}
 			liga.Close();
