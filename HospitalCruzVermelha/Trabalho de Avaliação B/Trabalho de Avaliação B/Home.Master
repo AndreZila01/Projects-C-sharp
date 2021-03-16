@@ -62,7 +62,7 @@
 							</asp:MenuItem>
 							<asp:MenuItem Text="Pacientes" Value="Pacientes">
 								<asp:MenuItem Text="Registar Consultas " Value="Registar Consultas " NavigateUrl="~/FrmRegConsulta.aspx"></asp:MenuItem>
-								<asp:MenuItem Text="Consultar Consultas" Value="Consultar Consultas"></asp:MenuItem>
+								<asp:MenuItem Text="Consultar Consultas" Value="Consultar Consultas" NavigateUrl="~/FrmConsultas.aspx"></asp:MenuItem>
 							</asp:MenuItem>
 							<asp:MenuItem Text="Consultas" Value="Consultas" NavigateUrl="~/FrmConsultas.aspx"></asp:MenuItem>
 						</Items>

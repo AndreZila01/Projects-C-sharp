@@ -56,3 +56,4 @@ C:\Users\andre\Desktop\12ºano\Psi\M11 -\Trabalho de Avaliação B\Trabalho de A
 C:\Users\andre\Desktop\12ºano\Psi\M11 -\Trabalho de Avaliação B\Trabalho de Avaliação B\obj\Debug\Trabalho de Avaliação B.csproj.CopyComplete
 C:\Users\andre\Desktop\12ºano\Psi\M11 -\Trabalho de Avaliação B\Trabalho de Avaliação B\obj\Debug\Trabalho de Avaliação B.dll
 C:\Users\andre\Desktop\12ºano\Psi\M11 -\Trabalho de Avaliação B\Trabalho de Avaliação B\obj\Debug\Trabalho de Avaliação B.pdb
+C:\Users\andre\Desktop\12ºano\Psi\M11 -\Trabalho de Avaliação B\Trabalho de Avaliação B\obj\Debug\Trabalho de Avaliação B.csprojAssemblyReference.cache

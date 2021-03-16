@@ -33,13 +33,13 @@
 			<asp:BoundField DataField="DataCons" HeaderText="DataCons" SortExpression="DataCons" />
 			<asp:BoundField DataField="NMed" HeaderText="NMed" SortExpression="NMed" />
 			<asp:BoundField DataField="NPac" HeaderText="NPac" SortExpression="NPac" />
-			<asp:BoundField DataField="ValorCon" HeaderText="ValorCon" SortExpression="ValorCon" />
+			<asp:BoundField DataField="ValorCon" HeaderText="ValorCon" SortExpression="ValorCon" DataFormatString="{0:###.##}€" />
 			<asp:BoundField DataField="MotivoDaConsulta" HeaderText="MotivoDaConsulta" SortExpression="MotivoDaConsulta" />
 		</Columns>
 	</asp:GridView>
 	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:L1949_ConnectionString %>" SelectCommand="SELECT [NumCons], [DataCons], [NMed], [NPac], [ValorCon], [MotivoDaConsulta] FROM [Tbl_Consulta]"></asp:SqlDataSource>
 	<br />
-	<asp:Panel ID="Panel1" runat="server" style="margin-left:10px; background-color:red">
+	<asp:Panel ID="Panel1" runat="server" style="margin-left:10px">
 		<table class="auto-style12">
 			<tr>
 				<td>&nbsp;</td>
