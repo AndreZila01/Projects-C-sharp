@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Trabalho_de_Avaliação_B.Home" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+	<title>Home</title>
+    <link rel="icon" href="Imagens/Cruz vermelha P.png">
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+	<style type="text/css">
+		.body{
+			background-color: #d8f5ff
+		}
+		.auto-style1 {
+			padding: 10px;
+			height: 332px;
+			}
+
+		.auto-styleData {
+			text-align: center;
+			width: 25%;
+			margin-left:20px;
+			position: absolute;
+			bottom:0px;
+		}
+		.body {
+			width: 100%
+		}
+		.auto-style2 {
+			left: 239px;
+			top: 0px;
+			height: 100px;
+		}
+		.auto-style3 {
+			height: 100px;
+			width: 160px;
+		}
+		.auto-style4 {
+			width: 160px;
+			text-align: center;
+		}
+		</style><link rel="shortcut icon" type="image/icon" href="~/Imagens/CVP.ico"/>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link href="css/estilo.css" rel="stylesheet">
+</head>
+<body style="background-color: #bff3ff">
+	<form id="form1" runat="server">
+		<table style="background-color: transparent; width: 100%";>
+			<tr>
+				<td class="auto-style3 col-xs-4 col-sm-4 col-md-4 col-lg-4 marcador">
+					<asp:Image ID="Image1" runat="server" Height="74px" ImageUrl="~/Imagens/CVG.png" Width="135px"/>
+				</td>
+				<td class="auto-style2 col-xs-8 col-sm-8 col-md-8 col-lg-8 marcador">
+
+					<asp:Menu ID="Menu2" runat="server" Orientation="Horizontal">
+						<Items>
+							<asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Frms/FrmHome.aspx"></asp:MenuItem>
+							<asp:MenuItem Text="M&eacute;dicos" Value="Médicos">
+								<asp:MenuItem Text="Manuten&ccedil;&atilde;o M&eacute;dicos" Value="Manutenção Médicos" NavigateUrl="~/Frms/FrmManutencao.aspx"></asp:MenuItem>
+								<asp:MenuItem Text="Consultar M&eacute;dicos" Value="Consultar Médicos" NavigateUrl="~/Frms/FrmConsultaMed.aspx"></asp:MenuItem>
+							</asp:MenuItem>
+							<asp:MenuItem Text="Pacientes" Value="Pacientes">
+								<asp:MenuItem Text="Registar Consultas " Value="Registar Consultas " NavigateUrl="~/Frms/FrmRegConsulta.aspx"></asp:MenuItem>
+								<asp:MenuItem Text="Consultar Consultas" Value="Consultar Consultas" NavigateUrl="~/Frms/FrmConsultas.aspx"></asp:MenuItem>
+							</asp:MenuItem>
+							<asp:MenuItem Text="Consultas" Value="Consultas" NavigateUrl="~/Frms/FrmConsultas.aspx"></asp:MenuItem>
+						</Items>
+						<StaticMenuItemStyle VerticalPadding="10px" BorderWidth="0px" HorizontalPadding="5px" />
+						<StaticMenuStyle HorizontalPadding="15px" VerticalPadding="15px" />
+					</asp:Menu>
+					<br />
+			</tr>
+			<tr>
+				<td class="auto-style4">
+
+					&nbsp;</td>
+				<td class="auto-style1" colspan="2" rowspan="2">
+					<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+					</asp:ContentPlaceHolder>
+				</td>
+			</tr>
+		</table>
+		
+	</form>
+	<div class="auto-styleData"><asp:Label ID="Label2" ForeColor="Black" runat="server" Text="Label"></asp:Label></div>
+</body>
+</html>
