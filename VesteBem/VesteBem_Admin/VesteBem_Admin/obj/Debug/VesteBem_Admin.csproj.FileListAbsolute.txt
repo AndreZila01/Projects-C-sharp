@@ -1,0 +1,103 @@
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmAddChangeProdutos.resources
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmAdmin.resources
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmCarrinho.resources
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmCliEFun.resources
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmConsultarCarrinho.resources
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmEditarApagarProdutos.resources
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmLogin.resources
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmModificarCliFun.resources
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.Properties.Resources.resources
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.GenerateResource.cache
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.CoreCompileInputs.cache
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.exe.config
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.exe
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.pdb
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\Newtonsoft.Json.dll
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\Newtonsoft.Json.xml
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.CopyComplete
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.exe
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.pdb
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.exe.config
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.exe
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.pdb
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\Newtonsoft.Json.dll
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\Newtonsoft.Json.xml
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmAddChangeProdutos.resources
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmAdmin.resources
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmCarrinho.resources
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmCliEFun.resources
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmConsultarCarrinho.resources
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmEditarApagarProdutos.resources
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmLogin.resources
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmModificarCliFun.resources
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.Properties.Resources.resources
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.GenerateResource.cache
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.CoreCompileInputs.cache
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.CopyComplete
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.exe
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.pdb
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.exe.config
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.exe
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.pdb
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\Newtonsoft.Json.dll
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\Newtonsoft.Json.xml
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csprojAssemblyReference.cache
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmAddChangeProdutos.resources
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmAdmin.resources
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmCarrinho.resources
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmCliEFun.resources
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmConsultarCarrinho.resources
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmEditarApagarProdutos.resources
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmEditarCarrinho.resources
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmLogin.resources
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmModificarCliFun.resources
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.Properties.Resources.resources
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.GenerateResource.cache
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.CoreCompileInputs.cache
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.CopyComplete
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.exe
+C:\Users\marco\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.pdb
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.exe.config
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.exe
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.pdb
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\Newtonsoft.Json.dll
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\Newtonsoft.Json.xml
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csprojAssemblyReference.cache
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmAddChangeProdutos.resources
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmAdmin.resources
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmCarrinho.resources
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmCliEFun.resources
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmConsultarCarrinho.resources
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmEditarApagarProdutos.resources
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmEditarCarrinho.resources
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmLogin.resources
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmModificarCliFun.resources
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.Properties.Resources.resources
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.GenerateResource.cache
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.CoreCompileInputs.cache
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.CopyComplete
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.exe
+C:\Users\l1974\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.pdb
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmConsultarDetalhe.resources
+C:\Users\utilizador\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmConsultarDetalhe.resources
+C:\Users\L1949\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csprojAssemblyReference.cache
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmAddChangeProdutos.resources
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmAdmin.resources
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmCarrinho.resources
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmCliEFun.resources
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmConsultarCarrinho.resources
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmConsultarDetalhe.resources
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmEditarApagarProdutos.resources
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.frmLogin.resources
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.FrmModificarCliFun.resources
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.Properties.Resources.resources
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.GenerateResource.cache
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.CoreCompileInputs.cache
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.exe
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.pdb
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.exe.config
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.exe
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\bin\Debug\VesteBem_Admin.pdb
+C:\Users\Altyra Solutions\Documents\GitHub\Project-Mod16-C-Sharp\VesteBem\VesteBem_Admin\VesteBem_Admin\obj\Debug\VesteBem_Admin.csproj.CopyComplete
