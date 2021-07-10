@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AudioSwitcher.AudioApi.dll" size="41472">
-      <assemblyIdentity name="AudioSwitcher.AudioApi" version="3.0.0.209" publicKeyToken="FDA5729E2DB3A64F" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AudioSwitcher.AudioApi.dll" size="35840">
+      <assemblyIdentity name="AudioSwitcher.AudioApi" version="4.0.0.308" publicKeyToken="FDA5729E2DB3A64F" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Jv82T8pJbuEJPeWWZFyGcxwVbYHQJrXQIN5GsN8FNRM=</dsig:DigestValue>
+        <dsig:DigestValue>7fzAX3ba2f5zVfQ38GPu3Sag8jW8dAF/8Q4wAC4EvBw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AudioSwitcher.AudioApi.CoreAudio.dll" size="77824">
-      <assemblyIdentity name="AudioSwitcher.AudioApi.CoreAudio" version="3.0.0.209" publicKeyToken="FDA5729E2DB3A64F" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AudioSwitcher.AudioApi.CoreAudio.dll" size="98816">
+      <assemblyIdentity name="AudioSwitcher.AudioApi.CoreAudio" version="4.0.0.308" publicKeyToken="FDA5729E2DB3A64F" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9Jb3T0jz27SZR07woGiUB5CHhxNCs+O8JUxZA+Suv5E=</dsig:DigestValue>
+        <dsig:DigestValue>vrBDZNZTkHzFqrnk11APv61ZI8OHIEeWr3C87VqvBrI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gQR8r59lShicfWvv1g5e3NubFRN6Yk+GjB98/eQYU/Y=</dsig:DigestValue>
+        <dsig:DigestValue>kK8AEztJY2HtqrtMxL4bnpYNeTMNMHAf3Pt/6/zp15A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,31 +86,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lWtm6and1rRdVy7wPZ8Ybv3axmqUNOLUcK4tunYKUZw=</dsig:DigestValue>
+        <dsig:DigestValue>QR3f4+qowoN2jc91QA+RGFwJmrVu2L2C4fCqSDbXbNM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="700336">
-      <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="701992">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>f5ErKKB8Im4L46z7L1fwUFOKugEA+h8L8sOfGh8dqBQ=</dsig:DigestValue>
+        <dsig:DigestValue>s/49vDEw6q3b2ZnkKO5qZ76YQO4CHjUB3629HCy5bPg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spotify Clone.exe" size="496096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spotify Clone.exe" size="488416">
       <assemblyIdentity name="Spotify Clone" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>b+rRT6b8/o9ZYvQpvN9L0F5ytmL8t8EzpLFSqKvHwjI=</dsig:DigestValue>
+        <dsig:DigestValue>rR8JGb4dwhv/Qa2ls8/RFucCsKFX3Wbz1vV2KyY1cZA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
