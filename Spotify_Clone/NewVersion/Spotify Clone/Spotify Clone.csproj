@@ -108,6 +108,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DiscordRpc.cs" />
     <Compile Include="Classes\PlayList.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -167,13 +168,7 @@
     <None Include="Resources\add1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\change %281%291.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\change1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\circle-utilitarios1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close_red1.png" />
@@ -192,9 +187,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimize1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\next1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\previous1.png" />
@@ -219,9 +211,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-plus-500 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\pause.png" />
   </ItemGroup>
   <ItemGroup>
@@ -237,12 +226,6 @@
     <None Include="Resources\delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconfinder_00-ELASTOFONT-STORE-READY_music_2703070.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconfinder_00-ELASTOFONT-STORE-READY_sliders_2738302.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\botao-play.png" />
   </ItemGroup>
   <ItemGroup>
@@ -251,6 +234,11 @@
   <ItemGroup>
     <None Include="Resources\full-screen.png" />
     <None Include="Resources\info.png" />
+    <None Include="Resources\music.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\mais.png" />
+    <Content Include="Resources\Spotify.ico" />
     <Content Include="Spotify.ico" />
   </ItemGroup>
   <ItemGroup>

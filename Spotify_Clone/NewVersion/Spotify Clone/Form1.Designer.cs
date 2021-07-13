@@ -45,7 +45,16 @@
 			this.pnlControlo = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel5 = new System.Windows.Forms.Panel();
+			this.panel7 = new System.Windows.Forms.Panel();
+			this.progressBar1 = new System.Windows.Forms.ProgressBar();
+			this.panel6 = new System.Windows.Forms.Panel();
+			this.pictureBox7 = new System.Windows.Forms.PictureBox();
+			this.pictureBox5 = new System.Windows.Forms.PictureBox();
+			this.pictureBox4 = new System.Windows.Forms.PictureBox();
+			this.pictureBox3 = new System.Windows.Forms.PictureBox();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.pictureBox6 = new System.Windows.Forms.PictureBox();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.pnlConteudo = new System.Windows.Forms.Panel();
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -56,6 +65,7 @@
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.timer2 = new System.Windows.Forms.Timer(this.components);
 			this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+			this.picSettings = new System.Windows.Forms.PictureBox();
 			this.pnlTop.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pE_MaxMin)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,13 +78,25 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3)).BeginInit();
 			this.pnlControlo.SuspendLayout();
 			this.panel3.SuspendLayout();
+			this.panel5.SuspendLayout();
+			this.panel7.SuspendLayout();
+			this.panel6.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			this.panel4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
 			this.pnlConteudo.SuspendLayout();
 			this.cmsMenuStrip.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.picSettings)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pnlTop
 			// 
 			this.pnlTop.BackColor = System.Drawing.Color.CadetBlue;
+			this.pnlTop.Controls.Add(this.picSettings);
 			this.pnlTop.Controls.Add(this.pE_MaxMin);
 			this.pnlTop.Controls.Add(this.pictureBox1);
 			this.pnlTop.Controls.Add(this.pE_minimizar);
@@ -87,7 +109,6 @@
 			// 
 			resources.ApplyResources(this.pE_MaxMin, "pE_MaxMin");
 			this.pE_MaxMin.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.pE_MaxMin.Image = global::Spotify_Clone.Properties.Resources.expand__1_;
 			this.pE_MaxMin.Name = "pE_MaxMin";
 			this.pE_MaxMin.TabStop = false;
 			this.pE_MaxMin.Click += new System.EventHandler(this.pE_Click);
@@ -95,29 +116,24 @@
 			// pictureBox1
 			// 
 			resources.ApplyResources(this.pictureBox1, "pictureBox1");
-			this.pictureBox1.Image = global::Spotify_Clone.Properties.Resources.full_screen;
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.TabStop = false;
-			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// pE_minimizar
 			// 
 			resources.ApplyResources(this.pE_minimizar, "pE_minimizar");
 			this.pE_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.pE_minimizar.Image = global::Spotify_Clone.Properties.Resources.minimize;
 			this.pE_minimizar.Name = "pE_minimizar";
 			this.pE_minimizar.TabStop = false;
+			this.pE_minimizar.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// pE_Close
 			// 
 			resources.ApplyResources(this.pE_Close, "pE_Close");
 			this.pE_Close.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.pE_Close.Image = global::Spotify_Clone.Properties.Resources.close_white;
 			this.pE_Close.Name = "pE_Close";
 			this.pE_Close.TabStop = false;
 			this.pE_Close.Click += new System.EventHandler(this.pE_Click);
-			this.pE_Close.MouseLeave += new System.EventHandler(this.pE_Close_MouseLeave);
-			this.pE_Close.MouseHover += new System.EventHandler(this.pE_Close_MouseHover);
 			// 
 			// panel2
 			// 
@@ -132,8 +148,6 @@
 			resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
 			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
 			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-			this.axWindowsMediaPlayer1.TabStop = false;
-			this.axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
 			// 
 			// pnlPrincipal
 			// 
@@ -165,11 +179,9 @@
 			// pictureEdit3
 			// 
 			this.pictureEdit3.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.pictureEdit3.Image = global::Spotify_Clone.Properties.Resources.add;
 			resources.ApplyResources(this.pictureEdit3, "pictureEdit3");
 			this.pictureEdit3.Name = "pictureEdit3";
 			this.pictureEdit3.TabStop = false;
-			this.pictureEdit3.Click += new System.EventHandler(this.pictureEdit3_Click);
 			// 
 			// pnlControlo
 			// 
@@ -188,14 +200,80 @@
 			// 
 			// panel5
 			// 
+			this.panel5.Controls.Add(this.panel7);
+			this.panel5.Controls.Add(this.panel6);
 			resources.ApplyResources(this.panel5, "panel5");
 			this.panel5.Name = "panel5";
+			// 
+			// panel7
+			// 
+			this.panel7.BackColor = System.Drawing.Color.DarkSlateGray;
+			this.panel7.Controls.Add(this.progressBar1);
+			resources.ApplyResources(this.panel7, "panel7");
+			this.panel7.Name = "panel7";
+			// 
+			// progressBar1
+			// 
+			resources.ApplyResources(this.progressBar1, "progressBar1");
+			this.progressBar1.Name = "progressBar1";
+			// 
+			// panel6
+			// 
+			this.panel6.Controls.Add(this.pictureBox7);
+			this.panel6.Controls.Add(this.pictureBox5);
+			this.panel6.Controls.Add(this.pictureBox4);
+			this.panel6.Controls.Add(this.pictureBox3);
+			this.panel6.Controls.Add(this.pictureBox2);
+			resources.ApplyResources(this.panel6, "panel6");
+			this.panel6.Name = "panel6";
+			// 
+			// pictureBox7
+			// 
+			resources.ApplyResources(this.pictureBox7, "pictureBox7");
+			this.pictureBox7.Name = "pictureBox7";
+			this.pictureBox7.TabStop = false;
+			this.pictureBox7.Click += new System.EventHandler(this.PicFunPrin);
+			// 
+			// pictureBox5
+			// 
+			resources.ApplyResources(this.pictureBox5, "pictureBox5");
+			this.pictureBox5.Name = "pictureBox5";
+			this.pictureBox5.TabStop = false;
+			this.pictureBox5.Click += new System.EventHandler(this.PicFunPrin);
+			// 
+			// pictureBox4
+			// 
+			resources.ApplyResources(this.pictureBox4, "pictureBox4");
+			this.pictureBox4.Name = "pictureBox4";
+			this.pictureBox4.TabStop = false;
+			this.pictureBox4.Click += new System.EventHandler(this.PicFunPrin);
+			// 
+			// pictureBox3
+			// 
+			resources.ApplyResources(this.pictureBox3, "pictureBox3");
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.TabStop = false;
+			this.pictureBox3.Click += new System.EventHandler(this.PicFunPrin);
+			// 
+			// pictureBox2
+			// 
+			resources.ApplyResources(this.pictureBox2, "pictureBox2");
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.TabStop = false;
+			this.pictureBox2.Click += new System.EventHandler(this.PicFunPrin);
 			// 
 			// panel4
 			// 
 			this.panel4.BackColor = System.Drawing.Color.Teal;
+			this.panel4.Controls.Add(this.pictureBox6);
 			resources.ApplyResources(this.panel4, "panel4");
 			this.panel4.Name = "panel4";
+			// 
+			// pictureBox6
+			// 
+			resources.ApplyResources(this.pictureBox6, "pictureBox6");
+			this.pictureBox6.Name = "pictureBox6";
+			this.pictureBox6.TabStop = false;
 			// 
 			// panel1
 			// 
@@ -210,11 +288,6 @@
 			resources.ApplyResources(this.pnlConteudo, "pnlConteudo");
 			this.pnlConteudo.Name = "pnlConteudo";
 			// 
-			// backgroundWorker1
-			// 
-			this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-			this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-			// 
 			// cmsMenuStrip
 			// 
 			this.cmsMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -225,25 +298,25 @@
 			// 
 			// TSMIRemove
 			// 
-			this.TSMIRemove.Image = global::Spotify_Clone.Properties.Resources.delete;
-			this.TSMIRemove.Name = "TSMIRemove";
 			resources.ApplyResources(this.TSMIRemove, "TSMIRemove");
-			this.TSMIRemove.Click += new System.EventHandler(this.removeThePlayListToolStripMenuItem_Click);
+			this.TSMIRemove.Name = "TSMIRemove";
 			// 
 			// TSMIEditPlayList
 			// 
-			this.TSMIEditPlayList.Image = global::Spotify_Clone.Properties.Resources.iconfinder_00_ELASTOFONT_STORE_READY_sliders_2738302;
-			this.TSMIEditPlayList.Name = "TSMIEditPlayList";
 			resources.ApplyResources(this.TSMIEditPlayList, "TSMIEditPlayList");
-			this.TSMIEditPlayList.Click += new System.EventHandler(this.editPlayListToolStripMenuItem_Click);
+			this.TSMIEditPlayList.Name = "TSMIEditPlayList";
 			// 
 			// openFileDialog1
 			// 
 			this.openFileDialog1.FileName = "openFileDialog1";
 			// 
-			// timer2
+			// picSettings
 			// 
-			this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+			resources.ApplyResources(this.picSettings, "picSettings");
+			this.picSettings.Image = global::Spotify_Clone.Properties.Resources.settings;
+			this.picSettings.Name = "picSettings";
+			this.picSettings.TabStop = false;
+			this.picSettings.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// Form1
 			// 
@@ -267,8 +340,19 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3)).EndInit();
 			this.pnlControlo.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);
+			this.panel5.ResumeLayout(false);
+			this.panel7.ResumeLayout(false);
+			this.panel6.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			this.panel4.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
 			this.pnlConteudo.ResumeLayout(false);
 			this.cmsMenuStrip.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.picSettings)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -301,6 +385,16 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Panel panel5;
+		private System.Windows.Forms.ProgressBar progressBar1;
+		private System.Windows.Forms.PictureBox pictureBox6;
+		private System.Windows.Forms.Panel panel6;
+		private System.Windows.Forms.Panel panel7;
+		private System.Windows.Forms.PictureBox pictureBox4;
+		private System.Windows.Forms.PictureBox pictureBox3;
+		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.PictureBox pictureBox5;
+		private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.PictureBox picSettings;
 	}
 }
 
