@@ -28,7 +28,6 @@ C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotif
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Newtonsoft.Json.xml
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Interop.WMPLib.dll
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csprojAssemblyReference.cache
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Interop.WMPLib.dll
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.ResolveComReference.cache
@@ -118,3 +117,9 @@ C:\Users\utilizador\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\S
 C:\Users\utilizador\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.exe
 C:\Users\utilizador\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.pdb
 C:\Users\utilizador\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.exe.manifest
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.application
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.exe.manifest
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.application
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Gma.System.MouseKeyHook.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.AssemblyReference.cache

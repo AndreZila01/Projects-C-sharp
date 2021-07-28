@@ -19,7 +19,7 @@ using System.Timers;
 using System.Windows.Forms;
 using WMPLib;
 using DiscordRpcDemo;
-
+using Gma.System.MouseKeyHook;
 
 namespace Spotify_Clone
 {
@@ -50,7 +50,7 @@ namespace Spotify_Clone
 		public static int IdPlayList, ecra = 0;
 		private bool atualizacao, musica;
 		public List<string> PlaydaLista = new List<string>();
-		public List<PlayList> _listInformacoes = new List<PlayList>();
+		public List<Classes.Class> _listInformacoes = new List<Classes.Class>();
 		public List<string> _Caminho_Musica = new List<string>();
 		public List<double> Ordem_de_Reproducao = new List<double>();
 		int dt;
@@ -1089,6 +1089,50 @@ namespace Spotify_Clone
 		//}
 		#endregion
 		#region NEW SOURCE
+		List<Settings> settings = new List<Settings>();
+		#region teste 
+		private IKeyboardMouseEvents m_Events;
+
+		private void Main_Closing(object sender, CancelEventArgs e)
+		{
+			Unsubscribe();
+		}
+
+		private void SubscribeGlobal()
+		{
+			Unsubscribe();
+			Subscribe(Hook.GlobalEvents());
+		}
+
+		private void Subscribe(IKeyboardMouseEvents events)
+		{
+			m_Events = events;
+			m_Events.KeyUp += KeyPress;
+			m_Events.MouseDown += Mouse;
+		}
+
+		private void OnPress(object sender, KeyPressEventArgs e)
+		{
+			//Log("\n" + e.KeyChar);
+		}
+
+		private void Unsubscribe()
+		{
+			if (m_Events == null) return;
+			m_Events.KeyDown -= KeyPress;
+			m_Events.KeyUp -= KeyPress;
+
+			m_Events.MouseUp -= Mouse;
+			m_Events.MouseClick -= Mouse;
+		}
+		//private async void KeyPress(KeyEventArgs e, Button ds)
+		//{
+
+		//}
+
+		#endregion
+
+		#region Done
 		private void pnlTop_MouseMove(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
@@ -1097,18 +1141,95 @@ namespace Spotify_Clone
 				SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
 			}
 		}
+
+		private void checkBox1_Click(object sender, EventArgs e)
+		{
+			CheckBox check = sender as CheckBox;
+			if (check.Name == "chkDiscord")
+			{
+				var ds = chkDiscord.Checked ? pnlDiscord.Visible = true : pnlDiscord.Visible = false;
+			}
+			else
+			if (check.Name == "chkAtalho")
+			{
+				var ds = chkAtalho.Checked ? pnlAtalho.Visible = true : pnlAtalho.Visible = false;
+			}
+		}
+		private void label11_Click(object sender, EventArgs e)
+		{
+			Label lbl = sender as Label;
+
+			if (lbl.Name == "lblSO")
+			{
+				var ds = switchSO.IsOn == true ? switchSO.IsOn = false : switchSO.IsOn = true;
+			}
+			else
+				if (lbl.Name == "lblNomeDisc")
+			{
+				var ds = switchNome.IsOn == true ? switchNome.IsOn = false : switchNome.IsOn = true;
+			}
+			else
+				if (lbl.Name == "lblDuracao")
+			{
+				var ds = switchDuracao.IsOn == true ? switchDuracao.IsOn = false : switchDuracao.IsOn = true;
+			}
+			SaveSettings();
+		}
+		#endregion
+
+		private async void KeyPress(object sender, KeyEventArgs e)
+		{
+			if (btnSel != null)
+				btnSel.Text += e.KeyCode+ " + ";
+		}
+		private void Mouse(object sender, MouseEventArgs e)
+		{
+			if (btnSel != null)
+				if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right")
+					btnSel.Text += e.Button + " + ";
+		}
+		Button btnSel = new Button();
+		private void Btn_TeclasAtalhos(object sender, EventArgs e)
+		{
+			btnSel = sender as Button;
+			btnSel.Text = "";
+		}
+
+
+
+
+		private void label9_Click(object sender, EventArgs e)
+		{
+			Label lbl = sender as Label;
+			switch (lbl.Tag.ToString())
+			{
+				case "Musica Anterior":
+					button1.Text = button1.Text.Remove((button1.Text.Length - 3));
+					break; ;
+				case "Pausar e Retomar":
+					button2.Text = button2.Text.Remove((button2.Text.Length - 3));
+					break;
+				case "musica Seguinte":
+					button3.Text = button3.Text.Remove((button3.Text.Length - 3));
+					break;
+				default:
+					break;
+			}
+			btnSel = null;
+		}
 		public Form1()
 		{
 			InitializeComponent();
 		}
+
 		private void Discord(string NomeMusic, string tempo)
 		{
 			this.handlers = default(DiscordRpc.EventHandlers);
 			DiscordRpc.Initialize("863871149598048297", ref this.handlers, true, null);
 			this.handlers = default(DiscordRpc.EventHandlers);
 			DiscordRpc.Initialize("863871149598048297", ref this.handlers, true, null);
-			this.presence.details = ""+ NomeMusic;
-			this.presence.state = ""+ tempo;
+			this.presence.details = "" + NomeMusic;
+			this.presence.state = "" + tempo;
 			this.presence.largeImageKey = "catjam";
 			this.presence.smallImageKey = "spotify";
 			this.presence.largeImageText = "";
@@ -1123,6 +1244,11 @@ namespace Spotify_Clone
 			atualizacao = false;
 			if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync();
 			Discord("Nome da Musica", "Duração ...");
+			pnlSettings.BringToFront();
+			comboBox1.Text = comboBox1.Items[0].ToString();
+
+			SubscribeGlobal();
+			FormClosing += Main_Closing;
 			//escrever();
 			//Process[] procs = Process.GetProcessesByName("Spotify Clone");
 			//if (procs.Length > 1) foreach (Process proc in procs)
@@ -1138,6 +1264,20 @@ namespace Spotify_Clone
 			//		this.CenterToScreen();
 			//	}
 			//}
+		}
+		private void SaveSettings()
+		{
+			int SO = switchSO.IsOn ? SO = 1 : SO = 0;
+			int Discord = switchSO.IsOn ? Discord = 1 : Discord = 0;
+			int Enviar = switchNome.IsOn ? Enviar = 1 : Enviar = 0;
+			int Duracao = switchDuracao.IsOn ? Duracao = 1 : Duracao = 0;
+			int Atalho = chkAtalho.Checked ? Atalho = 1 : Atalho = 0;
+
+			Backend back = new Backend();
+			List<Settings> st = back.UpdateSettings(comboBox1.Text, SO, Discord, Enviar, Duracao, Atalho, button1.Text, button2.Text, button3.Text);
+			Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
+			string json = JsonConvert.SerializeObject(_listInformacoes);
+			File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
 		}
 		private void PicFunPrin(object sender, EventArgs e)
 		{
@@ -1158,8 +1298,11 @@ namespace Spotify_Clone
 				this.WindowState = FormWindowState.Minimized;
 			}
 			else
-			if(pE.Name== "picSettings")
+			if (pE.Name == "picSettings")
 			{
+				if (pnlSettings.Visible == true)
+					SaveSettings();
+				var ds = pnlSettings.Visible == true ? pnlSettings.Visible = false : pnlSettings.Visible = true;
 
 			}
 			else

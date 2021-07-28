@@ -575,8 +575,31 @@ namespace Download_VideoEMusic
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("Check if have update!!", "Update!?!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			Process.Start("https://github.com/AndreZila01/Projects-C-sharp");
+			try
+			{
+
+				System.Net.WebClient wc = new System.Net.WebClient();
+				byte[] raw = wc.DownloadData("https://github.com/AndreZila01/Projects-C-sharp/blob/master/Download_VideoEMusic/README.md");
+
+				string webData = System.Text.Encoding.UTF8.GetString(raw);
+
+				int pos = webData.IndexOf(" At the moment in version :");
+				if (pos >= 0)
+				{
+					icn.Visible = true;
+					string beforeFounder = webData.Remove(0, pos);
+					int poss = beforeFounder.IndexOf("\"</a>\n");
+					beforeFounder = beforeFounder.Remove(poss);
+					beforeFounder = beforeFounder.Replace(" At the moment in version : \"", "");
+					if (Properties.Resources.Versions != beforeFounder)
+						icn.ShowBalloonTip(5, "Have a new version this application, ... please update new Version", "Error", ToolTipIcon.Info);
+				}
+
+			}
+			catch
+			{
+
+			}
 		}
 
 		private void ToolStripMenuItem_Click(object sender, EventArgs e)

@@ -31,6 +31,7 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.pnlTop = new System.Windows.Forms.Panel();
+			this.picSettings = new System.Windows.Forms.PictureBox();
 			this.pE_MaxMin = new System.Windows.Forms.PictureBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pE_minimizar = new System.Windows.Forms.PictureBox();
@@ -65,8 +66,40 @@
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.timer2 = new System.Windows.Forms.Timer(this.components);
 			this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-			this.picSettings = new System.Windows.Forms.PictureBox();
+			this.pnlCont = new System.Windows.Forms.Panel();
+			this.pnlSettings = new System.Windows.Forms.Panel();
+			this.label12 = new System.Windows.Forms.Label();
+			this.pnlAtalho = new System.Windows.Forms.Panel();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.button2 = new System.Windows.Forms.Button();
+			this.label8 = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
+			this.label9 = new System.Windows.Forms.Label();
+			this.button3 = new System.Windows.Forms.Button();
+			this.panel10 = new System.Windows.Forms.Panel();
+			this.label6 = new System.Windows.Forms.Label();
+			this.chkAtalho = new System.Windows.Forms.CheckBox();
+			this.pnlDiscord = new System.Windows.Forms.Panel();
+			this.lblDuracao = new System.Windows.Forms.Label();
+			this.lblNomeDisc = new System.Windows.Forms.Label();
+			this.switchNome = new ToggleButtonExample.CeLearningToggle();
+			this.switchDuracao = new ToggleButtonExample.CeLearningToggle();
+			this.panel9 = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
+			this.chkDiscord = new System.Windows.Forms.CheckBox();
+			this.panel8 = new System.Windows.Forms.Panel();
+			this.switchSO = new ToggleButtonExample.CeLearningToggle();
+			this.lblSO = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.panel14 = new System.Windows.Forms.Panel();
 			this.pnlTop.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.picSettings)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_MaxMin)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).BeginInit();
@@ -90,7 +123,13 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
 			this.pnlConteudo.SuspendLayout();
 			this.cmsMenuStrip.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.picSettings)).BeginInit();
+			this.pnlCont.SuspendLayout();
+			this.pnlSettings.SuspendLayout();
+			this.pnlAtalho.SuspendLayout();
+			this.panel10.SuspendLayout();
+			this.pnlDiscord.SuspendLayout();
+			this.panel9.SuspendLayout();
+			this.panel8.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pnlTop
@@ -104,6 +143,14 @@
 			resources.ApplyResources(this.pnlTop, "pnlTop");
 			this.pnlTop.Name = "pnlTop";
 			this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
+			// 
+			// picSettings
+			// 
+			resources.ApplyResources(this.picSettings, "picSettings");
+			this.picSettings.Image = global::Spotify_Clone.Properties.Resources.settings;
+			this.picSettings.Name = "picSettings";
+			this.picSettings.TabStop = false;
+			this.picSettings.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// pE_MaxMin
 			// 
@@ -310,25 +357,266 @@
 			// 
 			this.openFileDialog1.FileName = "openFileDialog1";
 			// 
-			// picSettings
+			// pnlCont
 			// 
-			resources.ApplyResources(this.picSettings, "picSettings");
-			this.picSettings.Image = global::Spotify_Clone.Properties.Resources.settings;
-			this.picSettings.Name = "picSettings";
-			this.picSettings.TabStop = false;
-			this.picSettings.Click += new System.EventHandler(this.pE_Click);
+			this.pnlCont.Controls.Add(this.pnlControlo);
+			this.pnlCont.Controls.Add(this.pnlConteudo);
+			resources.ApplyResources(this.pnlCont, "pnlCont");
+			this.pnlCont.Name = "pnlCont";
+			// 
+			// pnlSettings
+			// 
+			this.pnlSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(146)))), ((int)(((byte)(158)))));
+			this.pnlSettings.Controls.Add(this.label12);
+			this.pnlSettings.Controls.Add(this.pnlAtalho);
+			this.pnlSettings.Controls.Add(this.panel10);
+			this.pnlSettings.Controls.Add(this.pnlDiscord);
+			this.pnlSettings.Controls.Add(this.panel9);
+			this.pnlSettings.Controls.Add(this.panel8);
+			this.pnlSettings.Controls.Add(this.panel14);
+			resources.ApplyResources(this.pnlSettings, "pnlSettings");
+			this.pnlSettings.Name = "pnlSettings";
+			// 
+			// label12
+			// 
+			resources.ApplyResources(this.label12, "label12");
+			this.label12.Name = "label12";
+			// 
+			// pnlAtalho
+			// 
+			this.pnlAtalho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(146)))), ((int)(((byte)(158)))));
+			this.pnlAtalho.Controls.Add(this.label11);
+			this.pnlAtalho.Controls.Add(this.label5);
+			this.pnlAtalho.Controls.Add(this.label4);
+			this.pnlAtalho.Controls.Add(this.label7);
+			this.pnlAtalho.Controls.Add(this.button2);
+			this.pnlAtalho.Controls.Add(this.label8);
+			this.pnlAtalho.Controls.Add(this.button1);
+			this.pnlAtalho.Controls.Add(this.label9);
+			this.pnlAtalho.Controls.Add(this.button3);
+			resources.ApplyResources(this.pnlAtalho, "pnlAtalho");
+			this.pnlAtalho.Name = "pnlAtalho";
+			// 
+			// label11
+			// 
+			resources.ApplyResources(this.label11, "label11");
+			this.label11.Name = "label11";
+			this.label11.Tag = "musica Seguinte";
+			this.label11.Click += new System.EventHandler(this.label9_Click);
+			// 
+			// label5
+			// 
+			resources.ApplyResources(this.label5, "label5");
+			this.label5.Name = "label5";
+			this.label5.Tag = "Pausar e Retomar";
+			this.label5.Click += new System.EventHandler(this.label9_Click);
+			// 
+			// label4
+			// 
+			resources.ApplyResources(this.label4, "label4");
+			this.label4.Name = "label4";
+			this.label4.Tag = "Musica Anterior";
+			this.label4.Click += new System.EventHandler(this.label9_Click);
+			// 
+			// label7
+			// 
+			resources.ApplyResources(this.label7, "label7");
+			this.label7.Name = "label7";
+			// 
+			// button2
+			// 
+			resources.ApplyResources(this.button2, "button2");
+			this.button2.Name = "button2";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
+			// 
+			// label8
+			// 
+			resources.ApplyResources(this.label8, "label8");
+			this.label8.Name = "label8";
+			// 
+			// button1
+			// 
+			resources.ApplyResources(this.button1, "button1");
+			this.button1.Name = "button1";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
+			// 
+			// label9
+			// 
+			resources.ApplyResources(this.label9, "label9");
+			this.label9.Name = "label9";
+			this.label9.Click += new System.EventHandler(this.label9_Click);
+			// 
+			// button3
+			// 
+			resources.ApplyResources(this.button3, "button3");
+			this.button3.Name = "button3";
+			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
+			// 
+			// panel10
+			// 
+			this.panel10.Controls.Add(this.label6);
+			this.panel10.Controls.Add(this.chkAtalho);
+			resources.ApplyResources(this.panel10, "panel10");
+			this.panel10.Name = "panel10";
+			// 
+			// label6
+			// 
+			resources.ApplyResources(this.label6, "label6");
+			this.label6.Name = "label6";
+			// 
+			// chkAtalho
+			// 
+			resources.ApplyResources(this.chkAtalho, "chkAtalho");
+			this.chkAtalho.Name = "chkAtalho";
+			this.chkAtalho.UseVisualStyleBackColor = true;
+			this.chkAtalho.Click += new System.EventHandler(this.checkBox1_Click);
+			// 
+			// pnlDiscord
+			// 
+			this.pnlDiscord.Controls.Add(this.lblDuracao);
+			this.pnlDiscord.Controls.Add(this.lblNomeDisc);
+			this.pnlDiscord.Controls.Add(this.switchNome);
+			this.pnlDiscord.Controls.Add(this.switchDuracao);
+			resources.ApplyResources(this.pnlDiscord, "pnlDiscord");
+			this.pnlDiscord.Name = "pnlDiscord";
+			// 
+			// lblDuracao
+			// 
+			resources.ApplyResources(this.lblDuracao, "lblDuracao");
+			this.lblDuracao.Name = "lblDuracao";
+			this.lblDuracao.Click += new System.EventHandler(this.label11_Click);
+			// 
+			// lblNomeDisc
+			// 
+			resources.ApplyResources(this.lblNomeDisc, "lblNomeDisc");
+			this.lblNomeDisc.Name = "lblNomeDisc";
+			this.lblNomeDisc.Click += new System.EventHandler(this.label11_Click);
+			// 
+			// switchNome
+			// 
+			resources.ApplyResources(this.switchNome, "switchNome");
+			this.switchNome.BorderColor = System.Drawing.Color.Transparent;
+			this.switchNome.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchNome.ForeColor = System.Drawing.Color.White;
+			this.switchNome.IsOn = false;
+			this.switchNome.Name = "switchNome";
+			this.switchNome.OffColor = System.Drawing.Color.DarkGray;
+			this.switchNome.OffText = "OFF";
+			this.switchNome.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+			this.switchNome.OnText = "ON";
+			this.switchNome.TextEnabled = true;
+			// 
+			// switchDuracao
+			// 
+			resources.ApplyResources(this.switchDuracao, "switchDuracao");
+			this.switchDuracao.BorderColor = System.Drawing.Color.Transparent;
+			this.switchDuracao.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchDuracao.ForeColor = System.Drawing.Color.White;
+			this.switchDuracao.IsOn = false;
+			this.switchDuracao.Name = "switchDuracao";
+			this.switchDuracao.OffColor = System.Drawing.Color.DarkGray;
+			this.switchDuracao.OffText = "OFF";
+			this.switchDuracao.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+			this.switchDuracao.OnText = "ON";
+			this.switchDuracao.TextEnabled = true;
+			// 
+			// panel9
+			// 
+			this.panel9.Controls.Add(this.label3);
+			this.panel9.Controls.Add(this.chkDiscord);
+			resources.ApplyResources(this.panel9, "panel9");
+			this.panel9.Name = "panel9";
+			// 
+			// label3
+			// 
+			resources.ApplyResources(this.label3, "label3");
+			this.label3.Name = "label3";
+			// 
+			// chkDiscord
+			// 
+			resources.ApplyResources(this.chkDiscord, "chkDiscord");
+			this.chkDiscord.Name = "chkDiscord";
+			this.chkDiscord.UseVisualStyleBackColor = true;
+			this.chkDiscord.Click += new System.EventHandler(this.checkBox1_Click);
+			// 
+			// panel8
+			// 
+			this.panel8.Controls.Add(this.switchSO);
+			this.panel8.Controls.Add(this.lblSO);
+			this.panel8.Controls.Add(this.label10);
+			this.panel8.Controls.Add(this.label2);
+			this.panel8.Controls.Add(this.comboBox1);
+			this.panel8.Controls.Add(this.label1);
+			resources.ApplyResources(this.panel8, "panel8");
+			this.panel8.Name = "panel8";
+			// 
+			// switchSO
+			// 
+			resources.ApplyResources(this.switchSO, "switchSO");
+			this.switchSO.BorderColor = System.Drawing.Color.Transparent;
+			this.switchSO.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchSO.ForeColor = System.Drawing.Color.White;
+			this.switchSO.IsOn = false;
+			this.switchSO.Name = "switchSO";
+			this.switchSO.OffColor = System.Drawing.Color.DarkGray;
+			this.switchSO.OffText = "OFF";
+			this.switchSO.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+			this.switchSO.OnText = "ON";
+			this.switchSO.TextEnabled = true;
+			// 
+			// lblSO
+			// 
+			resources.ApplyResources(this.lblSO, "lblSO");
+			this.lblSO.Name = "lblSO";
+			this.lblSO.Tag = "En -> Choose language - changes will be applied after restarting the app";
+			this.lblSO.Click += new System.EventHandler(this.label11_Click);
+			// 
+			// label10
+			// 
+			resources.ApplyResources(this.label10, "label10");
+			this.label10.Name = "label10";
+			// 
+			// label2
+			// 
+			resources.ApplyResources(this.label2, "label2");
+			this.label2.Name = "label2";
+			this.label2.Tag = "En -> Choose language - changes will be applied after restarting the app";
+			// 
+			// comboBox1
+			// 
+			resources.ApplyResources(this.comboBox1, "comboBox1");
+			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1")});
+			this.comboBox1.Name = "comboBox1";
+			// 
+			// label1
+			// 
+			resources.ApplyResources(this.label1, "label1");
+			this.label1.Name = "label1";
+			// 
+			// panel14
+			// 
+			resources.ApplyResources(this.panel14, "panel14");
+			this.panel14.Name = "panel14";
 			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.pnlConteudo);
-			this.Controls.Add(this.pnlControlo);
+			this.Controls.Add(this.pnlSettings);
+			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.pnlTop.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.picSettings)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_MaxMin)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).EndInit();
@@ -352,7 +640,19 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
 			this.pnlConteudo.ResumeLayout(false);
 			this.cmsMenuStrip.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.picSettings)).EndInit();
+			this.pnlCont.ResumeLayout(false);
+			this.pnlSettings.ResumeLayout(false);
+			this.pnlSettings.PerformLayout();
+			this.pnlAtalho.ResumeLayout(false);
+			this.pnlAtalho.PerformLayout();
+			this.panel10.ResumeLayout(false);
+			this.panel10.PerformLayout();
+			this.pnlDiscord.ResumeLayout(false);
+			this.pnlDiscord.PerformLayout();
+			this.panel9.ResumeLayout(false);
+			this.panel9.PerformLayout();
+			this.panel8.ResumeLayout(false);
+			this.panel8.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -395,6 +695,38 @@
 		private System.Windows.Forms.PictureBox pictureBox5;
 		private System.Windows.Forms.PictureBox pictureBox7;
 		private System.Windows.Forms.PictureBox picSettings;
+		private System.Windows.Forms.Panel pnlCont;
+		private System.Windows.Forms.Panel pnlSettings;
+		private System.Windows.Forms.Panel panel8;
+		private System.Windows.Forms.CheckBox chkDiscord;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Panel panel9;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Panel panel10;
+		private ToggleButtonExample.CeLearningToggle switchDuracao;
+		private ToggleButtonExample.CeLearningToggle switchNome;
+		private System.Windows.Forms.Panel pnlDiscord;
+		private System.Windows.Forms.Label lblNomeDisc;
+		private System.Windows.Forms.Label lblDuracao;
+		private System.Windows.Forms.CheckBox chkAtalho;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Panel pnlAtalho;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label lblSO;
+		private ToggleButtonExample.CeLearningToggle switchSO;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Panel panel14;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label5;
 	}
 }
 
