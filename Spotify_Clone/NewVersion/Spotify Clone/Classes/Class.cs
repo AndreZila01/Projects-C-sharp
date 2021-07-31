@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Spotify_Clone.Classes
 {
-	public class Class
+	public class PlayList
 	{
 		public int IDList { get; set; }
 		public string Image { get; set; }
@@ -24,6 +24,7 @@ namespace Spotify_Clone.Classes
 		public List<Discord> discord { get; set; }
 		public int atal { get; set; }
 		public List<Atalho> Atalhos { get; set; }
+		public string Paths { get; set; }
 	}
 	public class Discord
 	{

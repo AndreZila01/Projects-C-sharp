@@ -68,36 +68,40 @@
 			this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
 			this.pnlCont = new System.Windows.Forms.Panel();
 			this.pnlSettings = new System.Windows.Forms.Panel();
-			this.label12 = new System.Windows.Forms.Label();
 			this.pnlAtalho = new System.Windows.Forms.Panel();
+			this.label12 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
+			this.btnPausa = new System.Windows.Forms.Button();
 			this.label8 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
+			this.btnAnterior = new System.Windows.Forms.Button();
 			this.label9 = new System.Windows.Forms.Label();
-			this.button3 = new System.Windows.Forms.Button();
+			this.btnNext = new System.Windows.Forms.Button();
 			this.panel10 = new System.Windows.Forms.Panel();
 			this.label6 = new System.Windows.Forms.Label();
 			this.chkAtalho = new System.Windows.Forms.CheckBox();
 			this.pnlDiscord = new System.Windows.Forms.Panel();
 			this.lblDuracao = new System.Windows.Forms.Label();
 			this.lblNomeDisc = new System.Windows.Forms.Label();
-			this.switchNome = new ToggleButtonExample.CeLearningToggle();
-			this.switchDuracao = new ToggleButtonExample.CeLearningToggle();
 			this.panel9 = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
 			this.chkDiscord = new System.Windows.Forms.CheckBox();
 			this.panel8 = new System.Windows.Forms.Panel();
-			this.switchSO = new ToggleButtonExample.CeLearningToggle();
+			this.pctPaths = new System.Windows.Forms.PictureBox();
+			this.label14 = new System.Windows.Forms.Label();
+			this.txtPaths = new System.Windows.Forms.TextBox();
+			this.label13 = new System.Windows.Forms.Label();
 			this.lblSO = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel14 = new System.Windows.Forms.Panel();
+			this.switchNome = new ToggleButtonExample.CeLearningToggle();
+			this.switchDuracao = new ToggleButtonExample.CeLearningToggle();
+			this.switchSO = new ToggleButtonExample.CeLearningToggle();
 			this.pnlTop.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picSettings)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_MaxMin)).BeginInit();
@@ -130,6 +134,7 @@
 			this.pnlDiscord.SuspendLayout();
 			this.panel9.SuspendLayout();
 			this.panel8.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pnlTop
@@ -335,6 +340,11 @@
 			resources.ApplyResources(this.pnlConteudo, "pnlConteudo");
 			this.pnlConteudo.Name = "pnlConteudo";
 			// 
+			// backgroundWorker1
+			// 
+			this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+			this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+			// 
 			// cmsMenuStrip
 			// 
 			this.cmsMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -367,7 +377,6 @@
 			// pnlSettings
 			// 
 			this.pnlSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(146)))), ((int)(((byte)(158)))));
-			this.pnlSettings.Controls.Add(this.label12);
 			this.pnlSettings.Controls.Add(this.pnlAtalho);
 			this.pnlSettings.Controls.Add(this.panel10);
 			this.pnlSettings.Controls.Add(this.pnlDiscord);
@@ -377,25 +386,26 @@
 			resources.ApplyResources(this.pnlSettings, "pnlSettings");
 			this.pnlSettings.Name = "pnlSettings";
 			// 
-			// label12
-			// 
-			resources.ApplyResources(this.label12, "label12");
-			this.label12.Name = "label12";
-			// 
 			// pnlAtalho
 			// 
 			this.pnlAtalho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(146)))), ((int)(((byte)(158)))));
+			this.pnlAtalho.Controls.Add(this.label12);
 			this.pnlAtalho.Controls.Add(this.label11);
 			this.pnlAtalho.Controls.Add(this.label5);
 			this.pnlAtalho.Controls.Add(this.label4);
 			this.pnlAtalho.Controls.Add(this.label7);
-			this.pnlAtalho.Controls.Add(this.button2);
+			this.pnlAtalho.Controls.Add(this.btnPausa);
 			this.pnlAtalho.Controls.Add(this.label8);
-			this.pnlAtalho.Controls.Add(this.button1);
+			this.pnlAtalho.Controls.Add(this.btnAnterior);
 			this.pnlAtalho.Controls.Add(this.label9);
-			this.pnlAtalho.Controls.Add(this.button3);
+			this.pnlAtalho.Controls.Add(this.btnNext);
 			resources.ApplyResources(this.pnlAtalho, "pnlAtalho");
 			this.pnlAtalho.Name = "pnlAtalho";
+			// 
+			// label12
+			// 
+			resources.ApplyResources(this.label12, "label12");
+			this.label12.Name = "label12";
 			// 
 			// label11
 			// 
@@ -423,24 +433,24 @@
 			resources.ApplyResources(this.label7, "label7");
 			this.label7.Name = "label7";
 			// 
-			// button2
+			// btnPausa
 			// 
-			resources.ApplyResources(this.button2, "button2");
-			this.button2.Name = "button2";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
+			resources.ApplyResources(this.btnPausa, "btnPausa");
+			this.btnPausa.Name = "btnPausa";
+			this.btnPausa.UseVisualStyleBackColor = true;
+			this.btnPausa.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
 			// 
 			// label8
 			// 
 			resources.ApplyResources(this.label8, "label8");
 			this.label8.Name = "label8";
 			// 
-			// button1
+			// btnAnterior
 			// 
-			resources.ApplyResources(this.button1, "button1");
-			this.button1.Name = "button1";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
+			resources.ApplyResources(this.btnAnterior, "btnAnterior");
+			this.btnAnterior.Name = "btnAnterior";
+			this.btnAnterior.UseVisualStyleBackColor = true;
+			this.btnAnterior.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
 			// 
 			// label9
 			// 
@@ -448,12 +458,12 @@
 			this.label9.Name = "label9";
 			this.label9.Click += new System.EventHandler(this.label9_Click);
 			// 
-			// button3
+			// btnNext
 			// 
-			resources.ApplyResources(this.button3, "button3");
-			this.button3.Name = "button3";
-			this.button3.UseVisualStyleBackColor = true;
-			this.button3.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
+			resources.ApplyResources(this.btnNext, "btnNext");
+			this.btnNext.Name = "btnNext";
+			this.btnNext.UseVisualStyleBackColor = true;
+			this.btnNext.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
 			// 
 			// panel10
 			// 
@@ -495,34 +505,6 @@
 			this.lblNomeDisc.Name = "lblNomeDisc";
 			this.lblNomeDisc.Click += new System.EventHandler(this.label11_Click);
 			// 
-			// switchNome
-			// 
-			resources.ApplyResources(this.switchNome, "switchNome");
-			this.switchNome.BorderColor = System.Drawing.Color.Transparent;
-			this.switchNome.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchNome.ForeColor = System.Drawing.Color.White;
-			this.switchNome.IsOn = false;
-			this.switchNome.Name = "switchNome";
-			this.switchNome.OffColor = System.Drawing.Color.DarkGray;
-			this.switchNome.OffText = "OFF";
-			this.switchNome.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-			this.switchNome.OnText = "ON";
-			this.switchNome.TextEnabled = true;
-			// 
-			// switchDuracao
-			// 
-			resources.ApplyResources(this.switchDuracao, "switchDuracao");
-			this.switchDuracao.BorderColor = System.Drawing.Color.Transparent;
-			this.switchDuracao.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchDuracao.ForeColor = System.Drawing.Color.White;
-			this.switchDuracao.IsOn = false;
-			this.switchDuracao.Name = "switchDuracao";
-			this.switchDuracao.OffColor = System.Drawing.Color.DarkGray;
-			this.switchDuracao.OffText = "OFF";
-			this.switchDuracao.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-			this.switchDuracao.OnText = "ON";
-			this.switchDuracao.TextEnabled = true;
-			// 
 			// panel9
 			// 
 			this.panel9.Controls.Add(this.label3);
@@ -544,6 +526,10 @@
 			// 
 			// panel8
 			// 
+			this.panel8.Controls.Add(this.pctPaths);
+			this.panel8.Controls.Add(this.label14);
+			this.panel8.Controls.Add(this.txtPaths);
+			this.panel8.Controls.Add(this.label13);
 			this.panel8.Controls.Add(this.switchSO);
 			this.panel8.Controls.Add(this.lblSO);
 			this.panel8.Controls.Add(this.label10);
@@ -553,19 +539,29 @@
 			resources.ApplyResources(this.panel8, "panel8");
 			this.panel8.Name = "panel8";
 			// 
-			// switchSO
+			// pctPaths
 			// 
-			resources.ApplyResources(this.switchSO, "switchSO");
-			this.switchSO.BorderColor = System.Drawing.Color.Transparent;
-			this.switchSO.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchSO.ForeColor = System.Drawing.Color.White;
-			this.switchSO.IsOn = false;
-			this.switchSO.Name = "switchSO";
-			this.switchSO.OffColor = System.Drawing.Color.DarkGray;
-			this.switchSO.OffText = "OFF";
-			this.switchSO.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-			this.switchSO.OnText = "ON";
-			this.switchSO.TextEnabled = true;
+			resources.ApplyResources(this.pctPaths, "pctPaths");
+			this.pctPaths.Image = global::Spotify_Clone.Properties.Resources.arquivo_aberto;
+			this.pctPaths.Name = "pctPaths";
+			this.pctPaths.TabStop = false;
+			this.pctPaths.Click += new System.EventHandler(this.pE_Click);
+			// 
+			// label14
+			// 
+			resources.ApplyResources(this.label14, "label14");
+			this.label14.Name = "label14";
+			// 
+			// txtPaths
+			// 
+			resources.ApplyResources(this.txtPaths, "txtPaths");
+			this.txtPaths.Name = "txtPaths";
+			// 
+			// label13
+			// 
+			resources.ApplyResources(this.label13, "label13");
+			this.label13.Name = "label13";
+			this.label13.Tag = "En -> Choose language - changes will be applied after restarting the app";
 			// 
 			// lblSO
 			// 
@@ -605,6 +601,48 @@
 			resources.ApplyResources(this.panel14, "panel14");
 			this.panel14.Name = "panel14";
 			// 
+			// switchNome
+			// 
+			resources.ApplyResources(this.switchNome, "switchNome");
+			this.switchNome.BorderColor = System.Drawing.Color.Transparent;
+			this.switchNome.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchNome.ForeColor = System.Drawing.Color.White;
+			this.switchNome.IsOn = false;
+			this.switchNome.Name = "switchNome";
+			this.switchNome.OffColor = System.Drawing.Color.DarkGray;
+			this.switchNome.OffText = "OFF";
+			this.switchNome.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+			this.switchNome.OnText = "ON";
+			this.switchNome.TextEnabled = true;
+			// 
+			// switchDuracao
+			// 
+			resources.ApplyResources(this.switchDuracao, "switchDuracao");
+			this.switchDuracao.BorderColor = System.Drawing.Color.Transparent;
+			this.switchDuracao.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchDuracao.ForeColor = System.Drawing.Color.White;
+			this.switchDuracao.IsOn = false;
+			this.switchDuracao.Name = "switchDuracao";
+			this.switchDuracao.OffColor = System.Drawing.Color.DarkGray;
+			this.switchDuracao.OffText = "OFF";
+			this.switchDuracao.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+			this.switchDuracao.OnText = "ON";
+			this.switchDuracao.TextEnabled = true;
+			// 
+			// switchSO
+			// 
+			resources.ApplyResources(this.switchSO, "switchSO");
+			this.switchSO.BorderColor = System.Drawing.Color.Transparent;
+			this.switchSO.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchSO.ForeColor = System.Drawing.Color.White;
+			this.switchSO.IsOn = false;
+			this.switchSO.Name = "switchSO";
+			this.switchSO.OffColor = System.Drawing.Color.DarkGray;
+			this.switchSO.OffText = "OFF";
+			this.switchSO.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+			this.switchSO.OnText = "ON";
+			this.switchSO.TextEnabled = true;
+			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
@@ -642,7 +680,6 @@
 			this.cmsMenuStrip.ResumeLayout(false);
 			this.pnlCont.ResumeLayout(false);
 			this.pnlSettings.ResumeLayout(false);
-			this.pnlSettings.PerformLayout();
 			this.pnlAtalho.ResumeLayout(false);
 			this.pnlAtalho.PerformLayout();
 			this.panel10.ResumeLayout(false);
@@ -653,6 +690,7 @@
 			this.panel9.PerformLayout();
 			this.panel8.ResumeLayout(false);
 			this.panel8.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -718,15 +756,19 @@
 		private ToggleButtonExample.CeLearningToggle switchSO;
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Panel panel14;
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button btnNext;
 		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnAnterior;
 		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btnPausa;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.TextBox txtPaths;
+		private System.Windows.Forms.PictureBox pctPaths;
 	}
 }
 

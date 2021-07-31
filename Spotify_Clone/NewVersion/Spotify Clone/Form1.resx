@@ -3048,8 +3048,11 @@
   <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
     <value>Candara Light, 12pt</value>
   </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>616, 387</value>
+    <value>619, 75</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 19</value>
@@ -3070,7 +3073,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
+    <value>pnlAtalho</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -3106,7 +3109,7 @@
     <value>pnlAtalho</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -3139,13 +3142,16 @@
     <value>pnlAtalho</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 64</value>
@@ -3169,7 +3175,7 @@
     <value>pnlAtalho</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -3205,44 +3211,44 @@
     <value>pnlAtalho</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
-  <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btnPausa.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
-  <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnPausa.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7pt</value>
   </data>
-  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnPausa.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnPausa.Location" type="System.Drawing.Point, System.Drawing">
     <value>364, 28</value>
   </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnPausa.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 35</value>
   </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnPausa.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="btnPausa.Text" xml:space="preserve">
     <value>Clicar no botão
 se acabares</value>
   </data>
-  <data name="button2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnPausa.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
+  <data name="&gt;&gt;btnPausa.Name" xml:space="preserve">
+    <value>btnPausa</value>
   </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnPausa.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnPausa.Parent" xml:space="preserve">
     <value>pnlAtalho</value>
   </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;btnPausa.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -3281,44 +3287,44 @@ se acabares</value>
     <value>pnlAtalho</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
-  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btnAnterior.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
-  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnAnterior.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7pt</value>
   </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnAnterior.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnAnterior.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 28</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnAnterior.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 35</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnAnterior.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="btnAnterior.Text" xml:space="preserve">
     <value>Clicar no botão
 se acabares</value>
   </data>
-  <data name="button1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnAnterior.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;btnAnterior.Name" xml:space="preserve">
+    <value>btnAnterior</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnAnterior.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnAnterior.Parent" xml:space="preserve">
     <value>pnlAtalho</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;btnAnterior.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="label9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -3354,50 +3360,50 @@ se acabares</value>
     <value>pnlAtalho</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
-  <data name="button3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btnNext.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
-  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnNext.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7pt</value>
   </data>
-  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnNext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
     <value>562, 28</value>
   </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnNext.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 35</value>
   </data>
-  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnNext.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="button3.Text" xml:space="preserve">
+  <data name="btnNext.Text" xml:space="preserve">
     <value>Clicar no botão
 se acabares</value>
   </data>
-  <data name="button3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnNext.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
+  <data name="&gt;&gt;btnNext.Name" xml:space="preserve">
+    <value>btnNext</value>
   </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnNext.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnNext.Parent" xml:space="preserve">
     <value>pnlAtalho</value>
   </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;btnNext.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="pnlAtalho.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
   <data name="pnlAtalho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 291</value>
+    <value>0, 315</value>
   </data>
   <data name="pnlAtalho.Size" type="System.Drawing.Size, System.Drawing">
     <value>800, 94</value>
@@ -3418,7 +3424,7 @@ se acabares</value>
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;pnlAtalho.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -3490,7 +3496,7 @@ se acabares</value>
     <value>Top</value>
   </data>
   <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 234</value>
+    <value>0, 258</value>
   </data>
   <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
     <value>800, 57</value>
@@ -3508,7 +3514,7 @@ se acabares</value>
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="lblDuracao.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3634,7 +3640,7 @@ se acabares</value>
     <value>Top</value>
   </data>
   <data name="pnlDiscord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 175</value>
+    <value>0, 199</value>
   </data>
   <data name="pnlDiscord.Size" type="System.Drawing.Size, System.Drawing">
     <value>800, 59</value>
@@ -3655,7 +3661,7 @@ se acabares</value>
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;pnlDiscord.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -3727,7 +3733,7 @@ se acabares</value>
     <value>Top</value>
   </data>
   <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 126</value>
+    <value>0, 150</value>
   </data>
   <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>800, 49</value>
@@ -3745,13 +3751,136 @@ se acabares</value>
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
+  </data>
+  <data name="pctPaths.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="pctPaths.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pctPaths.Location" type="System.Drawing.Point, System.Drawing">
+    <value>757, 106</value>
+  </data>
+  <data name="pctPaths.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 22</value>
+  </data>
+  <data name="pctPaths.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pctPaths.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;pctPaths.Name" xml:space="preserve">
+    <value>pctPaths</value>
+  </data>
+  <data name="&gt;&gt;pctPaths.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pctPaths.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;pctPaths.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 94</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 20</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Paths File</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtPaths.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="txtPaths.Location" type="System.Drawing.Point, System.Drawing">
+    <value>509, 106</value>
+  </data>
+  <data name="txtPaths.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 20</value>
+  </data>
+  <data name="txtPaths.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="txtPaths.Text" xml:space="preserve">
+    <value>%Temp%</value>
+  </data>
+  <data name="&gt;&gt;txtPaths.Name" xml:space="preserve">
+    <value>txtPaths</value>
+  </data>
+  <data name="&gt;&gt;txtPaths.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPaths.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;txtPaths.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label13.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 115</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 13</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Caminho do Ficheiro</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="switchSO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="switchSO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>715, 72</value>
+    <value>715, 67</value>
   </data>
   <data name="switchSO.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 22</value>
@@ -3772,7 +3901,7 @@ se acabares</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;switchSO.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="lblSO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -3805,7 +3934,7 @@ se acabares</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;lblSO.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3838,7 +3967,7 @@ se acabares</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -3871,7 +4000,7 @@ se acabares</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="comboBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -3883,7 +4012,7 @@ se acabares</value>
     <value>Inglês</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>629, 34</value>
+    <value>629, 37</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 21</value>
@@ -3901,7 +4030,7 @@ se acabares</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -3937,7 +4066,7 @@ se acabares</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="panel8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -3946,7 +4075,7 @@ se acabares</value>
     <value>0, 17</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 109</value>
+    <value>800, 133</value>
   </data>
   <data name="panel8.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3961,7 +4090,7 @@ se acabares</value>
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="panel14.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -3985,7 +4114,7 @@ se acabares</value>
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;panel14.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="pnlSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -4908,6 +5037,9 @@ se acabares</value>
         IXeUlddxF3r7w4lwefYSfeUhfvD6yxt9qRkZGRkZGRkZGRkZGRkZGRkZt8D/A79ZZwURCebhAAAAAElF
         TkSuQmCC
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Spotify Clone</value>

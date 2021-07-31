@@ -112,12 +112,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Backend.cs" />
-    <Compile Include="Classes\Switch.cs">
+    <Compile Include="Extensions\FolderSelectDialog.cs" />
+    <Compile Include="Extensions\Reflector.cs" />
+    <Compile Include="Extensions\Switch.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Classes\DiscordRpc.cs" />
-    <Compile Include="Classes\ExtenssionMethods.cs" />
-    <Compile Include="Classes\MyRectangle.cs" />
+    <Compile Include="Extensions\DiscordRpc.cs" />
+    <Compile Include="Extensions\ExtenssionMethods.cs" />
+    <Compile Include="Extensions\MyRectangle.cs" />
     <Compile Include="Classes\Class.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -247,6 +249,7 @@
     <None Include="Resources\next.png" />
     <None Include="Resources\settings.png" />
     <None Include="Resources\mais.png" />
+    <None Include="Resources\arquivo-aberto.png" />
     <Content Include="Resources\Spotify.ico" />
     <Content Include="Spotify.ico" />
   </ItemGroup>

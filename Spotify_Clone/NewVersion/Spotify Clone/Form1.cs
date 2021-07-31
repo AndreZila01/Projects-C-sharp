@@ -20,6 +20,7 @@ using System.Windows.Forms;
 using WMPLib;
 using DiscordRpcDemo;
 using Gma.System.MouseKeyHook;
+using FolderSelect;
 
 namespace Spotify_Clone
 {
@@ -50,7 +51,7 @@ namespace Spotify_Clone
 		public static int IdPlayList, ecra = 0;
 		private bool atualizacao, musica;
 		public List<string> PlaydaLista = new List<string>();
-		public List<Classes.Class> _listInformacoes = new List<Classes.Class>();
+		public List<Classes.PlayList> _listInformacoes = new List<Classes.PlayList>();
 		public List<string> _Caminho_Musica = new List<string>();
 		public List<double> Ordem_de_Reproducao = new List<double>();
 		int dt;
@@ -324,33 +325,26 @@ namespace Spotify_Clone
 		//			TSMIRemove.Tag = (int)picture.Tag;
 		//			TSMIEditPlayList.Tag = (int)picture.Tag;
 		//		}
-		//		private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-		//		{
-		//			try
-		//			{
-		//				Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-		//				var myString = File.ReadAllText(Environment.CurrentDirectory + "/Musics.json");
-		//				if (myString == "\"[]\"")
-		//				{
-		//					var json = JsonConvert.SerializeObject("[]");
-		//					json = json.Replace("\"", "");
-		//					File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
-		//					return;
-		//				}
-		//			}
-		//			catch (Exception ex)
-		//			{
-		//				Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-		//				MessageBox.Show("Erro: " + ex.Message + "\n\n Lose all musics!!!\n I create a new playList!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-		//				File.CreateText(Environment.CurrentDirectory + "Musics.json");
-		//			}
-		//		}
-		//		private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-		//		{
-		//			Atualiza();
-		//			if (backgroundWorker1.IsBusy) backgroundWorker1.CancelAsync();
-		//			while (backgroundWorker1.IsBusy) Application.DoEvents();
-		//		}
+		private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+		{
+			try
+			{
+				Backend bk = new Backend();
+				List<string> lst = bk.WriteReadMusic(null, true, null, true, txtPaths.Text);
+				
+				SaveSettings(lst[1]);
+			}
+			catch (Exception ex)
+			{
+				
+			}
+		}
+		private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+		{
+			//Atualiza();
+			if (backgroundWorker1.IsBusy) backgroundWorker1.CancelAsync();
+			while (backgroundWorker1.IsBusy) Application.DoEvents();
+		}
 		//		private void removeThePlayListToolStripMenuItem_Click(object sender, EventArgs e)
 		//		{
 		//			try
@@ -1173,14 +1167,14 @@ namespace Spotify_Clone
 			{
 				var ds = switchDuracao.IsOn == true ? switchDuracao.IsOn = false : switchDuracao.IsOn = true;
 			}
-			SaveSettings();
+			SaveSettings(null);
 		}
 		#endregion
 
 		private async void KeyPress(object sender, KeyEventArgs e)
 		{
 			if (btnSel != null)
-				btnSel.Text += e.KeyCode+ " + ";
+				btnSel.Text += e.KeyCode + " + ";
 		}
 		private void Mouse(object sender, MouseEventArgs e)
 		{
@@ -1195,22 +1189,19 @@ namespace Spotify_Clone
 			btnSel.Text = "";
 		}
 
-
-
-
 		private void label9_Click(object sender, EventArgs e)
 		{
 			Label lbl = sender as Label;
 			switch (lbl.Tag.ToString())
 			{
 				case "Musica Anterior":
-					button1.Text = button1.Text.Remove((button1.Text.Length - 3));
+					btnAnterior.Text = btnAnterior.Text.Remove((btnAnterior.Text.Length - 3));
 					break; ;
 				case "Pausar e Retomar":
-					button2.Text = button2.Text.Remove((button2.Text.Length - 3));
+					btnPausa.Text = btnPausa.Text.Remove((btnPausa.Text.Length - 3));
 					break;
 				case "musica Seguinte":
-					button3.Text = button3.Text.Remove((button3.Text.Length - 3));
+					btnNext.Text = btnNext.Text.Remove((btnNext.Text.Length - 3));
 					break;
 				default:
 					break;
@@ -1242,13 +1233,16 @@ namespace Spotify_Clone
 			axWindowsMediaPlayer1.Visible = false;
 			//pictureBox1.Click += pE_minimizar_Click;
 			atualizacao = false;
-			if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync();
 			Discord("Nome da Musica", "Duração ...");
 			pnlSettings.BringToFront();
 			comboBox1.Text = comboBox1.Items[0].ToString();
 
+			if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync();
+
 			SubscribeGlobal();
 			FormClosing += Main_Closing;
+
+
 			//escrever();
 			//Process[] procs = Process.GetProcessesByName("Spotify Clone");
 			//if (procs.Length > 1) foreach (Process proc in procs)
@@ -1265,19 +1259,41 @@ namespace Spotify_Clone
 			//	}
 			//}
 		}
-		private void SaveSettings()
+		private void SaveSettings(string settings)
 		{
-			int SO = switchSO.IsOn ? SO = 1 : SO = 0;
-			int Discord = switchSO.IsOn ? Discord = 1 : Discord = 0;
-			int Enviar = switchNome.IsOn ? Enviar = 1 : Enviar = 0;
-			int Duracao = switchDuracao.IsOn ? Duracao = 1 : Duracao = 0;
-			int Atalho = chkAtalho.Checked ? Atalho = 1 : Atalho = 0;
+			if (settings == null)
+			{
+				int SO = switchSO.IsOn ? SO = 1 : SO = 0;
+				int Discord = switchSO.IsOn ? Discord = 1 : Discord = 0;
+				int Enviar = switchNome.IsOn ? Enviar = 1 : Enviar = 0;
+				int Duracao = switchDuracao.IsOn ? Duracao = 1 : Duracao = 0;
+				int Atalho = chkAtalho.Checked ? Atalho = 1 : Atalho = 0;
 
-			Backend back = new Backend();
-			List<Settings> st = back.UpdateSettings(comboBox1.Text, SO, Discord, Enviar, Duracao, Atalho, button1.Text, button2.Text, button3.Text);
-			Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-			string json = JsonConvert.SerializeObject(_listInformacoes);
-			File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
+				Backend back = new Backend();
+				List<Settings> st = back.UpdateSettings(comboBox1.Text, SO, Discord, Enviar, Duracao, Atalho, btnAnterior.Text, btnPausa.Text, btnNext.Text, txtPaths.Text);
+				string json = JsonConvert.SerializeObject(st);
+
+				Backend bk = new Backend();
+				bk.WriteReadMusic(null, false, json, false, txtPaths.Text);
+			}
+			else
+			{
+				//Settings st = new Settings();
+
+				List<Settings> lst = new List<Settings>();
+				lst = JsonConvert.DeserializeObject<List<Settings>>(settings);
+
+				var ds = lst[0].atal==1 ? chkAtalho.Checked : chkAtalho.Checked=false;
+				ds = lst[0].disc == 1 ? chkDiscord.Checked : chkDiscord.Checked = false;
+				ds = lst[0].AutoRun == 1 ? switchSO.IsOn : switchSO.IsOn=false;
+				ds = lst[0].discord[0].Duracao == 1 ? switchDuracao.IsOn : switchDuracao.IsOn=false;
+				ds = lst[0].discord[0].EnviarNome == 1 ? switchNome.IsOn : switchNome.IsOn = false;
+				btnAnterior.Text = lst[0].Atalhos[0].MusicaAnterior;
+				btnPausa.Text = lst[0].Atalhos[0].Pausa;
+				btnNext.Text = lst[0].Atalhos[0].MusicaSeguinte;
+				txtPaths.Text = lst[0].Paths;
+				var dds = lst[0].Idioma == "Português" ? comboBox1.SelectedItem = "Português" : comboBox1.SelectedItem = "Inglês";
+			}
 		}
 		private void PicFunPrin(object sender, EventArgs e)
 		{
@@ -1286,50 +1302,111 @@ namespace Spotify_Clone
 		private void pE_Click(object sender, EventArgs e)
 		{
 			PictureBox pE = sender as PictureBox;
-			if (pE.Name == "pE_Close")
+
+			switch (pE.Name)
 			{
-				//IdPlayList = (int)pE.Tag;
-				//MusicaPlay();
-				this.Close();
-			}
-			else
-			if (pE.Name == "pE_minimizar")
-			{
-				this.WindowState = FormWindowState.Minimized;
-			}
-			else
-			if (pE.Name == "picSettings")
-			{
-				if (pnlSettings.Visible == true)
-					SaveSettings();
-				var ds = pnlSettings.Visible == true ? pnlSettings.Visible = false : pnlSettings.Visible = true;
+				case "pctPaths":
+					var fsd = new FolderSelectDialog();
+					fsd.Title = "Selecione um caminho onde quere guardar os ficheiros";//"Select path where u like save files";
+					fsd.InitialDirectory = txtPaths.Text;
+					Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
+					if (txtPaths.Text== "%Temp%")
+						fsd.InitialDirectory = Environment.CurrentDirectory;
+					if (fsd.ShowDialog(IntPtr.Zero))
+						if(!fsd.InitialDirectory.Contains("%Temp%"))
+							txtPaths.Text = fsd.FileName;					
+					Backend bk = new Backend();
+					bk.WriteReadMusic(null, false, null, false, txtPaths.Text);
+					//Debug.Print($"Ds: {((PictureBox)sender).Name}");//IMPORTANTE VER
+					break;
+				case "pE_Close":
+					//IdPlayList = (int)pE.Tag;
+					//MusicaPlay();
+					this.Close();
+					break;
+				case "pE_minimizar":
+					this.WindowState = FormWindowState.Minimized;
+					break;
+				case "picSettings":
+					if (pnlSettings.Visible == true)
+						SaveSettings(null);
+					var ds = pnlSettings.Visible == true ? pnlSettings.Visible = false : pnlSettings.Visible = true;
+					break;
+				case "pE_MaxMin":
+					PictureBox pct = sender as PictureBox;
+					Screen scrn = Screen.FromControl(this);
+					int n = int.Parse((scrn.DeviceName.Replace("\\", "").Replace(".DISPLAY", "")));
+					if (this.Size == new Size(800, 450))
+					{
+						FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+						Left = Top = 0;
+						Width = Screen.AllScreens[(n - 1)].WorkingArea.Width;
+						Height = Screen.AllScreens[(n - 1)].WorkingArea.Height;
+						this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
+					}
+					else
+					{
+						WindowState = FormWindowState.Normal;
+						this.Size = new Size(800, 450);
+						Width = 800;
+						Height = 450;
+						Left = (Screen.AllScreens[(n - 1)].WorkingArea.Width) / 5;
+						Top = (Screen.AllScreens[(n - 1)].WorkingArea.Height) / 5;
+						this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
+						this.CenterToScreen();
+					}
+					break;
+				default:
+					break;
 
 			}
-			else
-			{
-				PictureBox pct = sender as PictureBox;
-				Screen scrn = Screen.FromControl(this);
-				int n = int.Parse((scrn.DeviceName.Replace("\\", "").Replace(".DISPLAY", "")));
-				if (this.Size == new Size(800, 450))
-				{
-					FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-					Left = Top = 0;
-					Width = Screen.AllScreens[(n - 1)].WorkingArea.Width;
-					Height = Screen.AllScreens[(n - 1)].WorkingArea.Height;
-					this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
-				}
-				else
-				{
-					WindowState = FormWindowState.Normal;
-					this.Size = new Size(800, 450);
-					Width = 800;
-					Height = 450;
-					Left = (Screen.AllScreens[(n - 1)].WorkingArea.Width) / 5;
-					Top = (Screen.AllScreens[(n - 1)].WorkingArea.Height) / 5;
-					this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
-					this.CenterToScreen();
-				}
-			}
+			#region Lixo
+			//pctPaths
+			//if (pE.Name == "pE_Close")
+			//{
+			//	//IdPlayList = (int)pE.Tag;
+			//	//MusicaPlay();
+			//	this.Close();
+			//}
+			//else
+			//if (pE.Name == "pE_minimizar")
+			//{
+			//	this.WindowState = FormWindowState.Minimized;
+			//}
+			//else
+			//if (pE.Name == "picSettings")
+			//{
+			//	if (pnlSettings.Visible == true)
+			//		SaveSettings();
+			//	var ds = pnlSettings.Visible == true ? pnlSettings.Visible = false : pnlSettings.Visible = true;
+
+			//}
+			//else
+			//{
+			//	PictureBox pct = sender as PictureBox;
+			//	Screen scrn = Screen.FromControl(this);
+			//	int n = int.Parse((scrn.DeviceName.Replace("\\", "").Replace(".DISPLAY", "")));
+			//	if (this.Size == new Size(800, 450))
+			//	{
+			//		FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			//		Left = Top = 0;
+			//		Width = Screen.AllScreens[(n - 1)].WorkingArea.Width;
+			//		Height = Screen.AllScreens[(n - 1)].WorkingArea.Height;
+			//		this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
+			//	}
+			//	else
+			//	{
+			//		WindowState = FormWindowState.Normal;
+			//		this.Size = new Size(800, 450);
+			//		Width = 800;
+			//		Height = 450;
+			//		Left = (Screen.AllScreens[(n - 1)].WorkingArea.Width) / 5;
+			//		Top = (Screen.AllScreens[(n - 1)].WorkingArea.Height) / 5;
+			//		this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
+			//		this.CenterToScreen();
+			//	}
+			//}
+			#endregion
 		}
 	}
 	#endregion
