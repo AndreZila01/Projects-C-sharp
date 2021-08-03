@@ -70,14 +70,14 @@ namespace Spotify_Clone
 		//		{
 		//			pE_Close.Image = Properties.Resources.close_red;
 		//		}
-		//		private void pictureEdit3_Click(object sender, EventArgs e)
-		//		{
-		//			object tag = 0;
-		//			AuxForm2(tag);
-		//			_listInformacoes.Clear();
-		//			escrever();
-		//			Atualiza();
-		//		}
+		private void pictureEdit3_Click(object sender, EventArgs e)
+		{
+			object tag = 0;
+			AuxForm2(tag);
+			_listInformacoes.Clear();
+			escrever();
+			Atualiza();
+		}
 		//		private void pE_Close_MouseLeave(object sender, EventArgs e)
 		//		{
 		//			pE_Close.Image = Properties.Resources.close_white;
@@ -329,10 +329,11 @@ namespace Spotify_Clone
 		{
 			try
 			{
+				if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt"))
+					txtPaths.Text = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt");
 				Backend bk = new Backend();
-				List<string> lst = bk.WriteReadMusic(null, true, null, true, txtPaths.Text);
-				
-				SaveSettings(lst[1]);
+				List<Settings> lst = bk.WriteReadSettings(txtPaths.Text, true, "");
+				SaveSettings(lst[0]);
 			}
 			catch (Exception ex)
 			{
@@ -407,325 +408,325 @@ namespace Spotify_Clone
 		//			{
 		//			}
 		//		}
-		//		private void AuxForm2(object tag)
-		//		{
-		//			try
-		//			{
-		//				Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-		//				atualizacao = false;
-		//				try
-		//				{
-		//					if ((int)tag != 0)
-		//					{
-		//						IdPlayList = (int)tag;
-		//						atualizacao = true;
-		//					}
-		//					else
-		//					{
-		//						IdPlayList = 0;
-		//						atualizacao = false;
-		//					}
-		//				}
-		//				catch
-		//				{
-		//					MessageBox.Show("Your were very fast!! Take it easy,beacuse the program dont detect playList", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-		//					return;
-		//				}
-		//				Screen scrn = Screen.FromControl(this);
-		//				ecra = int.Parse((scrn.DeviceName.Replace("\\", "").Replace(".DISPLAY", "")));
-		//				Form2 form2 = new Form2(atualizacao, IdPlayList, ecra);
-		//				form2.ShowDialog();
-		//				form2.Close();
-		//				escrever();
-		//				int a = 1;
-		//				_listInformacoes.ToList().ForEach(item =>
-		//				{
-		//					item.IDList = a;
-		//					a++;
-		//				});
-		//				form2.Close();
-		//				var json = JsonConvert.SerializeObject(_listInformacoes);
-		//				File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
-		//			}
-		//			catch
-		//			{
-		//				return;
-		//			}
-		//			Atualiza();
-		//		}
-		//		private void MusicaPlay()
-		//		{
-		//			pnlPrincipal.Controls.Clear();
-		//			int widht = Screen.PrimaryScreen.Bounds.Width;
-		//			int height = Screen.PrimaryScreen.Bounds.Height;
-		//			musica = true;
-		//			pnlPrincipal.Visible = true;
-		//			axWindowsMediaPlayer1.Visible = false;
-		//			try
-		//			{
-		//				PlaydaLista.Clear();
-		//				_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.ToList().ForEach(item =>
-		//				{
-		//					NameMusic = item.Split(new string[]{
-		//"\\"}, StringSplitOptions.None);
-		//					int TAMANHO = NameMusic.Length;
-		//					int g = NameMusic[TAMANHO - 1].Count();
-		//					string f = NameMusic[TAMANHO - 1].Substring(0, g);
-		//					if (PlaydaLista.Contains(f) == false) PlaydaLista.Add(f);
-		//				});
-		//			}
-		//			catch
-		//			{
-		//			}
-		//			try
-		//			{
-		//				PictureBox pE_ = new PictureBox();
-		//				pE_.Location = new Point(20, 5);
-		//				pE_.Size = new Size(164, 136);
-		//				pE_.BackColor = Color.Silver;
-		//				pE_.LoadAsync(_listInformacoes[(IdPlayList - 1)].Image);
-		//				pE_.SizeMode = PictureBoxSizeMode.Zoom;
-		//				pE_.BorderStyle = BorderStyle.None;
-		//				pnlPrincipal.Controls.Add(pE_);
-		//			}
-		//			catch
-		//			{
-		//				return;
-		//			}
-		//			Label lblPl = new Label();
-		//			lblPl.Text = "PLAYLIST";
-		//			lblPl.Location = new Point(202, 25);
-		//			lblPl.Size = new Size(61, 13);
-		//			lblPl.BorderStyle = BorderStyle.None;
-		//			lblPl.Font = new Font("Tahoma", 9, FontStyle.Regular);
-		//			lblPl.BackColor = Color.Transparent;
-		//			lblPl.ForeColor = Color.Black;
-		//			pnlPrincipal.Controls.Add(lblPl);
-		//			Label lbl = new Label();
-		//			try
-		//			{
-		//				string s;
-		//				string s1 = _listInformacoes[(IdPlayList - 1)].Name;
-		//				if (s1.Count() > 30)
-		//				{
-		//					s = s1.Substring(0, 30);
-		//					if (s1.Count() > 30) s = s + " ...";
-		//				}
-		//				else s = s1;
-		//				lbl.Text = s;
-		//				lbl.Location = new Point(202, 39);
-		//				lbl.Size = new Size(195, 25);
-		//				lbl.BorderStyle = BorderStyle.None;
-		//				lbl.BackColor = Color.Transparent;
-		//				lbl.Font = new Font("Times New Roman", 18, FontStyle.Bold);
-		//				lbl.ForeColor = Color.Black;
-		//				pnlPrincipal.Controls.Add(lbl);
-		//			}
-		//			catch
-		//			{
-		//				return;
-		//			}
-		//			Label lbl1 = new Label();
-		//			lbl1.Text = _listInformacoes[(IdPlayList - 1)].Descrição;
-		//			lbl1.Location = new Point(202, 66);
-		//			lbl1.AutoSize = false;
-		//			lbl1.Size = new Size(314, 40);
-		//			lbl1.BorderStyle = BorderStyle.None;
-		//			lbl1.BackColor = Color.Transparent;
-		//			lbl1.Font = new Font("Times New Roman", 9, FontStyle.Italic);
-		//			lbl1.ForeColor = Color.Black;
-		//			pnlPrincipal.Controls.Add(lbl1);
-		//			Button btn = new Button();
-		//			btn.Location = new Point(202, 110);
-		//			btn.Size = new Size(100, 30);
-		//			btn.FlatStyle = FlatStyle.Flat;
-		//			btn.BackColor = Color.FromArgb(0, 128, 71);
-		//			btn.FlatAppearance.BorderSize = 0;
-		//			btn.ForeColor = Color.White;
-		//			btn.Font = new Font("Trebuchet MS", 17, FontStyle.Bold);
-		//			btn.Text = "PLAY";
-		//			btn.Click += btnPlayMusic_Click;
-		//			btn.Cursor = Cursors.Hand;
-		//			pnlPrincipal.Controls.Add(btn);
-		//			PictureBox pe = new PictureBox();
-		//			pe.Location = new Point(487, 110);
-		//			pe.Size = new Size(30, 30);
-		//			pe.Image = Properties.Resources.mais;
-		//			pe.BackColor = Color.Transparent;
-		//			pe.SizeMode = PictureBoxSizeMode.Zoom;
-		//			pe.BorderStyle = BorderStyle.None;
-		//			pe.Cursor = Cursors.Hand;
-		//			pe.Click += pEAdicionar_Click;
-		//			pnlPrincipal.Controls.Add(pe);
-		//			Panel pnl = new Panel();
-		//			pnl.Location = new Point(5, 160);
-		//			pnl.Size = new Size(662, 180);
-		//			pnl.BorderStyle = BorderStyle.None;
-		//			pnl.BackColor = Color.White;
-		//			pnlPrincipal.Controls.Add(pnl);
-		//			FlowLayoutPanel flp = new FlowLayoutPanel();
-		//			flp.Dock = DockStyle.Fill;
-		//			flp.AutoScroll = true;
-		//			flp.BackColor = Color.Transparent;
-		//			pnl.Controls.Add(flp);
-		//			PictureBox pictureEdit = new PictureBox();
-		//			pictureEdit.Location = new Point(pnlPrincipal.Width - 18, 0);
-		//			pictureEdit.Size = new Size(20, 20);
-		//			pictureEdit.Image = Properties.Resources.expand;
-		//			pictureEdit.BackColor = Color.Transparent;
-		//			pictureEdit.BorderStyle = BorderStyle.None;
-		//			pictureEdit.SizeMode = PictureBoxSizeMode.Zoom;
-		//			pictureEdit.Cursor = Cursors.Arrow;
-		//			pictureEdit.Click += PIC_Click;
-		//			pnlPrincipal.Controls.Add(pictureEdit);
-		//			flp.Controls.Clear();
-		//			try
-		//			{
-		//				int d = 0;
-		//				if (_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica != null)
-		//				{
-		//					PlaydaLista.ToList().ForEach(Testes =>
-		//					{
-		//						Panel pnl1 = new Panel();
-		//						pnl1.Size = new Size(flp.Width - 18, 40);
-		//						pnl1.BackColor = Color.FromArgb(224, 224, 209);
-		//						pnl1.Margin = new Padding(0, 2, 0, 0);
-		//						PictureBox pic = new PictureBox();
-		//						pic.Image = Properties.Resources.botao_play;
-		//						pic.SizeMode = PictureBoxSizeMode.Zoom;
-		//						pic.Size = new Size(30, 30);
-		//						pic.BorderStyle = BorderStyle.None;
-		//						pic.BackColor = Color.Transparent;
-		//						pic.Location = new Point(5, 5);
-		//						pic.Tag = d;
-		//						pic.Click += BotaoPlay_Click;
-		//						pnl1.Controls.Add(pic);
-		//						Label lbl2 = new Label();
-		//						lbl2.Size = new Size(flp.Width - 200, 20);
-		//						lbl2.BackColor = Color.Transparent;
-		//						lbl2.Location = new Point(50, 10);
-		//						int g = Testes.Count() - 4;
-		//						lbl2.Text = Testes.Substring(0, g);
-		//						lbl2.ForeColor = Color.Black;
-		//						lbl2.Font = new Font("Arial", 8, FontStyle.Italic);
-		//						pnl1.Controls.Add(lbl2);
-		//						PictureBox picture = new PictureBox();
-		//						picture.Image = Properties.Resources.close_red;
-		//						picture.Location = new Point(pnl1.Width - 40, (pnl1.Height / 2) - 10);
-		//						picture.Size = new Size(20, 20);
-		//						picture.SizeMode = PictureBoxSizeMode.Zoom;
-		//						picture.BorderStyle = BorderStyle.None;
-		//						picture.BackColor = Color.Transparent;
-		//						picture.Tag = d;
-		//						picture.Click += RemoveinPlayList_Click;
-		//						pnl1.Controls.Add(picture);
-		//						flp.Controls.Add(pnl1);
-		//						d++;
-		//					});
-		//				}
-		//			}
-		//			catch
-		//			{
-		//				return;
-		//			}
-		//		}
-		//		private void Atualiza()
-		//		{
-		//			pnlPrincipal.Visible = true;
-		//			axWindowsMediaPlayer1.Visible = false;
-		//			if (musica == true) MusicaPlay();
-		//			PainelControl1.Size = new Size(130, 409);
-		//			pE_PauseaPlay.Location = new Point(400, 5);
-		//			pE_previous.Location = new Point(350, 6);
-		//			pE_Random.Location = new Point(300, 5);
-		//			pE_Next.Location = new Point(450, 6);
-		//			pE_Repit.Location = new Point(500, 6);
-		//			PBC.Size = new Size(311, 18);
-		//			PBC.Location = new Point((pnlConteudo.Width / 2) - 140, 40);
-		//			pnlPlayList.Size = new Size(PainelControl1.Size.Width, PainelControl1.Size.Height - 70);
-		//			pictureEdit3.Location = new Point(12, 35);
-		//			this.FormBorderStyle = FormBorderStyle.None;
-		//			pnlPrincipal.Size = new Size(676, 345);
-		//			try
-		//			{
-		//				flowLayoutPanel1.Controls.Clear();
-		//				flowLayoutPanel1.Dock = DockStyle.Fill;
-		//				flowLayoutPanel1.AutoScroll = true;
-		//				flowLayoutPanel1.BorderStyle = BorderStyle.None;
-		//				flowLayoutPanel1.Margin = new Padding(0, 0, 0, 0);
-		//				flowLayoutPanel1.BackColor = Color.Transparent;
-		//				pnlPlayList.BorderStyle = BorderStyle.None;
-		//				_listInformacoes.ToList().ForEach(test =>
-		//				{
-		//					Panel pnl = new Panel();
-		//					pnl.Size = new Size(130, 50);
-		//					pnl.BorderStyle = BorderStyle.None;
-		//					pnl.BackColor = Color.AntiqueWhite;
-		//					pnl.Margin = new Padding(0, 0, 0, 0);
-		//					pnl.BackColor = Color.FromArgb(92, 209, 213);
-		//					pnl.Anchor = (AnchorStyles.Right | AnchorStyles.Left);
-		//					pnl.ContextMenuStrip = cmsMenuStrip;
-		//					pnl.Tag = test.IDList;
-		//					pnl.MouseHover += painel_MouseHover;
-		//					pnl.Click += pnl_Click;
-		//					string s1 = test.Name;
-		//					int k = s1.Count() > 10 ? k = 10 : k = s1.Count();
-		//					string s = s1.Substring(0, k);
-		//					s = s1.Count() > 10 ? s = s + " ..." : s = s + "";
-		//					PictureBox pE_ = new PictureBox();
-		//					pE_.Size = new Size(36, 37);
-		//					pE_.Location = new Point(6, 9);
-		//					pE_.LoadAsync((test.Image));
-		//					pE_.BackColor = Color.Transparent;
-		//					pE_.BorderStyle = BorderStyle.None;
-		//					pE_.SizeMode = PictureBoxSizeMode.Zoom;
-		//					pE_.Tag = test.IDList;
-		//					pE_.MouseHover += PicEdit_MouseHover;
-		//					pE_.Click += pE_Click;
-		//					pnl.Controls.Add(pE_);
-		//					Label lbl = new Label();
-		//					lbl.AutoSize = false;
-		//					lbl.Text = s;
-		//					lbl.Size = new Size(80, 37);
-		//					lbl.Location = new Point(49, 20);
-		//					lbl.BackColor = Color.Transparent;
-		//					lbl.BorderStyle = BorderStyle.None;
-		//					lbl.Tag = test.IDList;
-		//					lbl.MouseHover += Lbl_MouseHover;
-		//					lbl.Click += Lbl_Click;
-		//					pnl.Controls.Add(lbl);
-		//					flowLayoutPanel1.Controls.Add(pnl);
-		//				});
-		//			}
-		//			catch
-		//			{
-		//				Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-		//				var json = JsonConvert.SerializeObject("[]");
-		//				json = json.Replace("\"", "");
-		//				File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
-		//			}
-		//		}
-		//		private void escrever()
-		//		{
-		//			try
-		//			{
-		//				Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-		//				var myString = File.ReadAllText(Environment.CurrentDirectory + "/Musics.json");
-		//				_listInformacoes = JsonConvert.DeserializeObject<List<PlayList>>(myString);
-		//				if (myString == string.Empty || myString == " ")
-		//				{
-		//					var json = JsonConvert.SerializeObject("[]");
-		//					json = json.Replace("\"", "");
-		//					File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
-		//				}
-		//			}
-		//			catch
-		//			{
-		//				var json = JsonConvert.SerializeObject("[]");
-		//				json = json.Replace("\"", "");
-		//				File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
-		//			}
-		//		}
+		private void AuxForm2(object tag)
+		{
+			try
+			{
+				Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
+				atualizacao = false;
+				try
+				{
+					if ((int)tag != 0)
+					{
+						IdPlayList = (int)tag;
+						atualizacao = true;
+					}
+					else
+					{
+						IdPlayList = 0;
+						atualizacao = false;
+					}
+				}
+				catch
+				{
+					MessageBox.Show("Your were very fast!! Take it easy,beacuse the program dont detect playList", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					return;
+				}
+				Screen scrn = Screen.FromControl(this);
+				ecra = int.Parse((scrn.DeviceName.Replace("\\", "").Replace(".DISPLAY", "")));
+				Form2 form2 = new Form2(atualizacao, IdPlayList, ecra);
+				form2.ShowDialog();
+				form2.Close();
+				escrever();
+				int a = 1;
+				_listInformacoes.ToList().ForEach(item =>
+				{
+					item.IDList = a;
+					a++;
+				});
+				form2.Close();
+				var json = JsonConvert.SerializeObject(_listInformacoes);
+				File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
+			}
+			catch
+			{
+				return;
+			}
+			Atualiza();
+		}
+		private void MusicaPlay()
+		{
+			pnlPrincipal.Controls.Clear();
+			int widht = Screen.PrimaryScreen.Bounds.Width;
+			int height = Screen.PrimaryScreen.Bounds.Height;
+			musica = true;
+			pnlPrincipal.Visible = true;
+			axWindowsMediaPlayer1.Visible = false;
+			try
+			{
+				PlaydaLista.Clear();
+				_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.ToList().ForEach(item =>
+				{
+					NameMusic = item.Split(new string[]{
+		"\\"}, StringSplitOptions.None);
+					int TAMANHO = NameMusic.Length;
+					int g = NameMusic[TAMANHO - 1].Count();
+					string f = NameMusic[TAMANHO - 1].Substring(0, g);
+					if (PlaydaLista.Contains(f) == false) PlaydaLista.Add(f);
+				});
+			}
+			catch
+			{
+			}
+			try
+			{
+				PictureBox pE_ = new PictureBox();
+				pE_.Location = new Point(20, 5);
+				pE_.Size = new Size(164, 136);
+				pE_.BackColor = Color.Silver;
+				pE_.LoadAsync(_listInformacoes[(IdPlayList - 1)].Image);
+				pE_.SizeMode = PictureBoxSizeMode.Zoom;
+				pE_.BorderStyle = BorderStyle.None;
+				pnlPrincipal.Controls.Add(pE_);
+			}
+			catch
+			{
+				return;
+			}
+			Label lblPl = new Label();
+			lblPl.Text = "PLAYLIST";
+			lblPl.Location = new Point(202, 25);
+			lblPl.Size = new Size(61, 13);
+			lblPl.BorderStyle = BorderStyle.None;
+			lblPl.Font = new Font("Tahoma", 9, FontStyle.Regular);
+			lblPl.BackColor = Color.Transparent;
+			lblPl.ForeColor = Color.Black;
+			pnlPrincipal.Controls.Add(lblPl);
+			Label lbl = new Label();
+			try
+			{
+				string s;
+				string s1 = _listInformacoes[(IdPlayList - 1)].Name;
+				if (s1.Count() > 30)
+				{
+					s = s1.Substring(0, 30);
+					if (s1.Count() > 30) s = s + " ...";
+				}
+				else s = s1;
+				lbl.Text = s;
+				lbl.Location = new Point(202, 39);
+				lbl.Size = new Size(195, 25);
+				lbl.BorderStyle = BorderStyle.None;
+				lbl.BackColor = Color.Transparent;
+				lbl.Font = new Font("Times New Roman", 18, FontStyle.Bold);
+				lbl.ForeColor = Color.Black;
+				pnlPrincipal.Controls.Add(lbl);
+			}
+			catch
+			{
+				return;
+			}
+			Label lbl1 = new Label();
+			lbl1.Text = _listInformacoes[(IdPlayList - 1)].Descrição;
+			lbl1.Location = new Point(202, 66);
+			lbl1.AutoSize = false;
+			lbl1.Size = new Size(314, 40);
+			lbl1.BorderStyle = BorderStyle.None;
+			lbl1.BackColor = Color.Transparent;
+			lbl1.Font = new Font("Times New Roman", 9, FontStyle.Italic);
+			lbl1.ForeColor = Color.Black;
+			pnlPrincipal.Controls.Add(lbl1);
+			Button btn = new Button();
+			btn.Location = new Point(202, 110);
+			btn.Size = new Size(100, 30);
+			btn.FlatStyle = FlatStyle.Flat;
+			btn.BackColor = Color.FromArgb(0, 128, 71);
+			btn.FlatAppearance.BorderSize = 0;
+			btn.ForeColor = Color.White;
+			btn.Font = new Font("Trebuchet MS", 17, FontStyle.Bold);
+			btn.Text = "PLAY";
+			btn.Click += btnPlayMusic_Click;
+			btn.Cursor = Cursors.Hand;
+			pnlPrincipal.Controls.Add(btn);
+			PictureBox pe = new PictureBox();
+			pe.Location = new Point(487, 110);
+			pe.Size = new Size(30, 30);
+			pe.Image = Properties.Resources.mais;
+			pe.BackColor = Color.Transparent;
+			pe.SizeMode = PictureBoxSizeMode.Zoom;
+			pe.BorderStyle = BorderStyle.None;
+			pe.Cursor = Cursors.Hand;
+			pe.Click += pEAdicionar_Click;
+			pnlPrincipal.Controls.Add(pe);
+			Panel pnl = new Panel();
+			pnl.Location = new Point(5, 160);
+			pnl.Size = new Size(662, 180);
+			pnl.BorderStyle = BorderStyle.None;
+			pnl.BackColor = Color.White;
+			pnlPrincipal.Controls.Add(pnl);
+			FlowLayoutPanel flp = new FlowLayoutPanel();
+			flp.Dock = DockStyle.Fill;
+			flp.AutoScroll = true;
+			flp.BackColor = Color.Transparent;
+			pnl.Controls.Add(flp);
+			PictureBox pictureEdit = new PictureBox();
+			pictureEdit.Location = new Point(pnlPrincipal.Width - 18, 0);
+			pictureEdit.Size = new Size(20, 20);
+			pictureEdit.Image = Properties.Resources.expand;
+			pictureEdit.BackColor = Color.Transparent;
+			pictureEdit.BorderStyle = BorderStyle.None;
+			pictureEdit.SizeMode = PictureBoxSizeMode.Zoom;
+			pictureEdit.Cursor = Cursors.Arrow;
+			pictureEdit.Click += PIC_Click;
+			pnlPrincipal.Controls.Add(pictureEdit);
+			flp.Controls.Clear();
+			try
+			{
+				int d = 0;
+				if (_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica != null)
+				{
+					PlaydaLista.ToList().ForEach(Testes =>
+					{
+						Panel pnl1 = new Panel();
+						pnl1.Size = new Size(flp.Width - 18, 40);
+						pnl1.BackColor = Color.FromArgb(224, 224, 209);
+						pnl1.Margin = new Padding(0, 2, 0, 0);
+						PictureBox pic = new PictureBox();
+						pic.Image = Properties.Resources.botao_play;
+						pic.SizeMode = PictureBoxSizeMode.Zoom;
+						pic.Size = new Size(30, 30);
+						pic.BorderStyle = BorderStyle.None;
+						pic.BackColor = Color.Transparent;
+						pic.Location = new Point(5, 5);
+						pic.Tag = d;
+						pic.Click += BotaoPlay_Click;
+						pnl1.Controls.Add(pic);
+						Label lbl2 = new Label();
+						lbl2.Size = new Size(flp.Width - 200, 20);
+						lbl2.BackColor = Color.Transparent;
+						lbl2.Location = new Point(50, 10);
+						int g = Testes.Count() - 4;
+						lbl2.Text = Testes.Substring(0, g);
+						lbl2.ForeColor = Color.Black;
+						lbl2.Font = new Font("Arial", 8, FontStyle.Italic);
+						pnl1.Controls.Add(lbl2);
+						PictureBox picture = new PictureBox();
+						picture.Image = Properties.Resources.close_red;
+						picture.Location = new Point(pnl1.Width - 40, (pnl1.Height / 2) - 10);
+						picture.Size = new Size(20, 20);
+						picture.SizeMode = PictureBoxSizeMode.Zoom;
+						picture.BorderStyle = BorderStyle.None;
+						picture.BackColor = Color.Transparent;
+						picture.Tag = d;
+						picture.Click += RemoveinPlayList_Click;
+						pnl1.Controls.Add(picture);
+						flp.Controls.Add(pnl1);
+						d++;
+					});
+				}
+			}
+			catch
+			{
+				return;
+			}
+		}
+		private void Atualiza()
+		{
+			pnlPrincipal.Visible = true;
+			axWindowsMediaPlayer1.Visible = false;
+			if (musica == true) MusicaPlay();
+			PainelControl1.Size = new Size(130, 409);
+			pE_PauseaPlay.Location = new Point(400, 5);
+			pE_previous.Location = new Point(350, 6);
+			pE_Random.Location = new Point(300, 5);
+			pE_Next.Location = new Point(450, 6);
+			pE_Repit.Location = new Point(500, 6);
+			PBC.Size = new Size(311, 18);
+			PBC.Location = new Point((pnlConteudo.Width / 2) - 140, 40);
+			pnlPlayList.Size = new Size(PainelControl1.Size.Width, PainelControl1.Size.Height - 70);
+			pictureEdit3.Location = new Point(12, 35);
+			this.FormBorderStyle = FormBorderStyle.None;
+			pnlPrincipal.Size = new Size(676, 345);
+			try
+			{
+				flowLayoutPanel1.Controls.Clear();
+				flowLayoutPanel1.Dock = DockStyle.Fill;
+				flowLayoutPanel1.AutoScroll = true;
+				flowLayoutPanel1.BorderStyle = BorderStyle.None;
+				flowLayoutPanel1.Margin = new Padding(0, 0, 0, 0);
+				flowLayoutPanel1.BackColor = Color.Transparent;
+				pnlPlayList.BorderStyle = BorderStyle.None;
+				_listInformacoes.ToList().ForEach(test =>
+				{
+					Panel pnl = new Panel();
+					pnl.Size = new Size(130, 50);
+					pnl.BorderStyle = BorderStyle.None;
+					pnl.BackColor = Color.AntiqueWhite;
+					pnl.Margin = new Padding(0, 0, 0, 0);
+					pnl.BackColor = Color.FromArgb(92, 209, 213);
+					pnl.Anchor = (AnchorStyles.Right | AnchorStyles.Left);
+					pnl.ContextMenuStrip = cmsMenuStrip;
+					pnl.Tag = test.IDList;
+					pnl.MouseHover += painel_MouseHover;
+					pnl.Click += pnl_Click;
+					string s1 = test.Name;
+					int k = s1.Count() > 10 ? k = 10 : k = s1.Count();
+					string s = s1.Substring(0, k);
+					s = s1.Count() > 10 ? s = s + " ..." : s = s + "";
+					PictureBox pE_ = new PictureBox();
+					pE_.Size = new Size(36, 37);
+					pE_.Location = new Point(6, 9);
+					pE_.LoadAsync((test.Image));
+					pE_.BackColor = Color.Transparent;
+					pE_.BorderStyle = BorderStyle.None;
+					pE_.SizeMode = PictureBoxSizeMode.Zoom;
+					pE_.Tag = test.IDList;
+					pE_.MouseHover += PicEdit_MouseHover;
+					pE_.Click += pE_Click;
+					pnl.Controls.Add(pE_);
+					Label lbl = new Label();
+					lbl.AutoSize = false;
+					lbl.Text = s;
+					lbl.Size = new Size(80, 37);
+					lbl.Location = new Point(49, 20);
+					lbl.BackColor = Color.Transparent;
+					lbl.BorderStyle = BorderStyle.None;
+					lbl.Tag = test.IDList;
+					lbl.MouseHover += Lbl_MouseHover;
+					lbl.Click += Lbl_Click;
+					pnl.Controls.Add(lbl);
+					flowLayoutPanel1.Controls.Add(pnl);
+				});
+			}
+			catch
+			{
+				Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
+				var json = JsonConvert.SerializeObject("[]");
+				json = json.Replace("\"", "");
+				File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
+			}
+		}
+		private void escrever()
+		{
+			try
+			{
+				Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
+				var myString = File.ReadAllText(Environment.CurrentDirectory + "/Musics.json");
+				_listInformacoes = JsonConvert.DeserializeObject<List<PlayList>>(myString);
+				if (myString == string.Empty || myString == " ")
+				{
+					var json = JsonConvert.SerializeObject("[]");
+					json = json.Replace("\"", "");
+					File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
+				}
+			}
+			catch
+			{
+				var json = JsonConvert.SerializeObject("[]");
+				json = json.Replace("\"", "");
+				File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
+			}
+		}
 		//		private void RemoveinPlayList_Click(object sender, EventArgs e)
 		//		{
 		//			PictureBox picture = sender as PictureBox;
@@ -1057,74 +1058,74 @@ namespace Spotify_Clone
 		//				}
 		//			}
 		//}
-		//private void pnl_Click(object sender, EventArgs e)
-		//{
-		//	Panel pnl = sender as Panel;
-		//	IdPlayList = (int)pnl.Tag;
-		//	MusicaPlay();
-		//}
-		//private void painel_MouseHover(object sender, EventArgs e)
-		//{
-		//	Panel pnl = sender as Panel;
-		//	TSMIRemove.Tag = (int)pnl.Tag;
-		//	TSMIEditPlayList.Tag = (int)pnl.Tag;
-		//}
-		//private void Lbl_Click(object sender, EventArgs e)
-		//{
-		//	Label lbl = sender as Label;
-		//	IdPlayList = (int)lbl.Tag;
-		//	MusicaPlay();
-		//}
-		//private void Lbl_MouseHover(object sender, EventArgs e)
-		//{
-		//	Label lbl = sender as Label;
-		//	TSMIRemove.Tag = (int)lbl.Tag;
-		//	TSMIEditPlayList.Tag = (int)lbl.Tag;
-		//}
+		private void pnl_Click(object sender, EventArgs e)
+		{
+			Panel pnl = sender as Panel;
+			IdPlayList = (int)pnl.Tag;
+			MusicaPlay();
+		}
+		private void painel_MouseHover(object sender, EventArgs e)
+		{
+			Panel pnl = sender as Panel;
+			TSMIRemove.Tag = (int)pnl.Tag;
+			TSMIEditPlayList.Tag = (int)pnl.Tag;
+		}
+		private void Lbl_Click(object sender, EventArgs e)
+		{
+			Label lbl = sender as Label;
+			IdPlayList = (int)lbl.Tag;
+			MusicaPlay();
+		}
+		private void Lbl_MouseHover(object sender, EventArgs e)
+		{
+			Label lbl = sender as Label;
+			TSMIRemove.Tag = (int)lbl.Tag;
+			TSMIEditPlayList.Tag = (int)lbl.Tag;
+		}
 		#endregion
 		#region NEW SOURCE
 		List<Settings> settings = new List<Settings>();
-		#region teste 
-		private IKeyboardMouseEvents m_Events;
+		//#region teste 
+		//private IKeyboardMouseEvents m_Events;
 
-		private void Main_Closing(object sender, CancelEventArgs e)
-		{
-			Unsubscribe();
-		}
-
-		private void SubscribeGlobal()
-		{
-			Unsubscribe();
-			Subscribe(Hook.GlobalEvents());
-		}
-
-		private void Subscribe(IKeyboardMouseEvents events)
-		{
-			m_Events = events;
-			m_Events.KeyUp += KeyPress;
-			m_Events.MouseDown += Mouse;
-		}
-
-		private void OnPress(object sender, KeyPressEventArgs e)
-		{
-			//Log("\n" + e.KeyChar);
-		}
-
-		private void Unsubscribe()
-		{
-			if (m_Events == null) return;
-			m_Events.KeyDown -= KeyPress;
-			m_Events.KeyUp -= KeyPress;
-
-			m_Events.MouseUp -= Mouse;
-			m_Events.MouseClick -= Mouse;
-		}
-		//private async void KeyPress(KeyEventArgs e, Button ds)
+		//private void Main_Closing(object sender, CancelEventArgs e)
 		//{
-
+		//	Unsubscribe();
 		//}
 
-		#endregion
+		//private void SubscribeGlobal()
+		//{
+		//	Unsubscribe();
+		//	Subscribe(Hook.GlobalEvents());
+		//}
+
+		//private void Subscribe(IKeyboardMouseEvents events)
+		//{
+		//	m_Events = events;
+		//	m_Events.KeyUp += KeyPress;
+		//	m_Events.MouseDown += Mouse;
+		//}
+
+		//private void OnPress(object sender, KeyPressEventArgs e)
+		//{
+		//	//Log("\n" + e.KeyChar);
+		//}
+
+		//private void Unsubscribe()
+		//{
+		//	if (m_Events == null) return;
+		//	m_Events.KeyDown -= KeyPress;
+		//	m_Events.KeyUp -= KeyPress;
+
+		//	m_Events.MouseUp -= Mouse;
+		//	m_Events.MouseClick -= Mouse;
+		//}
+		////private async void KeyPress(KeyEventArgs e, Button ds)
+		////{
+
+		////}
+
+		//#endregion
 
 		#region Done
 		private void pnlTop_MouseMove(object sender, MouseEventArgs e)
@@ -1239,8 +1240,8 @@ namespace Spotify_Clone
 
 			if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync();
 
-			SubscribeGlobal();
-			FormClosing += Main_Closing;
+			//SubscribeGlobal();
+			//FormClosing += Main_Closing;
 
 
 			//escrever();
@@ -1259,7 +1260,7 @@ namespace Spotify_Clone
 			//	}
 			//}
 		}
-		private void SaveSettings(string settings)
+		private void SaveSettings(Settings settings)
 		{
 			if (settings == null)
 			{
@@ -1274,25 +1275,26 @@ namespace Spotify_Clone
 				string json = JsonConvert.SerializeObject(st);
 
 				Backend bk = new Backend();
-				bk.WriteReadMusic(null, false, json, false, txtPaths.Text);
+				bk.WriteReadSettings(txtPaths.Text, false, json);
 			}
 			else
 			{
 				//Settings st = new Settings();
 
-				List<Settings> lst = new List<Settings>();
-				lst = JsonConvert.DeserializeObject<List<Settings>>(settings);
+				//lst = JsonConvert.DeserializeObject<List<Settings>>(settings);
 
-				var ds = lst[0].atal==1 ? chkAtalho.Checked : chkAtalho.Checked=false;
-				ds = lst[0].disc == 1 ? chkDiscord.Checked : chkDiscord.Checked = false;
-				ds = lst[0].AutoRun == 1 ? switchSO.IsOn : switchSO.IsOn=false;
-				ds = lst[0].discord[0].Duracao == 1 ? switchDuracao.IsOn : switchDuracao.IsOn=false;
-				ds = lst[0].discord[0].EnviarNome == 1 ? switchNome.IsOn : switchNome.IsOn = false;
-				btnAnterior.Text = lst[0].Atalhos[0].MusicaAnterior;
-				btnPausa.Text = lst[0].Atalhos[0].Pausa;
-				btnNext.Text = lst[0].Atalhos[0].MusicaSeguinte;
-				txtPaths.Text = lst[0].Paths;
-				var dds = lst[0].Idioma == "Português" ? comboBox1.SelectedItem = "Português" : comboBox1.SelectedItem = "Inglês";
+				var ds = settings.atal==1 ? chkAtalho.Checked=true : chkAtalho.Checked=false;
+				ds = chkAtalho.Checked == true ? pnlAtalho.Visible = true : pnlAtalho.Visible = false;
+				ds = settings.disc == 1 ? chkDiscord.Checked = true : chkDiscord.Checked = false;
+				ds = chkDiscord.Checked == true ? pnlDiscord.Visible = true : pnlDiscord.Visible = false;
+				ds = settings.AutoRun == 1 ? switchSO.IsOn = true : switchSO.IsOn=false;
+				ds = settings.discord[0].Duracao == 1 ? switchDuracao.IsOn = true : switchDuracao.IsOn=false;
+				ds = settings.discord[0].EnviarNome == 1 ? switchNome.IsOn = true : switchNome.IsOn = false;
+				btnAnterior.Text = settings.Atalhos[0].MusicaAnterior;
+				btnPausa.Text = settings.Atalhos[0].Pausa;
+				btnNext.Text = settings.Atalhos[0].MusicaSeguinte;
+				txtPaths.Text = settings.Paths;
+				var dds = settings.Idioma == "Português" ? comboBox1.SelectedItem = "Português" : comboBox1.SelectedItem = "Inglês";
 			}
 		}
 		private void PicFunPrin(object sender, EventArgs e)
@@ -1306,15 +1308,23 @@ namespace Spotify_Clone
 			switch (pE.Name)
 			{
 				case "pctPaths":
+					string paths=""+ Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 					var fsd = new FolderSelectDialog();
 					fsd.Title = "Selecione um caminho onde quere guardar os ficheiros";//"Select path where u like save files";
 					fsd.InitialDirectory = txtPaths.Text;
-					Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-					if (txtPaths.Text== "%Temp%")
-						fsd.InitialDirectory = Environment.CurrentDirectory;
+					if (txtPaths.Text == "%appdata%")
+						fsd.InitialDirectory = paths;
 					if (fsd.ShowDialog(IntPtr.Zero))
-						if(!fsd.InitialDirectory.Contains("%Temp%"))
-							txtPaths.Text = fsd.FileName;					
+						if (!fsd.FileName.Contains("" + paths))
+						{
+							if (File.Exists(paths + "/SpotifyClone/Musics.json"))
+								File.Delete(paths + "/SpotifyClone/Musics.json");
+							if (File.Exists(paths + "/SpotifyClone/Settings.json"))
+								File.Delete(paths + "/SpotifyClone/Settings.json");
+							if (Directory.Exists(paths + "/SpotifyClone"))
+								Directory.Delete(paths + "/SpotifyClone");
+							txtPaths.Text = fsd.FileName;
+						}
 					Backend bk = new Backend();
 					bk.WriteReadMusic(null, false, null, false, txtPaths.Text);
 					//Debug.Print($"Ds: {((PictureBox)sender).Name}");//IMPORTANTE VER

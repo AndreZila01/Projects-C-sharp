@@ -27,9 +27,12 @@ namespace Spotify_Clone.Classes
 			if (st.atal != 0)
 			{
 				Atalho atl = new Atalho();
+				if(Musicaant!= "Clicar no botão se acabares")
 				atl.MusicaAnterior = Musicaant;
-				atl.Pausa = Pausa;
-				atl.MusicaSeguinte = Musicaseg;
+				if (Pausa != "Clicar no botão se acabares")
+					atl.Pausa = Pausa;
+				if (Musicaseg != "Clicar no botão se acabares")
+					atl.MusicaSeguinte = Musicaseg;
 				lstatl.Add(atl);
 				st.Atalhos = lstatl;
 			}
@@ -37,135 +40,102 @@ namespace Spotify_Clone.Classes
 			lstset.Add(st);
 			return lstset;
 		}
-		public List<Classes.PlayList> _listInformacoes = new List<Classes.PlayList>();
+		public List<PlayList> _listInformacoes = new List<PlayList>();
 		public void CreateFiles(string Paths, bool file)
 		{
 			if (file == false)
 				Directory.CreateDirectory(Paths);
 			else
-				File.WriteAllText(Paths, "[]");
-			//File.CreateText(Paths);
+				File.WriteAllText(Paths,EncryptADeDecrypt.EncryptOther("[]"));
+
 		}
 
-		public List<string> WriteReadMusic(string json, bool readMusic, string settings, bool readSettings, string path)
+		private void CheckFiles(string paths)
+		{
+			if (!Directory.Exists(paths + "/SpotifyClone"))
+				CreateFiles(paths + "/SpotifyClone", false);
+			if (!File.Exists(paths + "/SpotifyClone/Musics.json"))
+				CreateFiles(paths + "/SpotifyClone/Musics.json", true);
+			if (!File.Exists(paths + "/SpotifyClone/Settings.json"))
+				CreateFiles(paths + "/SpotifyClone/Settings.json", true);
+		}
+
+		public List<Settings> WriteReadSettings(string path, bool readSettings, string settings)
+		{
+			string Paths = "";
+			string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+			if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt") && path == null)
+			{
+				Paths = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt");
+				CheckFiles(Paths);
+			}
+			else
+			{
+				var ds = path == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = path;
+				CheckFiles(Paths);
+			}
+			if(readSettings==true)
+			{
+				var myString = EncryptADeDecrypt.DecryptString(Properties.Resources.Key, (File.ReadAllText(Paths + "/SpotifyClone/Settings.json")));
+				return JsonConvert.DeserializeObject<List<Settings>>(myString);
+			}
+			else
+			{
+				File.WriteAllText(Paths + "/SpotifyClone/Settings.json", EncryptADeDecrypt.EncryptOther(settings));
+				
+				if (!(Paths.Contains("Roaming")))
+					using (StreamWriter w = File.AppendText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt"))
+					{
+						w.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+						File.SetAttributes(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt", FileAttributes.Hidden);
+					}
+
+				return null;
+			}
+		}
+
+		public List<PlayList> WriteReadMusic(string json, bool readMusic, string settings, bool readSettings, string path)
 		{
 			var Paths = "";
-			var ds = path == "%temp%" ? Paths = "%temp%" : Paths = path;
+			var ds = path == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = path;
 			PlayList playList = new PlayList();
-			List<string> lstConteudo = new List<string>();//0 - Music | 1- Settings | 2 - Possiveis Erros
+			List<PlayList> lstConteudo = new List<PlayList>();
 
 			try
 			{
-
-				if (Paths == "%Temp%")
-				{
-					Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-					if (!Directory.Exists(Environment.CurrentDirectory + "/SpotifyClone"))
-						CreateFiles(Environment.CurrentDirectory + "/SpotifyClone", false);
-					if (!File.Exists(Environment.CurrentDirectory + "/SpotifyClone/Musics.json"))
-						CreateFiles(Environment.CurrentDirectory + "/SpotifyClone/Musics.json", true);
-					if (!File.Exists(Environment.CurrentDirectory + "/SpotifyClone/Settings.json"))
-						CreateFiles(Environment.CurrentDirectory + "/SpotifyClone/Settings.json", true);
-
-					//Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-					//if (!Directory.Exists(Environment.CurrentDirectory + "/SpotifyClone"))
-					//	Directory.CreateDirectory(Environment.CurrentDirectory + "/SpotifyClone");
-					//if (!File.Exists(Environment.CurrentDirectory + "/SpotifyClone/Musics.json"))
-					//	File.CreateText(Environment.CurrentDirectory + "/SpotifyClone/Musics.json");
-					//if (!File.Exists(Environment.CurrentDirectory + "/SpotifyClone/Settings.json"))
-					//	File.CreateText(Environment.CurrentDirectory + "/SpotifyClone/Settings.json");
-				}
-				else
-				{
-					if (!Directory.Exists(Paths + "/SpotifyClone"))
-						CreateFiles(Paths + "/SpotifyClone", false);
-					if (!File.Exists(Paths + "/SpotifyClone/Musics.json"))
-						CreateFiles(Paths + "/SpotifyClone/Musics.json", true);
-					if (!File.Exists(Paths + "/SpotifyClone/Settings.json"))
-						CreateFiles(Paths + "/SpotifyClone/Settings.json", true);
-
-
-					//if (!Directory.Exists(Paths + "/SpotifyClone"))
-					//	Directory.CreateDirectory(Paths + "/SpotifyClone");
-					//if (!File.Exists(Paths + "/SpotifyClone/Musics.json"))
-					//	File.CreateText(Paths + "/SpotifyClone/Musics.json");
-					//if (!File.Exists(Paths + "/SpotifyClone/Settings.json"))
-					//	File.CreateText(Paths + "/SpotifyClone/Settings.json");
-				}
+				CheckFiles(Paths);
 			}
 			catch (Exception ex)
 			{
-				lstConteudo[2] = ex.Message;
+				//lstConteudo[2] = ex.Message;
 			}
 			if (lstConteudo.Count() == 0)
 			{
-				lstConteudo.Add("");
-				lstConteudo.Add("");
-				lstConteudo.Add("");
+
 			}
 			try
 			{
 				if (readMusic == true)
 				{
-					if (Paths == "%Temp%")
 					{
-						var myString = File.ReadAllText(Environment.CurrentDirectory + "/SpotifyClone/Musics.json");
+						var myString = EncryptADeDecrypt.DecryptOther(File.ReadAllText(Paths + "/SpotifyClone/Musics.json"));
 						if (myString != "\"[]\"" || myString != null)
 						{
-							lstConteudo[0] = myString;
-						}
-					}
-					else
-					{
-						var myString = File.ReadAllText(Paths + "/SpotifyClone/Musics.json");
-						if (myString != "\"[]\"" || myString != null)
-						{
-							lstConteudo[0] = myString;
+							lstConteudo = JsonConvert.DeserializeObject<List<PlayList>>(myString);
 						}
 					}
 				}
 				else
 				{
 					if (json != null)
-						if (Paths == "%temp%")
-						{
-							File.WriteAllText(Environment.CurrentDirectory + "/SpotifyClone/Musics.json", json);
-						}
-						else
-						{
-							File.WriteAllText(Paths + "/SpotifyClone/Musics.json", json);
-						}
-				}
-				if (readMusic == false)
-				{
-					if (Paths == "%Temp%")
-						File.WriteAllText(Environment.CurrentDirectory + "/SpotifyClone/Settings.json", settings);
-					else
-						File.WriteAllText(Paths + "/SpotifyClone/Settings.json", settings);
-
-					using (StreamWriter w = File.AppendText(Environment.CurrentDirectory+"/helper.txt"))
 					{
-						w.WriteLine(Paths);
-						File.SetAttributes(Environment.CurrentDirectory + "/helper.txt", FileAttributes.Hidden);
-					}
-				}
-				else
-				{
-					if (Paths == "%Temp%")
-					{
-						var myString = File.ReadAllText(Environment.CurrentDirectory + "/SpotifyClone/Settings.json");
-						lstConteudo[1] = myString;
-					}
-					else
-					{
-						var myString = File.ReadAllText(Paths + "/SpotifyClone/Settings.json");
-						lstConteudo[1] = myString;
+						File.WriteAllText(Paths + "/SpotifyClone/Musics.json", EncryptADeDecrypt.EncryptOther(json));
 					}
 				}
 			}
 			catch (Exception ex)
 			{
-				lstConteudo[2] = ex.Message;
+				//lstConteudo[2] = ex.Message;
 			}
 			return lstConteudo;
 		}

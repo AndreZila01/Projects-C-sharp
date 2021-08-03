@@ -122,3 +122,4 @@ C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotif
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.exe.manifest
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.application
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Gma.System.MouseKeyHook.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.AssemblyReference.cache

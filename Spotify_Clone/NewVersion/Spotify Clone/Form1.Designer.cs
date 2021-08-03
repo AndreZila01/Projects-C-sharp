@@ -85,6 +85,8 @@
 			this.pnlDiscord = new System.Windows.Forms.Panel();
 			this.lblDuracao = new System.Windows.Forms.Label();
 			this.lblNomeDisc = new System.Windows.Forms.Label();
+			this.switchNome = new ToggleButtonExample.CeLearningToggle();
+			this.switchDuracao = new ToggleButtonExample.CeLearningToggle();
 			this.panel9 = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
 			this.chkDiscord = new System.Windows.Forms.CheckBox();
@@ -93,15 +95,13 @@
 			this.label14 = new System.Windows.Forms.Label();
 			this.txtPaths = new System.Windows.Forms.TextBox();
 			this.label13 = new System.Windows.Forms.Label();
+			this.switchSO = new ToggleButtonExample.CeLearningToggle();
 			this.lblSO = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel14 = new System.Windows.Forms.Panel();
-			this.switchNome = new ToggleButtonExample.CeLearningToggle();
-			this.switchDuracao = new ToggleButtonExample.CeLearningToggle();
-			this.switchSO = new ToggleButtonExample.CeLearningToggle();
 			this.pnlTop.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picSettings)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_MaxMin)).BeginInit();
@@ -505,6 +505,34 @@
 			this.lblNomeDisc.Name = "lblNomeDisc";
 			this.lblNomeDisc.Click += new System.EventHandler(this.label11_Click);
 			// 
+			// switchNome
+			// 
+			resources.ApplyResources(this.switchNome, "switchNome");
+			this.switchNome.BorderColor = System.Drawing.Color.Transparent;
+			this.switchNome.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchNome.ForeColor = System.Drawing.Color.White;
+			this.switchNome.IsOn = false;
+			this.switchNome.Name = "switchNome";
+			this.switchNome.OffColor = System.Drawing.Color.DarkGray;
+			this.switchNome.OffText = "OFF";
+			this.switchNome.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+			this.switchNome.OnText = "ON";
+			this.switchNome.TextEnabled = true;
+			// 
+			// switchDuracao
+			// 
+			resources.ApplyResources(this.switchDuracao, "switchDuracao");
+			this.switchDuracao.BorderColor = System.Drawing.Color.Transparent;
+			this.switchDuracao.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchDuracao.ForeColor = System.Drawing.Color.White;
+			this.switchDuracao.IsOn = false;
+			this.switchDuracao.Name = "switchDuracao";
+			this.switchDuracao.OffColor = System.Drawing.Color.DarkGray;
+			this.switchDuracao.OffText = "OFF";
+			this.switchDuracao.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+			this.switchDuracao.OnText = "ON";
+			this.switchDuracao.TextEnabled = true;
+			// 
 			// panel9
 			// 
 			this.panel9.Controls.Add(this.label3);
@@ -563,6 +591,20 @@
 			this.label13.Name = "label13";
 			this.label13.Tag = "En -> Choose language - changes will be applied after restarting the app";
 			// 
+			// switchSO
+			// 
+			resources.ApplyResources(this.switchSO, "switchSO");
+			this.switchSO.BorderColor = System.Drawing.Color.Transparent;
+			this.switchSO.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchSO.ForeColor = System.Drawing.Color.White;
+			this.switchSO.IsOn = false;
+			this.switchSO.Name = "switchSO";
+			this.switchSO.OffColor = System.Drawing.Color.DarkGray;
+			this.switchSO.OffText = "OFF";
+			this.switchSO.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+			this.switchSO.OnText = "ON";
+			this.switchSO.TextEnabled = true;
+			// 
 			// lblSO
 			// 
 			resources.ApplyResources(this.lblSO, "lblSO");
@@ -601,55 +643,13 @@
 			resources.ApplyResources(this.panel14, "panel14");
 			this.panel14.Name = "panel14";
 			// 
-			// switchNome
-			// 
-			resources.ApplyResources(this.switchNome, "switchNome");
-			this.switchNome.BorderColor = System.Drawing.Color.Transparent;
-			this.switchNome.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchNome.ForeColor = System.Drawing.Color.White;
-			this.switchNome.IsOn = false;
-			this.switchNome.Name = "switchNome";
-			this.switchNome.OffColor = System.Drawing.Color.DarkGray;
-			this.switchNome.OffText = "OFF";
-			this.switchNome.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-			this.switchNome.OnText = "ON";
-			this.switchNome.TextEnabled = true;
-			// 
-			// switchDuracao
-			// 
-			resources.ApplyResources(this.switchDuracao, "switchDuracao");
-			this.switchDuracao.BorderColor = System.Drawing.Color.Transparent;
-			this.switchDuracao.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchDuracao.ForeColor = System.Drawing.Color.White;
-			this.switchDuracao.IsOn = false;
-			this.switchDuracao.Name = "switchDuracao";
-			this.switchDuracao.OffColor = System.Drawing.Color.DarkGray;
-			this.switchDuracao.OffText = "OFF";
-			this.switchDuracao.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-			this.switchDuracao.OnText = "ON";
-			this.switchDuracao.TextEnabled = true;
-			// 
-			// switchSO
-			// 
-			resources.ApplyResources(this.switchSO, "switchSO");
-			this.switchSO.BorderColor = System.Drawing.Color.Transparent;
-			this.switchSO.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchSO.ForeColor = System.Drawing.Color.White;
-			this.switchSO.IsOn = false;
-			this.switchSO.Name = "switchSO";
-			this.switchSO.OffColor = System.Drawing.Color.DarkGray;
-			this.switchSO.OffText = "OFF";
-			this.switchSO.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-			this.switchSO.OnText = "ON";
-			this.switchSO.TextEnabled = true;
-			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.pnlSettings);
 			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlTop);
+			this.Controls.Add(this.pnlSettings);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);

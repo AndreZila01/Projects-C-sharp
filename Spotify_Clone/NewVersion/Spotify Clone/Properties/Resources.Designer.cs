@@ -181,6 +181,15 @@ namespace Spotify_Clone.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to b14ca5898a4e4133bbce2ea2315a1916.
+        /// </summary>
+        internal static string Key {
+            get {
+                return ResourceManager.GetString("Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap mais {

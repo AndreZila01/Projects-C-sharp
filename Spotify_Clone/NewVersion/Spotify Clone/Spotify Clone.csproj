@@ -112,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Backend.cs" />
+    <Compile Include="Classes\SaveData.cs" />
     <Compile Include="Extensions\FolderSelectDialog.cs" />
     <Compile Include="Extensions\Reflector.cs" />
     <Compile Include="Extensions\Switch.cs">
