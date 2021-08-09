@@ -63,16 +63,6 @@ namespace Spotify_Clone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add {
-            get {
-                object obj = ResourceManager.GetObject("add", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap arquivo_aberto {
             get {
                 object obj = ResourceManager.GetObject("arquivo-aberto", resourceCulture);
@@ -136,6 +126,16 @@ namespace Spotify_Clone.Properties {
         internal static System.Drawing.Bitmap Diminuir {
             get {
                 object obj = ResourceManager.GetObject("Diminuir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap down {
+            get {
+                object obj = ResourceManager.GetObject("down", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

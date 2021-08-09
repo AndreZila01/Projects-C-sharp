@@ -113,11 +113,11 @@
   <ItemGroup>
     <Compile Include="Classes\Backend.cs" />
     <Compile Include="Classes\SaveData.cs" />
-    <Compile Include="Extensions\FolderSelectDialog.cs" />
-    <Compile Include="Extensions\Reflector.cs" />
-    <Compile Include="Extensions\Switch.cs">
+    <Compile Include="Extensions\CeLearningToggle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Extensions\FolderSelectDialog.cs" />
+    <Compile Include="Extensions\Reflector.cs" />
     <Compile Include="Extensions\DiscordRpc.cs" />
     <Compile Include="Extensions\ExtenssionMethods.cs" />
     <Compile Include="Extensions\MyRectangle.cs" />
@@ -251,6 +251,8 @@
     <None Include="Resources\settings.png" />
     <None Include="Resources\mais.png" />
     <None Include="Resources\arquivo-aberto.png" />
+    <None Include="Resources\Image1.png" />
+    <None Include="Resources\down-arrow.png" />
     <Content Include="Resources\Spotify.ico" />
     <Content Include="Spotify.ico" />
   </ItemGroup>

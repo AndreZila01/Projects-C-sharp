@@ -19,27 +19,6 @@ C:\Users\André Custódio\source\repos\Spotify Clone\Spotify Clone\bin\Debug\AxI
 C:\Users\André Custódio\source\repos\Spotify Clone\Spotify Clone\obj\Debug\Spotify Clone.csproj.CopyComplete
 C:\Users\André Custódio\source\repos\Spotify Clone\Spotify Clone\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
 C:\Users\André Custódio\source\repos\Spotify Clone\Spotify Clone\bin\Debug\AudioSwitcher.AudioApi.dll
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.exe.config
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.exe
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.pdb
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\AudioSwitcher.AudioApi.dll
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Newtonsoft.Json.dll
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Newtonsoft.Json.xml
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Interop.WMPLib.dll
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Interop.WMPLib.dll
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\AxInterop.WMPLib.dll
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.ResolveComReference.cache
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify_Clone.Form1.resources
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify_Clone.Form2.resources
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify_Clone.Video.resources
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify_Clone.Properties.Resources.resources
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.GenerateResource.cache
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.CoreCompileInputs.cache
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.CopyComplete
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.exe
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.pdb
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\bin\Debug\Spotify Clone.pdb
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
 C:\Users\andre\source\repos\Spotify Clone\Spotify Clone\bin\Debug\AudioSwitcher.AudioApi.dll
@@ -117,9 +96,30 @@ C:\Users\utilizador\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\S
 C:\Users\utilizador\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.exe
 C:\Users\utilizador\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.pdb
 C:\Users\utilizador\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.exe.config
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.exe.manifest
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.application
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\AudioSwitcher.AudioApi.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Gma.System.MouseKeyHook.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Newtonsoft.Json.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Newtonsoft.Json.xml
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Interop.WMPLib.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Interop.WMPLib.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.ResolveComReference.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify_Clone.Form1.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify_Clone.Form2.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify_Clone.Video.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify_Clone.Properties.Resources.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.GenerateResource.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.CoreCompileInputs.cache
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.exe.manifest
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.application
-C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Gma.System.MouseKeyHook.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.CopyComplete
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.pdb
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.AssemblyReference.cache

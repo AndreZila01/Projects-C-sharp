@@ -29,11 +29,12 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.Windows.Forms.TrackBar trackBar1;
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.pnlTop = new System.Windows.Forms.Panel();
 			this.picSettings = new System.Windows.Forms.PictureBox();
 			this.pE_MaxMin = new System.Windows.Forms.PictureBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.picForm3 = new System.Windows.Forms.PictureBox();
 			this.pE_minimizar = new System.Windows.Forms.PictureBox();
 			this.pE_Close = new System.Windows.Forms.PictureBox();
 			this.panel2 = new System.Windows.Forms.Panel();
@@ -42,30 +43,31 @@
 			this.PainelControl1 = new System.Windows.Forms.Panel();
 			this.pnlPlayList = new System.Windows.Forms.Panel();
 			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-			this.pictureEdit3 = new System.Windows.Forms.PictureBox();
+			this.picAddPlaylist = new System.Windows.Forms.PictureBox();
 			this.pnlControlo = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.panel7 = new System.Windows.Forms.Panel();
-			this.progressBar1 = new System.Windows.Forms.ProgressBar();
+			this.PBC = new System.Windows.Forms.ProgressBar();
 			this.panel6 = new System.Windows.Forms.Panel();
-			this.pictureBox7 = new System.Windows.Forms.PictureBox();
-			this.pictureBox5 = new System.Windows.Forms.PictureBox();
-			this.pictureBox4 = new System.Windows.Forms.PictureBox();
-			this.pictureBox3 = new System.Windows.Forms.PictureBox();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.pE_Random = new System.Windows.Forms.PictureBox();
+			this.pE_Repit = new System.Windows.Forms.PictureBox();
+			this.pE_Next = new System.Windows.Forms.PictureBox();
+			this.pE_PauseaPlay = new System.Windows.Forms.PictureBox();
+			this.pE_previous = new System.Windows.Forms.PictureBox();
 			this.panel4 = new System.Windows.Forms.Panel();
-			this.pictureBox6 = new System.Windows.Forms.PictureBox();
+			this.labelControl4 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.picInfos = new System.Windows.Forms.PictureBox();
+			this.labelControl2 = new System.Windows.Forms.Label();
 			this.pnlConteudo = new System.Windows.Forms.Panel();
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			this.cmsMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.TSMIRemove = new System.Windows.Forms.ToolStripMenuItem();
 			this.TSMIEditPlayList = new System.Windows.Forms.ToolStripMenuItem();
-			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.timer2 = new System.Windows.Forms.Timer(this.components);
-			this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+			this.bgwCarregar = new System.ComponentModel.BackgroundWorker();
 			this.pnlCont = new System.Windows.Forms.Panel();
 			this.pnlSettings = new System.Windows.Forms.Panel();
 			this.pnlAtalho = new System.Windows.Forms.Panel();
@@ -83,48 +85,51 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.chkAtalho = new System.Windows.Forms.CheckBox();
 			this.pnlDiscord = new System.Windows.Forms.Panel();
+			this.switchDuracao = new ToggleButtonExample.CeLearningToggle();
+			this.switchNome = new ToggleButtonExample.CeLearningToggle();
 			this.lblDuracao = new System.Windows.Forms.Label();
 			this.lblNomeDisc = new System.Windows.Forms.Label();
-			this.switchNome = new ToggleButtonExample.CeLearningToggle();
-			this.switchDuracao = new ToggleButtonExample.CeLearningToggle();
 			this.panel9 = new System.Windows.Forms.Panel();
-			this.label3 = new System.Windows.Forms.Label();
 			this.chkDiscord = new System.Windows.Forms.CheckBox();
+			this.label3 = new System.Windows.Forms.Label();
 			this.panel8 = new System.Windows.Forms.Panel();
+			this.switchSO = new ToggleButtonExample.CeLearningToggle();
 			this.pctPaths = new System.Windows.Forms.PictureBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.txtPaths = new System.Windows.Forms.TextBox();
 			this.label13 = new System.Windows.Forms.Label();
-			this.switchSO = new ToggleButtonExample.CeLearningToggle();
 			this.lblSO = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel14 = new System.Windows.Forms.Panel();
+			trackBar1 = new System.Windows.Forms.TrackBar();
+			((System.ComponentModel.ISupportInitialize)(trackBar1)).BeginInit();
 			this.pnlTop.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picSettings)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_MaxMin)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picForm3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).BeginInit();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.PainelControl1.SuspendLayout();
 			this.pnlPlayList.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picAddPlaylist)).BeginInit();
 			this.pnlControlo.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel7.SuspendLayout();
 			this.panel6.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pE_Random)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pE_Repit)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pE_Next)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pE_PauseaPlay)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pE_previous)).BeginInit();
 			this.panel4.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.picInfos)).BeginInit();
 			this.pnlConteudo.SuspendLayout();
 			this.cmsMenuStrip.SuspendLayout();
 			this.pnlCont.SuspendLayout();
@@ -137,12 +142,22 @@
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).BeginInit();
 			this.SuspendLayout();
 			// 
+			// trackBar1
+			// 
+			trackBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+			resources.ApplyResources(trackBar1, "trackBar1");
+			trackBar1.CausesValidation = false;
+			trackBar1.Cursor = System.Windows.Forms.Cursors.Default;
+			trackBar1.Name = "trackBar1";
+			trackBar1.TabStop = false;
+			trackBar1.Value = 5;
+			// 
 			// pnlTop
 			// 
 			this.pnlTop.BackColor = System.Drawing.Color.CadetBlue;
 			this.pnlTop.Controls.Add(this.picSettings);
 			this.pnlTop.Controls.Add(this.pE_MaxMin);
-			this.pnlTop.Controls.Add(this.pictureBox1);
+			this.pnlTop.Controls.Add(this.picForm3);
 			this.pnlTop.Controls.Add(this.pE_minimizar);
 			this.pnlTop.Controls.Add(this.pE_Close);
 			resources.ApplyResources(this.pnlTop, "pnlTop");
@@ -165,11 +180,11 @@
 			this.pE_MaxMin.TabStop = false;
 			this.pE_MaxMin.Click += new System.EventHandler(this.pE_Click);
 			// 
-			// pictureBox1
+			// picForm3
 			// 
-			resources.ApplyResources(this.pictureBox1, "pictureBox1");
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.TabStop = false;
+			resources.ApplyResources(this.picForm3, "picForm3");
+			this.picForm3.Name = "picForm3";
+			this.picForm3.TabStop = false;
 			// 
 			// pE_minimizar
 			// 
@@ -211,7 +226,7 @@
 			// 
 			this.PainelControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(154)))), ((int)(((byte)(158)))));
 			this.PainelControl1.Controls.Add(this.pnlPlayList);
-			this.PainelControl1.Controls.Add(this.pictureEdit3);
+			this.PainelControl1.Controls.Add(this.picAddPlaylist);
 			resources.ApplyResources(this.PainelControl1, "PainelControl1");
 			this.PainelControl1.Name = "PainelControl1";
 			// 
@@ -228,12 +243,13 @@
 			resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
 			// 
-			// pictureEdit3
+			// picAddPlaylist
 			// 
-			this.pictureEdit3.Cursor = System.Windows.Forms.Cursors.Hand;
-			resources.ApplyResources(this.pictureEdit3, "pictureEdit3");
-			this.pictureEdit3.Name = "pictureEdit3";
-			this.pictureEdit3.TabStop = false;
+			this.picAddPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
+			resources.ApplyResources(this.picAddPlaylist, "picAddPlaylist");
+			this.picAddPlaylist.Name = "picAddPlaylist";
+			this.picAddPlaylist.TabStop = false;
+			this.picAddPlaylist.Click += new System.EventHandler(this.pictureEdit3_Click);
 			// 
 			// pnlControlo
 			// 
@@ -260,78 +276,92 @@
 			// panel7
 			// 
 			this.panel7.BackColor = System.Drawing.Color.DarkSlateGray;
-			this.panel7.Controls.Add(this.progressBar1);
+			this.panel7.Controls.Add(this.PBC);
 			resources.ApplyResources(this.panel7, "panel7");
 			this.panel7.Name = "panel7";
 			// 
-			// progressBar1
+			// PBC
 			// 
-			resources.ApplyResources(this.progressBar1, "progressBar1");
-			this.progressBar1.Name = "progressBar1";
+			resources.ApplyResources(this.PBC, "PBC");
+			this.PBC.Name = "PBC";
 			// 
 			// panel6
 			// 
-			this.panel6.Controls.Add(this.pictureBox7);
-			this.panel6.Controls.Add(this.pictureBox5);
-			this.panel6.Controls.Add(this.pictureBox4);
-			this.panel6.Controls.Add(this.pictureBox3);
-			this.panel6.Controls.Add(this.pictureBox2);
+			this.panel6.Controls.Add(this.pE_Random);
+			this.panel6.Controls.Add(this.pE_Repit);
+			this.panel6.Controls.Add(this.pE_Next);
+			this.panel6.Controls.Add(this.pE_PauseaPlay);
+			this.panel6.Controls.Add(this.pE_previous);
 			resources.ApplyResources(this.panel6, "panel6");
 			this.panel6.Name = "panel6";
 			// 
-			// pictureBox7
+			// pE_Random
 			// 
-			resources.ApplyResources(this.pictureBox7, "pictureBox7");
-			this.pictureBox7.Name = "pictureBox7";
-			this.pictureBox7.TabStop = false;
-			this.pictureBox7.Click += new System.EventHandler(this.PicFunPrin);
+			resources.ApplyResources(this.pE_Random, "pE_Random");
+			this.pE_Random.Name = "pE_Random";
+			this.pE_Random.TabStop = false;
+			this.pE_Random.Click += new System.EventHandler(this.pE_Click);
 			// 
-			// pictureBox5
+			// pE_Repit
 			// 
-			resources.ApplyResources(this.pictureBox5, "pictureBox5");
-			this.pictureBox5.Name = "pictureBox5";
-			this.pictureBox5.TabStop = false;
-			this.pictureBox5.Click += new System.EventHandler(this.PicFunPrin);
+			resources.ApplyResources(this.pE_Repit, "pE_Repit");
+			this.pE_Repit.Name = "pE_Repit";
+			this.pE_Repit.TabStop = false;
+			this.pE_Repit.Click += new System.EventHandler(this.pE_Click);
 			// 
-			// pictureBox4
+			// pE_Next
 			// 
-			resources.ApplyResources(this.pictureBox4, "pictureBox4");
-			this.pictureBox4.Name = "pictureBox4";
-			this.pictureBox4.TabStop = false;
-			this.pictureBox4.Click += new System.EventHandler(this.PicFunPrin);
+			resources.ApplyResources(this.pE_Next, "pE_Next");
+			this.pE_Next.Name = "pE_Next";
+			this.pE_Next.TabStop = false;
+			this.pE_Next.Click += new System.EventHandler(this.pE_Click);
 			// 
-			// pictureBox3
+			// pE_PauseaPlay
 			// 
-			resources.ApplyResources(this.pictureBox3, "pictureBox3");
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.TabStop = false;
-			this.pictureBox3.Click += new System.EventHandler(this.PicFunPrin);
+			resources.ApplyResources(this.pE_PauseaPlay, "pE_PauseaPlay");
+			this.pE_PauseaPlay.Name = "pE_PauseaPlay";
+			this.pE_PauseaPlay.TabStop = false;
+			this.pE_PauseaPlay.Click += new System.EventHandler(this.pE_Click);
 			// 
-			// pictureBox2
+			// pE_previous
 			// 
-			resources.ApplyResources(this.pictureBox2, "pictureBox2");
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.TabStop = false;
-			this.pictureBox2.Click += new System.EventHandler(this.PicFunPrin);
+			resources.ApplyResources(this.pE_previous, "pE_previous");
+			this.pE_previous.Name = "pE_previous";
+			this.pE_previous.TabStop = false;
+			this.pE_previous.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// panel4
 			// 
 			this.panel4.BackColor = System.Drawing.Color.Teal;
-			this.panel4.Controls.Add(this.pictureBox6);
+			this.panel4.Controls.Add(trackBar1);
+			this.panel4.Controls.Add(this.labelControl4);
 			resources.ApplyResources(this.panel4, "panel4");
 			this.panel4.Name = "panel4";
 			// 
-			// pictureBox6
+			// labelControl4
 			// 
-			resources.ApplyResources(this.pictureBox6, "pictureBox6");
-			this.pictureBox6.Name = "pictureBox6";
-			this.pictureBox6.TabStop = false;
+			resources.ApplyResources(this.labelControl4, "labelControl4");
+			this.labelControl4.Name = "labelControl4";
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+			this.panel1.Controls.Add(this.picInfos);
+			this.panel1.Controls.Add(this.labelControl2);
 			resources.ApplyResources(this.panel1, "panel1");
 			this.panel1.Name = "panel1";
+			// 
+			// picInfos
+			// 
+			resources.ApplyResources(this.picInfos, "picInfos");
+			this.picInfos.Image = global::Spotify_Clone.Properties.Resources.info;
+			this.picInfos.Name = "picInfos";
+			this.picInfos.TabStop = false;
+			// 
+			// labelControl2
+			// 
+			resources.ApplyResources(this.labelControl2, "labelControl2");
+			this.labelControl2.Name = "labelControl2";
 			// 
 			// pnlConteudo
 			// 
@@ -363,9 +393,18 @@
 			resources.ApplyResources(this.TSMIEditPlayList, "TSMIEditPlayList");
 			this.TSMIEditPlayList.Name = "TSMIEditPlayList";
 			// 
-			// openFileDialog1
+			// timer1
 			// 
-			this.openFileDialog1.FileName = "openFileDialog1";
+			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+			// 
+			// timer2
+			// 
+			this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+			// 
+			// bgwCarregar
+			// 
+			this.bgwCarregar.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwCarregar_DoWork);
+			this.bgwCarregar.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwCarregar_RunWorkerCompleted);
 			// 
 			// pnlCont
 			// 
@@ -486,12 +525,40 @@
 			// 
 			// pnlDiscord
 			// 
+			this.pnlDiscord.Controls.Add(this.switchDuracao);
+			this.pnlDiscord.Controls.Add(this.switchNome);
 			this.pnlDiscord.Controls.Add(this.lblDuracao);
 			this.pnlDiscord.Controls.Add(this.lblNomeDisc);
-			this.pnlDiscord.Controls.Add(this.switchNome);
-			this.pnlDiscord.Controls.Add(this.switchDuracao);
 			resources.ApplyResources(this.pnlDiscord, "pnlDiscord");
 			this.pnlDiscord.Name = "pnlDiscord";
+			// 
+			// switchDuracao
+			// 
+			this.switchDuracao.BorderColor = System.Drawing.Color.Transparent;
+			this.switchDuracao.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchDuracao.ForeColor = System.Drawing.Color.Transparent;
+			this.switchDuracao.IsOn = false;
+			resources.ApplyResources(this.switchDuracao, "switchDuracao");
+			this.switchDuracao.Name = "switchDuracao";
+			this.switchDuracao.OffColor = System.Drawing.Color.DarkGray;
+			this.switchDuracao.OffText = "OFF";
+			this.switchDuracao.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+			this.switchDuracao.OnText = "ON";
+			this.switchDuracao.TextEnabled = true;
+			// 
+			// switchNome
+			// 
+			this.switchNome.BorderColor = System.Drawing.Color.Transparent;
+			this.switchNome.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchNome.ForeColor = System.Drawing.Color.Transparent;
+			this.switchNome.IsOn = false;
+			resources.ApplyResources(this.switchNome, "switchNome");
+			this.switchNome.Name = "switchNome";
+			this.switchNome.OffColor = System.Drawing.Color.DarkGray;
+			this.switchNome.OffText = "OFF";
+			this.switchNome.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+			this.switchNome.OnText = "ON";
+			this.switchNome.TextEnabled = true;
 			// 
 			// lblDuracao
 			// 
@@ -505,45 +572,12 @@
 			this.lblNomeDisc.Name = "lblNomeDisc";
 			this.lblNomeDisc.Click += new System.EventHandler(this.label11_Click);
 			// 
-			// switchNome
-			// 
-			resources.ApplyResources(this.switchNome, "switchNome");
-			this.switchNome.BorderColor = System.Drawing.Color.Transparent;
-			this.switchNome.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchNome.ForeColor = System.Drawing.Color.White;
-			this.switchNome.IsOn = false;
-			this.switchNome.Name = "switchNome";
-			this.switchNome.OffColor = System.Drawing.Color.DarkGray;
-			this.switchNome.OffText = "OFF";
-			this.switchNome.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-			this.switchNome.OnText = "ON";
-			this.switchNome.TextEnabled = true;
-			// 
-			// switchDuracao
-			// 
-			resources.ApplyResources(this.switchDuracao, "switchDuracao");
-			this.switchDuracao.BorderColor = System.Drawing.Color.Transparent;
-			this.switchDuracao.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchDuracao.ForeColor = System.Drawing.Color.White;
-			this.switchDuracao.IsOn = false;
-			this.switchDuracao.Name = "switchDuracao";
-			this.switchDuracao.OffColor = System.Drawing.Color.DarkGray;
-			this.switchDuracao.OffText = "OFF";
-			this.switchDuracao.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-			this.switchDuracao.OnText = "ON";
-			this.switchDuracao.TextEnabled = true;
-			// 
 			// panel9
 			// 
-			this.panel9.Controls.Add(this.label3);
 			this.panel9.Controls.Add(this.chkDiscord);
+			this.panel9.Controls.Add(this.label3);
 			resources.ApplyResources(this.panel9, "panel9");
 			this.panel9.Name = "panel9";
-			// 
-			// label3
-			// 
-			resources.ApplyResources(this.label3, "label3");
-			this.label3.Name = "label3";
 			// 
 			// chkDiscord
 			// 
@@ -552,13 +586,18 @@
 			this.chkDiscord.UseVisualStyleBackColor = true;
 			this.chkDiscord.Click += new System.EventHandler(this.checkBox1_Click);
 			// 
+			// label3
+			// 
+			resources.ApplyResources(this.label3, "label3");
+			this.label3.Name = "label3";
+			// 
 			// panel8
 			// 
+			this.panel8.Controls.Add(this.switchSO);
 			this.panel8.Controls.Add(this.pctPaths);
 			this.panel8.Controls.Add(this.label14);
 			this.panel8.Controls.Add(this.txtPaths);
 			this.panel8.Controls.Add(this.label13);
-			this.panel8.Controls.Add(this.switchSO);
 			this.panel8.Controls.Add(this.lblSO);
 			this.panel8.Controls.Add(this.label10);
 			this.panel8.Controls.Add(this.label2);
@@ -566,6 +605,20 @@
 			this.panel8.Controls.Add(this.label1);
 			resources.ApplyResources(this.panel8, "panel8");
 			this.panel8.Name = "panel8";
+			// 
+			// switchSO
+			// 
+			this.switchSO.BorderColor = System.Drawing.Color.Transparent;
+			this.switchSO.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.switchSO.ForeColor = System.Drawing.Color.Transparent;
+			this.switchSO.IsOn = false;
+			resources.ApplyResources(this.switchSO, "switchSO");
+			this.switchSO.Name = "switchSO";
+			this.switchSO.OffColor = System.Drawing.Color.DarkGray;
+			this.switchSO.OffText = "OFF";
+			this.switchSO.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+			this.switchSO.OnText = "ON";
+			this.switchSO.TextEnabled = true;
 			// 
 			// pctPaths
 			// 
@@ -590,20 +643,6 @@
 			resources.ApplyResources(this.label13, "label13");
 			this.label13.Name = "label13";
 			this.label13.Tag = "En -> Choose language - changes will be applied after restarting the app";
-			// 
-			// switchSO
-			// 
-			resources.ApplyResources(this.switchSO, "switchSO");
-			this.switchSO.BorderColor = System.Drawing.Color.Transparent;
-			this.switchSO.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchSO.ForeColor = System.Drawing.Color.White;
-			this.switchSO.IsOn = false;
-			this.switchSO.Name = "switchSO";
-			this.switchSO.OffColor = System.Drawing.Color.DarkGray;
-			this.switchSO.OffText = "OFF";
-			this.switchSO.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-			this.switchSO.OnText = "ON";
-			this.switchSO.TextEnabled = true;
 			// 
 			// lblSO
 			// 
@@ -648,34 +687,36 @@
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.pnlCont);
-			this.Controls.Add(this.pnlTop);
 			this.Controls.Add(this.pnlSettings);
+			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
+			((System.ComponentModel.ISupportInitialize)(trackBar1)).EndInit();
 			this.pnlTop.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.picSettings)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_MaxMin)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picForm3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).EndInit();
 			this.panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.PainelControl1.ResumeLayout(false);
 			this.pnlPlayList.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picAddPlaylist)).EndInit();
 			this.pnlControlo.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);
 			this.panel5.ResumeLayout(false);
 			this.panel7.ResumeLayout(false);
 			this.panel6.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pE_Random)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pE_Repit)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pE_Next)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pE_PauseaPlay)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pE_previous)).EndInit();
 			this.panel4.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+			this.panel1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.picInfos)).EndInit();
 			this.pnlConteudo.ResumeLayout(false);
 			this.cmsMenuStrip.ResumeLayout(false);
 			this.pnlCont.ResumeLayout(false);
@@ -702,7 +743,7 @@
 		private System.Windows.Forms.PictureBox pE_Close;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Panel PainelControl1;
-		private System.Windows.Forms.PictureBox pictureEdit3;
+		private System.Windows.Forms.PictureBox picAddPlaylist;
 		private System.Windows.Forms.Panel pnlPlayList;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 		private System.Windows.Forms.Panel pnlControlo;
@@ -711,40 +752,35 @@
 		private System.Windows.Forms.Panel pnlPrincipal;
 		private System.ComponentModel.BackgroundWorker backgroundWorker1;
 		private System.Windows.Forms.ContextMenuStrip cmsMenuStrip;
-		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.Timer timer1;
 		private System.Windows.Forms.ToolStripMenuItem TSMIRemove;
 		private System.Windows.Forms.ToolStripMenuItem TSMIEditPlayList;
 		private System.Windows.Forms.Timer timer2;
-		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.ComponentModel.BackgroundWorker backgroundWorker2;
+		private System.Windows.Forms.PictureBox picForm3;
+		private System.ComponentModel.BackgroundWorker bgwCarregar;
 		private System.Windows.Forms.PictureBox pE_MaxMin;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Panel panel5;
-		private System.Windows.Forms.ProgressBar progressBar1;
-		private System.Windows.Forms.PictureBox pictureBox6;
+		private System.Windows.Forms.ProgressBar PBC;
 		private System.Windows.Forms.Panel panel6;
 		private System.Windows.Forms.Panel panel7;
-		private System.Windows.Forms.PictureBox pictureBox4;
-		private System.Windows.Forms.PictureBox pictureBox3;
-		private System.Windows.Forms.PictureBox pictureBox2;
-		private System.Windows.Forms.PictureBox pictureBox5;
-		private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.PictureBox pE_Next;
+		private System.Windows.Forms.PictureBox pE_PauseaPlay;
+		private System.Windows.Forms.PictureBox pE_previous;
+		private System.Windows.Forms.PictureBox pE_Repit;
+		private System.Windows.Forms.PictureBox pE_Random;
 		private System.Windows.Forms.PictureBox picSettings;
 		private System.Windows.Forms.Panel pnlCont;
 		private System.Windows.Forms.Panel pnlSettings;
 		private System.Windows.Forms.Panel panel8;
-		private System.Windows.Forms.CheckBox chkDiscord;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Panel panel9;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Panel panel10;
-		private ToggleButtonExample.CeLearningToggle switchDuracao;
-		private ToggleButtonExample.CeLearningToggle switchNome;
 		private System.Windows.Forms.Panel pnlDiscord;
 		private System.Windows.Forms.Label lblNomeDisc;
 		private System.Windows.Forms.Label lblDuracao;
@@ -753,7 +789,6 @@
 		private System.Windows.Forms.Panel pnlAtalho;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label lblSO;
-		private ToggleButtonExample.CeLearningToggle switchSO;
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Panel panel14;
 		private System.Windows.Forms.Button btnNext;
@@ -769,6 +804,13 @@
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.TextBox txtPaths;
 		private System.Windows.Forms.PictureBox pctPaths;
+		private System.Windows.Forms.PictureBox picInfos;
+		private System.Windows.Forms.Label labelControl2;
+		private System.Windows.Forms.Label labelControl4;
+		private System.Windows.Forms.CheckBox chkDiscord;
+		private ToggleButtonExample.CeLearningToggle switchSO;
+		private ToggleButtonExample.CeLearningToggle switchDuracao;
+		private ToggleButtonExample.CeLearningToggle switchNome;
 	}
 }
 

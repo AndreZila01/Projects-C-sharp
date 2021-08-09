@@ -117,14 +117,48 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="trackBar1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="trackBar1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="trackBar1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="trackBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="trackBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 10</value>
+  </data>
+  <data name="trackBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 45</value>
+  </data>
+  <data name="trackBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;trackBar1.Name" xml:space="preserve">
+    <value>trackBar1</value>
+  </data>
+  <data name="&gt;&gt;trackBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;trackBar1.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;trackBar1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="picSettings.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="picSettings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="picSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 5</value>
   </data>
@@ -134,7 +168,6 @@
   <data name="picSettings.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="picSettings.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
@@ -312,10 +345,10 @@
   <data name="&gt;&gt;pE_MaxMin.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="picForm3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picForm3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABu
         ugAAbroB1t6xFwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACctSURBVHhe7d17
@@ -489,31 +522,31 @@
         Z61hgJWjks8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="picForm3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="picForm3.Location" type="System.Drawing.Point, System.Drawing">
     <value>628, 8</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="picForm3.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 30</value>
   </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="picForm3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="picForm3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
+  <data name="&gt;&gt;picForm3.Name" xml:space="preserve">
+    <value>picForm3</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;picForm3.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;picForm3.Parent" xml:space="preserve">
     <value>pnlTop</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;picForm3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="pE_minimizar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -772,7 +805,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlTop.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="axWindowsMediaPlayer1.Enabled" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -902,7 +935,7 @@
   <data name="&gt;&gt;pnlPlayList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pictureEdit3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picAddPlaylist.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -1114,31 +1147,31 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="pictureEdit3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="picAddPlaylist.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureEdit3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="picAddPlaylist.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 9</value>
   </data>
-  <data name="pictureEdit3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="picAddPlaylist.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 35</value>
   </data>
-  <data name="pictureEdit3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="picAddPlaylist.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="pictureEdit3.TabIndex" type="System.Int32, mscorlib">
+  <data name="picAddPlaylist.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;pictureEdit3.Name" xml:space="preserve">
-    <value>pictureEdit3</value>
+  <data name="&gt;&gt;picAddPlaylist.Name" xml:space="preserve">
+    <value>picAddPlaylist</value>
   </data>
-  <data name="&gt;&gt;pictureEdit3.Type" xml:space="preserve">
+  <data name="&gt;&gt;picAddPlaylist.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureEdit3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;picAddPlaylist.Parent" xml:space="preserve">
     <value>PainelControl1</value>
   </data>
-  <data name="&gt;&gt;pictureEdit3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;picAddPlaylist.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="PainelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1165,31 +1198,31 @@
   <data name="&gt;&gt;PainelControl1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="progressBar1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="PBC.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
   </data>
-  <data name="progressBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PBC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PBC.Location" type="System.Drawing.Point, System.Drawing">
     <value>38, 3</value>
   </data>
-  <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PBC.Size" type="System.Drawing.Size, System.Drawing">
     <value>283, 23</value>
   </data>
-  <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
+  <data name="PBC.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;progressBar1.Name" xml:space="preserve">
-    <value>progressBar1</value>
+  <data name="&gt;&gt;PBC.Name" xml:space="preserve">
+    <value>PBC</value>
   </data>
-  <data name="&gt;&gt;progressBar1.Type" xml:space="preserve">
+  <data name="&gt;&gt;PBC.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;progressBar1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PBC.Parent" xml:space="preserve">
     <value>panel7</value>
   </data>
-  <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PBC.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="panel7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1216,10 +1249,10 @@
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pictureBox7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="pE_Random.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pE_Random.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -1390,37 +1423,37 @@
         xjnxG2IAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pE_Random.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pE_Random.Location" type="System.Drawing.Point, System.Drawing">
     <value>44, 1</value>
   </data>
-  <data name="pictureBox7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pE_Random.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 34</value>
   </data>
-  <data name="pictureBox7.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="pE_Random.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="pictureBox7.TabIndex" type="System.Int32, mscorlib">
+  <data name="pE_Random.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;pictureBox7.Name" xml:space="preserve">
-    <value>pictureBox7</value>
+  <data name="&gt;&gt;pE_Random.Name" xml:space="preserve">
+    <value>pE_Random</value>
   </data>
-  <data name="&gt;&gt;pictureBox7.Type" xml:space="preserve">
+  <data name="&gt;&gt;pE_Random.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pE_Random.Parent" xml:space="preserve">
     <value>panel6</value>
   </data>
-  <data name="&gt;&gt;pictureBox7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pE_Random.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pictureBox5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="pE_Repit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pE_Repit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -1635,37 +1668,37 @@
         7+j16PG45HK8LR+fwR9A9iDR83GNhRjsvnqXWuuv/ur/AwwGzr9KK8yOAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pE_Repit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pE_Repit.Location" type="System.Drawing.Point, System.Drawing">
     <value>284, 1</value>
   </data>
-  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pE_Repit.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 34</value>
   </data>
-  <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="pE_Repit.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
+  <data name="pE_Repit.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
-    <value>pictureBox5</value>
+  <data name="&gt;&gt;pE_Repit.Name" xml:space="preserve">
+    <value>pE_Repit</value>
   </data>
-  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
+  <data name="&gt;&gt;pE_Repit.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pE_Repit.Parent" xml:space="preserve">
     <value>panel6</value>
   </data>
-  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pE_Repit.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pictureBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="pE_Next.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pE_Next.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -1788,37 +1821,37 @@
         dLtr2AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pE_Next.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pE_Next.Location" type="System.Drawing.Point, System.Drawing">
     <value>224, 1</value>
   </data>
-  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pE_Next.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 34</value>
   </data>
-  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="pE_Next.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
+  <data name="pE_Next.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
+  <data name="&gt;&gt;pE_Next.Name" xml:space="preserve">
+    <value>pE_Next</value>
   </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
+  <data name="&gt;&gt;pE_Next.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pE_Next.Parent" xml:space="preserve">
     <value>panel6</value>
   </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pE_Next.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="pictureBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="pE_PauseaPlay.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pE_PauseaPlay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -2123,37 +2156,37 @@
         XHmZHmi0v/u7/w/CBY36xMlSQwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pE_PauseaPlay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pE_PauseaPlay.Location" type="System.Drawing.Point, System.Drawing">
     <value>164, 1</value>
   </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pE_PauseaPlay.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 34</value>
   </data>
-  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="pE_PauseaPlay.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="pE_PauseaPlay.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
+  <data name="&gt;&gt;pE_PauseaPlay.Name" xml:space="preserve">
+    <value>pE_PauseaPlay</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;pE_PauseaPlay.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pE_PauseaPlay.Parent" xml:space="preserve">
     <value>panel6</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pE_PauseaPlay.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="pE_previous.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pE_previous.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -2320,31 +2353,31 @@
         N/zjRuiTPun/Ay6oNj9+77ogAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pE_previous.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pE_previous.Location" type="System.Drawing.Point, System.Drawing">
     <value>104, 1</value>
   </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pE_previous.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 34</value>
   </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="pE_previous.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+  <data name="pE_previous.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
+  <data name="&gt;&gt;pE_previous.Name" xml:space="preserve">
+    <value>pE_previous</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;pE_previous.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pE_previous.Parent" xml:space="preserve">
     <value>panel6</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pE_previous.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -2395,206 +2428,32 @@
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pictureBox6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Right</value>
-  </data>
-  <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        xjnxG2IAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="pictureBox6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="labelControl4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 6</value>
+  <data name="labelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 17</value>
   </data>
-  <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 34</value>
+  <data name="labelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
   </data>
-  <data name="pictureBox6.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="labelControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="pictureBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="labelControl4.Text" xml:space="preserve">
+    <value>50</value>
   </data>
-  <data name="&gt;&gt;pictureBox6.Name" xml:space="preserve">
-    <value>pictureBox6</value>
+  <data name="&gt;&gt;labelControl4.Name" xml:space="preserve">
+    <value>labelControl4</value>
   </data>
-  <data name="&gt;&gt;pictureBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;labelControl4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;labelControl4.Parent" xml:space="preserve">
     <value>panel4</value>
   </data>
-  <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;labelControl4.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
@@ -2618,6 +2477,63 @@
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="picInfos.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="picInfos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picInfos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 16</value>
+  </data>
+  <data name="picInfos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 24</value>
+  </data>
+  <data name="picInfos.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="picInfos.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;picInfos.Name" xml:space="preserve">
+    <value>picInfos</value>
+  </data>
+  <data name="&gt;&gt;picInfos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picInfos.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;picInfos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelControl2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelControl2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 30</value>
+  </data>
+  <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 24</value>
+  </data>
+  <data name="labelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Name" xml:space="preserve">
+    <value>labelControl2</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -3003,16 +2919,13 @@
   <data name="&gt;&gt;cmsMenuStrip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>336, 17</value>
-  </metadata>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>476, 17</value>
   </metadata>
   <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>563, 17</value>
   </metadata>
-  <metadata name="backgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="bgwCarregar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>650, 17</value>
   </metadata>
   <data name="pnlCont.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -3516,6 +3429,54 @@ se acabares</value>
   <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="switchDuracao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>746, 30</value>
+  </data>
+  <data name="switchDuracao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 23</value>
+  </data>
+  <data name="switchDuracao.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="switchDuracao.Text" xml:space="preserve">
+    <value>ceLearningToggle3</value>
+  </data>
+  <data name="&gt;&gt;switchDuracao.Name" xml:space="preserve">
+    <value>switchDuracao</value>
+  </data>
+  <data name="&gt;&gt;switchDuracao.Type" xml:space="preserve">
+    <value>ToggleButtonExample.CeLearningToggle, Spotify Clone, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;switchDuracao.Parent" xml:space="preserve">
+    <value>pnlDiscord</value>
+  </data>
+  <data name="&gt;&gt;switchDuracao.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="switchNome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>746, 2</value>
+  </data>
+  <data name="switchNome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 23</value>
+  </data>
+  <data name="switchNome.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="switchNome.Text" xml:space="preserve">
+    <value>ceLearningToggle2</value>
+  </data>
+  <data name="&gt;&gt;switchNome.Name" xml:space="preserve">
+    <value>switchNome</value>
+  </data>
+  <data name="&gt;&gt;switchNome.Type" xml:space="preserve">
+    <value>ToggleButtonExample.CeLearningToggle, Spotify Clone, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;switchNome.Parent" xml:space="preserve">
+    <value>pnlDiscord</value>
+  </data>
+  <data name="&gt;&gt;switchNome.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="lblDuracao.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3547,7 +3508,7 @@ se acabares</value>
     <value>pnlDiscord</value>
   </data>
   <data name="&gt;&gt;lblDuracao.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="lblNomeDisc.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3580,60 +3541,6 @@ se acabares</value>
     <value>pnlDiscord</value>
   </data>
   <data name="&gt;&gt;lblNomeDisc.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="switchNome.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="switchNome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>715, 4</value>
-  </data>
-  <data name="switchNome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 22</value>
-  </data>
-  <data name="switchNome.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="switchNome.Text" xml:space="preserve">
-    <value>ceLearningToggle1</value>
-  </data>
-  <data name="&gt;&gt;switchNome.Name" xml:space="preserve">
-    <value>switchNome</value>
-  </data>
-  <data name="&gt;&gt;switchNome.Type" xml:space="preserve">
-    <value>ToggleButtonExample.CeLearningToggle, Spotify Clone, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;switchNome.Parent" xml:space="preserve">
-    <value>pnlDiscord</value>
-  </data>
-  <data name="&gt;&gt;switchNome.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="switchDuracao.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="switchDuracao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>715, 30</value>
-  </data>
-  <data name="switchDuracao.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 22</value>
-  </data>
-  <data name="switchDuracao.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="switchDuracao.Text" xml:space="preserve">
-    <value>ceLearningToggle2</value>
-  </data>
-  <data name="&gt;&gt;switchDuracao.Name" xml:space="preserve">
-    <value>switchDuracao</value>
-  </data>
-  <data name="&gt;&gt;switchDuracao.Type" xml:space="preserve">
-    <value>ToggleButtonExample.CeLearningToggle, Spotify Clone, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;switchDuracao.Parent" xml:space="preserve">
-    <value>pnlDiscord</value>
-  </data>
-  <data name="&gt;&gt;switchDuracao.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="pnlDiscord.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -3662,6 +3569,36 @@ se acabares</value>
   </data>
   <data name="&gt;&gt;pnlDiscord.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="chkDiscord.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkDiscord.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkDiscord.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 30</value>
+  </data>
+  <data name="chkDiscord.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 17</value>
+  </data>
+  <data name="chkDiscord.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="chkDiscord.Text" xml:space="preserve">
+    <value>Enviar informação para o discord</value>
+  </data>
+  <data name="&gt;&gt;chkDiscord.Name" xml:space="preserve">
+    <value>chkDiscord</value>
+  </data>
+  <data name="&gt;&gt;chkDiscord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkDiscord.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;chkDiscord.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -3697,36 +3634,6 @@ se acabares</value>
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="chkDiscord.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chkDiscord.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chkDiscord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 30</value>
-  </data>
-  <data name="chkDiscord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 17</value>
-  </data>
-  <data name="chkDiscord.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="chkDiscord.Text" xml:space="preserve">
-    <value>Enviar informação para o discord</value>
-  </data>
-  <data name="&gt;&gt;chkDiscord.Name" xml:space="preserve">
-    <value>chkDiscord</value>
-  </data>
-  <data name="&gt;&gt;chkDiscord.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chkDiscord.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;chkDiscord.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="panel9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -3752,6 +3659,30 @@ se acabares</value>
   </data>
   <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="switchSO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>746, 72</value>
+  </data>
+  <data name="switchSO.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 23</value>
+  </data>
+  <data name="switchSO.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="switchSO.Text" xml:space="preserve">
+    <value>ceLearningToggle1</value>
+  </data>
+  <data name="&gt;&gt;switchSO.Name" xml:space="preserve">
+    <value>switchSO</value>
+  </data>
+  <data name="&gt;&gt;switchSO.Type" xml:space="preserve">
+    <value>ToggleButtonExample.CeLearningToggle, Spotify Clone, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;switchSO.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;switchSO.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="pctPaths.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -3781,7 +3712,7 @@ se acabares</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;pctPaths.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3814,7 +3745,7 @@ se acabares</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="txtPaths.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -3841,7 +3772,7 @@ se acabares</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;txtPaths.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label13.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -3874,33 +3805,6 @@ se acabares</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="switchSO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="switchSO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>715, 67</value>
-  </data>
-  <data name="switchSO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 22</value>
-  </data>
-  <data name="switchSO.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="switchSO.Text" xml:space="preserve">
-    <value>ceLearningToggle3</value>
-  </data>
-  <data name="&gt;&gt;switchSO.Name" xml:space="preserve">
-    <value>switchSO</value>
-  </data>
-  <data name="&gt;&gt;switchSO.Type" xml:space="preserve">
-    <value>ToggleButtonExample.CeLearningToggle, Spotify Clone, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;switchSO.Parent" xml:space="preserve">
-    <value>panel8</value>
-  </data>
-  <data name="&gt;&gt;switchSO.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="lblSO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -4120,10 +4024,10 @@ se acabares</value>
     <value>Fill</value>
   </data>
   <data name="pnlSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, 41</value>
   </data>
   <data name="pnlSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>800, 409</value>
   </data>
   <data name="pnlSettings.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4141,12 +4045,9 @@ se acabares</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
@@ -5038,9 +4939,6 @@ se acabares</value>
         TkSuQmCC
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Spotify Clone</value>
   </data>
@@ -5062,12 +4960,6 @@ se acabares</value>
   <data name="&gt;&gt;TSMIEditPlayList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>openFileDialog1</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;timer1.Name" xml:space="preserve">
     <value>timer1</value>
   </data>
@@ -5080,10 +4972,10 @@ se acabares</value>
   <data name="&gt;&gt;timer2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;backgroundWorker2.Name" xml:space="preserve">
-    <value>backgroundWorker2</value>
+  <data name="&gt;&gt;bgwCarregar.Name" xml:space="preserve">
+    <value>bgwCarregar</value>
   </data>
-  <data name="&gt;&gt;backgroundWorker2.Type" xml:space="preserve">
+  <data name="&gt;&gt;bgwCarregar.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

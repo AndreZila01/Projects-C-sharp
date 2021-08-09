@@ -27,8 +27,8 @@ namespace Spotify_Clone.Classes
 			if (st.atal != 0)
 			{
 				Atalho atl = new Atalho();
-				if(Musicaant!= "Clicar no botão se acabares")
-				atl.MusicaAnterior = Musicaant;
+				if (Musicaant != "Clicar no botão se acabares")
+					atl.MusicaAnterior = Musicaant;
 				if (Pausa != "Clicar no botão se acabares")
 					atl.Pausa = Pausa;
 				if (Musicaseg != "Clicar no botão se acabares")
@@ -40,13 +40,13 @@ namespace Spotify_Clone.Classes
 			lstset.Add(st);
 			return lstset;
 		}
-		public List<PlayList> _listInformacoes = new List<PlayList>();
-		public void CreateFiles(string Paths, bool file)
+
+		private void CreateFiles(string Paths, bool file)
 		{
 			if (file == false)
 				Directory.CreateDirectory(Paths);
 			else
-				File.WriteAllText(Paths,EncryptADeDecrypt.EncryptOther("[]"));
+				File.WriteAllText(Paths, EncryptADeDecrypt.EncryptOther("[]"));
 
 		}
 
@@ -74,7 +74,7 @@ namespace Spotify_Clone.Classes
 				var ds = path == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = path;
 				CheckFiles(Paths);
 			}
-			if(readSettings==true)
+			if (readSettings == true)
 			{
 				var myString = EncryptADeDecrypt.DecryptString(Properties.Resources.Key, (File.ReadAllText(Paths + "/SpotifyClone/Settings.json")));
 				return JsonConvert.DeserializeObject<List<Settings>>(myString);
@@ -82,7 +82,7 @@ namespace Spotify_Clone.Classes
 			else
 			{
 				File.WriteAllText(Paths + "/SpotifyClone/Settings.json", EncryptADeDecrypt.EncryptOther(settings));
-				
+
 				if (!(Paths.Contains("Roaming")))
 					using (StreamWriter w = File.AppendText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt"))
 					{
@@ -93,8 +93,7 @@ namespace Spotify_Clone.Classes
 				return null;
 			}
 		}
-
-		public List<PlayList> WriteReadMusic(string json, bool readMusic, string settings, bool readSettings, string path)
+		public List<PlayList> WriteReadMusic(string json, bool readMusic, string path)
 		{
 			var Paths = "";
 			var ds = path == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = path;
@@ -103,7 +102,8 @@ namespace Spotify_Clone.Classes
 
 			try
 			{
-				CheckFiles(Paths);
+				if (!Paths.Contains("json"))
+					CheckFiles(Paths);
 			}
 			catch (Exception ex)
 			{
@@ -118,10 +118,11 @@ namespace Spotify_Clone.Classes
 				if (readMusic == true)
 				{
 					{
-						var myString = EncryptADeDecrypt.DecryptOther(File.ReadAllText(Paths + "/SpotifyClone/Musics.json"));
+						string myString = /*EncryptADeDecrypt.DecryptOther*/(File.ReadAllText(@"C:\Users\andre\AppData\Local\Temp\Musics.json"/*Paths + "/SpotifyClone/Musics.json"*/));
 						if (myString != "\"[]\"" || myString != null)
 						{
-							lstConteudo = JsonConvert.DeserializeObject<List<PlayList>>(myString);
+							//myString.Replace(@"\\", @"\");
+							lstConteudo = JsonConvert.DeserializeObject<List<PlayList>>(myString.ToString());
 						}
 					}
 				}
@@ -129,7 +130,7 @@ namespace Spotify_Clone.Classes
 				{
 					if (json != null)
 					{
-						File.WriteAllText(Paths + "/SpotifyClone/Musics.json", EncryptADeDecrypt.EncryptOther(json));
+						File.WriteAllText(Paths + "/SpotifyClone/Musics.json", /*EncryptADeDecrypt.EncryptOther*/json);
 					}
 				}
 			}
@@ -140,5 +141,32 @@ namespace Spotify_Clone.Classes
 			return lstConteudo;
 		}
 
+
+		List<double> ProduceRandom = new List<double>();
+		public List<double> RandomMusic(int IdPlayList, List<PlayList> _lst)
+		{
+			//foreach (string a in _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica)
+			//	Ordem_de_Reproducao.Add(0.0001);
+			//ProduceRandom.Add(0);
+			//ProduceRandom.RemoveAt(1);
+			_lst[IdPlayList].Caminho_da_Musica.ToList().ForEach(item =>//for (int d = 0; d < _lst[(IdPlayList)].Caminho_da_Musica.Count(); d++)
+			{
+				aqui:
+				Random rd = new Random();
+				int r = rd.Next(0, _lst[(IdPlayList)].Caminho_da_Musica.Count());
+				try
+				{
+					if ((!ProduceRandom.Contains(r)))
+						ProduceRandom.Add(r);
+					else
+						goto aqui;
+				}
+				catch
+				{
+					ProduceRandom.Add(r);
+				}
+			});
+			return ProduceRandom;
+		}
 	}
 }
