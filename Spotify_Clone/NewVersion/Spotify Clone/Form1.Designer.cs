@@ -300,6 +300,7 @@
 			resources.ApplyResources(this.pE_Random, "pE_Random");
 			this.pE_Random.Name = "pE_Random";
 			this.pE_Random.TabStop = false;
+			this.pE_Random.Tag = "0";
 			this.pE_Random.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// pE_Repit
@@ -307,6 +308,7 @@
 			resources.ApplyResources(this.pE_Repit, "pE_Repit");
 			this.pE_Repit.Name = "pE_Repit";
 			this.pE_Repit.TabStop = false;
+			this.pE_Repit.Tag = "0";
 			this.pE_Repit.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// pE_Next
@@ -321,6 +323,7 @@
 			resources.ApplyResources(this.pE_PauseaPlay, "pE_PauseaPlay");
 			this.pE_PauseaPlay.Name = "pE_PauseaPlay";
 			this.pE_PauseaPlay.TabStop = false;
+			this.pE_PauseaPlay.Tag = "0";
 			this.pE_PauseaPlay.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// pE_previous
@@ -387,11 +390,13 @@
 			// 
 			resources.ApplyResources(this.TSMIRemove, "TSMIRemove");
 			this.TSMIRemove.Name = "TSMIRemove";
+			this.TSMIRemove.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
 			// 
 			// TSMIEditPlayList
 			// 
 			resources.ApplyResources(this.TSMIEditPlayList, "TSMIEditPlayList");
 			this.TSMIEditPlayList.Name = "TSMIEditPlayList";
+			this.TSMIEditPlayList.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
 			// 
 			// timer1
 			// 

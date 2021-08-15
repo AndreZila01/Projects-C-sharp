@@ -61,7 +61,7 @@ namespace Spotify_Clone
 		Video fmr = new Video(); Backend bk = new Backend();
 		public static int t;
 		private void Lbl_Click(object sender, EventArgs e) { Label lbl = sender as Label; IdPlayList = (int)lbl.Tag; MusicaPlay(); }
-		private void Lbl_MouseHover(object sender, EventArgs e) { Label lbl = sender as Label; TSMIRemove.Tag = (int)lbl.Tag; TSMIEditPlayList.Tag = (int)lbl.Tag; }
+		
 		private void PIC_Click(object sender, EventArgs e)
 		{
 			FormVideo = false;
@@ -166,7 +166,7 @@ namespace Spotify_Clone
 				List<Settings> lst = bk.WriteReadSettings(txtPaths.Text, true, "");
 				SaveSettings(lst[0]);
 
-				List<PlayList> lstM = bk.WriteReadMusic(null, true, txtPaths.Text);
+				List<PlayList> lstM = bk.WriteReadMusic(true, txtPaths.Text, null);
 				//bk.CreateFiles(txtPaths.Text, true);
 			}
 			catch (Exception ex)
@@ -181,11 +181,75 @@ namespace Spotify_Clone
 			while (backgroundWorker1.IsBusy) Application.DoEvents();
 		}
 
-		private void removeThePlayListToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-
+			switch (((ToolStripMenuItem)sender).Name)
+			{
+				case "TSMIRemove":
+					{
+						try
+						{
+							if (picInfos.Tag != null)
+								if (int.Parse(picInfos.Tag.ToString()) == (int)((ToolStripMenuItem)sender).Tag)
+								{
+									PBC.Value = 0;
+									labelControl2.Text = "";
+									labelControl2.Tag = "";
+									axWindowsMediaPlayer1.URL = null;
+									pE_Random.Enabled = false;
+									timer1.Stop();
+									timer2.Stop();
+									pE_Random.Tag = 0;
+									pE_PauseaPlay.Tag = 0;
+									pE_PauseaPlay.Image = Properties.Resources.play;
+									pE_Random.Image = Properties.Resources.change;
+									axWindowsMediaPlayer1.Visible = false;
+									if (FormVideo == true)
+									{
+										FormCollection fc = Application.OpenForms;
+										foreach (Form frm in fc)
+										{
+											if (frm.Name == "Video")
+												frm.Close();
+										}
+									}
+								}
+							if ((IdPlayList) == ((int)((ToolStripMenuItem)sender).Tag) && (pE_PauseaPlay.Tag.ToString()) != "0")
+							{
+								labelControl2.Text = "";
+								IdPlayList = 0;
+								PBC.Value = 0;
+								timer1.Stop();
+								timer2.Stop();
+								axWindowsMediaPlayer1.URL = "";
+							}
+							IdPlayList = (int)((ToolStripMenuItem)sender).Tag;
+							_listInformacoes.Remove(_listInformacoes.FirstOrDefault(row => row.IDList == (int)((ToolStripMenuItem)sender).Tag));
+							_listInformacoes.ToList().ForEach(item =>
+							{
+								if(item.IDList>0)
+								item.IDList--;
+							});
+							var json = JsonConvert.SerializeObject(_listInformacoes);
+							if (txtPaths.Text == "%appdata%")
+								txtPaths.Text = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+							File.WriteAllText(txtPaths.Text + "/SpotifyClone/Musics.json", json);
+							Atualiza();
+						}
+						catch(Exception ex) { Atualiza(); }
+					}
+					break;
+				case "TSMIEditPlayList":
+					try
+					{
+						atualizacao = true;
+						IdPlayList = (int)((ToolStripMenuItem)sender).Tag;
+						AuxForm2(((ToolStripMenuItem)sender).Tag);
+					}
+					catch { }
+					break;
+			}
 		}
-		private void painel_MouseHover(object sender, EventArgs e) { Panel pnl = sender as Panel; TSMIRemove.Tag = (int)pnl.Tag; TSMIEditPlayList.Tag = (int)pnl.Tag; }
 		private void AuxForm2(object tag)
 		{
 			try
@@ -216,7 +280,7 @@ namespace Spotify_Clone
 				Form2 form2 = new Form2(atualizacao, IdPlayList, ecra, (txtPaths.Text));
 				form2.ShowDialog();
 				form2.Close();
-				_listInformacoes = bk.WriteReadMusic(null, true, txtPaths.Text);
+				_listInformacoes = bk.WriteReadMusic(true, txtPaths.Text, null);
 				if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 				this.Tag = "AddPnl";
 				//escrever();
@@ -267,7 +331,7 @@ namespace Spotify_Clone
 			//	File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
 			//}
 		}
-		private void PicEdit_MouseHover(object sender, EventArgs e) { PictureBox picture = sender as PictureBox; TSMIRemove.Tag = (int)picture.Tag; TSMIEditPlayList.Tag = (int)picture.Tag; }
+		
 		private void trackBar1_Click(object sender, EventArgs e)
 		{
 			labelControl2.Focus();
@@ -282,7 +346,53 @@ namespace Spotify_Clone
 			else if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPaused) timer1.Stop();
 		}
 		//private void RemoveinPlayList_Click(object sender, EventArgs e) { PictureBox picture = sender as PictureBox; _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.RemoveAt(int.Parse(picture.Tag.ToString())); PlaydaLista.Clear(); _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.ToList().ForEach(item => { NameMusic = item.Split(new string[] { "\\" }, StringSplitOptions.None); int TAMANHO = NameMusic.Length; int g = NameMusic[TAMANHO - 1].Count(); string f = NameMusic[TAMANHO - 1].Substring(0, g); PlaydaLista.Add(f); }); var json = JsonConvert.SerializeObject(_listInformacoes); Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp"); File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json); MusicaPlay(); }
-		private void pEAdicionar_Click(object sender, EventArgs e) { string[] files, path; PictureBox button = sender as PictureBox; OpenFileDialog ofd = new OpenFileDialog(); ofd.Multiselect = true; ofd.Filter = "Video and Music Files (*.mp3,*.au,*.m4a,*.mp4,*.m4v,*.mp4v)|*.mp3;*.au;*.m4a;*.mp4;*.m4v;*.mp4v"; ofd.Multiselect = true; if (ofd.ShowDialog() == DialogResult.OK) { files = ofd.SafeFileNames; path = ofd.FileNames; if (PlaydaLista.Count() == 0) { path.ToList().ForEach(item => { _Caminho_Musica.Add(item); NameMusic = item.Split(new string[] { "\\" }, StringSplitOptions.None); int TAMANHO = NameMusic.Length; int g = NameMusic[TAMANHO - 1].Count(); string f = NameMusic[TAMANHO - 1].Substring(0, g); PlaydaLista.Add(f); }); } else { path.ToList().ForEach(item => { if (_listInformacoes[IdPlayList - 1].Caminho_da_Musica.Contains(item) == false) { _Caminho_Musica.Add(item); NameMusic = item.Split(new string[] { "\\" }, StringSplitOptions.None); int TAMANHO = NameMusic.Length; int g = NameMusic[TAMANHO - 1].Count(); string f = NameMusic[TAMANHO - 1].Substring(0, g); PlaydaLista.Add(f); } }); } _listInformacoes[IdPlayList - 1].Caminho_da_Musica = _Caminho_Musica; Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp"); string json = JsonConvert.SerializeObject(_listInformacoes); File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json); MusicaPlay(); } Invalidate(); }
+		//private void pEAdicionar_Click(object sender, EventArgs e)
+		//{
+		//	string[] files, path;
+		//	PictureBox button = sender as PictureBox;
+		//	OpenFileDialog ofd = new OpenFileDialog();
+		//	ofd.Multiselect = true;
+		//	ofd.Filter = "Video and Music Files (*.mp3,*.au,*.m4a,*.mp4,*.m4v,*.mp4v)|*.mp3;*.au;*.m4a;*.mp4;*.m4v;*.mp4v";
+		//	ofd.Multiselect = true;
+		//	if (ofd.ShowDialog() == DialogResult.OK)
+		//	{
+		//		files = ofd.SafeFileNames;
+		//		path = ofd.FileNames;
+		//		if (PlaydaLista.Count() == 0)
+		//		{
+		//			path.ToList().ForEach(item =>
+		//			{
+		//				_Caminho_Musica.Add(item);
+		//				NameMusic = item.Split(new string[] { "\\" }, StringSplitOptions.None);
+		//				int TAMANHO = NameMusic.Length;
+		//				int g = NameMusic[TAMANHO - 1].Count();
+		//				string f = NameMusic[TAMANHO - 1].Substring(0, g);
+		//				PlaydaLista.Add(f);
+		//			});
+		//		}
+		//		else
+		//		{
+		//			path.ToList().ForEach(item =>
+		//			{
+		//				if (_listInformacoes[IdPlayList - 1].Caminho_da_Musica.Contains(item) == false)
+		//				{
+		//					_Caminho_Musica.Add(item);
+		//					NameMusic = item.Split(new string[] { "\\" }, StringSplitOptions.None);
+		//					int TAMANHO = NameMusic.Length;
+		//					int g = NameMusic[TAMANHO - 1].Count();
+		//					string f = NameMusic[TAMANHO - 1].Substring(0, g);
+		//					PlaydaLista.Add(f);
+		//				}
+		//			});
+		//		}
+		//		_listInformacoes[IdPlayList - 1].Caminho_da_Musica = _Caminho_Musica;
+		//		Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
+		//		string json = JsonConvert.SerializeObject(_listInformacoes);
+		//		File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
+		//		MusicaPlay();
+		//	}
+		//	Invalidate();
+		//}
 		#endregion
 		#region NEW SOURCE
 		List<Settings> settings = new List<Settings>();
@@ -419,7 +529,7 @@ namespace Spotify_Clone
 		{
 			Aqui:
 			pnlPrincipal.Controls.Clear();
-			if (this.Tag.ToString() == "MusicaPlay" || this.Tag.ToString()== "MusicaPlayD")
+			if (this.Tag.ToString() == "MusicaPlay" || this.Tag.ToString() == "MusicaPlayD")
 			{
 				int widht = Screen.PrimaryScreen.Bounds.Width;
 				int height = Screen.PrimaryScreen.Bounds.Height;
@@ -520,7 +630,8 @@ namespace Spotify_Clone
 				pe.SizeMode = PictureBoxSizeMode.Zoom;
 				pe.BorderStyle = BorderStyle.None;
 				pe.Cursor = Cursors.Hand;
-				pe.Click += pEAdicionar_Click;
+				pe.Name = "picAddMusic";
+				pe.Click += pE_Click;
 				pnlPrincipal.Controls.Add(pe);
 				Panel pnl = new Panel();
 				pnl.Location = new Point(5, 160);
@@ -546,7 +657,7 @@ namespace Spotify_Clone
 				flp.Controls.Clear();
 				try
 				{
-					int d = 0, limite=0;
+					int d = 0, limite = 0;
 					if (_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica != null)
 					{
 						if (this.Tag.ToString() == "MusicaPlayD")
@@ -666,6 +777,7 @@ namespace Spotify_Clone
 					flowLayoutPanel1.Margin = new Padding(0, 0, 0, 0);
 					flowLayoutPanel1.BackColor = Color.Transparent;
 					pnlPlayList.BorderStyle = BorderStyle.None;
+					int temp = 1;
 					_listInformacoes.ToList().ForEach(test =>
 					{
 						Panel pnl = new Panel();
@@ -676,8 +788,8 @@ namespace Spotify_Clone
 						pnl.BackColor = Color.FromArgb(92, 209, 213);
 						pnl.Anchor = (AnchorStyles.Right | AnchorStyles.Left);
 						pnl.ContextMenuStrip = cmsMenuStrip;
-						pnl.Tag = test.IDList;
-						pnl.MouseHover += painel_MouseHover;
+						pnl.Tag = temp;
+						pnl.MouseDown += painel_MouseDown;
 						pnl.Click += pnl_Click;
 						string s1 = test.Name;
 						int k = s1.Count() > 10 ? k = 10 : k = s1.Count();
@@ -690,8 +802,8 @@ namespace Spotify_Clone
 						pE_.BackColor = Color.Transparent;
 						pE_.BorderStyle = BorderStyle.None;
 						pE_.SizeMode = PictureBoxSizeMode.Zoom;
-						pE_.Tag = test.IDList;
-						pE_.MouseHover += PicEdit_MouseHover;
+						pE_.Tag = temp;
+						pE_.MouseDown += PicEdit_MouseDown;
 						pE_.Click += pE_Click;
 						pE_.Name = "picPlaylist";
 						pnl.Controls.Add(pE_);
@@ -702,11 +814,12 @@ namespace Spotify_Clone
 						lbl.Location = new Point(49, 20);
 						lbl.BackColor = Color.Transparent;
 						lbl.BorderStyle = BorderStyle.None;
-						lbl.Tag = test.IDList;
-						lbl.MouseHover += Lbl_MouseHover;
+						lbl.Tag = temp;
+						lbl.MouseDown += Lbl_MouseDown;
 						lbl.Click += Lbl_Click;
 						pnl.Controls.Add(lbl);
 						flowLayoutPanel1.Controls.Add(pnl);
+						temp++;
 					});
 				}
 				catch
@@ -721,19 +834,26 @@ namespace Spotify_Clone
 		{
 			if (this.Tag.ToString() != "MusicaPlay")
 			{
-				//Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-				//var json = JsonConvert.SerializeObject("[]");
-				//json = json.Replace("\"", "");
-				//File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
+				try
+				{
+					//Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
+					//var json = JsonConvert.SerializeObject("[]");
+					//json = json.Replace("\"", "");
+					//File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
 
-				if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt"))
-					txtPaths.Text = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt");
-				Backend bk = new Backend();
-				List<Settings> lst = bk.WriteReadSettings(txtPaths.Text, true, "");
-				SaveSettings(lst[0]);
+					if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt"))
+						txtPaths.Text = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt");
+					Backend bk = new Backend();
+					List<Settings> lst = bk.WriteReadSettings(txtPaths.Text, true, "");
+					SaveSettings(lst[0]);
 
-				_listInformacoes = bk.WriteReadMusic(null, true, txtPaths.Text);
-				//bk.CreateFiles(txtPaths.Text, true);
+					_listInformacoes = bk.WriteReadMusic(true, txtPaths.Text, null);
+					//bk.CreateFiles(txtPaths.Text, true);
+				}
+				catch
+				{
+
+				}
 			}
 		}
 
@@ -828,6 +948,24 @@ namespace Spotify_Clone
 			}
 		}
 
+		#region give tag to toolstrip
+		private void painel_MouseDown(object sender, MouseEventArgs e)
+		{ 
+			TSMIRemove.Tag = (int)(((Panel)sender).Tag);
+			TSMIEditPlayList.Tag = (int)((Panel)sender).Tag;
+		}
+		private void PicEdit_MouseDown(object sender, MouseEventArgs e) 
+		{
+			TSMIRemove.Tag = (int)((PictureBox)sender).Tag;
+			TSMIEditPlayList.Tag = (int)((PictureBox)sender).Tag; 
+		}
+		private void Lbl_MouseDown(object sender, MouseEventArgs e) 
+		{
+			TSMIRemove.Tag = (int)((Label)sender).Tag;
+			TSMIEditPlayList.Tag = (int)((Label)sender).Tag;
+		}
+		#endregion
+
 		private void pE_Click(object sender, EventArgs e)
 		{
 			PictureBox pE = sender as PictureBox;
@@ -854,7 +992,7 @@ namespace Spotify_Clone
 							txtPaths.Text = fsd.FileName;
 						}
 					//Backend bk = new Backend();
-					bk.WriteReadMusic(null, false, txtPaths.Text);
+					bk.WriteReadMusic(false, txtPaths.Text, null);
 					//Debug.Print($"Ds: {((PictureBox)sender).Name}");//IMPORTANTE VER
 					break;
 				case "pE_Close":
@@ -1046,13 +1184,14 @@ namespace Spotify_Clone
 							}
 							else
 							{
-								CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
 								if (axWindowsMediaPlayer1.Ctlcontrols.currentPosition != 0)
 									Posicao = axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString();
 								Volume = labelControl4.Text;
 								Processo = "pause";
-								NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
-								labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4));
+								//CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
+								//NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
+								//labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4));
+								axwindows();
 								fmr.timer1_Tick(sender, e);
 								timer1.Stop();
 							}
@@ -1144,6 +1283,53 @@ namespace Spotify_Clone
 				case "picPlaylist":
 					IdPlayList = (int)pE.Tag; MusicaPlay();
 					break;
+				case "picAddMusic":
+
+					string[] files, path;
+					PictureBox button = sender as PictureBox;
+					OpenFileDialog ofd = new OpenFileDialog();
+					ofd.Multiselect = true;
+					ofd.Filter = "Video and Music Files (*.mp3,*.au,*.m4a,*.mp4,*.m4v,*.mp4v)|*.mp3;*.au;*.m4a;*.mp4;*.m4v;*.mp4v";
+					ofd.Multiselect = true;
+					if (ofd.ShowDialog() == DialogResult.OK)
+					{
+						files = ofd.SafeFileNames;
+						path = ofd.FileNames;
+						if (PlaydaLista.Count() == 0)
+						{
+							path.ToList().ForEach(item =>
+							{
+								_Caminho_Musica.Add(item);
+								NameMusic = item.Split(new string[] { "\\" }, StringSplitOptions.None);
+								int TAMANHO = NameMusic.Length;
+								int g = NameMusic[TAMANHO - 1].Count();
+								string f = NameMusic[TAMANHO - 1].Substring(0, g);
+								PlaydaLista.Add(f);
+							});
+						}
+						else
+						{
+							path.ToList().ForEach(item =>
+							{
+								if (_listInformacoes[IdPlayList - 1].Caminho_da_Musica.Contains(item) == false)
+								{
+									_Caminho_Musica.Add(item);
+									NameMusic = item.Split(new string[] { "\\" }, StringSplitOptions.None);
+									int TAMANHO = NameMusic.Length;
+									int g = NameMusic[TAMANHO - 1].Count();
+									string f = NameMusic[TAMANHO - 1].Substring(0, g);
+									PlaydaLista.Add(f);
+								}
+							});
+						}
+						//_listInformacoes[IdPlayList - 1].Caminho_da_Musica = _Caminho_Musica;
+						//Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
+						//string jsons = JsonConvert.SerializeObject(_listInformacoes);
+						//File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", jsons);
+						MusicaPlay();
+					}
+					Invalidate();
+					break;
 				case "picRemoveMusic":
 
 					_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.RemoveAt(int.Parse(pE.Tag.ToString()));
@@ -1157,8 +1343,9 @@ namespace Spotify_Clone
 						PlaydaLista.Add(f);
 					});
 					var json = JsonConvert.SerializeObject(_listInformacoes);
-					Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
-					File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
+					string Paths = "";
+					var dss = txtPaths.Text == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = txtPaths.Text;
+					File.WriteAllText(Paths + "/SpotifyClone/Musics.json", json);
 					MusicaPlay();
 
 					break;
@@ -1213,9 +1400,10 @@ namespace Spotify_Clone
 				try
 				{
 					var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() == "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
-					axWindowsMediaPlayer1.URL = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
-					NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
-					labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4));
+					//axWindowsMediaPlayer1.URL = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
+					//NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
+					//labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4));
+					axwindows();
 					axWindowsMediaPlayer1.Ctlcontrols.play();
 					PBC.Value = 0;
 					dt = 0;
@@ -1286,7 +1474,68 @@ namespace Spotify_Clone
 					}
 					catch { }
 				}
-				if (Video.progresso != 0) PBC.Maximum = (int)Video.maxprogresso; if (Ordem_de_Reproducao.Count > 0) { if (CaMusica != (_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]]).ToString()) { NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None); labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4)); t = int.Parse(labelControl2.Tag.ToString()); if (Video.maxprogresso != 0) PBC.Maximum = (int)Video.maxprogresso; } if (PBC.Value == 1) dt = 0; if ((PBC.Value == PBC.Maximum || PBC.Value == (PBC.Maximum - 1)) && pE_PauseaPlay.Tag.ToString() != "1") { if (dt >= 12 || PBC.Value == Video.maxprogresso || PBC.Value == (PBC.Maximum - 1)) { if (PBC.Tag != null && (PBC.Value == Video.maxprogresso)) if ((PBC.Value == Video.maxprogresso)) { var dsd = (int.Parse(labelControl2.Tag.ToString()) == _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1; Volume = labelControl4.Text; Processo = "start"; NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None); CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]]; labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4)); fmr.timer1_Tick(sender, e); Video.progresso = 0; dt = 0; PBC.Tag = null; } } } if (dt == 0) { PBC.Tag = Video.progresso; dt++; } if ((dt > 0 && dt < 100) && pE_PauseaPlay.Tag.ToString() != "1") { dt++; try { if ((int.Parse(PBC.Tag.ToString()) == Video.progresso && dt > 50)) { var dsd = (int.Parse(labelControl2.Tag.ToString()) == _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1; Volume = labelControl4.Text; Processo = "start"; NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None); CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]]; labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4)); fmr.timer1_Tick(sender, e); Video.progresso = 0; dt = 0; PBC.Tag = null; Processo = "start"; } } catch { } } else dt = 0; }
+				if (Video.progresso != 0)
+					PBC.Maximum = (int)Video.maxprogresso;
+				if (Ordem_de_Reproducao.Count > 0)
+				{
+					if (CaMusica != (_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]]).ToString())
+					{
+						NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
+						labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4));
+						t = int.Parse(labelControl2.Tag.ToString());
+						if (Video.maxprogresso != 0)
+							PBC.Maximum = (int)Video.maxprogresso;
+					}
+					if (PBC.Value == 1)
+						dt = 0;
+					if ((PBC.Value == PBC.Maximum || PBC.Value == (PBC.Maximum - 1)) && pE_PauseaPlay.Tag.ToString() != "1")
+					{
+						if (dt >= 12 || PBC.Value == Video.maxprogresso || PBC.Value == (PBC.Maximum - 1))
+						{
+							if (PBC.Tag != null && (PBC.Value == Video.maxprogresso))
+								if ((PBC.Value == Video.maxprogresso))
+								{
+									var dsd = (int.Parse(labelControl2.Tag.ToString()) == _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
+									Volume = labelControl4.Text;
+									Processo = "start";
+									//NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
+									//CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
+									//labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4));
+									axwindows();
+									fmr.timer1_Tick(sender, e);
+									Video.progresso = 0;
+									dt = 0;
+									PBC.Tag = null;
+								}
+						}
+					}
+					if (dt == 0) { PBC.Tag = Video.progresso; dt++; }
+					if ((dt > 0 && dt < 100) && pE_PauseaPlay.Tag.ToString() != "1")
+					{
+						dt++;
+						try
+						{
+							if ((int.Parse(PBC.Tag.ToString()) == Video.progresso && dt > 50))
+							{
+								var dsd = (int.Parse(labelControl2.Tag.ToString()) == _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
+								Volume = labelControl4.Text;
+								Processo = "start";
+								//NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None); 
+								//CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]]; 
+								//labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4)); 
+								axwindows();
+								fmr.timer1_Tick(sender, e);
+								Video.progresso = 0;
+								dt = 0;
+								PBC.Tag = null;
+								Processo = "start";
+							}
+						}
+						catch { }
+					}
+					else
+						dt = 0;
+				}
 				try { PBC.Value = (int)Video.progresso; }
 				catch { }
 			}

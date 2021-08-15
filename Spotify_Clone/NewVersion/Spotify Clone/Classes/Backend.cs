@@ -46,7 +46,7 @@ namespace Spotify_Clone.Classes
 			if (file == false)
 				Directory.CreateDirectory(Paths);
 			else
-				File.WriteAllText(Paths, EncryptADeDecrypt.EncryptOther("[]"));
+				File.WriteAllText(Paths, /*EncryptADeDecrypt.EncryptOther*/("[]"));
 
 		}
 
@@ -76,12 +76,12 @@ namespace Spotify_Clone.Classes
 			}
 			if (readSettings == true)
 			{
-				var myString = EncryptADeDecrypt.DecryptString(Properties.Resources.Key, (File.ReadAllText(Paths + "/SpotifyClone/Settings.json")));
+				var myString = /*EncryptADeDecrypt.DecryptString*/(/*Properties.Resources.Key,*/ (File.ReadAllText(Paths + "/SpotifyClone/Settings.json")));
 				return JsonConvert.DeserializeObject<List<Settings>>(myString);
 			}
 			else
 			{
-				File.WriteAllText(Paths + "/SpotifyClone/Settings.json", EncryptADeDecrypt.EncryptOther(settings));
+				File.WriteAllText(Paths + "/SpotifyClone/Settings.json", /*EncryptADeDecrypt.EncryptOther*/(settings));
 
 				if (!(Paths.Contains("Roaming")))
 					using (StreamWriter w = File.AppendText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt"))
@@ -93,7 +93,7 @@ namespace Spotify_Clone.Classes
 				return null;
 			}
 		}
-		public List<PlayList> WriteReadMusic(string json, bool readMusic, string path)
+		public List<PlayList> WriteReadMusic(bool readMusic, string path, PlayList play)
 		{
 			var Paths = "";
 			var ds = path == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = path;
@@ -118,7 +118,7 @@ namespace Spotify_Clone.Classes
 				if (readMusic == true)
 				{
 					{
-						string myString = /*EncryptADeDecrypt.DecryptOther*/(File.ReadAllText(@"C:\Users\andre\AppData\Local\Temp\Musics.json"/*Paths + "/SpotifyClone/Musics.json"*/));
+						string myString = /*EncryptADeDecrypt.DecryptOther*/(File.ReadAllText(Paths + "/SpotifyClone/Musics.json"));
 						if (myString != "\"[]\"" || myString != null)
 						{
 							//myString.Replace(@"\\", @"\");
@@ -128,9 +128,18 @@ namespace Spotify_Clone.Classes
 				}
 				else
 				{
-					if (json != null)
+					if (play.Name != "")
 					{
-						File.WriteAllText(Paths + "/SpotifyClone/Musics.json", /*EncryptADeDecrypt.EncryptOther*/json);
+						string myString = /*EncryptADeDecrypt.DecryptOther*/(File.ReadAllText(Paths + "/SpotifyClone/Musics.json"));
+						lstConteudo = JsonConvert.DeserializeObject<List<PlayList>>(/*EncryptADeDecrypt.DecryptString*/(myString.ToString()));
+
+						playList.Descrição = play.Descrição;
+						playList.Image = play.Image;
+						playList.Name = play.Name;
+						playList.IDList = (lstConteudo.Count() + 1);
+						lstConteudo.Add(play);
+						string info = JsonConvert.SerializeObject(lstConteudo);
+						File.WriteAllText(Paths + "/SpotifyClone/Musics.json", /*EncryptADeDecrypt.EncryptOther*/info);
 					}
 				}
 			}
@@ -140,8 +149,41 @@ namespace Spotify_Clone.Classes
 			}
 			return lstConteudo;
 		}
+		//private void Consulta()
+		//{
+		//	{
+		//		Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
+		//		if (textBox1.Text != string.Empty && textBox2.Text != string.Empty && pictureBox1.Image != null)
+		//		{
+		//			if (Id == 0)
+		//			{
+		//				PlayList play = new PlayList();
+		//				List<PlayList> _listT = new List<PlayList>();
+		//				play.Name = textBox1.Text;
+		//				play.Image = caminho;
+		//				play.Descrição = textBox2.Text;
+		//				play.IDList = (_listInformacoes.Count() + 1);
+		//				_listInformacoes.Add(play);
+		//				string json = JsonConvert.SerializeObject(_listInformacoes);
+		//				File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
+		//			}
+		//			else
+		//			{
+		//				var myString = File.ReadAllText(Environment.CurrentDirectory + "/Musics.json");
+		//				_listInformacoes = JsonConvert.DeserializeObject<List<PlayList>>(myString);
+		//				_listInformacoes[(Id - 1)].Descrição = textBox2.Text; _listInformacoes[(Id - 1)].Name = textBox1.Text;
+		//				if (caminho != "" && caminho == "null")
+		//					_listInformacoes[(Id - 1)].Image = caminho;
+		//				string json = JsonConvert.SerializeObject(_listInformacoes);
+		//				File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
 
-
+		//			}
+		//			this.Close();
+		//		}
+		//		else
+		//			*MessageBox.Show("You have not completed the data !!\n Please complete !!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+		//	}
+		//}
 		List<double> ProduceRandom = new List<double>();
 		public List<double> RandomMusic(int IdPlayList, List<PlayList> _lst)
 		{
