@@ -61,28 +61,7 @@ namespace Spotify_Clone
 		Video fmr = new Video(); Backend bk = new Backend();
 		public static int t;
 		private void Lbl_Click(object sender, EventArgs e) { Label lbl = sender as Label; IdPlayList = (int)lbl.Tag; MusicaPlay(); }
-		
-		private void PIC_Click(object sender, EventArgs e)
-		{
-			FormVideo = false;
-			FormCollection fc = Application.OpenForms;
-			foreach (Form frm in fc)
-			{
-				if (frm.Name == "Video")
-					FormVideo = true;
-			}
-			if (PBC.Value != 0 && FormVideo == false)
-			{
-				pnlPrincipal.Visible = false;
-				axWindowsMediaPlayer1.Visible = true;
-				axWindowsMediaPlayer1.BringToFront();
-				axWindowsMediaPlayer1.Dock = DockStyle.Fill;
-				axWindowsMediaPlayer1.Location = new Point(0, 0);
-				pnlPrincipal.Controls.Clear();
-				axWindowsMediaPlayer1.Ctlcontrols.play();
-				musica = true;
-			}
-		}
+
 		private void pnl_Click(object sender, EventArgs e)
 		{
 			Panel pnl = sender as Panel;
@@ -141,6 +120,8 @@ namespace Spotify_Clone
 				labelControl2.Text = s;
 				axWindowsMediaPlayer1.Ctlcontrols.play();
 				labelControl2.Tag = "" + r;
+				//PBC.Maximum = a
+				timer1.Start();
 			}
 			else
 			{
@@ -166,7 +147,7 @@ namespace Spotify_Clone
 				List<Settings> lst = bk.WriteReadSettings(txtPaths.Text, true, "");
 				SaveSettings(lst[0]);
 
-				List<PlayList> lstM = bk.WriteReadMusic(true, txtPaths.Text, null);
+				List<PlayList> lstM = bk.WriteReadMusic(true, txtPaths.Text, null, -1);
 				//bk.CreateFiles(txtPaths.Text, true);
 			}
 			catch (Exception ex)
@@ -227,8 +208,8 @@ namespace Spotify_Clone
 							_listInformacoes.Remove(_listInformacoes.FirstOrDefault(row => row.IDList == (int)((ToolStripMenuItem)sender).Tag));
 							_listInformacoes.ToList().ForEach(item =>
 							{
-								if(item.IDList>0)
-								item.IDList--;
+								if (item.IDList > IdPlayList)
+									item.IDList--;
 							});
 							var json = JsonConvert.SerializeObject(_listInformacoes);
 							if (txtPaths.Text == "%appdata%")
@@ -236,7 +217,7 @@ namespace Spotify_Clone
 							File.WriteAllText(txtPaths.Text + "/SpotifyClone/Musics.json", json);
 							Atualiza();
 						}
-						catch(Exception ex) { Atualiza(); }
+						catch (Exception ex) { Atualiza(); }
 					}
 					break;
 				case "TSMIEditPlayList":
@@ -280,7 +261,7 @@ namespace Spotify_Clone
 				Form2 form2 = new Form2(atualizacao, IdPlayList, ecra, (txtPaths.Text));
 				form2.ShowDialog();
 				form2.Close();
-				_listInformacoes = bk.WriteReadMusic(true, txtPaths.Text, null);
+				_listInformacoes = bk.WriteReadMusic(true, txtPaths.Text, null, -1);
 				if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 				this.Tag = "AddPnl";
 				//escrever();
@@ -331,16 +312,12 @@ namespace Spotify_Clone
 			//	File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
 			//}
 		}
-		
-		private void trackBar1_Click(object sender, EventArgs e)
-		{
-			labelControl2.Focus();
-		}
+
 		private void axWindowsMediaPlayer1_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
 		{
 			if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPlaying)
 			{
-				//PBC.Maximum = (int)axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration;
+				PBC.Maximum = (int)axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration;
 				timer1.Start();
 			}
 			else if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPaused) timer1.Stop();
@@ -552,6 +529,12 @@ namespace Spotify_Clone
 				catch
 				{
 				}
+				Panel pnlpri = new Panel();
+				pnlpri.BackColor = Color.Red;
+				pnlpri.Location = new Point(0, 0);
+				pnlpri.Dock = DockStyle.Top;
+				pnlpri.Size = new Size(pnlPrincipal.Width, 155);
+				pnlPrincipal.Controls.Add(pnlpri);
 				try
 				{
 					PictureBox pE_ = new PictureBox();
@@ -561,7 +544,7 @@ namespace Spotify_Clone
 					pE_.LoadAsync(_listInformacoes[(IdPlayList - 1)].Image);
 					pE_.SizeMode = PictureBoxSizeMode.Zoom;
 					pE_.BorderStyle = BorderStyle.None;
-					pnlPrincipal.Controls.Add(pE_);
+					pnlpri.Controls.Add(pE_);
 				}
 				catch
 				{
@@ -575,26 +558,27 @@ namespace Spotify_Clone
 				lblPl.Font = new Font("Tahoma", 9, FontStyle.Regular);
 				lblPl.BackColor = Color.Transparent;
 				lblPl.ForeColor = Color.Black;
-				pnlPrincipal.Controls.Add(lblPl);
+				pnlpri.Controls.Add(lblPl);
 				Label lbl = new Label();
 				try
 				{
-					string s;
-					string s1 = _listInformacoes[(IdPlayList - 1)].Name;
-					if (s1.Count() > 30)
-					{
-						s = s1.Substring(0, 30);
-						if (s1.Count() > 30) s = s + " ...";
-					}
-					else s = s1;
-					lbl.Text = s;
+					//string s;
+					//string s1 = _listInformacoes[(IdPlayList - 1)].Name;
+					//if (s1.Count() > 30)
+					//{
+					//	s = s1.Substring(0, 30);
+					//	if (s1.Count() > 30) s = s + " ...";
+					//}
+					//else s = s1;
+					var ds = _listInformacoes[(IdPlayList - 1)].Name.Count() > 30 ? lbl.Text = _listInformacoes[(IdPlayList - 1)].Name.Substring(0, 30) : lbl.Text = _listInformacoes[(IdPlayList - 1)].Name;
+					//lbl.Text = s;
 					lbl.Location = new Point(202, 39);
 					lbl.Size = new Size(195, 25);
 					lbl.BorderStyle = BorderStyle.None;
 					lbl.BackColor = Color.Transparent;
 					lbl.Font = new Font("Times New Roman", 18, FontStyle.Bold);
 					lbl.ForeColor = Color.Black;
-					pnlPrincipal.Controls.Add(lbl);
+					pnlpri.Controls.Add(lbl);
 				}
 				catch
 				{
@@ -609,7 +593,7 @@ namespace Spotify_Clone
 				lbl1.BackColor = Color.Transparent;
 				lbl1.Font = new Font("Times New Roman", 9, FontStyle.Italic);
 				lbl1.ForeColor = Color.Black;
-				pnlPrincipal.Controls.Add(lbl1);
+				pnlpri.Controls.Add(lbl1);
 				Button btn = new Button();
 				btn.Location = new Point(202, 110);
 				btn.Size = new Size(100, 30);
@@ -621,40 +605,50 @@ namespace Spotify_Clone
 				btn.Text = "PLAY";
 				btn.Click += btnPlayMusic_Click;
 				btn.Cursor = Cursors.Hand;
-				pnlPrincipal.Controls.Add(btn);
+				pnlpri.Controls.Add(btn);
 				PictureBox pe = new PictureBox();
 				pe.Location = new Point(487, 110);
 				pe.Size = new Size(30, 30);
 				pe.Image = Properties.Resources.mais;
 				pe.BackColor = Color.Transparent;
 				pe.SizeMode = PictureBoxSizeMode.Zoom;
+				pe.Anchor = AnchorStyles.Right;
 				pe.BorderStyle = BorderStyle.None;
 				pe.Cursor = Cursors.Hand;
 				pe.Name = "picAddMusic";
 				pe.Click += pE_Click;
-				pnlPrincipal.Controls.Add(pe);
+				pnlpri.Controls.Add(pe);
+				//FlowLayoutPanel flp = new FlowLayoutPanel();
+				//flp.Dock = DockStyle.Fill;
+				//flp.AutoScroll = true;
+				//flp.BackColor = Color.Transparent;
+				//pnl.Controls.Add(flp);
+				Panel pnlseg = new Panel();
+				pnlseg.Dock = DockStyle.Fill;
+				pnlseg.BackColor = Color.Blue;
+				pnlPrincipal.Controls.Add(pnlseg);
 				Panel pnl = new Panel();
 				pnl.Location = new Point(5, 160);
-				pnl.Size = new Size(662, 180);
+				pnl.AutoScroll = true;
+				pnl.Size = new Size((pnlseg.Width - 10), (pnlseg.Height - 230));
 				pnl.BorderStyle = BorderStyle.None;
+				//pnl.Dock = DockStyle.Fill;
+				pnl.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
 				pnl.BackColor = Color.White;
-				pnlPrincipal.Controls.Add(pnl);
-				FlowLayoutPanel flp = new FlowLayoutPanel();
-				flp.Dock = DockStyle.Fill;
-				flp.AutoScroll = true;
-				flp.BackColor = Color.Transparent;
-				pnl.Controls.Add(flp);
+				pnl.Margin = new Padding(15, 15, 15, 25);
+				pnlseg.Controls.Add(pnl);
 				PictureBox pictureEdit = new PictureBox();
-				pictureEdit.Location = new Point(pnlPrincipal.Width - 18, 0);
+				pictureEdit.Location = new Point(pnlpri.Width - 18, 0);
 				pictureEdit.Size = new Size(20, 20);
 				pictureEdit.Image = Properties.Resources.expand;
+				pictureEdit.Anchor = AnchorStyles.Right;
 				pictureEdit.BackColor = Color.Transparent;
 				pictureEdit.BorderStyle = BorderStyle.None;
 				pictureEdit.SizeMode = PictureBoxSizeMode.Zoom;
 				pictureEdit.Cursor = Cursors.Arrow;
-				pictureEdit.Click += PIC_Click;
-				pnlPrincipal.Controls.Add(pictureEdit);
-				flp.Controls.Clear();
+				pictureEdit.Name = "picAxw";
+				pictureEdit.Click += pE_Click;
+				pnlpri.Controls.Add(pictureEdit);
 				try
 				{
 					int d = 0, limite = 0;
@@ -671,9 +665,32 @@ namespace Spotify_Clone
 							if (d <= limite)
 							{
 								Panel pnl1 = new Panel();
-								pnl1.Size = new Size(flp.Width - 18, 40);
+								//if (d > 11)
+								//	pnl1.Size = new Size(pnl.Width - 25, 40);
+								//else if(d==6)
+								//	pnl1.Size = new Size(pnl.Width - 35, 40);
+								/*else*/
+								//if (this.Tag.ToString() == "MusicaPlayD" && this.Size!= new Size(800, 450)  && (d>4 && d<11))
+								//	pnl1.Size = new Size(pnl.Width - 25, 40);
+								//else
+
+								if (d == 5)
+									pnl1.Size = new Size(pnl.Width - 31, 40);
+								else if (d > 5)
+									pnl1.Size = new Size(pnl.Width - 29, 40);
+								else
+									pnl1.Size = new Size(pnl.Width - 14, 40);
+
+								pnl1.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left;
+
 								pnl1.BackColor = Color.FromArgb(224, 224, 209);
-								pnl1.Margin = new Padding(0, 2, 0, 0);
+								if (d > 1)
+									pnl1.Location = new Point(5, d * 46);
+								else if (d == 1)
+									pnl1.Location = new Point(5, 48);
+								else
+									pnl1.Location = new Point(5, 3);
+								//pnl1.Dock = DockStyle.Top;
 								PictureBox pic = new PictureBox();
 								pic.Image = Properties.Resources.botao_play;
 								pic.SizeMode = PictureBoxSizeMode.Zoom;
@@ -686,12 +703,12 @@ namespace Spotify_Clone
 								pic.Click += pE_Click;
 								pnl1.Controls.Add(pic);
 								Label lbl2 = new Label();
-								lbl2.Size = new Size(flp.Width - 200, 20);
+								lbl2.Size = new Size(pnl.Width - 200, 20);
 								lbl2.BackColor = Color.Transparent;
 								lbl2.Location = new Point(50, 10);
-								int g = Testes.Count() - 4;
-								lbl2.Text = Testes.Substring(0, g);
+								lbl2.Text = Testes.Substring(0, (Testes.Count() - 4));
 								lbl2.ForeColor = Color.Black;
+								lbl2.Anchor =AnchorStyles.Left;
 								lbl2.Font = new Font("Arial", 8, FontStyle.Italic);
 								pnl1.Controls.Add(lbl2);
 								PictureBox picture = new PictureBox();
@@ -701,19 +718,22 @@ namespace Spotify_Clone
 								picture.SizeMode = PictureBoxSizeMode.Zoom;
 								picture.BorderStyle = BorderStyle.None;
 								picture.BackColor = Color.Transparent;
+								picture.Anchor = AnchorStyles.Right ;
 								picture.Tag = d;
 								picture.Name = "picRemoveMusic";
 								picture.Click += pE_Click;
 								pnl1.Controls.Add(picture);
-								flp.Controls.Add(pnl1);
+								pnl.Controls.Add(pnl1);
 								d++;
 							}
 							else if (d == 16)
 							{
 								Panel pnl1 = new Panel();
-								pnl1.Size = new Size(flp.Width - 18, 40);
+								pnl1.Size = new Size(pnl.Width - 29, 40);
 								pnl1.BackColor = Color.FromArgb(224, 224, 209);
 								pnl1.Margin = new Padding(0, 2, 0, 0);
+								pnl1.Location = new Point(5, d * 46);
+								pnl1.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
 								pnl1.Name = "pnlDown";
 								PictureBox pic = new PictureBox();
 								pic.Image = Properties.Resources.down;
@@ -724,16 +744,18 @@ namespace Spotify_Clone
 								pic.Location = new Point(5, 5);
 								pic.Tag = d;
 								pic.Name = "picDown";
+								pic.Anchor = AnchorStyles.Left;
 								pic.Click += pE_Click;
 								pnl1.Controls.Add(pic);
 								Label lbl2 = new Label();
-								lbl2.Size = new Size(flp.Width - 120, 20);
+								lbl2.Size = new Size(pnl.Width - 120, 20);
 								lbl2.BackColor = Color.Red;
 								lbl2.Location = new Point(50, 10);
 								lbl2.Text = "Teste";
 								lbl2.ForeColor = Color.Black;
 								lbl2.Font = new Font("Times New Roman", 12, FontStyle.Italic);
 								lbl2.TextAlign = ContentAlignment.MiddleCenter;
+								lbl2.Anchor = AnchorStyles.Right | AnchorStyles.Left;
 								pnl1.Controls.Add(lbl2);
 								PictureBox picture = new PictureBox();
 								picture.Image = Properties.Resources.down;
@@ -744,9 +766,10 @@ namespace Spotify_Clone
 								picture.BackColor = Color.Transparent;
 								picture.Tag = d;
 								picture.Name = "picDown";
+								picture.Anchor = AnchorStyles.Right;
 								picture.Click += pE_Click;
 								pnl1.Controls.Add(picture);
-								flp.Controls.Add(pnl1);
+								pnl.Controls.Add(pnl1);
 								d++;
 							}
 						});
@@ -844,10 +867,13 @@ namespace Spotify_Clone
 					if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt"))
 						txtPaths.Text = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt");
 					Backend bk = new Backend();
-					List<Settings> lst = bk.WriteReadSettings(txtPaths.Text, true, "");
-					SaveSettings(lst[0]);
-
-					_listInformacoes = bk.WriteReadMusic(true, txtPaths.Text, null);
+					try
+					{
+						List<Settings> lst = bk.WriteReadSettings(txtPaths.Text, true, "");
+						SaveSettings(lst[0]);
+					}
+					catch { }
+					_listInformacoes = bk.WriteReadMusic(true, txtPaths.Text, null, -1);
 					//bk.CreateFiles(txtPaths.Text, true);
 				}
 				catch
@@ -950,16 +976,16 @@ namespace Spotify_Clone
 
 		#region give tag to toolstrip
 		private void painel_MouseDown(object sender, MouseEventArgs e)
-		{ 
+		{
 			TSMIRemove.Tag = (int)(((Panel)sender).Tag);
 			TSMIEditPlayList.Tag = (int)((Panel)sender).Tag;
 		}
-		private void PicEdit_MouseDown(object sender, MouseEventArgs e) 
+		private void PicEdit_MouseDown(object sender, MouseEventArgs e)
 		{
 			TSMIRemove.Tag = (int)((PictureBox)sender).Tag;
-			TSMIEditPlayList.Tag = (int)((PictureBox)sender).Tag; 
+			TSMIEditPlayList.Tag = (int)((PictureBox)sender).Tag;
 		}
-		private void Lbl_MouseDown(object sender, MouseEventArgs e) 
+		private void Lbl_MouseDown(object sender, MouseEventArgs e)
 		{
 			TSMIRemove.Tag = (int)((Label)sender).Tag;
 			TSMIEditPlayList.Tag = (int)((Label)sender).Tag;
@@ -992,7 +1018,7 @@ namespace Spotify_Clone
 							txtPaths.Text = fsd.FileName;
 						}
 					//Backend bk = new Backend();
-					bk.WriteReadMusic(false, txtPaths.Text, null);
+					bk.WriteReadMusic(false, txtPaths.Text, null, -1);
 					//Debug.Print($"Ds: {((PictureBox)sender).Name}");//IMPORTANTE VER
 					break;
 				case "pE_Close":
@@ -1035,6 +1061,26 @@ namespace Spotify_Clone
 
 				#endregion
 				#region novos
+				case "picAxw":
+					FormVideo = false; 
+					FormCollection fc = Application.OpenForms;
+					foreach (Form frm in fc) { if (frm.Name == "Video") FormVideo = true; }
+					if (PBC.Value != 0 && FormVideo == false) 
+					{ 
+						pnlPrincipal.Visible = false;
+						axWindowsMediaPlayer1.Visible = true;
+						axWindowsMediaPlayer1.BringToFront(); 
+						axWindowsMediaPlayer1.Dock = DockStyle.Fill;
+						axWindowsMediaPlayer1.Location = new Point(0, 0);
+						pnlPrincipal.Controls.Clear(); axWindowsMediaPlayer1.Ctlcontrols.play();
+						musica = true;
+					}
+
+					break;
+				case "picInfos":
+					if (PBC.Value > 0)
+						MessageBox.Show(labelControl2.Text);
+					break;
 				case "picBotaoPlay":
 					labelControl2.Tag = pE.Tag;
 					picForm3.Tag = "" + IdPlayList;
@@ -1231,7 +1277,7 @@ namespace Spotify_Clone
 								//	}
 								//}
 								Ordem_de_Reproducao = bk.RandomMusic((IdPlayList - 1), (_listInformacoes));
-								pE_Random.Image = Properties.Resources.change;
+								pE_Random.Image = Properties.Resources.random;
 							}
 							catch (Exception ex)
 							{
@@ -1252,7 +1298,7 @@ namespace Spotify_Clone
 						MessageBox.Show("At the moment,dont select playList!! \n OR \n The playList dont ahve musics!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					}
 					break;
-				case "":
+				case "picForm3":
 					{
 						if (labelControl2.Text != "" && FormVideo == false)
 						{
@@ -1284,7 +1330,6 @@ namespace Spotify_Clone
 					IdPlayList = (int)pE.Tag; MusicaPlay();
 					break;
 				case "picAddMusic":
-
 					string[] files, path;
 					PictureBox button = sender as PictureBox;
 					OpenFileDialog ofd = new OpenFileDialog();
@@ -1306,6 +1351,8 @@ namespace Spotify_Clone
 								string f = NameMusic[TAMANHO - 1].Substring(0, g);
 								PlaydaLista.Add(f);
 							});
+							_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica = _Caminho_Musica;
+							bk.WriteReadMusic(false, txtPaths.Text, _listInformacoes, -1);
 						}
 						else
 						{
@@ -1313,7 +1360,8 @@ namespace Spotify_Clone
 							{
 								if (_listInformacoes[IdPlayList - 1].Caminho_da_Musica.Contains(item) == false)
 								{
-									_Caminho_Musica.Add(item);
+									_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Add(item);
+									//_Caminho_Musica.Add(item);
 									NameMusic = item.Split(new string[] { "\\" }, StringSplitOptions.None);
 									int TAMANHO = NameMusic.Length;
 									int g = NameMusic[TAMANHO - 1].Count();
@@ -1321,12 +1369,14 @@ namespace Spotify_Clone
 									PlaydaLista.Add(f);
 								}
 							});
+							//_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Add(_Caminho_Musica);
+							bk.WriteReadMusic(false, txtPaths.Text, _listInformacoes, -1);
 						}
 						//_listInformacoes[IdPlayList - 1].Caminho_da_Musica = _Caminho_Musica;
 						//Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
 						//string jsons = JsonConvert.SerializeObject(_listInformacoes);
 						//File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", jsons);
-						MusicaPlay();
+						//MusicaPlay();
 					}
 					Invalidate();
 					break;
@@ -1386,7 +1436,8 @@ namespace Spotify_Clone
 		//{
 		//	Atualiza();
 		//}
-
+		private void trackBar1_Click(object sender, EventArgs e) { labelControl2.Focus(); }
+		private void trackBar1_ValueChanged(object sender, EventArgs e) { TrackBar track = sender as TrackBar; int d = (track.Value * 10); axWindowsMediaPlayer1.settings.volume = d; labelControl4.Text = d.ToString(); labelControl2.Focus(); if (FormVideo == true) { Volume = d.ToString(); fmr.timer1_Tick(sender, e); timer1.Stop(); } }
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
@@ -1423,6 +1474,7 @@ namespace Spotify_Clone
 			axWindowsMediaPlayer1.URL = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
 			NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
 			labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4));
+			timer1.Start();
 		}
 
 		private void timer2_Tick(object sender, EventArgs e)

@@ -151,6 +151,8 @@
 			trackBar1.Name = "trackBar1";
 			trackBar1.TabStop = false;
 			trackBar1.Value = 5;
+			trackBar1.Click += new System.EventHandler(this.trackBar1_Click);
+			trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
 			// 
 			// pnlTop
 			// 
@@ -185,6 +187,7 @@
 			resources.ApplyResources(this.picForm3, "picForm3");
 			this.picForm3.Name = "picForm3";
 			this.picForm3.TabStop = false;
+			this.picForm3.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// pE_minimizar
 			// 
@@ -360,6 +363,7 @@
 			this.picInfos.Image = global::Spotify_Clone.Properties.Resources.info;
 			this.picInfos.Name = "picInfos";
 			this.picInfos.TabStop = false;
+			this.picInfos.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// labelControl2
 			// 

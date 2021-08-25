@@ -57,16 +57,16 @@ namespace Spotify_Clone
 				if (Id == 0)
 				{
 					Classes.PlayList play = new Classes.PlayList();
-					List<Classes.PlayList> _listT = new List<Classes.PlayList>();
+					//List<Classes.PlayList> _listT = new List<Classes.PlayList>();
 					play.Name = textBox1.Text;
 					play.Image = caminhoImg;
 					play.Descrição = textBox2.Text;
-					play.IDList = (_listInformacoes.Count() + 1);
-					_listT.Add(play);
+					play.IDList = (_listInformacoes.Count()+1);
+					_listInformacoes.Add(play);
 
 					//string ds = JsonConvert.SerializeObject(_listT);
 					// JsonConvert.DeserializeObject<List<PlayList>>(JsonConvert.SerializeObject(play));
-					bk.WriteReadMusic(false, paths, play);
+					bk.WriteReadMusic(false, paths, _listInformacoes, Id);
 
 					//_listInformacoes.Add(play);
 					//string json = JsonConvert.SerializeObject(_listInformacoes);
@@ -75,7 +75,7 @@ namespace Spotify_Clone
 				else
 				{
 					Classes.PlayList play = new Classes.PlayList();
-					_listInformacoes =bk.WriteReadMusic(true, paths, null);
+					_listInformacoes =bk.WriteReadMusic(true, paths, null, Id);
 					//var myString = File.ReadAllText(Environment.CurrentDirectory + "/Musics.json");
 					//_listInformacoes = JsonConvert.DeserializeObject<List<PlayList>>(myString);
 					//_listInformacoes[(Id - 1)].Descrição = textBox2.Text;
@@ -83,12 +83,12 @@ namespace Spotify_Clone
 					//if (caminhoImg != "" && caminhoImg == "null")
 					//	_listInformacoes[(Id - 1)].Image = caminhoImg;
 
-					play.Descrição = textBox2.Text;
-					play.Name = textBox1.Text;
+					_listInformacoes[(Id-1)].Descrição = textBox2.Text;
+					_listInformacoes[(Id-1)].Name = textBox1.Text;
 					if (caminhoImg != "" && caminhoImg == "null")
-						play.Image = caminhoImg;
+						_listInformacoes[(Id - 1)].Image = caminhoImg;
 
-					bk.WriteReadMusic(false, paths, play);
+					bk.WriteReadMusic(false, paths, _listInformacoes, -1);
 					//string json = JsonConvert.SerializeObject(_listInformacoes);
 					//File.WriteAllText(Environment.CurrentDirectory + "/Musics.json", json);
 				}
@@ -105,7 +105,7 @@ namespace Spotify_Clone
 			this.CenterToScreen();
 			try
 			{
-				_listInformacoes = bk.WriteReadMusic(true, paths, null);
+				_listInformacoes = bk.WriteReadMusic(true, paths, null, Id);
 				//var myString = File.ReadAllText(Environment.CurrentDirectory + "/Musics.json");
 				//_listInformacoes = JsonConvert.DeserializeObject<List<PlayList>>(myString);
 			}
