@@ -38,7 +38,6 @@
 			this.pE_minimizar = new System.Windows.Forms.PictureBox();
 			this.pE_Close = new System.Windows.Forms.PictureBox();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
 			this.pnlPrincipal = new System.Windows.Forms.Panel();
 			this.PainelControl1 = new System.Windows.Forms.Panel();
 			this.pnlPlayList = new System.Windows.Forms.Panel();
@@ -104,6 +103,7 @@
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel14 = new System.Windows.Forms.Panel();
+			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
 			trackBar1 = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).BeginInit();
 			this.pnlTop.SuspendLayout();
@@ -113,7 +113,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).BeginInit();
 			this.panel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.PainelControl1.SuspendLayout();
 			this.pnlPlayList.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picAddPlaylist)).BeginInit();
@@ -140,6 +139,7 @@
 			this.panel9.SuspendLayout();
 			this.panel8.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// trackBar1
@@ -212,12 +212,6 @@
 			this.panel2.Controls.Add(this.pnlPrincipal);
 			resources.ApplyResources(this.panel2, "panel2");
 			this.panel2.Name = "panel2";
-			// 
-			// axWindowsMediaPlayer1
-			// 
-			resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
-			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
 			// 
 			// pnlPrincipal
 			// 
@@ -691,6 +685,12 @@
 			resources.ApplyResources(this.panel14, "panel14");
 			this.panel14.Name = "panel14";
 			// 
+			// axWindowsMediaPlayer1
+			// 
+			resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
+			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
@@ -709,7 +709,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).EndInit();
 			this.panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.PainelControl1.ResumeLayout(false);
 			this.pnlPlayList.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.picAddPlaylist)).EndInit();
@@ -741,6 +740,7 @@
 			this.panel8.ResumeLayout(false);
 			this.panel8.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -757,7 +757,6 @@
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 		private System.Windows.Forms.Panel pnlControlo;
 		private System.Windows.Forms.Panel pnlConteudo;
-		private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
 		private System.Windows.Forms.Panel pnlPrincipal;
 		private System.ComponentModel.BackgroundWorker backgroundWorker1;
 		private System.Windows.Forms.ContextMenuStrip cmsMenuStrip;
@@ -820,6 +819,7 @@
 		private ToggleButtonExample.CeLearningToggle switchSO;
 		private ToggleButtonExample.CeLearningToggle switchDuracao;
 		private ToggleButtonExample.CeLearningToggle switchNome;
+		private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
 	}
 }
 
