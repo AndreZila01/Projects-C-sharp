@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6aynIhxdMmZxmaM3J/tnwdKblpAlao4vuu3HDZqDVeY=</dsig:DigestValue>
+        <dsig:DigestValue>rWvamdUWAv3cSLu1DVrH2mwReypGYe2qz6Kn57PsK04=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rT6HzmcIFnuzidCP/r+HwNR7kN5XBapmypPaH0snC7M=</dsig:DigestValue>
+        <dsig:DigestValue>J/I2HkHr36ui2tPJx1/ry5x8zOnh3h73GAnn+YLOkrA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -110,19 +110,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>s/49vDEw6q3b2ZnkKO5qZ76YQO4CHjUB3629HCy5bPg=</dsig:DigestValue>
+        <dsig:DigestValue>tiSUnfiw46YVP9+3MKfG9JkLZZLuDZIuF4hDPSdmEPM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spotify Clone.exe" size="690144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spotify Clone.exe" size="690656">
       <assemblyIdentity name="Spotify Clone" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wlyn9BHH97I7eZQFSKTRxjQpuurOyvo5QCjsuM8515c=</dsig:DigestValue>
+        <dsig:DigestValue>eCXX4YRktcPJHcYWt3hEy0zJ8kmJQ3PDisxcEN6ettg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

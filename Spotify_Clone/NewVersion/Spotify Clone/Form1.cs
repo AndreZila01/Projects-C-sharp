@@ -38,6 +38,7 @@ namespace Spotify_Clone
 		[DllImportAttribute("user32.dll")] public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 		[DllImportAttribute("user32.dll")] public static extern bool ReleaseCapture();
 
+
 		protected override CreateParams CreateParams
 		{
 			get
@@ -1087,6 +1088,7 @@ namespace Spotify_Clone
 					picForm3.Tag = "" + IdPlayList;
 					pE_PauseaPlay.Image = Properties.Resources.pause;
 					pE_PauseaPlay.Tag = "0";
+					panel6.Tag = "Unicamente";
 					if (FormVideo == false)
 					{
 						axWindowsMediaPlayer1.URL = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[((int)pE.Tag)];
@@ -1127,6 +1129,7 @@ namespace Spotify_Clone
 					break;
 				case "pE_Next":
 					{
+						PBC.Value = 0;
 						if (int.Parse(labelControl2.Tag.ToString()) == _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1)
 							labelControl2.Tag = "" + 0;
 						else
@@ -1220,6 +1223,7 @@ namespace Spotify_Clone
 					{
 						try
 						{
+							PBC.Value = 0;
 							if (int.Parse(labelControl2.Tag.ToString()) == 0)
 								labelControl2.Tag = "" + (_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1);
 							else labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) - 1;
@@ -1456,36 +1460,60 @@ namespace Spotify_Clone
 			{
 				try
 				{
-					//if (((int.Parse(labelControl2.Tag.ToString()+1) != _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count()) && pE_Repit.Tag.ToString() != "1"))
-					//{ var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() != "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
+					if (panel6.Tag.ToString() != "Unicamente" && _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() != 1)
+					{
+						var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() != "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
 
-					axWindowsMediaPlayer1.URL = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
-					NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
-					labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4));
-					//axwindows();
-					axWindowsMediaPlayer1.Ctlcontrols.play();
-					PBC.Value = 0;
-					dt = 0;
-					//}
-					//else
-					//{
-					//	axWindowsMediaPlayer1.Ctlcontrols.stop();
-					//	PBC.Value = 0;
-					//	timer1.Stop();
-					//	timer2.Stop();
-					//	pE_PauseaPlay.Image = Properties.Resources.play;
-					//}
+
+
+
+
+						axWindowsMediaPlayer1.URL = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
+						NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
+						labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4));
+						if (((int.Parse(labelControl2.Tag.ToString() + 1) != _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count()) && pE_Repit.Tag.ToString() != "1") && labelControl2.Text != _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[int.Parse(labelControl2.Tag.ToString())])
+						{ //var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() != "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
+
+
+							//axwindows();
+							axWindowsMediaPlayer1.Ctlcontrols.play();
+							PBC.Value = 0;
+							dt = 0;
+							//}
+							//else
+							//{
+							//	axWindowsMediaPlayer1.Ctlcontrols.stop();
+							//	PBC.Value = 0;
+							//	timer1.Stop();
+							//	timer2.Stop();
+							//	pE_PauseaPlay.Image = Properties.Resources.play;
+						}
+
+					}
+					else
+					{
+						labelControl2.Tag = -1;
+						labelControl2.Text = "";
+						timer1.Stop();
+						timer2.Stop();
+						PBC.Value = 0;
+						dt = 0;
+						pE_PauseaPlay.Image = Properties.Resources.play;
+						axWindowsMediaPlayer1.Ctlcontrols.stop();
+						panel6.Tag = "";
+					}
 				}
 				catch
 				{
 					axWindowsMediaPlayer1.Ctlcontrols.stop();
 					PBC.Value = 0;
 					timer1.Stop();
+					PBC.Value = 0;
 					timer2.Stop();
 					pE_PauseaPlay.Image = Properties.Resources.play;
 				}
 			}
-			else if ((PBC.Value == 0) && pE_PauseaPlay.Tag.ToString() != "1" && labelControl2.Text != string.Empty && (Ordem_de_Reproducao.Count() >= 1))
+			else if (((PBC.Value == 0) && pE_PauseaPlay.Tag.ToString() != "1" && labelControl2.Text != string.Empty && (Ordem_de_Reproducao.Count() >= 1)) && panel6.Tag.ToString() != "Unicamente")
 				timer2.Start();
 
 		}
