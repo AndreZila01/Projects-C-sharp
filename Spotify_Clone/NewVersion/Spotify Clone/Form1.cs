@@ -65,11 +65,10 @@ namespace Spotify_Clone
 
 		private void pnl_Click(object sender, EventArgs e)
 		{
-			Panel pnl = sender as Panel;
-			switch (pnl.Name)
+			switch (((Panel)sender).Name)
 			{
 				case "ds":
-					IdPlayList = (int)pnl.Tag;
+					IdPlayList = (int)((Label)sender).Tag;
 					MusicaPlay();
 					break;
 				case "pnlDown":
@@ -443,19 +442,17 @@ namespace Spotify_Clone
 		}
 		private void label11_Click(object sender, EventArgs e)
 		{
-			Label lbl = sender as Label;
-
-			if (lbl.Name == "lblSO")
+			if (((Label)sender).Name == "lblSO")
 			{
 				var ds = switchSO.IsOn == true ? switchSO.IsOn = false : switchSO.IsOn = true;
 			}
 			else
-				if (lbl.Name == "lblNomeDisc")
+				if (((Label)sender).Name == "lblNomeDisc")
 			{
 				var ds = switchNome.IsOn == true ? switchNome.IsOn = false : switchNome.IsOn = true;
 			}
 			else
-				if (lbl.Name == "lblDuracao")
+				if (((Label)sender).Name == "lblDuracao")
 			{
 				var ds = switchDuracao.IsOn == true ? switchDuracao.IsOn = false : switchDuracao.IsOn = true;
 			}
@@ -483,8 +480,7 @@ namespace Spotify_Clone
 
 		private void label9_Click(object sender, EventArgs e)
 		{
-			Label lbl = sender as Label;
-			switch (lbl.Tag.ToString())
+			switch (((Label)sender).Tag)
 			{
 				case "Musica Anterior":
 					btnAnterior.Text = btnAnterior.Text.Remove((btnAnterior.Text.Length - 3));
@@ -994,7 +990,7 @@ namespace Spotify_Clone
 		}
 		#endregion
 
-		private void pE_Click(object sender, EventArgs e)
+		public void pE_Click(object sender, EventArgs e)
 		{
 			PictureBox pE = sender as PictureBox;
 

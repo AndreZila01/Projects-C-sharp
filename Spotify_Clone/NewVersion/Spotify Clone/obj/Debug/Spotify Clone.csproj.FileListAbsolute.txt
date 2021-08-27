@@ -122,3 +122,4 @@ C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotif
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.CopyComplete
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.exe
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.AssemblyReference.cache
