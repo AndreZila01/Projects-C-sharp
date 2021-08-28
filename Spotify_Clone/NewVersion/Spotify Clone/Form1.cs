@@ -60,29 +60,7 @@ namespace Spotify_Clone
 		public static string Processo = "", Posicao = "", CaMusica = "", Volume = "";
 		Video fmr = new Video(); Backend bk = new Backend();
 		public static int t;
-		private void Lbl_Click(object sender, EventArgs e) { Label lbl = sender as Label; IdPlayList = (int)lbl.Tag; MusicaPlay(); }
-		
-		private void PIC_Click(object sender, EventArgs e)
-		{
-			FormVideo = false;
-			FormCollection fc = Application.OpenForms;
-			foreach (Form frm in fc)
-			{
-				if (frm.Name == "Video")
-					FormVideo = true;
-			}
-			if (PBC.Value != 0 && FormVideo == false)
-			{
-				pnlPrincipal.Visible = false;
-				axWindowsMediaPlayer1.Visible = true;
-				axWindowsMediaPlayer1.BringToFront();
-				axWindowsMediaPlayer1.Dock = DockStyle.Fill;
-				axWindowsMediaPlayer1.Location = new Point(0, 0);
-				pnlPrincipal.Controls.Clear();
-				axWindowsMediaPlayer1.Ctlcontrols.play();
-				musica = true;
-			}
-		}
+
 		private void pnl_Click(object sender, EventArgs e)
 		{
 			Panel pnl = sender as Panel;
@@ -464,23 +442,54 @@ namespace Spotify_Clone
 		}
 		private void label11_Click(object sender, EventArgs e)
 		{
-			Label lbl = sender as Label;
 
-			if (lbl.Name == "lblSO")
+			switch (((Label)sender).Name)
 			{
-				var ds = switchSO.IsOn == true ? switchSO.IsOn = false : switchSO.IsOn = true;
+				case "lblAnterior":
+					btnAnterior.Text = btnAnterior.Text.Remove((btnAnterior.Text.Length - 3));
+					break; ;
+				case "lblPR":
+					btnPausa.Text = btnPausa.Text.Remove((btnPausa.Text.Length - 3));
+					break;
+				case "lblSeguinte":
+					btnNext.Text = btnNext.Text.Remove((btnNext.Text.Length - 3));
+					break;
+				case "lblSO":
+					var ds = switchSO.IsOn == true ? switchSO.IsOn = false : switchSO.IsOn = true;
+					break;
+				case "lblNomeDisc":
+					ds = switchNome.IsOn == true ? switchNome.IsOn = false : switchNome.IsOn = true;
+					break;
+				case "lblDuracao":
+					ds = switchDuracao.IsOn == true ? switchDuracao.IsOn = false : switchDuracao.IsOn = true;
+					break;
+				case "lblVersao":
+					ds = pnlXampp.Visible == true ? pnlXampp.Visible = false : pnlXampp.Visible = true;
+					break;
+				case "lblMusic": 
+					IdPlayList = (int)((Label)sender).Tag; MusicaPlay();
+					break;
+				default:
+					break;
 			}
-			else
-				if (lbl.Name == "lblNomeDisc")
-			{
-				var ds = switchNome.IsOn == true ? switchNome.IsOn = false : switchNome.IsOn = true;
-			}
-			else
-				if (lbl.Name == "lblDuracao")
-			{
-				var ds = switchDuracao.IsOn == true ? switchDuracao.IsOn = false : switchDuracao.IsOn = true;
-			}
-			SaveSettings(null);
+			if(((Label)sender).Name== "lblDuracao" || ((Label)sender).Name== "lblNomeDisc" || ((Label)sender).Name== "lblSO")
+				SaveSettings(null);
+			btnSel = null;
+
+			//if (lbl.Name == "lblSO")
+			//{
+			//	var ds = switchSO.IsOn == true ? switchSO.IsOn = false : switchSO.IsOn = true;
+			//}
+			//else
+			//	if (lbl.Name == "lblNomeDisc")
+			//{
+			//	var ds = switchNome.IsOn == true ? switchNome.IsOn = false : switchNome.IsOn = true;
+			//}
+			//else
+			//	if (lbl.Name == "lblDuracao")
+			//{
+			//	var ds = switchDuracao.IsOn == true ? switchDuracao.IsOn = false : switchDuracao.IsOn = true;
+			//}
 		}
 		#endregion
 
@@ -502,25 +511,6 @@ namespace Spotify_Clone
 			btnSel.Text = "";
 		}
 
-		private void label9_Click(object sender, EventArgs e)
-		{
-			Label lbl = sender as Label;
-			switch (lbl.Tag.ToString())
-			{
-				case "Musica Anterior":
-					btnAnterior.Text = btnAnterior.Text.Remove((btnAnterior.Text.Length - 3));
-					break; ;
-				case "Pausar e Retomar":
-					btnPausa.Text = btnPausa.Text.Remove((btnPausa.Text.Length - 3));
-					break;
-				case "musica Seguinte":
-					btnNext.Text = btnNext.Text.Remove((btnNext.Text.Length - 3));
-					break;
-				default:
-					break;
-			}
-			btnSel = null;
-		}
 		public Form1()
 		{
 			InitializeComponent();
@@ -652,7 +642,8 @@ namespace Spotify_Clone
 				pictureEdit.BorderStyle = BorderStyle.None;
 				pictureEdit.SizeMode = PictureBoxSizeMode.Zoom;
 				pictureEdit.Cursor = Cursors.Arrow;
-				pictureEdit.Click += PIC_Click;
+				pictureEdit.Name = "pE_Form";
+				pictureEdit.Click += pE_Click;
 				pnlPrincipal.Controls.Add(pictureEdit);
 				flp.Controls.Clear();
 				try
@@ -815,8 +806,9 @@ namespace Spotify_Clone
 						lbl.BackColor = Color.Transparent;
 						lbl.BorderStyle = BorderStyle.None;
 						lbl.Tag = temp;
+						lbl.Name = "lblMusic";
 						lbl.MouseDown += Lbl_MouseDown;
-						lbl.Click += Lbl_Click;
+						lbl.Click += label11_Click;
 						pnl.Controls.Add(lbl);
 						flowLayoutPanel1.Controls.Add(pnl);
 						temp++;
@@ -1252,7 +1244,7 @@ namespace Spotify_Clone
 						MessageBox.Show("At the moment,dont select playList!! \n OR \n The playList dont ahve musics!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					}
 					break;
-				case "":
+				case "picForm3":
 					{
 						if (labelControl2.Text != "" && FormVideo == false)
 						{
@@ -1353,6 +1345,30 @@ namespace Spotify_Clone
 					this.Tag = "MusicaPlayD";
 					if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 					break;
+				case "pE_Form":
+					FormVideo = false;
+					FormCollection fc = Application.OpenForms;
+					foreach (Form frm in fc)
+					{
+						if (frm.Name == "Video")
+							FormVideo = true;
+					}
+					if (PBC.Value != 0 && FormVideo == false)
+					{
+						pnlPrincipal.Visible = false;
+						axWindowsMediaPlayer1.Visible = true;
+						axWindowsMediaPlayer1.BringToFront();
+						axWindowsMediaPlayer1.Dock = DockStyle.Fill;
+						axWindowsMediaPlayer1.Location = new Point(0, 0);
+						pnlPrincipal.Controls.Clear();
+						axWindowsMediaPlayer1.Ctlcontrols.play();
+						musica = true;
+					}
+					break;
+				case "picAddPlaylist":
+					object tag = 0;
+					AuxForm2(tag);
+					break;
 				#endregion
 				default:
 					break;
@@ -1369,14 +1385,6 @@ namespace Spotify_Clone
 		private void pE_Close_MouseHover(object sender, EventArgs e)//Não mexer
 		{
 			pE_Close.Image = Properties.Resources.close_red;
-		}
-		private void pictureEdit3_Click(object sender, EventArgs e)
-		{
-			object tag = 0;
-			AuxForm2(tag);
-			//_listInformacoes.Clear();
-			//escrever();
-			//Atualiza();
 		}
 		private void pE_Close_MouseLeave(object sender, EventArgs e)//Não mexer
 		{

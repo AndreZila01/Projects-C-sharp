@@ -70,11 +70,14 @@
 			this.bgwCarregar = new System.ComponentModel.BackgroundWorker();
 			this.pnlCont = new System.Windows.Forms.Panel();
 			this.pnlSettings = new System.Windows.Forms.Panel();
+			this.lblVersao = new System.Windows.Forms.Label();
+			this.pnlXampp = new System.Windows.Forms.Panel();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.label15 = new System.Windows.Forms.Label();
 			this.pnlAtalho = new System.Windows.Forms.Panel();
-			this.label12 = new System.Windows.Forms.Label();
-			this.label11 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
+			this.lblSeguinte = new System.Windows.Forms.Label();
+			this.lblPR = new System.Windows.Forms.Label();
+			this.lblAnterior = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.btnPausa = new System.Windows.Forms.Button();
 			this.label8 = new System.Windows.Forms.Label();
@@ -134,6 +137,7 @@
 			this.cmsMenuStrip.SuspendLayout();
 			this.pnlCont.SuspendLayout();
 			this.pnlSettings.SuspendLayout();
+			this.pnlXampp.SuspendLayout();
 			this.pnlAtalho.SuspendLayout();
 			this.panel10.SuspendLayout();
 			this.pnlDiscord.SuspendLayout();
@@ -185,6 +189,7 @@
 			resources.ApplyResources(this.picForm3, "picForm3");
 			this.picForm3.Name = "picForm3";
 			this.picForm3.TabStop = false;
+			this.picForm3.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// pE_minimizar
 			// 
@@ -249,7 +254,7 @@
 			resources.ApplyResources(this.picAddPlaylist, "picAddPlaylist");
 			this.picAddPlaylist.Name = "picAddPlaylist";
 			this.picAddPlaylist.TabStop = false;
-			this.picAddPlaylist.Click += new System.EventHandler(this.pictureEdit3_Click);
+			this.picAddPlaylist.Click += new System.EventHandler(this.pE_Click);
 			// 
 			// pnlControlo
 			// 
@@ -421,6 +426,8 @@
 			// pnlSettings
 			// 
 			this.pnlSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(146)))), ((int)(((byte)(158)))));
+			this.pnlSettings.Controls.Add(this.lblVersao);
+			this.pnlSettings.Controls.Add(this.pnlXampp);
 			this.pnlSettings.Controls.Add(this.pnlAtalho);
 			this.pnlSettings.Controls.Add(this.panel10);
 			this.pnlSettings.Controls.Add(this.pnlDiscord);
@@ -430,13 +437,35 @@
 			resources.ApplyResources(this.pnlSettings, "pnlSettings");
 			this.pnlSettings.Name = "pnlSettings";
 			// 
+			// lblVersao
+			// 
+			resources.ApplyResources(this.lblVersao, "lblVersao");
+			this.lblVersao.Name = "lblVersao";
+			this.lblVersao.Click += new System.EventHandler(this.label11_Click);
+			// 
+			// pnlXampp
+			// 
+			this.pnlXampp.Controls.Add(this.textBox1);
+			this.pnlXampp.Controls.Add(this.label15);
+			resources.ApplyResources(this.pnlXampp, "pnlXampp");
+			this.pnlXampp.Name = "pnlXampp";
+			// 
+			// textBox1
+			// 
+			resources.ApplyResources(this.textBox1, "textBox1");
+			this.textBox1.Name = "textBox1";
+			// 
+			// label15
+			// 
+			resources.ApplyResources(this.label15, "label15");
+			this.label15.Name = "label15";
+			// 
 			// pnlAtalho
 			// 
 			this.pnlAtalho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(146)))), ((int)(((byte)(158)))));
-			this.pnlAtalho.Controls.Add(this.label12);
-			this.pnlAtalho.Controls.Add(this.label11);
-			this.pnlAtalho.Controls.Add(this.label5);
-			this.pnlAtalho.Controls.Add(this.label4);
+			this.pnlAtalho.Controls.Add(this.lblSeguinte);
+			this.pnlAtalho.Controls.Add(this.lblPR);
+			this.pnlAtalho.Controls.Add(this.lblAnterior);
 			this.pnlAtalho.Controls.Add(this.label7);
 			this.pnlAtalho.Controls.Add(this.btnPausa);
 			this.pnlAtalho.Controls.Add(this.label8);
@@ -445,32 +474,28 @@
 			this.pnlAtalho.Controls.Add(this.btnNext);
 			resources.ApplyResources(this.pnlAtalho, "pnlAtalho");
 			this.pnlAtalho.Name = "pnlAtalho";
+			this.pnlAtalho.Tag = "800, 94";
 			// 
-			// label12
+			// lblSeguinte
 			// 
-			resources.ApplyResources(this.label12, "label12");
-			this.label12.Name = "label12";
+			resources.ApplyResources(this.lblSeguinte, "lblSeguinte");
+			this.lblSeguinte.Name = "lblSeguinte";
+			this.lblSeguinte.Tag = "musica Seguinte";
+			this.lblSeguinte.Click += new System.EventHandler(this.label11_Click);
 			// 
-			// label11
+			// lblPR
 			// 
-			resources.ApplyResources(this.label11, "label11");
-			this.label11.Name = "label11";
-			this.label11.Tag = "musica Seguinte";
-			this.label11.Click += new System.EventHandler(this.label9_Click);
+			resources.ApplyResources(this.lblPR, "lblPR");
+			this.lblPR.Name = "lblPR";
+			this.lblPR.Tag = "Pausar e Retomar";
+			this.lblPR.Click += new System.EventHandler(this.label11_Click);
 			// 
-			// label5
+			// lblAnterior
 			// 
-			resources.ApplyResources(this.label5, "label5");
-			this.label5.Name = "label5";
-			this.label5.Tag = "Pausar e Retomar";
-			this.label5.Click += new System.EventHandler(this.label9_Click);
-			// 
-			// label4
-			// 
-			resources.ApplyResources(this.label4, "label4");
-			this.label4.Name = "label4";
-			this.label4.Tag = "Musica Anterior";
-			this.label4.Click += new System.EventHandler(this.label9_Click);
+			resources.ApplyResources(this.lblAnterior, "lblAnterior");
+			this.lblAnterior.Name = "lblAnterior";
+			this.lblAnterior.Tag = "Musica Anterior";
+			this.lblAnterior.Click += new System.EventHandler(this.label11_Click);
 			// 
 			// label7
 			// 
@@ -500,7 +525,6 @@
 			// 
 			resources.ApplyResources(this.label9, "label9");
 			this.label9.Name = "label9";
-			this.label9.Click += new System.EventHandler(this.label9_Click);
 			// 
 			// btnNext
 			// 
@@ -691,8 +715,8 @@
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlSettings);
+			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
@@ -726,6 +750,9 @@
 			this.cmsMenuStrip.ResumeLayout(false);
 			this.pnlCont.ResumeLayout(false);
 			this.pnlSettings.ResumeLayout(false);
+			this.pnlSettings.PerformLayout();
+			this.pnlXampp.ResumeLayout(false);
+			this.pnlXampp.PerformLayout();
 			this.pnlAtalho.ResumeLayout(false);
 			this.pnlAtalho.PerformLayout();
 			this.panel10.ResumeLayout(false);
@@ -794,7 +821,6 @@
 		private System.Windows.Forms.Panel pnlAtalho;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label lblSO;
-		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Panel panel14;
 		private System.Windows.Forms.Button btnNext;
 		private System.Windows.Forms.Label label9;
@@ -802,9 +828,9 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Button btnPausa;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label lblAnterior;
+		private System.Windows.Forms.Label lblSeguinte;
+		private System.Windows.Forms.Label lblPR;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.TextBox txtPaths;
@@ -816,6 +842,10 @@
 		private ToggleButtonExample.CeLearningToggle switchSO;
 		private ToggleButtonExample.CeLearningToggle switchDuracao;
 		private ToggleButtonExample.CeLearningToggle switchNome;
+		private System.Windows.Forms.Label lblVersao;
+		private System.Windows.Forms.Panel pnlXampp;
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Label label15;
 	}
 }
 
