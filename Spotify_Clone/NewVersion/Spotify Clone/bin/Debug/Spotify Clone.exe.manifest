@@ -74,7 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+cmWdMAGNN3ZuwrIt31GxRWgPOhes7kepxfMlbvAawU=</dsig:DigestValue>
+        <dsig:DigestValue>rCC8RWSxkgeKgUuq5c9fUVOGlpBuYW37W1gVO3JLNiY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DiscordRPC.dll" size="81408">
+      <assemblyIdentity name="DiscordRPC" version="1.0.175.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ahjfyL3GAweHtYFMdrhmPb5bjKRpvrZaLKn1cx+hkG8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +110,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sysRkSntZGXSTkD++yXUx71+oG2TkgT/DTT17Af8hsk=</dsig:DigestValue>
+        <dsig:DigestValue>P0tPBNaLyFftZs8AuQNjuK6M/hGG9I8lxY/3O3c6ln0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -110,19 +122,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>s/49vDEw6q3b2ZnkKO5qZ76YQO4CHjUB3629HCy5bPg=</dsig:DigestValue>
+        <dsig:DigestValue>tiSUnfiw46YVP9+3MKfG9JkLZZLuDZIuF4hDPSdmEPM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spotify Clone.exe" size="699872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spotify Clone.exe" size="697312">
       <assemblyIdentity name="Spotify Clone" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4bnxQIB5GEsFSDSaIz7zB5+N9W+YIChGxxc6GkheOEw=</dsig:DigestValue>
+        <dsig:DigestValue>B1GBgRl+R1rFGyp2Hj7pUkfr1UcJZh+CMWB5o22YGI0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -135,13 +147,13 @@
       <dsig:DigestValue>5mpoH5XtnlMS2xtVRBKGyvsIozAuMz/WSfMf9QsVFZE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Spotify Clone.exe.config" size="189">
+  <file name="Spotify Clone.exe.config" size="544">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+      <dsig:DigestValue>dBuLcGJZURn7vOGj6aC8JWz8FXkDBNEz5xXQkJL4Dio=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Spotify.ico" size="52686">

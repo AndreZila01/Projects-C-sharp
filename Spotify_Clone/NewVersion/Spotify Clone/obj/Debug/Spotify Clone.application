@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Spotify Clone.exe.manifest" size="8429">
+    <dependentAssembly dependencyType="install" codebase="Spotify Clone.exe.manifest" size="9069">
       <assemblyIdentity name="Spotify Clone.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+Vv2UCLhXXW/F/UVfo9YQO9Qx0nV2KuhA/EEUMwlkSE=</dsig:DigestValue>
+        <dsig:DigestValue>MtNfE8pTx89nclX7A346Gl4k2jen7APDfuhVu+zhd0M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

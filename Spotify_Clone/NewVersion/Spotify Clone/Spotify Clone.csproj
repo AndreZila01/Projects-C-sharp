@@ -79,11 +79,14 @@
     <Reference Include="AudioSwitcher.AudioApi.CoreAudio, Version=4.0.0.308, Culture=neutral, PublicKeyToken=fda5729e2db3a64f, processorArchitecture=MSIL">
       <HintPath>..\packages\AudioSwitcher.AudioApi.CoreAudio.4.0.0-alpha5\lib\net45\AudioSwitcher.AudioApi.CoreAudio.dll</HintPath>
     </Reference>
+    <Reference Include="DiscordRPC, Version=1.0.175.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscordRichPresence.1.0.175\lib\net35\DiscordRPC.dll</HintPath>
+    </Reference>
     <Reference Include="Gma.System.MouseKeyHook, Version=5.6.130.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MouseKeyHook.5.6.0\lib\net40\Gma.System.MouseKeyHook.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1-beta2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -113,15 +116,14 @@
   <ItemGroup>
     <Compile Include="Classes\Backend.cs" />
     <Compile Include="Classes\SaveData.cs" />
-    <Compile Include="Extensions\CeLearningToggle.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Extensions\FolderSelectDialog.cs" />
-    <Compile Include="Extensions\Reflector.cs" />
     <Compile Include="Extensions\DiscordRpc.cs" />
     <Compile Include="Extensions\ExtenssionMethods.cs" />
-    <Compile Include="Extensions\MyRectangle.cs" />
     <Compile Include="Classes\Class.cs" />
+    <Compile Include="Extensions\Reflector.cs" />
+    <Compile Include="Extensions\RJToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

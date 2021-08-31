@@ -150,3 +150,6 @@ C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVer
 C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.CopyComplete
 C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.exe
 C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.pdb
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\DiscordRPC.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\DiscordRPC.pdb
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\DiscordRPC.xml

@@ -93,7 +93,7 @@ namespace Spotify_Clone.Classes
 				return null;
 			}
 		}
-		public List<PlayList> WriteReadMusic(bool readMusic, string path, PlayList play)
+		public List<PlayList> WriteReadMusic(bool readMusic, string path, List<PlayList> play, int IdPlaylist)
 		{
 			var Paths = "";
 			var ds = path == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = path;
@@ -128,19 +128,21 @@ namespace Spotify_Clone.Classes
 				}
 				else
 				{
-					if (play.Name != "")
-					{
-						string myString = /*EncryptADeDecrypt.DecryptOther*/(File.ReadAllText(Paths + "/SpotifyClone/Musics.json"));
-						lstConteudo = JsonConvert.DeserializeObject<List<PlayList>>(/*EncryptADeDecrypt.DecryptString*/(myString.ToString()));
+					//if (play.Name != "")
+					//{
+					//	string myString = /*EncryptADeDecrypt.DecryptOther*/(File.ReadAllText(Paths + "/SpotifyClone/Musics.json"));
+					//	lstConteudo = JsonConvert.DeserializeObject<List<PlayList>>(/*EncryptADeDecrypt.DecryptString*/(myString.ToString()));
 
-						playList.Descrição = play.Descrição;
-						playList.Image = play.Image;
-						playList.Name = play.Name;
-						playList.IDList = (lstConteudo.Count() + 1);
-						lstConteudo.Add(play);
-						string info = JsonConvert.SerializeObject(lstConteudo);
-						File.WriteAllText(Paths + "/SpotifyClone/Musics.json", /*EncryptADeDecrypt.EncryptOther*/info);
-					}
+					//	playList.Descrição = play.Descrição;
+					//	playList.Image = play.Image;
+					//	playList.Name = play.Name;
+					//	playList.IDList = (lstConteudo.Count() + 1);
+					//	lstConteudo.Add(play);
+					//	string info = JsonConvert.SerializeObject(lstConteudo);
+					//	File.WriteAllText(Paths + "/SpotifyClone/Musics.json", /*EncryptADeDecrypt.EncryptOther*/info);
+					//}
+					string info = JsonConvert.SerializeObject(play);
+					File.WriteAllText(Paths + "/SpotifyClone/Musics.json", /*EncryptADeDecrypt.EncryptOther*/info);
 				}
 			}
 			catch (Exception ex)

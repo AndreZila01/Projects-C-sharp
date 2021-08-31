@@ -88,15 +88,13 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.chkAtalho = new System.Windows.Forms.CheckBox();
 			this.pnlDiscord = new System.Windows.Forms.Panel();
-			this.switchDuracao = new ToggleButtonExample.CeLearningToggle();
-			this.switchNome = new ToggleButtonExample.CeLearningToggle();
+			this.label4 = new System.Windows.Forms.Label();
 			this.lblDuracao = new System.Windows.Forms.Label();
 			this.lblNomeDisc = new System.Windows.Forms.Label();
 			this.panel9 = new System.Windows.Forms.Panel();
 			this.chkDiscord = new System.Windows.Forms.CheckBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel8 = new System.Windows.Forms.Panel();
-			this.switchSO = new ToggleButtonExample.CeLearningToggle();
 			this.pctPaths = new System.Windows.Forms.PictureBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.txtPaths = new System.Windows.Forms.TextBox();
@@ -107,6 +105,9 @@
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel14 = new System.Windows.Forms.Panel();
+			this.switchDuracao = new CustomControls.RJControls.RJToggleButton();
+			this.switchNome = new CustomControls.RJControls.RJToggleButton();
+			this.switchSO = new CustomControls.RJControls.RJToggleButton();
 			trackBar1 = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).BeginInit();
 			this.pnlTop.SuspendLayout();
@@ -155,6 +156,8 @@
 			trackBar1.Name = "trackBar1";
 			trackBar1.TabStop = false;
 			trackBar1.Value = 5;
+			trackBar1.Click += new System.EventHandler(this.trackBar1_Click);
+			trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
 			// 
 			// pnlTop
 			// 
@@ -436,6 +439,7 @@
 			this.pnlSettings.Controls.Add(this.panel14);
 			resources.ApplyResources(this.pnlSettings, "pnlSettings");
 			this.pnlSettings.Name = "pnlSettings";
+			this.pnlSettings.Tag = "0";
 			// 
 			// lblVersao
 			// 
@@ -556,38 +560,17 @@
 			// 
 			this.pnlDiscord.Controls.Add(this.switchDuracao);
 			this.pnlDiscord.Controls.Add(this.switchNome);
+			this.pnlDiscord.Controls.Add(this.label4);
 			this.pnlDiscord.Controls.Add(this.lblDuracao);
 			this.pnlDiscord.Controls.Add(this.lblNomeDisc);
 			resources.ApplyResources(this.pnlDiscord, "pnlDiscord");
 			this.pnlDiscord.Name = "pnlDiscord";
 			// 
-			// switchDuracao
+			// label4
 			// 
-			this.switchDuracao.BorderColor = System.Drawing.Color.Transparent;
-			this.switchDuracao.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchDuracao.ForeColor = System.Drawing.Color.Transparent;
-			this.switchDuracao.IsOn = false;
-			resources.ApplyResources(this.switchDuracao, "switchDuracao");
-			this.switchDuracao.Name = "switchDuracao";
-			this.switchDuracao.OffColor = System.Drawing.Color.DarkGray;
-			this.switchDuracao.OffText = "OFF";
-			this.switchDuracao.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
-			this.switchDuracao.OnText = "ON";
-			this.switchDuracao.TextEnabled = true;
-			// 
-			// switchNome
-			// 
-			this.switchNome.BorderColor = System.Drawing.Color.Transparent;
-			this.switchNome.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchNome.ForeColor = System.Drawing.Color.Transparent;
-			this.switchNome.IsOn = false;
-			resources.ApplyResources(this.switchNome, "switchNome");
-			this.switchNome.Name = "switchNome";
-			this.switchNome.OffColor = System.Drawing.Color.DarkGray;
-			this.switchNome.OffText = "OFF";
-			this.switchNome.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
-			this.switchNome.OnText = "ON";
-			this.switchNome.TextEnabled = true;
+			resources.ApplyResources(this.label4, "label4");
+			this.label4.Name = "label4";
+			this.label4.Tag = "En -> Choose language - changes will be applied after restarting the app";
 			// 
 			// lblDuracao
 			// 
@@ -634,20 +617,6 @@
 			this.panel8.Controls.Add(this.label1);
 			resources.ApplyResources(this.panel8, "panel8");
 			this.panel8.Name = "panel8";
-			// 
-			// switchSO
-			// 
-			this.switchSO.BorderColor = System.Drawing.Color.Transparent;
-			this.switchSO.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.switchSO.ForeColor = System.Drawing.Color.Transparent;
-			this.switchSO.IsOn = false;
-			resources.ApplyResources(this.switchSO, "switchSO");
-			this.switchSO.Name = "switchSO";
-			this.switchSO.OffColor = System.Drawing.Color.DarkGray;
-			this.switchSO.OffText = "OFF";
-			this.switchSO.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
-			this.switchSO.OnText = "ON";
-			this.switchSO.TextEnabled = true;
 			// 
 			// pctPaths
 			// 
@@ -711,12 +680,45 @@
 			resources.ApplyResources(this.panel14, "panel14");
 			this.panel14.Name = "panel14";
 			// 
+			// switchDuracao
+			// 
+			this.switchDuracao.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.switchDuracao, "switchDuracao");
+			this.switchDuracao.Name = "switchDuracao";
+			this.switchDuracao.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchDuracao.OffToggleColor = System.Drawing.Color.White;
+			this.switchDuracao.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchDuracao.OnToggleColor = System.Drawing.Color.White;
+			this.switchDuracao.UseVisualStyleBackColor = false;
+			// 
+			// switchNome
+			// 
+			this.switchNome.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.switchNome, "switchNome");
+			this.switchNome.Name = "switchNome";
+			this.switchNome.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchNome.OffToggleColor = System.Drawing.Color.White;
+			this.switchNome.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchNome.OnToggleColor = System.Drawing.Color.White;
+			this.switchNome.UseVisualStyleBackColor = false;
+			// 
+			// switchSO
+			// 
+			this.switchSO.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.switchSO, "switchSO");
+			this.switchSO.Name = "switchSO";
+			this.switchSO.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchSO.OffToggleColor = System.Drawing.Color.White;
+			this.switchSO.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchSO.OnToggleColor = System.Drawing.Color.White;
+			this.switchSO.UseVisualStyleBackColor = false;
+			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.pnlSettings);
 			this.Controls.Add(this.pnlCont);
+			this.Controls.Add(this.pnlSettings);
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
@@ -839,13 +841,14 @@
 		private System.Windows.Forms.Label labelControl2;
 		private System.Windows.Forms.Label labelControl4;
 		private System.Windows.Forms.CheckBox chkDiscord;
-		private ToggleButtonExample.CeLearningToggle switchSO;
-		private ToggleButtonExample.CeLearningToggle switchDuracao;
-		private ToggleButtonExample.CeLearningToggle switchNome;
 		private System.Windows.Forms.Label lblVersao;
 		private System.Windows.Forms.Panel pnlXampp;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Label label4;
+		private CustomControls.RJControls.RJToggleButton switchNome;
+		private CustomControls.RJControls.RJToggleButton switchDuracao;
+		private CustomControls.RJControls.RJToggleButton switchSO;
 	}
 }
 

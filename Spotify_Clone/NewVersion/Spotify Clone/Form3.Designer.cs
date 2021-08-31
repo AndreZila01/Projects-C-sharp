@@ -79,7 +79,7 @@
 			this.MinimizeBox = false;
 			this.Name = "Video";
 			this.ShowIcon = false;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Load += new System.EventHandler(this.Form3_Load);
 			this.SizeChanged += new System.EventHandler(this.Form3_SizeChanged);
 			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
