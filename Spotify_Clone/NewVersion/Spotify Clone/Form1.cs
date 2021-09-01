@@ -22,6 +22,7 @@ using DiscordRpcDemo;
 using Gma.System.MouseKeyHook;
 using FolderSelect;
 using DiscordRPC;
+using Microsoft.Win32;
 
 namespace Spotify_Clone
 {
@@ -474,6 +475,12 @@ namespace Spotify_Clone
 				case "lblMusic":
 					IdPlayList = (int)((Label)sender).Tag; MusicaPlay();
 					break;
+				case "lblMini":
+					ds = switchMini.Checked == true ? switchMini.Checked = false : switchMini.Checked = true;
+					break;
+				case "lblInfoMusic":
+					ds = switchMusic.Checked == true ? switchMusic.Checked = false : switchMusic.Checked = true;
+					break;
 				default:
 					break;
 			}
@@ -520,316 +527,8 @@ namespace Spotify_Clone
 		{
 			InitializeComponent();
 		}
-		/*private void bgwCarregar_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-		{
-			Aqui:
-			pnlPrincipal.Controls.Clear();
-			if (this.Tag.ToString() == "MusicaPlay" || this.Tag.ToString() == "MusicaPlayD")
-			{
-				int widht = Screen.PrimaryScreen.Bounds.Width;
-				int height = Screen.PrimaryScreen.Bounds.Height;
-				musica = true;
-				pnlPrincipal.Visible = true;
-				axWindowsMediaPlayer1.Visible = false;
-				try
-				{
-					PlaydaLista.Clear();
-					_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.ToList().ForEach(item =>
-					{
-						NameMusic = item.Split(new string[]{
-		"\\"}, StringSplitOptions.None);
-						int TAMANHO = NameMusic.Length;
-						int g = NameMusic[TAMANHO - 1].Count();
-						string f = NameMusic[TAMANHO - 1].Substring(0, g);
-						if (PlaydaLista.Contains(f) == false) PlaydaLista.Add(f);
-					});
-				}
-				catch
-				{
-				}
-				try
-				{
-					PictureBox pE_ = new PictureBox();
-					pE_.Location = new Point(20, 5);
-					pE_.Size = new Size(164, 136);
-					pE_.BackColor = Color.Silver;
-					pE_.LoadAsync(_listInformacoes[(IdPlayList - 1)].Image);
-					pE_.SizeMode = PictureBoxSizeMode.Zoom;
-					pE_.BorderStyle = BorderStyle.None;
-					pnlPrincipal.Controls.Add(pE_);
-				}
-				catch
-				{
-					return;
-				}
-				Label lblPl = new Label();
-				lblPl.Text = "PLAYLIST";
-				lblPl.Location = new Point(202, 25);
-				lblPl.Size = new Size(61, 13);
-				lblPl.BorderStyle = BorderStyle.None;
-				lblPl.Font = new Font("Tahoma", 9, FontStyle.Regular);
-				lblPl.BackColor = Color.Transparent;
-				lblPl.ForeColor = Color.Black;
-				pnlPrincipal.Controls.Add(lblPl);
-				Label lbl = new Label();
-				try
-				{
-					string s;
-					string s1 = _listInformacoes[(IdPlayList - 1)].Name;
-					if (s1.Count() > 30)
-					{
-						s = s1.Substring(0, 30);
-						if (s1.Count() > 30) s = s + " ...";
-					}
-					else s = s1;
-					lbl.Text = s;
-					lbl.Location = new Point(202, 39);
-					lbl.Size = new Size(195, 25);
-					lbl.BorderStyle = BorderStyle.None;
-					lbl.BackColor = Color.Transparent;
-					lbl.Font = new Font("Times New Roman", 18, FontStyle.Bold);
-					lbl.ForeColor = Color.Black;
-					pnlPrincipal.Controls.Add(lbl);
-				}
-				catch
-				{
-					return;
-				}
-				Label lbl1 = new Label();
-				lbl1.Text = _listInformacoes[(IdPlayList - 1)].Descrição;
-				lbl1.Location = new Point(202, 66);
-				lbl1.AutoSize = false;
-				lbl1.Size = new Size(314, 40);
-				lbl1.BorderStyle = BorderStyle.None;
-				lbl1.BackColor = Color.Transparent;
-				lbl1.Font = new Font("Times New Roman", 9, FontStyle.Italic);
-				lbl1.ForeColor = Color.Black;
-				pnlPrincipal.Controls.Add(lbl1);
-				Button btn = new Button();
-				btn.Location = new Point(202, 110);
-				btn.Size = new Size(100, 30);
-				btn.FlatStyle = FlatStyle.Flat;
-				btn.BackColor = Color.FromArgb(0, 128, 71);
-				btn.FlatAppearance.BorderSize = 0;
-				btn.ForeColor = Color.White;
-				btn.Font = new Font("Trebuchet MS", 17, FontStyle.Bold);
-				btn.Text = "PLAY";
-				btn.Click += btnPlayMusic_Click;
-				btn.Cursor = Cursors.Hand;
-				pnlPrincipal.Controls.Add(btn);
-				PictureBox pe = new PictureBox();
-				pe.Location = new Point(487, 110);
-				pe.Size = new Size(30, 30);
-				pe.Image = Properties.Resources.mais;
-				pe.BackColor = Color.Transparent;
-				pe.SizeMode = PictureBoxSizeMode.Zoom;
-				pe.BorderStyle = BorderStyle.None;
-				pe.Cursor = Cursors.Hand;
-				pe.Name = "picAddMusic";
-				pe.Click += pE_Click;
-				pnlPrincipal.Controls.Add(pe);
-				Panel pnl = new Panel();
-				pnl.Location = new Point(5, 160);
-				pnl.Size = new Size(662, 180);
-				pnl.BorderStyle = BorderStyle.None;
-				pnl.BackColor = Color.White;
-				pnlPrincipal.Controls.Add(pnl);
-				FlowLayoutPanel flp = new FlowLayoutPanel();
-				flp.Dock = DockStyle.Fill;
-				flp.AutoScroll = true;
-				flp.BackColor = Color.Transparent;
-				pnl.Controls.Add(flp);
-				PictureBox pictureEdit = new PictureBox();
-				pictureEdit.Location = new Point(pnlPrincipal.Width - 18, 0);
-				pictureEdit.Size = new Size(20, 20);
-				pictureEdit.Image = Properties.Resources.expand;
-				pictureEdit.BackColor = Color.Transparent;
-				pictureEdit.BorderStyle = BorderStyle.None;
-				pictureEdit.SizeMode = PictureBoxSizeMode.Zoom;
-				pictureEdit.Cursor = Cursors.Arrow;
-				pictureEdit.Name = "pE_Form";
-				pictureEdit.Click += pE_Click;
-				pnlPrincipal.Controls.Add(pictureEdit);
-				flp.Controls.Clear();
-				try
-				{
-					int d = 0, limite = 0;
-					if (_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica != null)
-					{
-						if (this.Tag.ToString() == "MusicaPlayD")
-							limite = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count();
-						else
-							limite = 15;
-						PlaydaLista.ToList().ForEach(Testes =>
-						{
-							NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[d].Split(new string[] { "\\" }, StringSplitOptions.None);
-
-							if (d <= limite)
-							{
-								Panel pnl1 = new Panel();
-								pnl1.Size = new Size(flp.Width - 18, 40);
-								pnl1.BackColor = Color.FromArgb(224, 224, 209);
-								pnl1.Margin = new Padding(0, 2, 0, 0);
-								PictureBox pic = new PictureBox();
-								pic.Image = Properties.Resources.botao_play;
-								pic.SizeMode = PictureBoxSizeMode.Zoom;
-								pic.Size = new Size(30, 30);
-								pic.BorderStyle = BorderStyle.None;
-								pic.BackColor = Color.Transparent;
-								pic.Location = new Point(5, 5);
-								pic.Tag = d;
-								pic.Name = "picBotaoPlay";
-								pic.Click += pE_Click;
-								pnl1.Controls.Add(pic);
-								Label lbl2 = new Label();
-								lbl2.Size = new Size(flp.Width - 200, 20);
-								lbl2.BackColor = Color.Transparent;
-								lbl2.Location = new Point(50, 10);
-								int g = Testes.Count() - 4;
-								lbl2.Text = Testes.Substring(0, g);
-								lbl2.ForeColor = Color.Black;
-								lbl2.Font = new Font("Arial", 8, FontStyle.Italic);
-								pnl1.Controls.Add(lbl2);
-								PictureBox picture = new PictureBox();
-								picture.Image = Properties.Resources.close_red;
-								picture.Location = new Point(pnl1.Width - 40, (pnl1.Height / 2) - 10);
-								picture.Size = new Size(20, 20);
-								picture.SizeMode = PictureBoxSizeMode.Zoom;
-								picture.BorderStyle = BorderStyle.None;
-								picture.BackColor = Color.Transparent;
-								picture.Tag = d;
-								picture.Name = "picRemoveMusic";
-								picture.Click += pE_Click;
-								pnl1.Controls.Add(picture);
-								flp.Controls.Add(pnl1);
-								d++;
-							}
-							else if (d == 16)
-							{
-								Panel pnl1 = new Panel();
-								pnl1.Size = new Size(flp.Width - 18, 40);
-								pnl1.BackColor = Color.FromArgb(224, 224, 209);
-								pnl1.Margin = new Padding(0, 2, 0, 0);
-								pnl1.Name = "pnlDown";
-								PictureBox pic = new PictureBox();
-								pic.Image = Properties.Resources.down;
-								pic.SizeMode = PictureBoxSizeMode.Zoom;
-								pic.Size = new Size(30, 30);
-								pic.BorderStyle = BorderStyle.None;
-								pic.BackColor = Color.Transparent;
-								pic.Location = new Point(5, 5);
-								pic.Tag = d;
-								pic.Name = "picDown";
-								pic.Click += pE_Click;
-								pnl1.Controls.Add(pic);
-								Label lbl2 = new Label();
-								lbl2.Size = new Size(flp.Width - 120, 20);
-								lbl2.BackColor = Color.Red;
-								lbl2.Location = new Point(50, 10);
-								lbl2.Text = "Teste";
-								lbl2.ForeColor = Color.Black;
-								lbl2.Font = new Font("Times New Roman", 12, FontStyle.Italic);
-								lbl2.TextAlign = ContentAlignment.MiddleCenter;
-								pnl1.Controls.Add(lbl2);
-								PictureBox picture = new PictureBox();
-								picture.Image = Properties.Resources.down;
-								picture.Location = new Point(pnl1.Width - 40, (pnl1.Height / 2) - 10);
-								picture.Size = new Size(20, 20);
-								picture.SizeMode = PictureBoxSizeMode.Zoom;
-								picture.BorderStyle = BorderStyle.None;
-								picture.BackColor = Color.Transparent;
-								picture.Tag = d;
-								picture.Name = "picDown";
-								picture.Click += pE_Click;
-								pnl1.Controls.Add(picture);
-								flp.Controls.Add(pnl1);
-								d++;
-							}
-						});
-					}
-				}
-				catch
-				{
-					return;
-				}
-			}
-			else
-			if (this.Tag.ToString() == "AddPnl")
-			{
-				pnlPrincipal.Visible = true;
-				axWindowsMediaPlayer1.Visible = false;
-				if (musica == true) MusicaPlay();
-				PainelControl1.Size = new Size(130, 409);
-				pnlPlayList.Size = new Size(PainelControl1.Size.Width, PainelControl1.Size.Height - 70);
-				picAddPlaylist.Location = new Point(12, 35);
-				this.FormBorderStyle = FormBorderStyle.None;
-				pnlPrincipal.Size = new Size(676, 345);
-				try
-				{
-					flowLayoutPanel1.Controls.Clear();
-					flowLayoutPanel1.Dock = DockStyle.Fill;
-					flowLayoutPanel1.AutoScroll = true;
-					flowLayoutPanel1.BorderStyle = BorderStyle.None;
-					flowLayoutPanel1.Margin = new Padding(0, 0, 0, 0);
-					flowLayoutPanel1.BackColor = Color.Transparent;
-					pnlPlayList.BorderStyle = BorderStyle.None;
-					int temp = 1;
-					_listInformacoes.ToList().ForEach(test =>
-					{
-						Panel pnl = new Panel();
-						pnl.Size = new Size(130, 50);
-						pnl.BorderStyle = BorderStyle.None;
-						pnl.BackColor = Color.AntiqueWhite;
-						pnl.Margin = new Padding(0, 0, 0, 0);
-						pnl.BackColor = Color.FromArgb(92, 209, 213);
-						pnl.Anchor = (AnchorStyles.Right | AnchorStyles.Left);
-						pnl.ContextMenuStrip = cmsMenuStrip;
-						pnl.Tag = temp;
-						pnl.MouseDown += painel_MouseDown;
-						pnl.Click += pnl_Click;
-						string s1 = test.Name;
-						int k = s1.Count() > 10 ? k = 10 : k = s1.Count();
-						string s = s1.Substring(0, k);
-						s = s1.Count() > 10 ? s = s + " ..." : s = s + "";
-						PictureBox pE_ = new PictureBox();
-						pE_.Size = new Size(36, 37);
-						pE_.Location = new Point(6, 9);
-						pE_.LoadAsync((test.Image));
-						pE_.BackColor = Color.Transparent;
-						pE_.BorderStyle = BorderStyle.None;
-						pE_.SizeMode = PictureBoxSizeMode.Zoom;
-						pE_.Tag = temp;
-						pE_.MouseDown += PicEdit_MouseDown;
-						pE_.Click += pE_Click;
-						pE_.Name = "picPlaylist";
-						pnl.Controls.Add(pE_);
-						Label lbl = new Label();
-						lbl.AutoSize = false;
-						lbl.Text = s;
-						lbl.Size = new Size(80, 37);
-						lbl.Location = new Point(49, 20);
-						lbl.BackColor = Color.Transparent;
-						lbl.BorderStyle = BorderStyle.None;
-						lbl.Tag = temp;
-						lbl.Name = "lblMusic";
-						lbl.MouseDown += Lbl_MouseDown;
-						lbl.Click += label11_Click;
-						pnl.Controls.Add(lbl);
-						flowLayoutPanel1.Controls.Add(pnl);
-						temp++;
-					});
-				}
-				catch
-				{
-
-				}
-				this.Tag = "";
-			}
-		}*/
-
 		private void bgwCarregar_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
-			Aqui:
 			pnlPrincipal.Controls.Clear();
 			if (this.Tag.ToString() == "MusicaPlay" || this.Tag.ToString() == "MusicaPlayD")
 			{
@@ -887,16 +586,7 @@ namespace Spotify_Clone
 				Label lbl = new Label();
 				try
 				{
-					//string s;
-					//string s1 = _listInformacoes[(IdPlayList - 1)].Name;
-					//if (s1.Count() > 30)
-					//{
-					//	s = s1.Substring(0, 30);
-					//	if (s1.Count() > 30) s = s + " ...";
-					//}
-					//else s = s1;
 					var ds = _listInformacoes[(IdPlayList - 1)].Name.Count() > 30 ? lbl.Text = _listInformacoes[(IdPlayList - 1)].Name.Substring(0, 30) : lbl.Text = _listInformacoes[(IdPlayList - 1)].Name;
-					//lbl.Text = s;
 					lbl.Location = new Point(202, 39);
 					lbl.Size = new Size(195, 25);
 					lbl.BorderStyle = BorderStyle.None;
@@ -943,11 +633,6 @@ namespace Spotify_Clone
 				pe.Name = "picAddMusic";
 				pe.Click += pE_Click;
 				pnlpri.Controls.Add(pe);
-				//FlowLayoutPanel flp = new FlowLayoutPanel();
-				//flp.Dock = DockStyle.Fill;
-				//flp.AutoScroll = true;
-				//flp.BackColor = Color.Transparent;
-				//pnl.Controls.Add(flp);
 				Panel pnlseg = new Panel();
 				pnlseg.Dock = DockStyle.Fill;
 				pnlseg.BackColor = Color.Blue;
@@ -957,7 +642,6 @@ namespace Spotify_Clone
 				pnl.AutoScroll = true;
 				pnl.Size = new Size((pnlseg.Width - 10), (pnlseg.Height - 230));
 				pnl.BorderStyle = BorderStyle.None;
-				//pnl.Dock = DockStyle.Fill;
 				pnl.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
 				pnl.BackColor = Color.White;
 				pnl.Margin = new Padding(15, 15, 15, 25);
@@ -1177,8 +861,6 @@ namespace Spotify_Clone
 				}
 				this.Tag = "";
 			}
-
-			Discord("Nome da Musica", 0, 0);
 		}
 		private void bgwCarregar_DoWork(object sender, DoWorkEventArgs e)
 		{
@@ -1214,37 +896,60 @@ namespace Spotify_Clone
 			return result;
 		}
 		#region teste discord5
+		DiscordRpcClient client;
+		DateTime start = DateTime.UtcNow;
 		private void Discord(string NomeMusic, int tempoatual, int duracao)
 		{
-			if (chkDiscord.Checked)
+			if (!switchNome.Checked)
+				NomeMusic = "catJAM catJAM catJAM catJAM ";
+			if (client == null)
 			{
-				//var rp = new RichPresence();
-				this.handlers = default(DiscordRpc.EventHandlers);
-				DiscordRpc.Initialize("863871149598048297", ref this.handlers, true, null);
-				this.handlers = default(DiscordRpc.EventHandlers);
-				DiscordRpc.Initialize("863871149598048297", ref this.handlers, true, null);
-				if (switchNome.Checked)
-					this.presence.details = "" + NomeMusic;
-				else
-					this.presence.details = "catJAM catJAM catJAM catJAM ";
-				if (tempoatual != 0 && duracao != 0 && switchDuracao.Checked)
-					try
-					{
-						TimeSpan timesat = time(tempoatual);
-						TimeSpan timesend = time(duracao);
-						this.presence.state = "" + timesat + "/" + timesend;
-					}
-					catch (Exception ex) { }
-				else
-					this.presence.state = "Infinity D: ";
-				this.presence.largeImageKey = "catjam";
-				this.presence.smallImageKey = "spotifyicon";
-				this.presence.largeImageText = "";
-				this.presence.smallImageText = "";
-				
+				client = new DiscordRpcClient("863871149598048297", -1);
+
+				client.Initialize();
 			}
-			else
-				DiscordRpc.Shutdown();
+			string temp = "";
+			if (tempoatual != 0 && duracao != 0 && switchDuracao.Checked)
+				try
+				{
+					TimeSpan timesat = time(tempoatual);
+					TimeSpan timesend = time(duracao);
+					temp = "" + timesat + "/" + timesend;
+				}
+				catch (Exception ex) { }
+			var rp = new RichPresence()
+			{
+				Details = "" + NomeMusic,
+				State = "" + temp,
+				Assets = new Assets()
+				{
+					SmallImageKey = "spotifyicon",
+					LargeImageKey = "catjam",
+				}
+			};
+
+			if (!switchDuracao.Checked)
+				rp.Timestamps = new Timestamps(start);
+
+			client.SetPresence(rp);
+		}
+		public struct Preset
+		{
+			public string ID;
+			public string Details;
+			public string State;
+			public int PartySize;
+			public int PartyMax;
+			public int Timestamps;
+			public DateTime CustomTimestamp;
+			public string LargeKey;
+			public string LargeText;
+			public string SmallKey;
+			public string SmallText;
+			public string Button1Text;
+			public string Button1URL;
+			public string Button2Text;
+			public string Button2URL;
 		}
 		#endregion
 		private void Form1_Load(object sender, EventArgs e)
@@ -1256,9 +961,10 @@ namespace Spotify_Clone
 			pnlSettings.BringToFront();
 			comboBox1.Text = comboBox1.Items[0].ToString();
 
-			//if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync();
+			////if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync();
 			if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 			this.Tag = "AddPnl";
+			Discord("Nome da Musica", 0, 0);
 			//SubscribeGlobal();
 			//FormClosing += Main_Closing;
 
@@ -1288,9 +994,11 @@ namespace Spotify_Clone
 				int Enviar = switchNome.Checked ? Enviar = 1 : Enviar = 0;
 				int Duracao = switchDuracao.Checked ? Duracao = 1 : Duracao = 0;
 				int Atalho = chkAtalho.Checked ? Atalho = 1 : Atalho = 0;
+				int Mini = switchMini.Checked ? Mini = 1 : Mini = 0;
+				int NotifMusic = switchMusic.Checked ? NotifMusic = 1 : NotifMusic = 0;
 
 				Backend back = new Backend();
-				List<Settings> st = back.UpdateSettings(comboBox1.Text, SO, Discord, Enviar, Duracao, Atalho, btnAnterior.Text, btnPausa.Text, btnNext.Text, txtPaths.Text);
+				List<Settings> st = back.UpdateSettings(comboBox1.Text, SO, Discord, Enviar, Duracao, Atalho, Mini, NotifMusic, btnAnterior.Text, btnPausa.Text, btnNext.Text, txtPaths.Text);
 				string json = JsonConvert.SerializeObject(st);
 
 				Backend bk = new Backend();
@@ -1316,6 +1024,8 @@ namespace Spotify_Clone
 					ds = settings.disc == 1 ? chkDiscord.Checked = true : chkDiscord.Checked = false;
 					ds = chkDiscord.Checked == true ? pnlDiscord.Visible = true : pnlDiscord.Visible = false;
 					ds = settings.AutoRun == 1 ? switchSO.Checked = true : switchSO.Checked = false;
+					ds = settings.Minimizar == 1 ? switchMini.Checked = true : switchMini.Checked = false;
+					ds = settings.NotifMusic == 1 ? switchMusic.Checked = true : switchMusic.Checked = false;
 					if (settings.discord != null)
 					{
 						ds = settings.discord[0].Duracao == 1 ? switchDuracao.Checked = true : switchDuracao.Checked = false;
@@ -1331,7 +1041,18 @@ namespace Spotify_Clone
 					var dds = settings.Idioma == "Português" ? comboBox1.Invoke((MethodInvoker)(() => comboBox1.SelectedItem = "Português")) : comboBox1.Invoke((MethodInvoker)(() => comboBox1.SelectedItem = "Inglês"));
 				}
 				catch (Exception ex) { }
+
 			}
+			/*RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+			if (switchSO.Checked)
+			{
+				Application.EnableVisualStyles();
+				Application.SetCompatibleTextRenderingDefault(false);
+				rkApp.SetValue("Spotify_Clone", Application.ExecutablePath.ToString());
+			}
+			else
+				rkApp.DeleteValue("Spotify_Clone", false);*/
+			//Erro ao tentar criar um ficheiro no run do windows, ... SetCompatibleTextRenderingDefault must be called before the first IWin32Window object is created in the application
 		}
 
 		#region give tag to toolstrip
@@ -1384,7 +1105,13 @@ namespace Spotify_Clone
 				case "pE_Close":
 					//IdPlayList = (int)pE.Tag;
 					//MusicaPlay();
-					this.Close();
+					if (switchMini.Checked)
+						this.WindowState = FormWindowState.Minimized;
+					else
+					{
+						Application.Exit();
+						icnNotification.Visible = false;
+					}
 					break;
 				case "pE_minimizar":
 					this.WindowState = FormWindowState.Minimized;
@@ -1793,6 +1520,11 @@ namespace Spotify_Clone
 			}
 		}
 
+		private void icnNotification_Click(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Normal;
+		}
+
 		#endregion
 
 		#region modificando o codigo
@@ -1842,8 +1574,13 @@ namespace Spotify_Clone
 			//}
 			//else if ((PBC.Value == 0) && pE_PauseaPlay.Tag.ToString() != "1" && labelControl2.Text != string.Empty && (Ordem_de_Reproducao.Count() >= 1))
 			//	timer2.Start();
+			dt++;
 			if ((int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition != 0)
+			{
+				dt = 0;
 				PBC.Value = ((int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition);
+				PBC.Tag = ((int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition);
+			}
 			if (axWindowsMediaPlayer1.playState == WMPPlayState.wmppsPlaying)
 			{
 				PBC.Maximum = (int)axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration;
@@ -1872,6 +1609,7 @@ namespace Spotify_Clone
 							axWindowsMediaPlayer1.Ctlcontrols.play();
 							PBC.Value = 0;
 							dt = 0;
+							icnNotification.ShowBalloonTip(25, "Next Music ", "" + labelControl2.Text, ToolTipIcon.Info);
 							//}
 							//else
 							//{
@@ -1903,11 +1641,17 @@ namespace Spotify_Clone
 					timer1.Stop();
 					PBC.Value = 0;
 					timer2.Stop();
+					dt = 0;
 					pE_PauseaPlay.Image = Properties.Resources.play;
 				}
 			}
-			else if (((PBC.Value == 0) && pE_PauseaPlay.Tag.ToString() != "1" && labelControl2.Text != string.Empty && (Ordem_de_Reproducao.Count() >= 1)) && panel6.Tag != null)
+			//else if ((((PBC.Value == 0) && pE_PauseaPlay.Tag.ToString() != "1" && labelControl2.Text != string.Empty && (Ordem_de_Reproducao.Count() >= 1)))|| (dt>=20 && panel6.Tag != null))
+			//	timer2.Start();
+			else if (dt > 15 && panel6.Tag == null && PBC.Value == int.Parse(PBC.Tag.ToString()))
+			{
+				dt = 0;
 				timer2.Start();
+			}
 			try
 			{
 				Discord(labelControl2.Text, (int)(axWindowsMediaPlayer1.Ctlcontrols.currentPosition), (int)(axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration));
@@ -1941,6 +1685,7 @@ namespace Spotify_Clone
 								var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() == "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
 								axwindows();
 								axWindowsMediaPlayer1.Ctlcontrols.play();
+								icnNotification.ShowBalloonTip(25, "Next Music ", "" + labelControl2.Text, ToolTipIcon.Info);
 								dt = 0;
 								timer2.Stop();
 							}

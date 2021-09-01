@@ -25,6 +25,10 @@ namespace Spotify_Clone.Classes
 		public int atal { get; set; }
 		public List<Atalho> Atalhos { get; set; }
 		public string Paths { get; set; }
+		public int Minimizar { get; set; }
+		public int NotifMusic { get; set; }
+		//public string XAMPP { get; set; }
+
 	}
 	public class Discord
 	{

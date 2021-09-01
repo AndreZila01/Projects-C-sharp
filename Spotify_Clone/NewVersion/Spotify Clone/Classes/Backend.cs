@@ -10,11 +10,11 @@ namespace Spotify_Clone.Classes
 {
 	public class Backend
 	{
-		public List<Settings> UpdateSettings(string Idioma, int AutoRun, int Discord, int EnviarNome, int Duracao, int Atalho, string Musicaant, string Pausa, string Musicaseg, string paths)
+		public List<Settings> UpdateSettings(string Idioma, int AutoRun, int Discord, int EnviarNome, int Duracao, int Atalho, int Mini,int NotifMusi,  string Musicaant, string Pausa, string Musicaseg, string paths)
 		{
 			List<Discord> lstDisc = new List<Discord>(); List<Atalho> lstatl = new List<Atalho>(); List<Settings> lstset = new List<Settings>(); Settings st = new Settings();
 
-			st.Idioma = Idioma; st.AutoRun = AutoRun; st.disc = Discord;
+			st.Idioma = Idioma; st.AutoRun = AutoRun; st.disc = Discord; st.Minimizar = Mini; st.NotifMusic = NotifMusi;
 			if (st.disc != 0)
 			{
 				Discord disc = new Discord();
