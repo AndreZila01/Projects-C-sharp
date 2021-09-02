@@ -89,3 +89,36 @@ C:\Users\andre\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_V
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.CopyComplete
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.exe
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.pdb
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.AssemblyReference.cache
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Interop.WMPLib.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.ResolveComReference.cache
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.Form2.resources
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.Form1.resources
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.Properties.Resources.resources
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.GenerateResource.cache
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.CoreCompileInputs.cache
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.exe
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.pdb
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Download_VideoEMusic.exe.config
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Download_VideoEMusic.exe
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Download_VideoEMusic.pdb
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\libvideo.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\MediaToolkit.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Buffers.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Memory.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\YoutubeExtractor.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Buffers.xml
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Memory.xml
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\YoutubeExtractor.xml
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\Interop.WMPLib.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Download_VideoEMusic\Download_VideoEMusic\obj\Debug\Download_VideoEMusic.csproj.CopyComplete

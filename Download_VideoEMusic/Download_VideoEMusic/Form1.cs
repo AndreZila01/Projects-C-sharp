@@ -591,8 +591,8 @@ namespace Download_VideoEMusic
 					int poss = beforeFounder.IndexOf("\"</a>\n");
 					beforeFounder = beforeFounder.Remove(poss);
 					beforeFounder = beforeFounder.Replace(" At the moment in version : \"", "");
-					if (Properties.Resources.Versions != beforeFounder)
-						icn.ShowBalloonTip(5, "Have a new version this application, ... please update new Version", "Error", ToolTipIcon.Info);
+					//if (Properties.Resources.Versions != beforeFounder)
+					//	icn.ShowBalloonTip(5, "Have a new version this application, ... please update new Version", "Error", ToolTipIcon.Info);
 				}
 
 			}

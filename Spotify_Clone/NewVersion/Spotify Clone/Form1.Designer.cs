@@ -88,6 +88,8 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.chkAtalho = new System.Windows.Forms.CheckBox();
 			this.pnlDiscord = new System.Windows.Forms.Panel();
+			this.switchDuracao = new CustomControls.RJControls.RJToggleButton();
+			this.switchNome = new CustomControls.RJControls.RJToggleButton();
 			this.label4 = new System.Windows.Forms.Label();
 			this.lblDuracao = new System.Windows.Forms.Label();
 			this.lblNomeDisc = new System.Windows.Forms.Label();
@@ -95,6 +97,13 @@
 			this.chkDiscord = new System.Windows.Forms.CheckBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel8 = new System.Windows.Forms.Panel();
+			this.switchMusic = new CustomControls.RJControls.RJToggleButton();
+			this.lblInfoMusic = new System.Windows.Forms.Label();
+			this.label12 = new System.Windows.Forms.Label();
+			this.switchMini = new CustomControls.RJControls.RJToggleButton();
+			this.lblMini = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.switchSO = new CustomControls.RJControls.RJToggleButton();
 			this.pctPaths = new System.Windows.Forms.PictureBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.txtPaths = new System.Windows.Forms.TextBox();
@@ -106,15 +115,12 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel14 = new System.Windows.Forms.Panel();
 			this.icnNotification = new System.Windows.Forms.NotifyIcon(this.components);
-			this.label5 = new System.Windows.Forms.Label();
-			this.lblMini = new System.Windows.Forms.Label();
-			this.switchDuracao = new CustomControls.RJControls.RJToggleButton();
-			this.switchNome = new CustomControls.RJControls.RJToggleButton();
-			this.switchMini = new CustomControls.RJControls.RJToggleButton();
-			this.switchSO = new CustomControls.RJControls.RJToggleButton();
-			this.switchMusic = new CustomControls.RJControls.RJToggleButton();
-			this.lblInfoMusic = new System.Windows.Forms.Label();
-			this.label12 = new System.Windows.Forms.Label();
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.TSMIPrevious = new System.Windows.Forms.ToolStripMenuItem();
+			this.TSMIPause = new System.Windows.Forms.ToolStripMenuItem();
+			this.TSMINext = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.TSMIClose = new System.Windows.Forms.ToolStripMenuItem();
 			trackBar1 = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).BeginInit();
 			this.pnlTop.SuspendLayout();
@@ -152,6 +158,7 @@
 			this.panel9.SuspendLayout();
 			this.panel8.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).BeginInit();
+			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// trackBar1
@@ -573,6 +580,28 @@
 			resources.ApplyResources(this.pnlDiscord, "pnlDiscord");
 			this.pnlDiscord.Name = "pnlDiscord";
 			// 
+			// switchDuracao
+			// 
+			resources.ApplyResources(this.switchDuracao, "switchDuracao");
+			this.switchDuracao.BackColor = System.Drawing.Color.Transparent;
+			this.switchDuracao.Name = "switchDuracao";
+			this.switchDuracao.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchDuracao.OffToggleColor = System.Drawing.Color.White;
+			this.switchDuracao.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchDuracao.OnToggleColor = System.Drawing.Color.White;
+			this.switchDuracao.UseVisualStyleBackColor = false;
+			// 
+			// switchNome
+			// 
+			resources.ApplyResources(this.switchNome, "switchNome");
+			this.switchNome.BackColor = System.Drawing.Color.Transparent;
+			this.switchNome.Name = "switchNome";
+			this.switchNome.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchNome.OffToggleColor = System.Drawing.Color.White;
+			this.switchNome.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchNome.OnToggleColor = System.Drawing.Color.White;
+			this.switchNome.UseVisualStyleBackColor = false;
+			// 
 			// label4
 			// 
 			resources.ApplyResources(this.label4, "label4");
@@ -630,6 +659,63 @@
 			this.panel8.Controls.Add(this.label1);
 			resources.ApplyResources(this.panel8, "panel8");
 			this.panel8.Name = "panel8";
+			// 
+			// switchMusic
+			// 
+			resources.ApplyResources(this.switchMusic, "switchMusic");
+			this.switchMusic.BackColor = System.Drawing.Color.Transparent;
+			this.switchMusic.Name = "switchMusic";
+			this.switchMusic.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchMusic.OffToggleColor = System.Drawing.Color.White;
+			this.switchMusic.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchMusic.OnToggleColor = System.Drawing.Color.White;
+			this.switchMusic.UseVisualStyleBackColor = false;
+			// 
+			// lblInfoMusic
+			// 
+			resources.ApplyResources(this.lblInfoMusic, "lblInfoMusic");
+			this.lblInfoMusic.Name = "lblInfoMusic";
+			this.lblInfoMusic.Tag = "En -> Hitting X will make application, invisble. But is visible in taskbar";
+			this.lblInfoMusic.Click += new System.EventHandler(this.label11_Click);
+			// 
+			// label12
+			// 
+			resources.ApplyResources(this.label12, "label12");
+			this.label12.Name = "label12";
+			// 
+			// switchMini
+			// 
+			resources.ApplyResources(this.switchMini, "switchMini");
+			this.switchMini.BackColor = System.Drawing.Color.Transparent;
+			this.switchMini.Name = "switchMini";
+			this.switchMini.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchMini.OffToggleColor = System.Drawing.Color.White;
+			this.switchMini.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchMini.OnToggleColor = System.Drawing.Color.White;
+			this.switchMini.UseVisualStyleBackColor = false;
+			// 
+			// lblMini
+			// 
+			resources.ApplyResources(this.lblMini, "lblMini");
+			this.lblMini.Name = "lblMini";
+			this.lblMini.Tag = "En -> Hitting X will make application, invisble. But is visible in taskbar";
+			this.lblMini.Click += new System.EventHandler(this.label11_Click);
+			// 
+			// label5
+			// 
+			resources.ApplyResources(this.label5, "label5");
+			this.label5.Name = "label5";
+			// 
+			// switchSO
+			// 
+			resources.ApplyResources(this.switchSO, "switchSO");
+			this.switchSO.BackColor = System.Drawing.Color.Transparent;
+			this.switchSO.Name = "switchSO";
+			this.switchSO.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchSO.OffToggleColor = System.Drawing.Color.White;
+			this.switchSO.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchSO.OnToggleColor = System.Drawing.Color.White;
+			this.switchSO.UseVisualStyleBackColor = false;
 			// 
 			// pctPaths
 			// 
@@ -696,87 +782,55 @@
 			// icnNotification
 			// 
 			this.icnNotification.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+			this.icnNotification.ContextMenuStrip = this.contextMenuStrip1;
 			resources.ApplyResources(this.icnNotification, "icnNotification");
 			this.icnNotification.Click += new System.EventHandler(this.icnNotification_Click);
 			// 
-			// label5
+			// contextMenuStrip1
 			// 
-			resources.ApplyResources(this.label5, "label5");
-			this.label5.Name = "label5";
+			this.contextMenuStrip1.BackColor = System.Drawing.Color.White;
+			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSMIPrevious,
+            this.TSMIPause,
+            this.TSMINext,
+            this.toolStripSeparator1,
+            this.TSMIClose});
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
 			// 
-			// lblMini
+			// TSMIPrevious
 			// 
-			resources.ApplyResources(this.lblMini, "lblMini");
-			this.lblMini.Name = "lblMini";
-			this.lblMini.Tag = "En -> Hitting X will make application, invisble. But is visible in taskbar";
-			this.lblMini.Click += new System.EventHandler(this.label11_Click);
+			this.TSMIPrevious.BackColor = System.Drawing.Color.White;
+			this.TSMIPrevious.Image = global::Spotify_Clone.Properties.Resources.previousB;
+			this.TSMIPrevious.Name = "TSMIPrevious";
+			resources.ApplyResources(this.TSMIPrevious, "TSMIPrevious");
+			this.TSMIPrevious.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
 			// 
-			// switchDuracao
+			// TSMIPause
 			// 
-			resources.ApplyResources(this.switchDuracao, "switchDuracao");
-			this.switchDuracao.BackColor = System.Drawing.Color.Transparent;
-			this.switchDuracao.Name = "switchDuracao";
-			this.switchDuracao.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchDuracao.OffToggleColor = System.Drawing.Color.White;
-			this.switchDuracao.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchDuracao.OnToggleColor = System.Drawing.Color.White;
-			this.switchDuracao.UseVisualStyleBackColor = false;
+			this.TSMIPause.Image = global::Spotify_Clone.Properties.Resources.pauseB;
+			this.TSMIPause.Name = "TSMIPause";
+			resources.ApplyResources(this.TSMIPause, "TSMIPause");
+			this.TSMIPause.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
 			// 
-			// switchNome
+			// TSMINext
 			// 
-			resources.ApplyResources(this.switchNome, "switchNome");
-			this.switchNome.BackColor = System.Drawing.Color.Transparent;
-			this.switchNome.Name = "switchNome";
-			this.switchNome.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchNome.OffToggleColor = System.Drawing.Color.White;
-			this.switchNome.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchNome.OnToggleColor = System.Drawing.Color.White;
-			this.switchNome.UseVisualStyleBackColor = false;
+			this.TSMINext.Image = global::Spotify_Clone.Properties.Resources.nextB;
+			this.TSMINext.Name = "TSMINext";
+			resources.ApplyResources(this.TSMINext, "TSMINext");
+			this.TSMINext.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
 			// 
-			// switchMini
+			// toolStripSeparator1
 			// 
-			resources.ApplyResources(this.switchMini, "switchMini");
-			this.switchMini.BackColor = System.Drawing.Color.Transparent;
-			this.switchMini.Name = "switchMini";
-			this.switchMini.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchMini.OffToggleColor = System.Drawing.Color.White;
-			this.switchMini.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchMini.OnToggleColor = System.Drawing.Color.White;
-			this.switchMini.UseVisualStyleBackColor = false;
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
 			// 
-			// switchSO
+			// TSMIClose
 			// 
-			resources.ApplyResources(this.switchSO, "switchSO");
-			this.switchSO.BackColor = System.Drawing.Color.Transparent;
-			this.switchSO.Name = "switchSO";
-			this.switchSO.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchSO.OffToggleColor = System.Drawing.Color.White;
-			this.switchSO.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchSO.OnToggleColor = System.Drawing.Color.White;
-			this.switchSO.UseVisualStyleBackColor = false;
-			// 
-			// switchMusic
-			// 
-			resources.ApplyResources(this.switchMusic, "switchMusic");
-			this.switchMusic.BackColor = System.Drawing.Color.Transparent;
-			this.switchMusic.Name = "switchMusic";
-			this.switchMusic.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchMusic.OffToggleColor = System.Drawing.Color.White;
-			this.switchMusic.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchMusic.OnToggleColor = System.Drawing.Color.White;
-			this.switchMusic.UseVisualStyleBackColor = false;
-			// 
-			// lblInfoMusic
-			// 
-			resources.ApplyResources(this.lblInfoMusic, "lblInfoMusic");
-			this.lblInfoMusic.Name = "lblInfoMusic";
-			this.lblInfoMusic.Tag = "En -> Hitting X will make application, invisble. But is visible in taskbar";
-			this.lblInfoMusic.Click += new System.EventHandler(this.label11_Click);
-			// 
-			// label12
-			// 
-			resources.ApplyResources(this.label12, "label12");
-			this.label12.Name = "label12";
+			this.TSMIClose.Image = global::Spotify_Clone.Properties.Resources.close_red;
+			this.TSMIClose.Name = "TSMIClose";
+			resources.ApplyResources(this.TSMIClose, "TSMIClose");
+			this.TSMIClose.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
 			// 
 			// Form1
 			// 
@@ -787,6 +841,7 @@
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).EndInit();
 			this.pnlTop.ResumeLayout(false);
@@ -831,6 +886,7 @@
 			this.panel8.ResumeLayout(false);
 			this.panel8.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).EndInit();
+			this.contextMenuStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -921,6 +977,12 @@
 		private CustomControls.RJControls.RJToggleButton switchMusic;
 		private System.Windows.Forms.Label lblInfoMusic;
 		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem TSMIPrevious;
+		private System.Windows.Forms.ToolStripMenuItem TSMIPause;
+		private System.Windows.Forms.ToolStripMenuItem TSMINext;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripMenuItem TSMIClose;
 	}
 }
 
