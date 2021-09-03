@@ -442,6 +442,7 @@
 			// 
 			// pnlSettings
 			// 
+			resources.ApplyResources(this.pnlSettings, "pnlSettings");
 			this.pnlSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(146)))), ((int)(((byte)(158)))));
 			this.pnlSettings.Controls.Add(this.lblVersao);
 			this.pnlSettings.Controls.Add(this.pnlXampp);
@@ -451,7 +452,6 @@
 			this.pnlSettings.Controls.Add(this.panel9);
 			this.pnlSettings.Controls.Add(this.panel8);
 			this.pnlSettings.Controls.Add(this.panel14);
-			resources.ApplyResources(this.pnlSettings, "pnlSettings");
 			this.pnlSettings.Name = "pnlSettings";
 			this.pnlSettings.Tag = "0";
 			// 

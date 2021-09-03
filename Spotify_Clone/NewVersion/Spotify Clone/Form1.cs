@@ -429,44 +429,64 @@ namespace Spotify_Clone
 
 		#region teste 
 		private IKeyboardMouseEvents m_Events;
-
+		System.Windows.Forms.Button btnSel = new System.Windows.Forms.Button();
 		private void Main_Closing(object sender, CancelEventArgs e)
 		{
 			Unsubscribe();
 		}
-
-		private void SubscribeGlobal()
+		private void SubscribeApplication()
 		{
 			Unsubscribe();
-			Subscribe(Hook.GlobalEvents());
+			Subscribe(Hook.AppEvents());
 		}
-
 		private void Subscribe(IKeyboardMouseEvents events)
 		{
 			m_Events = events;
 			m_Events.KeyUp += KeyPress;
-			m_Events.MouseDown += Mouse;
+			m_Events.MouseClick += Mouse;
+			m_Events.MouseDoubleClick += Mouse;
 		}
-
-		private void OnPress(object sender, KeyPressEventArgs e)
-		{
-			//Log("\n" + e.KeyChar);
-		}
-
 		private void Unsubscribe()
 		{
 			if (m_Events == null) return;
 			m_Events.KeyDown -= KeyPress;
 			m_Events.KeyUp -= KeyPress;
-
-			m_Events.MouseUp -= Mouse;
 			m_Events.MouseClick -= Mouse;
+			m_Events.MouseDoubleClick -= Mouse;
+			m_Events.Dispose();
+			m_Events = null;
 		}
-		private async void KeyPress(KeyEventArgs e, Button ds)
+		private void KeyPress(object sender, KeyEventArgs e)
 		{
-
+			Debug.Print(e.KeyCode.ToString());
+			if (btnSel.Name != "")
+				btnSel.Text += e.KeyCode + " + ";
+			else
+				CheckKeyPress();
 		}
-
+		private void CheckKeyPress()
+		{
+			int temp = 0;
+			while(true)
+			{
+				temp++;
+				if (temp == 30)
+				{
+					Debug.Print("Já foste");
+				}
+			}
+		}
+		private void Mouse(object sender, MouseEventArgs e)
+		{
+			Debug.Print(e.Button.ToString());
+			if (btnSel.Name != null)
+			{
+				if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right")
+					btnSel.Text += e.Button + " + ";
+			}
+			else
+				CheckKeyPress();
+		}
 		#endregion
 
 		#region Done
@@ -536,18 +556,6 @@ namespace Spotify_Clone
 		}
 		#endregion
 
-		private async void KeyPress(object sender, KeyEventArgs e)
-		{
-			if (btnSel != null)
-				btnSel.Text += e.KeyCode + " + ";
-		}
-		private void Mouse(object sender, MouseEventArgs e)
-		{
-			if (btnSel != null)
-				if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right")
-					btnSel.Text += e.Button + " + ";
-		}
-		System.Windows.Forms.Button btnSel = new System.Windows.Forms.Button();
 		private void Btn_TeclasAtalhos(object sender, EventArgs e)
 		{
 			btnSel = sender as System.Windows.Forms.Button;
@@ -557,6 +565,10 @@ namespace Spotify_Clone
 		public Form1()
 		{
 			InitializeComponent();
+		}
+		private async void KeyPress(KeyEventArgs e, System.Windows.Forms.Button ds)
+		{
+			Debug.Print("yellow");
 		}
 		private void bgwCarregar_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
@@ -981,7 +993,7 @@ namespace Spotify_Clone
 			if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 			this.Tag = "AddPnl";
 			Discord("Nome da Musica", 0, 0);
-			SubscribeGlobal();
+			SubscribeApplication();
 			FormClosing += Main_Closing;
 
 
