@@ -24,6 +24,8 @@ using FolderSelect;
 using DiscordRPC;
 using Microsoft.Win32;
 using IWshRuntimeLibrary;
+using MouseKeyHook.Rx;
+using System.Reactive.Linq;
 
 namespace Spotify_Clone
 {
@@ -364,7 +366,7 @@ namespace Spotify_Clone
 				case "TSMIClose":
 					Application.Exit();
 					break;
-					
+
 			}
 		}
 		private void AuxForm2(object tag)
@@ -456,36 +458,62 @@ namespace Spotify_Clone
 			m_Events.Dispose();
 			m_Events = null;
 		}
+		System.Windows.Forms.Timer tm = new System.Windows.Forms.Timer();
 		private void KeyPress(object sender, KeyEventArgs e)
 		{
 			Debug.Print(e.KeyCode.ToString());
-			if (btnSel.Name != "")
-				btnSel.Text += e.KeyCode + " + ";
+			if (pnlSettings.Visible == true)
+			{
+				if (btnSel.Name != "")
+					btnSel.Text += e.KeyCode + " + ";
+			}
 			else
+			{
+				pnlTop.Tag += e.KeyCode + ", ";
 				CheckKeyPress();
+				Debug.Print(pnlTop.Tag.ToString());
+				//tm.Start();
+			}
+
 		}
+		int temp = 0;
 		private void CheckKeyPress()
 		{
-			int temp = 0;
-			while(true)
+			var quitTrigger = Combination.FromString("Control+Q");
+			var triggers = new[]
 			{
-				temp++;
-				if (temp == 30)
+				quitTrigger,
+				Combination.TriggeredBy(Keys.H).Alt().Shift(),
+				//Combination.TriggeredBy(Keys.E).With(Keys.Q).With(Keys.W)
+				Combination.TriggeredBy(Keys.Control).With(Keys.A)
+			};
+			Hook
+				.GlobalEvents()
+				.KeyDownObservable()
+				.Matching(triggers)
+				.ForEachAsync(trigger =>
 				{
-					Debug.Print("Já foste");
-				}
-			}
+					if (trigger == quitTrigger) this.Close();
+					Debug.Print(""+trigger);
+				});
+
+			//Debug.Print(""+trigger);
 		}
 		private void Mouse(object sender, MouseEventArgs e)
 		{
 			Debug.Print(e.Button.ToString());
-			if (btnSel.Name != null)
-			{
-				if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right")
-					btnSel.Text += e.Button + " + ";
-			}
-			else
-				CheckKeyPress();
+			if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right")
+				if (btnSel.Name != null)
+				{
+					if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right")
+						btnSel.Text += e.Button + " + ";
+				}
+				else
+				{
+					pnlTop.Tag += e.Button + ", ";
+					CheckKeyPress();
+					Debug.Print(pnlTop.Tag.ToString());
+				}
 		}
 		#endregion
 
@@ -1126,7 +1154,7 @@ namespace Spotify_Clone
 					if (switchMini.Checked)
 					{
 						FormCollection Sfc = Application.OpenForms;
-						foreach (Form frm in Sfc) { frm.Visible = false;  }
+						foreach (Form frm in Sfc) { frm.Visible = false; }
 						this.WindowState = FormWindowState.Minimized;
 					}
 					else
