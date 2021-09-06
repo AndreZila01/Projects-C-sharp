@@ -948,7 +948,6 @@ namespace Spotify_Clone
 		private TimeSpan time(int time)
 		{
 			TimeSpan result = TimeSpan.FromSeconds(time);
-			Debug.Print("" + result);
 			return result;
 		}
 		#region teste discord5
@@ -1405,7 +1404,7 @@ namespace Spotify_Clone
 						pnlPrincipal.Visible = false;
 						axWindowsMediaPlayer1.Visible = true;
 						axWindowsMediaPlayer1.BringToFront();
-						axWindowsMediaPlayer1.Dock = DockStyle.Fill;
+						//axWindowsMediaPlayer1.Dock = DockStyle.Fill;
 						axWindowsMediaPlayer1.Location = new Point(0, 0);
 						pnlPrincipal.Controls.Clear(); axWindowsMediaPlayer1.Ctlcontrols.play();
 						musica = true;

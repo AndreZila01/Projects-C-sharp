@@ -807,8 +807,8 @@
   <data name="&gt;&gt;pnlTop.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="axWindowsMediaPlayer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="axWindowsMediaPlayer1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="axWindowsMediaPlayer1.Enabled" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -828,7 +828,7 @@
 </value>
   </data>
   <data name="axWindowsMediaPlayer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>673, 409</value>
+    <value>673, 345</value>
   </data>
   <data name="axWindowsMediaPlayer1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2953,7 +2953,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlCont.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="pnlSettings.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2971,7 +2971,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblVersao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 1233</value>
+    <value>690, 1354</value>
   </data>
   <data name="lblVersao.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 23</value>
@@ -4366,7 +4366,7 @@ se acabares</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="icnNotification.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>557, 23</value>
@@ -6190,6 +6190,9 @@ se acabares</value>
         IXeUlddxF3r7w4lwefYSfeUhfvD6yxt9qRkZGRkZGRkZGRkZGRkZGRkZt8D/A79ZZwURCebhAAAAAElF
         TkSuQmCC
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
