@@ -823,15 +823,15 @@
         ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAuQAAAAIB
         AAAAAQAAAAAAAAAAAAAAAKQAAAAAAwAACAACAAAAAAAFAAAAAAAAAPA/AwAAAAAABQAAAAAAAAAAAAgA
         AgAAAAAAAwABAAAACwD//wMAAAAAAAsA//8IAAIAAAAAAAMAMgAAAAsAAAAIAAoAAABuAG8AbgBlAAAA
-        CwD//wsAAAALAAAACwAAAAsAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAAIAAIAAAAAAAsAAAD6FwAA
-        /QsAAAs=
+        CwAAAAsAAAALAP//CwD//wsAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAAIAAIAAAAAAAsAAACORQAA
+        qCMAAAs=
 </value>
   </data>
   <data name="axWindowsMediaPlayer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>673, 345</value>
   </data>
   <data name="axWindowsMediaPlayer1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;axWindowsMediaPlayer1.Name" xml:space="preserve">
     <value>axWindowsMediaPlayer1</value>
@@ -2953,7 +2953,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlCont.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pnlSettings.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2971,7 +2971,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblVersao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 1354</value>
+    <value>690, 2443</value>
   </data>
   <data name="lblVersao.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 23</value>
@@ -4366,7 +4366,7 @@ se acabares</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="icnNotification.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>557, 23</value>
@@ -5299,6 +5299,9 @@ se acabares</value>
   <data name="icnNotification.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <metadata name="tmAtalho.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>843, 23</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -6191,9 +6194,6 @@ se acabares</value>
         TkSuQmCC
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
@@ -6271,6 +6271,12 @@ se acabares</value>
   </data>
   <data name="&gt;&gt;TSMIClose.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tmAtalho.Name" xml:space="preserve">
+    <value>tmAtalho</value>
+  </data>
+  <data name="&gt;&gt;tmAtalho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>

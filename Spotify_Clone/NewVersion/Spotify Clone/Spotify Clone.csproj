@@ -106,8 +106,8 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
@@ -136,25 +136,6 @@
     <Compile Include="Extensions\DiscordRpc.cs" />
     <Compile Include="Extensions\ExtenssionMethods.cs" />
     <Compile Include="Classes\Class.cs" />
-    <Compile Include="Extensions\KeyBoard\BaseListener.cs" />
-    <Compile Include="Extensions\KeyBoard\Callback.cs" />
-    <Compile Include="Extensions\KeyBoard\CallbackData.cs" />
-    <Compile Include="Extensions\KeyBoard\Chord.cs" />
-    <Compile Include="Extensions\KeyBoard\Combination.cs" />
-    <Compile Include="Extensions\KeyBoard\HookHelper.cs" />
-    <Compile Include="Extensions\KeyBoard\HookIds.cs" />
-    <Compile Include="Extensions\KeyBoard\HookNativeMethods.cs" />
-    <Compile Include="Extensions\KeyBoard\HookProcedureHandle.cs" />
-    <Compile Include="Extensions\KeyBoard\HookResult.cs" />
-    <Compile Include="Extensions\KeyBoard\KeyDownTxtEventArgs.cs" />
-    <Compile Include="Extensions\KeyBoard\KeyEvent.cs" />
-    <Compile Include="Extensions\KeyBoard\KeyEventKind.cs" />
-    <Compile Include="Extensions\KeyBoard\KeyListener.cs" />
-    <Compile Include="Extensions\KeyBoard\KeysExtensions.cs" />
-    <Compile Include="Extensions\KeyBoard\KeyWithState.cs" />
-    <Compile Include="Extensions\KeyBoard\Subscribe.cs" />
-    <Compile Include="Extensions\KeyBoard\KeyObserverExtensions.cs" />
-    <Compile Include="Extensions\KeyBoard\ThreadNativeMethods.cs" />
     <Compile Include="Extensions\Reflector.cs" />
     <Compile Include="Extensions\RJToggleButton.cs">
       <SubType>Component</SubType>
@@ -311,6 +292,8 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Extensions\KeyBoard\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
