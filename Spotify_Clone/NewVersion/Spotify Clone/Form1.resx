@@ -2971,7 +2971,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblVersao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 2443</value>
+    <value>687, 503</value>
   </data>
   <data name="lblVersao.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 23</value>
@@ -5294,7 +5294,7 @@ se acabares</value>
 </value>
   </data>
   <data name="icnNotification.Text" xml:space="preserve">
-    <value>notifyIcon1</value>
+    <value>Spotify Clone</value>
   </data>
   <data name="icnNotification.Visible" type="System.Boolean, mscorlib">
     <value>True</value>

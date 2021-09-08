@@ -530,17 +530,17 @@ namespace Spotify_Clone
 
 				key.ToList().ForEach(item =>
 				{
-					if ((ant[temp]==item && (key.Length) == (btnAnterior.Text.Split('+').ToArray().Count())))
+					if ((ant[temp]==item && (key.Length) == (btnAnterior.Text.Split('+').ToArray().Count()))&& btnAnte==true && temp>0)
 						btnAnte = true;
 					else
 						btnAnte = false;
 
-					if ((pau[temp] == item && (key.Length) == (btnPausa.Text.Split('+').ToArray().Count()))/* && btnPause == true && key[0] != item*/)
+					if ((pau[temp] == item && (key.Length) == (btnPausa.Text.Split('+').ToArray().Count()) && btnPause == true && temp > 0)/* && btnPause == true && key[0] != item*/)
 						btnPause = true;
 					else
 						btnPause = false;
 
-					if ((nex[temp] == item && (key.Length) == (btnNext.Text.Split('+').ToArray().Count()))/* && btnNexts == true && key[0] != item*/)
+					if ((nex[temp] == item && (key.Length) == (btnNext.Text.Split('+').ToArray().Count()) && btnNexts == true && temp > 0)/* && btnNexts == true && key[0] != item*/)
 						btnNexts = true;
 					else
 						btnNexts = false;

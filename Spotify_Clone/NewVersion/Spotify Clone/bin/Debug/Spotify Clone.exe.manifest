@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spotify Clone.exe" size="848864">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spotify Clone.exe" size="849376">
       <assemblyIdentity name="Spotify Clone" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IFOCMQIKtRUqzm8XUSQMhv/UxbgRHyikZv09WM+fYZc=</dsig:DigestValue>
+        <dsig:DigestValue>6YP8udwwGuhDq4hh5b456QhjjK3iQdG7AoUQCbcyn3Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
