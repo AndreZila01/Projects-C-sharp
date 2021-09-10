@@ -1,0 +1,78 @@
+<html>
+<style>
+    .centerti {
+        margin-top: 5px;
+        padding-top: 3px;
+        padding-bottom: 7px;
+        width: 78%;
+        margin-left: 10%;
+        margin-right: 10%;
+        background-color: green;
+        text-align: center;
+    }
+
+    .centervid {
+        margin-top: 5px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: blue;
+        text-align: center;
+    }
+
+    .centermid {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25%;
+        width: 45%;
+    }
+    .centersec {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 45%;
+        width: 45%;
+    }
+
+    body {
+        margin: 0px;
+    }
+</style>
+
+<head>
+    <title> Spotify Clone</title>
+    <link rel="icon" href="imagens/698.webp">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div style="height: 60%; width: 100%; background-color: red;">
+        <div style="background-color: yellow; width: 100%; height: 5%;"></div>
+        <video width="80%" height="90%" style="margin-right: 10%; margin-left: 10%;" controls>
+            <source src="http://192.168.1.130/Breeze, Breeze, Breeze, ....mp4">
+        </video>
+        <div style="background-color: yellow; width: 100%; height: 5%;"><label id="Music Name"></label></div>
+    </div>
+    <div style="height: 40%;width: 100%; background-color: green;">
+        <div style="background-color: red; width: 100%; height: 15%;"></div>
+        <div style="background-color: blue; width: 100%; height: 55%;" class="row">
+            <div style="background-color: beige; width: 10%; height: 15%;"></div>
+            <div style="background-color: black; width: 10%; height: 15%;"></div>
+            <div style="background-color: beige; width: 10%; height: 15%;"></div>
+            <div style="background-color: black; width: 10%; height: 15%;"></div>
+
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    function myGeeks() {
+        document.getElementById('Music Name').innerHTML
+            = 'A computer science portal for geeks';
+    }
+</script>
+
+</html>
