@@ -459,114 +459,117 @@ namespace Spotify_Clone
 		}
 		private void OnKeyDown(object sender, KeyEventArgs e)
 		{
-			//Debug.Print(e.KeyCode.ToString());
-			if (pnlSettings.Visible == true)
-			{
-				try
+			if (chkAtalho.Checked)
+				//Debug.Print(e.KeyCode.ToString());
+				if (pnlSettings.Visible == true)
 				{
-					if (btnSel.Name != "" && !(btnSel.Text.Contains(e.KeyCode.ToString())))
-						btnSel.Text += e.KeyCode + " + ";
+					try
+					{
+						if (btnSel.Name != "" && !(btnSel.Text.Contains(e.KeyCode.ToString())))
+							btnSel.Text += e.KeyCode + " + ";
+					}
+					catch { /*MessageBox.Show("You cannot acess the keybinds in settings!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);*/ }
 				}
-				catch { MessageBox.Show("You cannot acess the keybinds in settings!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-			}
-			else
-			{
-				try
+				else
 				{
-					if (pnlTop.Tag == null)
-						pnlTop.Tag += e.KeyCode + ", ";
-					else if ((!pnlTop.Tag.ToString().Contains(e.KeyCode.ToString())))
-						pnlTop.Tag += e.KeyCode + ", ";
-					//CheckKeyPress();
-					Debug.Print(pnlTop.Tag.ToString());
-					tmAtalho.Start();
-				}
-				catch
-				{
+					try
+					{
+						if (pnlTop.Tag == null)
+							pnlTop.Tag += e.KeyCode + ", ";
+						else if ((!pnlTop.Tag.ToString().Contains(e.KeyCode.ToString())))
+							pnlTop.Tag += e.KeyCode + ", ";
+						//CheckKeyPress();
+						Debug.Print(pnlTop.Tag.ToString());
+						tmAtalho.Start();
+					}
+					catch
+					{
 
+					}
 				}
-			}
 		}
 		private void Mouse(object sender, MouseEventArgs e)
 		{
-			try
-			{
-				if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right")
-					if (btnSel.Name != null)
-					{
-						if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right" && !(btnSel.Text.Contains(e.Button.ToString())))
-							btnSel.Text += e.Button + " + ";
-					}
-					else
-					{
-						try
+			if (chkAtalho.Checked)
+				try
+				{
+					if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right")
+						if (btnSel.Name != null)
 						{
-							if (pnlTop.Tag == null)
-								pnlTop.Tag += e.Button + ", ";
-							else if (!pnlTop.Tag.ToString().Contains(e.Button.ToString()))
-								pnlTop.Tag += e.Button + ", ";
-							//CheckKeyPress();
-							//Debug.Print(pnlTop.Tag.ToString());
-							tmAtalho.Start();
+							if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right" && !(btnSel.Text.Contains(e.Button.ToString())))
+								btnSel.Text += e.Button + " + ";
 						}
-						catch { }
-					}
-			}
-			catch { }
+						else
+						{
+							try
+							{
+								if (pnlTop.Tag == null)
+									pnlTop.Tag += e.Button + ", ";
+								else if (!pnlTop.Tag.ToString().Contains(e.Button.ToString()))
+									pnlTop.Tag += e.Button + ", ";
+								//CheckKeyPress();
+								//Debug.Print(pnlTop.Tag.ToString());
+								tmAtalho.Start();
+							}
+							catch { }
+						}
+				}
+				catch { }
 		}
 		string[] key;
 		private void tmAtalho_Tick(object sender, EventArgs e)
 		{
-			try
-			{
-				int temp=0;
-				bool btnAnte = false, btnNexts = false, btnPause = false;
-
-				key = pnlTop.Tag.ToString().Replace(" ", string.Empty).Split(',');
-				key = key.Where(w => w != key[(key.Length - 1)]).ToArray();
-				string [] ant = btnAnterior.Text.Replace(" ", string.Empty).Split('+');
-				string [] pau = btnPausa.Text.Replace(" ", string.Empty).Split('+');
-				string [] nex = btnNext.Text.Replace(" ", string.Empty).Split('+');
-
-				key.ToList().ForEach(item =>
+			if (chkAtalho.Checked)
+				try
 				{
-					if ((ant[temp]==item && (key.Length) == (btnAnterior.Text.Split('+').ToArray().Count()))&& btnAnte==true && temp>0)
-						btnAnte = true;
+					int temp = 0;
+					bool btnAnte = true, btnNexts = true, btnPause = true;
+
+					key = pnlTop.Tag.ToString().Replace(" ", string.Empty).Split(',');
+					key = key.Where(w => w != key[(key.Length - 1)]).ToArray();
+					string[] ant = btnAnterior.Text.Replace(" ", string.Empty).Split('+');
+					string[] pau = btnPausa.Text.Replace(" ", string.Empty).Split('+');
+					string[] nex = btnNext.Text.Replace(" ", string.Empty).Split('+');
+
+					key.ToList().ForEach(item =>
+					{
+						if ((ant[temp] == item && (key.Length) == (btnAnterior.Text.Split('+').ToArray().Count())) && btnAnte == true && temp >= 0)
+							btnAnte = true;
+						else
+							btnAnte = false;
+
+						if ((pau[temp] == item && (key.Length) == (btnPausa.Text.Split('+').ToArray().Count()) && btnPause == true && temp >= 0)/* && btnPause == true && key[0] != item*/)
+							btnPause = true;
+						else
+							btnPause = false;
+
+						if ((nex[temp] == item && (key.Length) == (btnNext.Text.Split('+').ToArray().Count()) && btnNexts == true && temp >= 0)/* && btnNexts == true && key[0] != item*/)
+							btnNexts = true;
+						else
+							btnNexts = false;
+						temp++;
+					});
+					Debug.Print("Anterior: " + btnAnte + "\t Next: " + btnNexts + "\t Pause " + btnPause);
+					if (btnNexts == true)
+						EventosPE("pE_Next");
 					else
-						btnAnte = false;
-
-					if ((pau[temp] == item && (key.Length) == (btnPausa.Text.Split('+').ToArray().Count()) && btnPause == true && temp > 0)/* && btnPause == true && key[0] != item*/)
-						btnPause = true;
+					if (btnAnte == true)
+						EventosPE("pE_previous");
 					else
-						btnPause = false;
+					if (btnPause == true)
+						EventosPE("pE_PauseaPlay");
 
-					if ((nex[temp] == item && (key.Length) == (btnNext.Text.Split('+').ToArray().Count()) && btnNexts == true && temp > 0)/* && btnNexts == true && key[0] != item*/)
-						btnNexts = true;
-					else
-						btnNexts = false;
-					temp++;
-				});
-				Debug.Print("Anterior: " + btnAnte + "\t Next: " + btnNexts + "\t Pause " + btnPause);
-				if (btnNexts == true)
-					EventosPE("pE_Next");
-				else
-				if (btnAnte == true)
-					EventosPE("pE_previous");
-				else
-				if (btnPause == true)
-					EventosPE("pE_PauseaPlay");
+					//Debug.Print(labelControl2.Tag.ToString());
+					pnlTop.Tag = "";
+					tmAtalho.Stop();
+					key = key.Where(w => w != "").ToArray();
+					temp = 0;
 
-				//Debug.Print(labelControl2.Tag.ToString());
-				pnlTop.Tag = "";
-				tmAtalho.Stop();
-				key = key.Where(w => w != "").ToArray();
-				temp = 0;
-
-				btnPause = false;
-				btnAnte = false;
-				btnNexts = false;
-			}
-			catch (Exception ex){ }
+					btnPause = false;
+					btnAnte = false;
+					btnNexts = false;
+				}
+				catch (Exception ex) { }
 
 		}
 
@@ -1149,38 +1152,41 @@ namespace Spotify_Clone
 		DateTime start = DateTime.UtcNow;
 		private void Discord(string NomeMusic, int tempoatual, int duracao)
 		{
-			if (!switchNome.Checked)
-				NomeMusic = "catJAM catJAM catJAM catJAM ";
-			if (client == null)
+			if (chkDiscord.Checked)
 			{
-				client = new DiscordRpcClient("863871149598048297", -1);
+				if (!switchNome.Checked)
+					NomeMusic = "catJAM catJAM catJAM catJAM ";
+				if (client == null)
+				{
+					client = new DiscordRpcClient("863871149598048297", -1);
 
-				client.Initialize();
+					client.Initialize();
+				}
+				string temp = "";
+				if (tempoatual != 0 && duracao != 0 && switchDuracao.Checked)
+					try
+					{
+						TimeSpan timesat = time(tempoatual);
+						TimeSpan timesend = time(duracao);
+						temp = "" + timesat + "/" + timesend;
+					}
+					catch (Exception ex) { }
+				var rp = new RichPresence()
+				{
+					Details = "" + NomeMusic,
+					State = "" + temp,
+					Assets = new Assets()
+					{
+						SmallImageKey = "spotifyicon",
+						LargeImageKey = "catjam",
+					}
+				};
+
+				if (!switchDuracao.Checked)
+					rp.Timestamps = new Timestamps(start);
+
+				client.SetPresence(rp);
 			}
-			string temp = "";
-			if (tempoatual != 0 && duracao != 0 && switchDuracao.Checked)
-				try
-				{
-					TimeSpan timesat = time(tempoatual);
-					TimeSpan timesend = time(duracao);
-					temp = "" + timesat + "/" + timesend;
-				}
-				catch (Exception ex) { }
-			var rp = new RichPresence()
-			{
-				Details = "" + NomeMusic,
-				State = "" + temp,
-				Assets = new Assets()
-				{
-					SmallImageKey = "spotifyicon",
-					LargeImageKey = "catjam",
-				}
-			};
-
-			if (!switchDuracao.Checked)
-				rp.Timestamps = new Timestamps(start);
-
-			client.SetPresence(rp);
 		}
 		public struct Preset
 		{
@@ -1423,12 +1429,12 @@ namespace Spotify_Clone
 				case "pE_Repit":
 					if (pE_Repit.Tag.ToString() == "0")
 					{
-						pE_Repit.Image = Properties.Resources.refresh;
+						pE_Repit.Image = Properties.Resources.refresh1;
 						pE_Repit.Tag = 1;
 					}
 					else
 					{
-						pE_Repit.Image = Properties.Resources.refresh1;
+						pE_Repit.Image = Properties.Resources.refresh;
 						pE_Repit.Tag = 0;
 					}
 					break;
@@ -1784,7 +1790,8 @@ namespace Spotify_Clone
 				{
 					if ((panel6.Tag == null) && _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() != 1)
 					{
-						var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() != "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
+						Debug.Print(""+labelControl2.Tag);
+						var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() == "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
 
 						axWindowsMediaPlayer1.URL = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
 						NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
@@ -1794,9 +1801,10 @@ namespace Spotify_Clone
 							axWindowsMediaPlayer1.Ctlcontrols.play();
 							PBC.Value = 0;
 							dt = 0;
+							if(switchMusic.Checked)
 							icnNotification.ShowBalloonTip(25, "Next Music ", "" + labelControl2.Text, ToolTipIcon.Info);
 						}
-
+						PBC.Value = 0;
 					}
 					else
 					{
@@ -1826,7 +1834,7 @@ namespace Spotify_Clone
 				if (dt > 15 && panel6.Tag == null && PBC.Value == int.Parse(PBC.Tag.ToString()))
 				{
 					timer2.Start();
-					timer1.Stop();
+					//timer1.Stop();
 				}
 			try
 			{
@@ -1861,7 +1869,8 @@ namespace Spotify_Clone
 								var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() == "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
 								axwindows();
 								axWindowsMediaPlayer1.Ctlcontrols.play();
-								icnNotification.ShowBalloonTip(25, "Next Music ", "" + labelControl2.Text, ToolTipIcon.Info);
+								if (switchMusic.Checked)
+									icnNotification.ShowBalloonTip(25, "Next Music ", "" + labelControl2.Text, ToolTipIcon.Info);
 								dt = 0;
 								timer2.Stop();
 							}
