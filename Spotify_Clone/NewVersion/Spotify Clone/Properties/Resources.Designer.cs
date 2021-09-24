@@ -348,5 +348,23 @@ namespace Spotify_Clone.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [{&quot;Idioma&quot;:&quot;Inglês&quot;, &quot;Form1&quot;:[{&quot;lblEscIdioma&quot;:&quot;Choose language - changes will be applied after restarting the app&quot;,&quot;lblSO&quot;:&quot;Application startup with SO&quot;,&quot;lblTitMini&quot;:&quot;Minimize Application&quot;,&quot;lblMini&quot;:&quot;Hitting X will make application, invisble. But is visible in taskbar&quot;,&quot;lblnotif&quot;:&quot;Notification when change music&quot;,&quot;lblInfoMusic&quot;:&quot;Hitting X will make application, invisble. But is visible in taskbar&quot;,&quot;chkDiscord&quot;:&quot;Send data to discord&quot;,&quot;lblNomeDisc&quot;:&quot;Send name of Music&quot;,&quot;lblDuracao&quot;:&quot;Duration of Music&quot;,&quot;lblinfo [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SettingsIdioma {
+            get {
+                return ResourceManager.GetString("SettingsIdioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
     }
 }

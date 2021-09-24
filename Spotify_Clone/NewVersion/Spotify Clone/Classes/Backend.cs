@@ -10,7 +10,7 @@ namespace Spotify_Clone.Classes
 {
 	public class Backend
 	{
-		public List<Settings> UpdateSettings(string Idioma, int AutoRun, int Discord, int EnviarNome, int Duracao, int Atalho, int Mini,int NotifMusi,  string Musicaant, string Pausa, string Musicaseg, string paths)
+		public List<Settings> UpdateSettings(string Idioma, int AutoRun, int Discord, int EnviarNome, int Duracao, int Atalho, int Mini, int NotifMusi, string Musicaant, string Pausa, string Musicaseg, string paths, string XAMPP)
 		{
 			List<Discord> lstDisc = new List<Discord>(); List<Atalho> lstatl = new List<Atalho>(); List<Settings> lstset = new List<Settings>(); Settings st = new Settings();
 
@@ -37,6 +37,7 @@ namespace Spotify_Clone.Classes
 				st.Atalhos = lstatl;
 			}
 			st.Paths = paths;
+			st.XAMPP = XAMPP;
 			lstset.Add(st);
 			return lstset;
 		}
@@ -76,17 +77,19 @@ namespace Spotify_Clone.Classes
 			}
 			if (readSettings == true)
 			{
-				var myString = /*EncryptADeDecrypt.DecryptString*/(/*Properties.Resources.Key,*/ (File.ReadAllText(Paths + "/SpotifyClone/Settings.json")));
+				var myString = EncryptADeDecrypt.DecryptString(Properties.Resources.Key, (File.ReadAllText(Paths + "/SpotifyClone/Settings.json")));
 				return JsonConvert.DeserializeObject<List<Settings>>(myString);
 			}
 			else
 			{
-				File.WriteAllText(Paths + "/SpotifyClone/Settings.json", /*EncryptADeDecrypt.EncryptOther*/(settings));
-
+				File.WriteAllText(Paths + "/SpotifyClone/Settings.json", EncryptADeDecrypt.EncryptOther(settings));
+				if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt"))
+					File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt");
 				if (!(Paths.Contains("Roaming")))
 					using (StreamWriter w = File.AppendText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt"))
 					{
-						w.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+						string fileName = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt";
+						w.Write(path);
 						File.SetAttributes(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/helper.txt", FileAttributes.Hidden);
 					}
 
@@ -96,7 +99,7 @@ namespace Spotify_Clone.Classes
 		public List<PlayList> WriteReadMusic(bool readMusic, string path, List<PlayList> play, int IdPlaylist)
 		{
 			var Paths = "";
-			var ds = path == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = path;
+			var ds = path == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = path/*.Replace("\r\n", "")*/;//remover \r\n
 			PlayList playList = new PlayList();
 			List<PlayList> lstConteudo = new List<PlayList>();
 
@@ -105,20 +108,20 @@ namespace Spotify_Clone.Classes
 				if (!Paths.Contains("json"))
 					CheckFiles(Paths);
 			}
-			catch (Exception ex)
+			catch
 			{
 				//lstConteudo[2] = ex.Message;
 			}
-			if (lstConteudo.Count() == 0)
-			{
+			//if (lstConteudo.Count() == 0)
+			//{
 
-			}
+			//}
 			try
 			{
 				if (readMusic == true)
 				{
 					{
-						string myString = /*EncryptADeDecrypt.DecryptOther*/(File.ReadAllText(Paths + "/SpotifyClone/Musics.json"));
+						string myString = EncryptADeDecrypt.DecryptString(Properties.Resources.Key, File.ReadAllText(Paths + "/SpotifyClone/Musics.json"));
 						if (myString != "\"[]\"" || myString != null)
 						{
 							//myString.Replace(@"\\", @"\");
@@ -142,10 +145,10 @@ namespace Spotify_Clone.Classes
 					//	File.WriteAllText(Paths + "/SpotifyClone/Musics.json", /*EncryptADeDecrypt.EncryptOther*/info);
 					//}
 					string info = JsonConvert.SerializeObject(play);
-					File.WriteAllText(Paths + "/SpotifyClone/Musics.json", /*EncryptADeDecrypt.EncryptOther*/info);
+					File.WriteAllText(Paths + "/SpotifyClone/Musics.json", EncryptADeDecrypt.EncryptOther(info));
 				}
 			}
-			catch (Exception ex)
+			catch
 			{
 				//lstConteudo[2] = ex.Message;
 			}
@@ -211,6 +214,23 @@ namespace Spotify_Clone.Classes
 				}
 			});
 			return ProduceRandom;
+		}
+
+		public void Xampp(string Paths, List<PlayList> lst)
+		{
+			Paths += @"\htdocs";
+			if (!(File.Exists(Paths + @"\.htaccess")))
+				File.WriteAllText(Paths + @"\.htaccess", ("Header Set Access-Control-Allow-Origin \"*\""));
+			if (!(Directory.Exists(Paths + @"\Spotify_Clone_Music")))
+				Directory.CreateDirectory(Paths + @"\Spotify_Clone_Music");
+
+			lst[0].Caminho_da_Musica.ToList().ForEach(item =>
+			{
+				string[] name = item.Split('\\');
+				string destinationFile = Paths + @"\Spotify_Clone_Music\" + name[(name.Length - 1)];
+				if (!File.Exists(destinationFile))
+					File.Copy(item, destinationFile);
+			});
 		}
 	}
 }

@@ -153,6 +153,213 @@
   <data name="&gt;&gt;trackBar1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        Z61hgJWjks8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>587, 8</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 30</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="pictureBox1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>pnlTop</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="picSettings.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
@@ -181,7 +388,7 @@
     <value>pnlTop</value>
   </data>
   <data name="&gt;&gt;picSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="pE_MaxMin.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -343,7 +550,7 @@
     <value>pnlTop</value>
   </data>
   <data name="&gt;&gt;pE_MaxMin.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="picForm3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -547,7 +754,7 @@
     <value>pnlTop</value>
   </data>
   <data name="&gt;&gt;picForm3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pE_minimizar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -595,7 +802,7 @@
     <value>pnlTop</value>
   </data>
   <data name="&gt;&gt;pE_minimizar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="pE_Close.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -781,7 +988,7 @@
     <value>pnlTop</value>
   </data>
   <data name="&gt;&gt;pE_Close.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pnlTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -2953,13 +3160,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlCont.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pnlSettings.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="lblVersao.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
   </data>
   <data name="lblVersao.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2971,13 +3175,13 @@
     <value>NoControl</value>
   </data>
   <data name="lblVersao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>687, 2076</value>
+    <value>0, 0</value>
   </data>
   <data name="lblVersao.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 23</value>
   </data>
   <data name="lblVersao.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>7</value>
   </data>
   <data name="lblVersao.Text" xml:space="preserve">
     <value>Versão 4.0</value>
@@ -2994,26 +3198,56 @@
   <data name="&gt;&gt;lblVersao.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 30</value>
+  <data name="pctXAMPP.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+  <data name="pctXAMPP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="pctXAMPP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 28</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="pctXAMPP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 22</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pctXAMPP.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="pctXAMPP.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;pctXAMPP.Name" xml:space="preserve">
+    <value>pctXAMPP</value>
+  </data>
+  <data name="&gt;&gt;pctXAMPP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pctXAMPP.Parent" xml:space="preserve">
     <value>pnlXampp</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pctXAMPP.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="txtXAMPP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 30</value>
+  </data>
+  <data name="txtXAMPP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 20</value>
+  </data>
+  <data name="txtXAMPP.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtXAMPP.Name" xml:space="preserve">
+    <value>txtXAMPP</value>
+  </data>
+  <data name="&gt;&gt;txtXAMPP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtXAMPP.Parent" xml:space="preserve">
+    <value>pnlXampp</value>
+  </data>
+  <data name="&gt;&gt;txtXAMPP.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label15.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -3049,7 +3283,7 @@
     <value>pnlXampp</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="pnlXampp.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -3177,40 +3411,40 @@
   <data name="&gt;&gt;lblAnterior.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lblPaRe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblPaRe.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblPaRe.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblPaRe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblPaRe.Location" type="System.Drawing.Point, System.Drawing">
     <value>349, 7</value>
   </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblPaRe.Size" type="System.Drawing.Size, System.Drawing">
     <value>138, 20</value>
   </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblPaRe.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
+  <data name="lblPaRe.Text" xml:space="preserve">
     <value>Pausar e Retomar</value>
   </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
+  <data name="&gt;&gt;lblPaRe.Name" xml:space="preserve">
+    <value>lblPaRe</value>
   </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblPaRe.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblPaRe.Parent" xml:space="preserve">
     <value>pnlAtalho</value>
   </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblPaRe.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="btnPausa.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -3247,43 +3481,43 @@ se acabares</value>
   <data name="&gt;&gt;btnPausa.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lblAnt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblAnt.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblAnt.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblAnt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblAnt.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 7</value>
   </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblAnt.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 20</value>
   </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblAnt.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="label8.Text" xml:space="preserve">
+  <data name="lblAnt.Text" xml:space="preserve">
     <value>Musica anterior</value>
   </data>
-  <data name="label8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lblAnt.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
+  <data name="&gt;&gt;lblAnt.Name" xml:space="preserve">
+    <value>lblAnt</value>
   </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblAnt.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblAnt.Parent" xml:space="preserve">
     <value>pnlAtalho</value>
   </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblAnt.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="btnAnterior.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -3320,40 +3554,40 @@ se acabares</value>
   <data name="&gt;&gt;btnAnterior.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="label9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lblSeg.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
-  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblSeg.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblSeg.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblSeg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblSeg.Location" type="System.Drawing.Point, System.Drawing">
     <value>543, 7</value>
   </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblSeg.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 20</value>
   </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblSeg.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="label9.Text" xml:space="preserve">
+  <data name="lblSeg.Text" xml:space="preserve">
     <value>Musica Seguinte</value>
   </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
+  <data name="&gt;&gt;lblSeg.Name" xml:space="preserve">
+    <value>lblSeg</value>
   </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblSeg.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblSeg.Parent" xml:space="preserve">
     <value>pnlAtalho</value>
   </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblSeg.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="btnNext.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -3417,40 +3651,40 @@ se acabares</value>
   <data name="&gt;&gt;pnlAtalho.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbltec.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbltec.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbltec.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lbltec.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lbltec.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 9</value>
   </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbltec.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 20</value>
   </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbltec.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
+  <data name="lbltec.Text" xml:space="preserve">
     <value>Teclas de atalho</value>
   </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
+  <data name="&gt;&gt;lbltec.Name" xml:space="preserve">
+    <value>lbltec</value>
   </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbltec.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbltec.Parent" xml:space="preserve">
     <value>panel10</value>
   </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbltec.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="chkAtalho.AutoSize" type="System.Boolean, mscorlib">
@@ -3514,7 +3748,7 @@ se acabares</value>
     <value>NoControl</value>
   </data>
   <data name="switchDuracao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>726, 34</value>
+    <value>725, 34</value>
   </data>
   <data name="switchDuracao.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>45, 22</value>
@@ -3544,7 +3778,7 @@ se acabares</value>
     <value>NoControl</value>
   </data>
   <data name="switchNome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>726, 6</value>
+    <value>725, 6</value>
   </data>
   <data name="switchNome.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>45, 22</value>
@@ -3567,37 +3801,37 @@ se acabares</value>
   <data name="&gt;&gt;switchNome.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lblinfoDu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblinfoDu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblinfoDu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblinfoDu.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 38</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblinfoDu.Size" type="System.Drawing.Size, System.Drawing">
     <value>328, 13</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblinfoDu.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="lblinfoDu.Text" xml:space="preserve">
     <value>Se não envia a duração, envia o tempo que está a usar a aplicação</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="&gt;&gt;lblinfoDu.Name" xml:space="preserve">
+    <value>lblinfoDu</value>
   </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblinfoDu.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblinfoDu.Parent" xml:space="preserve">
     <value>pnlDiscord</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblinfoDu.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="lblDuracao.AutoSize" type="System.Boolean, mscorlib">
@@ -3846,37 +4080,37 @@ se acabares</value>
   <data name="&gt;&gt;lblInfoMusic.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblnotif.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblnotif.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
-  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblnotif.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblnotif.Location" type="System.Drawing.Point, System.Drawing">
     <value>68, 159</value>
   </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblnotif.Size" type="System.Drawing.Size, System.Drawing">
     <value>265, 20</value>
   </data>
-  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblnotif.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="label12.Text" xml:space="preserve">
+  <data name="lblnotif.Text" xml:space="preserve">
     <value>Notificação ao mudar de musica</value>
   </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
+  <data name="&gt;&gt;lblnotif.Name" xml:space="preserve">
+    <value>lblnotif</value>
   </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblnotif.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblnotif.Parent" xml:space="preserve">
     <value>panel8</value>
   </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblnotif.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="switchMini.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -3886,7 +4120,7 @@ se acabares</value>
     <value>NoControl</value>
   </data>
   <data name="switchMini.Location" type="System.Drawing.Point, System.Drawing">
-    <value>726, 134</value>
+    <value>725, 134</value>
   </data>
   <data name="switchMini.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>45, 22</value>
@@ -3942,37 +4176,37 @@ se acabares</value>
   <data name="&gt;&gt;lblMini.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblTitMini.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblTitMini.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblTitMini.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblTitMini.Location" type="System.Drawing.Point, System.Drawing">
     <value>68, 123</value>
   </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblTitMini.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 20</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblTitMini.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
+  <data name="lblTitMini.Text" xml:space="preserve">
     <value>Minimizar a aplicação</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="&gt;&gt;lblTitMini.Name" xml:space="preserve">
+    <value>lblTitMini</value>
   </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblTitMini.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblTitMini.Parent" xml:space="preserve">
     <value>panel8</value>
   </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblTitMini.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="switchSO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -3982,7 +4216,7 @@ se acabares</value>
     <value>NoControl</value>
   </data>
   <data name="switchSO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>726, 57</value>
+    <value>725, 57</value>
   </data>
   <data name="switchSO.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>45, 22</value>
@@ -4194,47 +4428,47 @@ se acabares</value>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lblEscIdioma.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblEscIdioma.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblEscIdioma.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblEscIdioma.Location" type="System.Drawing.Point, System.Drawing">
     <value>82, 27</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblEscIdioma.Size" type="System.Drawing.Size, System.Drawing">
     <value>309, 13</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblEscIdioma.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="lblEscIdioma.Text" xml:space="preserve">
     <value>Escolhe o idioma - as alterações serão feitas após reniciar a app</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="&gt;&gt;lblEscIdioma.Name" xml:space="preserve">
+    <value>lblEscIdioma</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblEscIdioma.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblEscIdioma.Parent" xml:space="preserve">
     <value>panel8</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblEscIdioma.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="comboBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
   </data>
   <data name="comboBox1.Items" xml:space="preserve">
-    <value>Português</value>
+    <value>Inglês</value>
   </data>
   <data name="comboBox1.Items1" xml:space="preserve">
-    <value>Inglês</value>
+    <value>Português</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>628, 19</value>
@@ -4257,40 +4491,40 @@ se acabares</value>
   <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lblIdioma.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblIdioma.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblIdioma.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblIdioma.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblIdioma.Location" type="System.Drawing.Point, System.Drawing">
     <value>68, 7</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblIdioma.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 20</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblIdioma.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="lblIdioma.Text" xml:space="preserve">
     <value>Idioma</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;lblIdioma.Name" xml:space="preserve">
+    <value>lblIdioma</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblIdioma.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblIdioma.Parent" xml:space="preserve">
     <value>panel8</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblIdioma.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
   <data name="panel8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -4366,7 +4600,7 @@ se acabares</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="icnNotification.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>557, 23</value>
@@ -6193,6 +6427,9 @@ se acabares</value>
         IXeUlddxF3r7w4lwefYSfeUhfvD6yxt9qRkZGRkZGRkZGRkZGRkZGRkZt8D/A79ZZwURCebhAAAAAElF
         TkSuQmCC
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

@@ -16,3 +16,14 @@ C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Co
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.csproj.CoreCompileInputs.cache
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.exe
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.pdb
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\bin\Debug\Jogo da Cobra, Aventura.exe.config
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\bin\Debug\Jogo da Cobra, Aventura.exe
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\bin\Debug\Jogo da Cobra, Aventura.pdb
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.csproj.AssemblyReference.cache
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo_da_Cobra__Aventura.Form1.resources
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo_da_Cobra__Aventura.FrmMain.resources
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo_da_Cobra__Aventura.Properties.Resources.resources
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.csproj.GenerateResource.cache
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.csproj.CoreCompileInputs.cache
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.exe
+C:\Users\André Custódio\Documents\GitHub\Projects-C-sharp\Snake-Game-Adventure\Jogo da Cobra, Aventura\Jogo da Cobra, Aventura\obj\Debug\Jogo da Cobra, Aventura.pdb

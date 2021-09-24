@@ -27,7 +27,7 @@ namespace Spotify_Clone.Classes
 		public string Paths { get; set; }
 		public int Minimizar { get; set; }
 		public int NotifMusic { get; set; }
-		//public string XAMPP { get; set; }
+		public string XAMPP { get; set; }
 
 	}
 	public class Discord
@@ -41,6 +41,41 @@ namespace Spotify_Clone.Classes
 		public string Pausa { get; set; }
 		public string MusicaSeguinte { get; set; }
 	}
-
+	public class ConfIdioma
+	{
+		public string Idioma { get; set; }
+		public List<Forms1> form1 { get; set; }
+		public List<Forms2> form2 { get; set; }
+	}
+	public class Forms1
+	{
+		public string lblEscIdioma { get; set; }
+		public string lblSO { get; set; }
+		public string lblTitMini { get; set; }
+		public string lblMini { get; set; }
+		public string lblnotif { get; set; }
+		public string lblInfoMusic { get; set; }
+		public string chkDiscord { get; set; }
+		public string lblNomeDisc { get; set; }
+		public string lblDuracao { get; set; }
+		public string lblinfoDu { get; set; }
+		public string lbltec { get; set; }
+		public string chkAtalho { get; set; }
+		public string lblAnt { get; set; }
+		public string lblPaRe { get; set; }
+		public string lblSeg { get; set; }
+		public string MSGRANDOM { get; set; }
+		public string MSGFLASH { get; set; }
+		public string ICNXAMPP { get; set; }
+	}
+	public class Forms2
+	{
+		public string Form2Text { get; set; }
+		public string lblNome { get; set; }
+		public string lblDescription { get; set; }
+		public string button1 { get; set; }
+		public string MSGBUTTON { get; set; }
+		public string MSGPICT { get; set; }
+	}
 
 }

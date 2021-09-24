@@ -18,7 +18,7 @@ namespace Spotify_Clone
 		private string caminhoImg, paths;
 		private bool Aux;
 		private int Id, ecra;
-		private string nameplaylist, description;
+		//private string nameplaylist, description;
 		private List<Classes.PlayList> _listInformacoes = new List<Classes.PlayList>();
 		Backend bk = new Backend();
 		public Form2(bool a, int tag, int d, string path)
@@ -56,14 +56,17 @@ namespace Spotify_Clone
 			{
 				if (Id == 0)
 				{
-					Classes.PlayList play = new Classes.PlayList();
-					List<Classes.PlayList> _listT = new List<Classes.PlayList>();
-					play.Name = textBox1.Text;
-					play.Image = caminhoImg;
-					play.Descrição = textBox2.Text;
-					play.IDList = (_listInformacoes.Count() + 1);
-					_listInformacoes.Add(play);
-
+					try
+					{
+						Classes.PlayList play = new Classes.PlayList();
+						//List<Classes.PlayList> _listT = new List<Classes.PlayList>();
+						play.Name = textBox1.Text;
+						play.Image = caminhoImg;
+						play.Descrição = textBox2.Text;
+						play.IDList = ((_listInformacoes.Count()) + 1);//erro aqui, ... provavelmente problemas no count
+						_listInformacoes.Add(play);
+					}
+					catch{ }
 					//string ds = JsonConvert.SerializeObject(_listT);
 					// JsonConvert.DeserializeObject<List<PlayList>>(JsonConvert.SerializeObject(play));
 					bk.WriteReadMusic(false, paths, _listInformacoes, -1);

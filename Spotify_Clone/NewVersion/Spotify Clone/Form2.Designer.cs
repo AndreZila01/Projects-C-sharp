@@ -31,8 +31,8 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lblDescription = new System.Windows.Forms.Label();
+			this.lblNome = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,22 +66,22 @@
 			this.textBox2.Size = new System.Drawing.Size(307, 88);
 			this.textBox2.TabIndex = 2;
 			// 
-			// label1
+			// lblDescription
 			// 
-			this.label1.Location = new System.Drawing.Point(235, 91);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(120, 21);
-			this.label1.TabIndex = 3;
-			this.label1.Text = "Description: ";
+			this.lblDescription.Location = new System.Drawing.Point(235, 91);
+			this.lblDescription.Name = "lblDescription";
+			this.lblDescription.Size = new System.Drawing.Size(120, 21);
+			this.lblDescription.TabIndex = 3;
+			this.lblDescription.Text = "Description: ";
 			// 
-			// label2
+			// lblNome
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(235, 29);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(92, 13);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Name of PlayList: ";
+			this.lblNome.AutoSize = true;
+			this.lblNome.Location = new System.Drawing.Point(235, 29);
+			this.lblNome.Name = "lblNome";
+			this.lblNome.Size = new System.Drawing.Size(92, 13);
+			this.lblNome.TabIndex = 4;
+			this.lblNome.Text = "Name of PlayList: ";
 			// 
 			// button1
 			// 
@@ -99,9 +99,9 @@
 			this.panel1.Controls.Add(this.textBox2);
 			this.panel1.Controls.Add(this.button1);
 			this.panel1.Controls.Add(this.pictureBox1);
-			this.panel1.Controls.Add(this.label2);
+			this.panel1.Controls.Add(this.lblNome);
 			this.panel1.Controls.Add(this.textBox1);
-			this.panel1.Controls.Add(this.label1);
+			this.panel1.Controls.Add(this.lblDescription);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
@@ -133,8 +133,8 @@
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lblDescription;
+		private System.Windows.Forms.Label lblNome;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Panel panel1;
 	}

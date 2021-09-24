@@ -72,47 +72,43 @@
 			this.pnlSettings = new System.Windows.Forms.Panel();
 			this.lblVersao = new System.Windows.Forms.Label();
 			this.pnlXampp = new System.Windows.Forms.Panel();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.pctXAMPP = new System.Windows.Forms.PictureBox();
+			this.txtXAMPP = new System.Windows.Forms.TextBox();
 			this.label15 = new System.Windows.Forms.Label();
 			this.pnlAtalho = new System.Windows.Forms.Panel();
 			this.lblSeguinte = new System.Windows.Forms.Label();
 			this.lblPR = new System.Windows.Forms.Label();
 			this.lblAnterior = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
+			this.lblPaRe = new System.Windows.Forms.Label();
 			this.btnPausa = new System.Windows.Forms.Button();
-			this.label8 = new System.Windows.Forms.Label();
+			this.lblAnt = new System.Windows.Forms.Label();
 			this.btnAnterior = new System.Windows.Forms.Button();
-			this.label9 = new System.Windows.Forms.Label();
+			this.lblSeg = new System.Windows.Forms.Label();
 			this.btnNext = new System.Windows.Forms.Button();
 			this.panel10 = new System.Windows.Forms.Panel();
-			this.label6 = new System.Windows.Forms.Label();
+			this.lbltec = new System.Windows.Forms.Label();
 			this.chkAtalho = new System.Windows.Forms.CheckBox();
 			this.pnlDiscord = new System.Windows.Forms.Panel();
-			this.switchDuracao = new CustomControls.RJControls.RJToggleButton();
-			this.switchNome = new CustomControls.RJControls.RJToggleButton();
-			this.label4 = new System.Windows.Forms.Label();
+			this.lblinfoDu = new System.Windows.Forms.Label();
 			this.lblDuracao = new System.Windows.Forms.Label();
 			this.lblNomeDisc = new System.Windows.Forms.Label();
 			this.panel9 = new System.Windows.Forms.Panel();
 			this.chkDiscord = new System.Windows.Forms.CheckBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel8 = new System.Windows.Forms.Panel();
-			this.switchMusic = new CustomControls.RJControls.RJToggleButton();
 			this.lblInfoMusic = new System.Windows.Forms.Label();
-			this.label12 = new System.Windows.Forms.Label();
-			this.switchMini = new CustomControls.RJControls.RJToggleButton();
+			this.lblnotif = new System.Windows.Forms.Label();
 			this.lblMini = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.switchSO = new CustomControls.RJControls.RJToggleButton();
+			this.lblTitMini = new System.Windows.Forms.Label();
 			this.pctPaths = new System.Windows.Forms.PictureBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.txtPaths = new System.Windows.Forms.TextBox();
 			this.label13 = new System.Windows.Forms.Label();
 			this.lblSO = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lblEscIdioma = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.label1 = new System.Windows.Forms.Label();
+			this.lblIdioma = new System.Windows.Forms.Label();
 			this.panel14 = new System.Windows.Forms.Panel();
 			this.icnNotification = new System.Windows.Forms.NotifyIcon(this.components);
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -122,6 +118,12 @@
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.TSMIClose = new System.Windows.Forms.ToolStripMenuItem();
 			this.tmAtalho = new System.Windows.Forms.Timer(this.components);
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.switchDuracao = new CustomControls.RJControls.RJToggleButton();
+			this.switchNome = new CustomControls.RJControls.RJToggleButton();
+			this.switchMusic = new CustomControls.RJControls.RJToggleButton();
+			this.switchMini = new CustomControls.RJControls.RJToggleButton();
+			this.switchSO = new CustomControls.RJControls.RJToggleButton();
 			trackBar1 = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).BeginInit();
 			this.pnlTop.SuspendLayout();
@@ -153,6 +155,7 @@
 			this.pnlCont.SuspendLayout();
 			this.pnlSettings.SuspendLayout();
 			this.pnlXampp.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pctXAMPP)).BeginInit();
 			this.pnlAtalho.SuspendLayout();
 			this.panel10.SuspendLayout();
 			this.pnlDiscord.SuspendLayout();
@@ -160,6 +163,7 @@
 			this.panel8.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).BeginInit();
 			this.contextMenuStrip1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// trackBar1
@@ -177,6 +181,7 @@
 			// pnlTop
 			// 
 			this.pnlTop.BackColor = System.Drawing.Color.CadetBlue;
+			this.pnlTop.Controls.Add(this.pictureBox1);
 			this.pnlTop.Controls.Add(this.picSettings);
 			this.pnlTop.Controls.Add(this.pE_MaxMin);
 			this.pnlTop.Controls.Add(this.picForm3);
@@ -397,11 +402,6 @@
 			resources.ApplyResources(this.pnlConteudo, "pnlConteudo");
 			this.pnlConteudo.Name = "pnlConteudo";
 			// 
-			// backgroundWorker1
-			// 
-			this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-			this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-			// 
 			// cmsMenuStrip
 			// 
 			this.cmsMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -465,15 +465,24 @@
 			// 
 			// pnlXampp
 			// 
-			this.pnlXampp.Controls.Add(this.textBox1);
+			this.pnlXampp.Controls.Add(this.pctXAMPP);
+			this.pnlXampp.Controls.Add(this.txtXAMPP);
 			this.pnlXampp.Controls.Add(this.label15);
 			resources.ApplyResources(this.pnlXampp, "pnlXampp");
 			this.pnlXampp.Name = "pnlXampp";
 			// 
-			// textBox1
+			// pctXAMPP
 			// 
-			resources.ApplyResources(this.textBox1, "textBox1");
-			this.textBox1.Name = "textBox1";
+			resources.ApplyResources(this.pctXAMPP, "pctXAMPP");
+			this.pctXAMPP.Image = global::Spotify_Clone.Properties.Resources.arquivo_aberto;
+			this.pctXAMPP.Name = "pctXAMPP";
+			this.pctXAMPP.TabStop = false;
+			this.pctXAMPP.Click += new System.EventHandler(this.pE_Click);
+			// 
+			// txtXAMPP
+			// 
+			resources.ApplyResources(this.txtXAMPP, "txtXAMPP");
+			this.txtXAMPP.Name = "txtXAMPP";
 			// 
 			// label15
 			// 
@@ -486,11 +495,11 @@
 			this.pnlAtalho.Controls.Add(this.lblSeguinte);
 			this.pnlAtalho.Controls.Add(this.lblPR);
 			this.pnlAtalho.Controls.Add(this.lblAnterior);
-			this.pnlAtalho.Controls.Add(this.label7);
+			this.pnlAtalho.Controls.Add(this.lblPaRe);
 			this.pnlAtalho.Controls.Add(this.btnPausa);
-			this.pnlAtalho.Controls.Add(this.label8);
+			this.pnlAtalho.Controls.Add(this.lblAnt);
 			this.pnlAtalho.Controls.Add(this.btnAnterior);
-			this.pnlAtalho.Controls.Add(this.label9);
+			this.pnlAtalho.Controls.Add(this.lblSeg);
 			this.pnlAtalho.Controls.Add(this.btnNext);
 			resources.ApplyResources(this.pnlAtalho, "pnlAtalho");
 			this.pnlAtalho.Name = "pnlAtalho";
@@ -517,10 +526,10 @@
 			this.lblAnterior.Tag = "Musica Anterior";
 			this.lblAnterior.Click += new System.EventHandler(this.label11_Click);
 			// 
-			// label7
+			// lblPaRe
 			// 
-			resources.ApplyResources(this.label7, "label7");
-			this.label7.Name = "label7";
+			resources.ApplyResources(this.lblPaRe, "lblPaRe");
+			this.lblPaRe.Name = "lblPaRe";
 			// 
 			// btnPausa
 			// 
@@ -529,10 +538,10 @@
 			this.btnPausa.UseVisualStyleBackColor = true;
 			this.btnPausa.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
 			// 
-			// label8
+			// lblAnt
 			// 
-			resources.ApplyResources(this.label8, "label8");
-			this.label8.Name = "label8";
+			resources.ApplyResources(this.lblAnt, "lblAnt");
+			this.lblAnt.Name = "lblAnt";
 			// 
 			// btnAnterior
 			// 
@@ -541,10 +550,10 @@
 			this.btnAnterior.UseVisualStyleBackColor = true;
 			this.btnAnterior.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
 			// 
-			// label9
+			// lblSeg
 			// 
-			resources.ApplyResources(this.label9, "label9");
-			this.label9.Name = "label9";
+			resources.ApplyResources(this.lblSeg, "lblSeg");
+			this.lblSeg.Name = "lblSeg";
 			// 
 			// btnNext
 			// 
@@ -555,15 +564,15 @@
 			// 
 			// panel10
 			// 
-			this.panel10.Controls.Add(this.label6);
+			this.panel10.Controls.Add(this.lbltec);
 			this.panel10.Controls.Add(this.chkAtalho);
 			resources.ApplyResources(this.panel10, "panel10");
 			this.panel10.Name = "panel10";
 			// 
-			// label6
+			// lbltec
 			// 
-			resources.ApplyResources(this.label6, "label6");
-			this.label6.Name = "label6";
+			resources.ApplyResources(this.lbltec, "lbltec");
+			this.lbltec.Name = "lbltec";
 			// 
 			// chkAtalho
 			// 
@@ -576,39 +585,17 @@
 			// 
 			this.pnlDiscord.Controls.Add(this.switchDuracao);
 			this.pnlDiscord.Controls.Add(this.switchNome);
-			this.pnlDiscord.Controls.Add(this.label4);
+			this.pnlDiscord.Controls.Add(this.lblinfoDu);
 			this.pnlDiscord.Controls.Add(this.lblDuracao);
 			this.pnlDiscord.Controls.Add(this.lblNomeDisc);
 			resources.ApplyResources(this.pnlDiscord, "pnlDiscord");
 			this.pnlDiscord.Name = "pnlDiscord";
 			// 
-			// switchDuracao
+			// lblinfoDu
 			// 
-			resources.ApplyResources(this.switchDuracao, "switchDuracao");
-			this.switchDuracao.BackColor = System.Drawing.Color.Transparent;
-			this.switchDuracao.Name = "switchDuracao";
-			this.switchDuracao.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchDuracao.OffToggleColor = System.Drawing.Color.White;
-			this.switchDuracao.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchDuracao.OnToggleColor = System.Drawing.Color.White;
-			this.switchDuracao.UseVisualStyleBackColor = false;
-			// 
-			// switchNome
-			// 
-			resources.ApplyResources(this.switchNome, "switchNome");
-			this.switchNome.BackColor = System.Drawing.Color.Transparent;
-			this.switchNome.Name = "switchNome";
-			this.switchNome.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchNome.OffToggleColor = System.Drawing.Color.White;
-			this.switchNome.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchNome.OnToggleColor = System.Drawing.Color.White;
-			this.switchNome.UseVisualStyleBackColor = false;
-			// 
-			// label4
-			// 
-			resources.ApplyResources(this.label4, "label4");
-			this.label4.Name = "label4";
-			this.label4.Tag = "En -> Choose language - changes will be applied after restarting the app";
+			resources.ApplyResources(this.lblinfoDu, "lblinfoDu");
+			this.lblinfoDu.Name = "lblinfoDu";
+			this.lblinfoDu.Tag = "";
 			// 
 			// lblDuracao
 			// 
@@ -645,10 +632,10 @@
 			// 
 			this.panel8.Controls.Add(this.switchMusic);
 			this.panel8.Controls.Add(this.lblInfoMusic);
-			this.panel8.Controls.Add(this.label12);
+			this.panel8.Controls.Add(this.lblnotif);
 			this.panel8.Controls.Add(this.switchMini);
 			this.panel8.Controls.Add(this.lblMini);
-			this.panel8.Controls.Add(this.label5);
+			this.panel8.Controls.Add(this.lblTitMini);
 			this.panel8.Controls.Add(this.switchSO);
 			this.panel8.Controls.Add(this.pctPaths);
 			this.panel8.Controls.Add(this.label14);
@@ -656,22 +643,11 @@
 			this.panel8.Controls.Add(this.label13);
 			this.panel8.Controls.Add(this.lblSO);
 			this.panel8.Controls.Add(this.label10);
-			this.panel8.Controls.Add(this.label2);
+			this.panel8.Controls.Add(this.lblEscIdioma);
 			this.panel8.Controls.Add(this.comboBox1);
-			this.panel8.Controls.Add(this.label1);
+			this.panel8.Controls.Add(this.lblIdioma);
 			resources.ApplyResources(this.panel8, "panel8");
 			this.panel8.Name = "panel8";
-			// 
-			// switchMusic
-			// 
-			resources.ApplyResources(this.switchMusic, "switchMusic");
-			this.switchMusic.BackColor = System.Drawing.Color.Transparent;
-			this.switchMusic.Name = "switchMusic";
-			this.switchMusic.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchMusic.OffToggleColor = System.Drawing.Color.White;
-			this.switchMusic.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchMusic.OnToggleColor = System.Drawing.Color.White;
-			this.switchMusic.UseVisualStyleBackColor = false;
 			// 
 			// lblInfoMusic
 			// 
@@ -680,21 +656,10 @@
 			this.lblInfoMusic.Tag = "En -> Hitting X will make application, invisble. But is visible in taskbar";
 			this.lblInfoMusic.Click += new System.EventHandler(this.label11_Click);
 			// 
-			// label12
+			// lblnotif
 			// 
-			resources.ApplyResources(this.label12, "label12");
-			this.label12.Name = "label12";
-			// 
-			// switchMini
-			// 
-			resources.ApplyResources(this.switchMini, "switchMini");
-			this.switchMini.BackColor = System.Drawing.Color.Transparent;
-			this.switchMini.Name = "switchMini";
-			this.switchMini.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchMini.OffToggleColor = System.Drawing.Color.White;
-			this.switchMini.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchMini.OnToggleColor = System.Drawing.Color.White;
-			this.switchMini.UseVisualStyleBackColor = false;
+			resources.ApplyResources(this.lblnotif, "lblnotif");
+			this.lblnotif.Name = "lblnotif";
 			// 
 			// lblMini
 			// 
@@ -703,21 +668,10 @@
 			this.lblMini.Tag = "En -> Hitting X will make application, invisble. But is visible in taskbar";
 			this.lblMini.Click += new System.EventHandler(this.label11_Click);
 			// 
-			// label5
+			// lblTitMini
 			// 
-			resources.ApplyResources(this.label5, "label5");
-			this.label5.Name = "label5";
-			// 
-			// switchSO
-			// 
-			resources.ApplyResources(this.switchSO, "switchSO");
-			this.switchSO.BackColor = System.Drawing.Color.Transparent;
-			this.switchSO.Name = "switchSO";
-			this.switchSO.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchSO.OffToggleColor = System.Drawing.Color.White;
-			this.switchSO.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchSO.OnToggleColor = System.Drawing.Color.White;
-			this.switchSO.UseVisualStyleBackColor = false;
+			resources.ApplyResources(this.lblTitMini, "lblTitMini");
+			this.lblTitMini.Name = "lblTitMini";
 			// 
 			// pctPaths
 			// 
@@ -755,11 +709,11 @@
 			resources.ApplyResources(this.label10, "label10");
 			this.label10.Name = "label10";
 			// 
-			// label2
+			// lblEscIdioma
 			// 
-			resources.ApplyResources(this.label2, "label2");
-			this.label2.Name = "label2";
-			this.label2.Tag = "En -> Choose language - changes will be applied after restarting the app";
+			resources.ApplyResources(this.lblEscIdioma, "lblEscIdioma");
+			this.lblEscIdioma.Name = "lblEscIdioma";
+			this.lblEscIdioma.Tag = "En -> Choose language - changes will be applied after restarting the app";
 			// 
 			// comboBox1
 			// 
@@ -770,11 +724,12 @@
             resources.GetString("comboBox1.Items"),
             resources.GetString("comboBox1.Items1")});
 			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Tag = "0";
 			// 
-			// label1
+			// lblIdioma
 			// 
-			resources.ApplyResources(this.label1, "label1");
-			this.label1.Name = "label1";
+			resources.ApplyResources(this.lblIdioma, "lblIdioma");
+			this.lblIdioma.Name = "lblIdioma";
 			// 
 			// panel14
 			// 
@@ -838,12 +793,73 @@
 			// 
 			this.tmAtalho.Tick += new System.EventHandler(this.tmAtalho_Tick);
 			// 
+			// pictureBox1
+			// 
+			resources.ApplyResources(this.pictureBox1, "pictureBox1");
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.TabStop = false;
+			// 
+			// switchDuracao
+			// 
+			resources.ApplyResources(this.switchDuracao, "switchDuracao");
+			this.switchDuracao.BackColor = System.Drawing.Color.Transparent;
+			this.switchDuracao.Name = "switchDuracao";
+			this.switchDuracao.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchDuracao.OffToggleColor = System.Drawing.Color.White;
+			this.switchDuracao.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchDuracao.OnToggleColor = System.Drawing.Color.White;
+			this.switchDuracao.UseVisualStyleBackColor = false;
+			// 
+			// switchNome
+			// 
+			resources.ApplyResources(this.switchNome, "switchNome");
+			this.switchNome.BackColor = System.Drawing.Color.Transparent;
+			this.switchNome.Name = "switchNome";
+			this.switchNome.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchNome.OffToggleColor = System.Drawing.Color.White;
+			this.switchNome.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchNome.OnToggleColor = System.Drawing.Color.White;
+			this.switchNome.UseVisualStyleBackColor = false;
+			// 
+			// switchMusic
+			// 
+			resources.ApplyResources(this.switchMusic, "switchMusic");
+			this.switchMusic.BackColor = System.Drawing.Color.Transparent;
+			this.switchMusic.Name = "switchMusic";
+			this.switchMusic.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchMusic.OffToggleColor = System.Drawing.Color.White;
+			this.switchMusic.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchMusic.OnToggleColor = System.Drawing.Color.White;
+			this.switchMusic.UseVisualStyleBackColor = false;
+			// 
+			// switchMini
+			// 
+			resources.ApplyResources(this.switchMini, "switchMini");
+			this.switchMini.BackColor = System.Drawing.Color.Transparent;
+			this.switchMini.Name = "switchMini";
+			this.switchMini.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchMini.OffToggleColor = System.Drawing.Color.White;
+			this.switchMini.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchMini.OnToggleColor = System.Drawing.Color.White;
+			this.switchMini.UseVisualStyleBackColor = false;
+			// 
+			// switchSO
+			// 
+			resources.ApplyResources(this.switchSO, "switchSO");
+			this.switchSO.BackColor = System.Drawing.Color.Transparent;
+			this.switchSO.Name = "switchSO";
+			this.switchSO.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchSO.OffToggleColor = System.Drawing.Color.White;
+			this.switchSO.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchSO.OnToggleColor = System.Drawing.Color.White;
+			this.switchSO.UseVisualStyleBackColor = false;
+			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlSettings);
+			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
@@ -881,6 +897,7 @@
 			this.pnlSettings.PerformLayout();
 			this.pnlXampp.ResumeLayout(false);
 			this.pnlXampp.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pctXAMPP)).EndInit();
 			this.pnlAtalho.ResumeLayout(false);
 			this.pnlAtalho.PerformLayout();
 			this.panel10.ResumeLayout(false);
@@ -893,6 +910,7 @@
 			this.panel8.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).EndInit();
 			this.contextMenuStrip1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -935,9 +953,9 @@
 		private System.Windows.Forms.Panel pnlCont;
 		private System.Windows.Forms.Panel pnlSettings;
 		private System.Windows.Forms.Panel panel8;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lblIdioma;
 		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lblEscIdioma;
 		private System.Windows.Forms.Panel panel9;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Panel panel10;
@@ -945,17 +963,17 @@
 		private System.Windows.Forms.Label lblNomeDisc;
 		private System.Windows.Forms.Label lblDuracao;
 		private System.Windows.Forms.CheckBox chkAtalho;
-		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label lbltec;
 		private System.Windows.Forms.Panel pnlAtalho;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label lblSO;
 		private System.Windows.Forms.Panel panel14;
 		private System.Windows.Forms.Button btnNext;
-		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label lblSeg;
 		private System.Windows.Forms.Button btnAnterior;
-		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label lblAnt;
 		private System.Windows.Forms.Button btnPausa;
-		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label lblPaRe;
 		private System.Windows.Forms.Label lblAnterior;
 		private System.Windows.Forms.Label lblSeguinte;
 		private System.Windows.Forms.Label lblPR;
@@ -967,21 +985,20 @@
 		private System.Windows.Forms.Label labelControl2;
 		private System.Windows.Forms.Label labelControl4;
 		private System.Windows.Forms.CheckBox chkDiscord;
-		private System.Windows.Forms.Label lblVersao;
 		private System.Windows.Forms.Panel pnlXampp;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox txtXAMPP;
 		private System.Windows.Forms.Label label15;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label lblinfoDu;
 		private CustomControls.RJControls.RJToggleButton switchNome;
 		private CustomControls.RJControls.RJToggleButton switchDuracao;
 		private CustomControls.RJControls.RJToggleButton switchSO;
 		private System.Windows.Forms.NotifyIcon icnNotification;
 		private CustomControls.RJControls.RJToggleButton switchMini;
 		private System.Windows.Forms.Label lblMini;
-		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label lblTitMini;
 		private CustomControls.RJControls.RJToggleButton switchMusic;
 		private System.Windows.Forms.Label lblInfoMusic;
-		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label lblnotif;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem TSMIPrevious;
 		private System.Windows.Forms.ToolStripMenuItem TSMIPause;
@@ -990,6 +1007,9 @@
 		private System.Windows.Forms.ToolStripMenuItem TSMIClose;
 		private System.Windows.Forms.Timer tmAtalho;
 		private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+		private System.Windows.Forms.Label lblVersao;
+		private System.Windows.Forms.PictureBox pctXAMPP;
+		private System.Windows.Forms.PictureBox pictureBox1;
 	}
 }
 
