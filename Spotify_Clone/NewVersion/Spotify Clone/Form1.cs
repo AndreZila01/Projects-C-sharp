@@ -1043,23 +1043,27 @@ namespace Spotify_Clone
 			}
 			if (this.Tag.ToString() == "")
 			{
-				conf = JsonConvert.DeserializeObject<List<ConfIdioma>>(Properties.Resources.SettingsIdioma);
+				try
+				{
+					conf = JsonConvert.DeserializeObject<List<ConfIdioma>>(Properties.Resources.SettingsIdioma);
 
-				lblEscIdioma.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblEscIdioma;
-				lblSO.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblEscIdioma;
-				lblTitMini.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblTitMini;
-				lblMini.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblMini;
-				lblnotif.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblnotif;
-				lblInfoMusic.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblInfoMusic;
-				chkDiscord.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].chkDiscord;
-				lblNomeDisc.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblNomeDisc;
-				lblDuracao.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblDuracao;
-				lblinfoDu.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblinfoDu;
-				lbltec.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lbltec;
-				chkAtalho.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].chkAtalho;
-				lblAnt.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblAnt;
-				lblPaRe.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblPaRe;
-				lblSeg.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblSeg;
+					lblEscIdioma.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblEscIdioma;
+					lblSO.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblEscIdioma;
+					lblTitMini.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblTitMini;
+					lblMini.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblMini;
+					lblnotif.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblnotif;
+					lblInfoMusic.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblInfoMusic;
+					chkDiscord.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].chkDiscord;
+					lblNomeDisc.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblNomeDisc;
+					lblDuracao.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblDuracao;
+					lblinfoDu.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblinfoDu;
+					lbltec.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lbltec;
+					chkAtalho.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].chkAtalho;
+					lblAnt.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblAnt;
+					lblPaRe.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblPaRe;
+					lblSeg.Text = conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].lblSeg;
+				}
+				catch { MessageBox.Show("ERROR"); }
 			}
 			icnNotification.Visible = true;
 		}
@@ -1161,152 +1165,12 @@ namespace Spotify_Clone
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			#region SettingsIdioma
-			//Forms1 forms = new Forms1();
-			//forms.chkAtalho = "Can use keybinds";
-			//forms.chkDiscord = "Send data to discord";
-			//forms.lblAnt = "Previous Music";
-			//forms.lblDuracao = "Duration of Music";
-			//forms.lblEscIdioma = "Choose language - changes will be applied after restarting the app";
-			//forms.lblinfoDu = "If not send duration of music, send time to use application";
-			//forms.lblInfoMusic = "Hitting X will make application, invisble. But is visible in taskbar";
-			//forms.lblMini = "Hitting X will make application, invisble. But is visible in taskbar";
-			//forms.lblNomeDisc = "Send name of Music";
-			//forms.lblnotif = "Notification when change music";
-			//forms.lblPaRe = "Pause and continue";
-			//forms.lblSeg = "Next Music";
-			//forms.lblSO = "Application startup with SO";
-			//forms.lbltec = "KeyBind";
-			//forms.lblTitMini = "Minimize Application";
-			//forms.MSGFLASH = "Your were very fast!! Take it easy,beacuse the program dont detect playList!!";
-			//forms.MSGRANDOM = "At the moment,dont select playList!! \n OR \n The playList dont have musics!!!";
-
-			//var ds = JsonConvert.SerializeObject(forms);
-			////conf.form1 = forms;
-
-			//Forms2 forms2 = new Forms2();
-			//forms2.button1 = "Create";
-			//forms2.Form2Text = "New PlayList";
-			//forms2.lblDescription = "Description:";
-			//forms2.lblNome = "Name of Playlist:";
-			//forms2.MSGBUTTON = "You have not completed the data !!\n Please complete !!!!";
-			//forms2.MSGPICT = "The selected files must be in the format\n\t*.jpg,*.jpeg,*.jpe,*.jfif,*.png";
-			//ds = JsonConvert.SerializeObject(forms2);
-			//conf.form2.Add(forms2);
-
-			//forms.chkAtalho = "Poder usar teclas de Atalho";
-			//forms.chkDiscord = "Enviar informação para o discord";
-			//forms.lblAnt = "Musica anterior";
-			//forms.lblDuracao = "Duração da Musica";
-			//forms.lblEscIdioma = "Escolhe o idioma - as alterações serão feitas após reniciar a app";
-			//forms.lblinfoDu = "Se não envia a duração, envia o tempo que está a usar a aplicação";
-			//forms.lblInfoMusic = "Aparece uma mensagem a dizer o nome da musica seguinte";
-			//forms.lblMini = "Se clicar no X fará a aplicação ficar escondida na barra de tarefas";
-			//forms.lblNomeDisc = "Enviar nome da Musica";
-			//forms.lblnotif = "Notificação ao mudar de musica";
-			//forms.lblPaRe = "Pausar e Retomar";
-			//forms.lblSeg = "Musica Seguinte";
-			//forms.lblSO = "Aplicação Inicia com o Sistema Operativo";
-			//forms.lbltec = "Teclas de Atalho";
-			//forms.lblTitMini = "Minimizar a aplicação";
-			//forms.MSGFLASH = "Foste muito rápido!! Vai com mais calma, pois assim o programa não consegue detetar a playlist!!";
-			//forms.MSGRANDOM = "De momento não selecionou nenhuma playlist \n ou \n a playlist não tem musicas de momento!!!";
-
-			//ds = JsonConvert.SerializeObject(forms);
-			//conf.form1.Add(forms);
-
-			//forms2.button1 = "Criar";
-			//forms2.Form2Text = "Nova PlayList";
-			//forms2.lblDescription = "Descrição:";
-			//forms2.lblNome = "Nome da Playlist:";
-			//forms2.MSGBUTTON = "Não completaste os dados!!\n Complete por favor !!!!";
-			//forms2.MSGPICT = "O formato da imagem deve ser \n\t*.jpg,*.jpeg,*.jpe,*.jfif,*.png";
-			//conf.form2.Add(forms2);
-			/*Form2Text
-En="New PlayList"
-Pt="Nova Playlista"
-lblNome
-En="Name of Playlist:"
-Pt="Nome da Playlista:"
-lblDescription
-En="Description:"
-Pt="Descrição:"
-button1
-En="Create"
-Pt="Criar"
-MSGBUTTON
-En="You have not completed the data !!\n Please complete !!!!"
-Pt="Não completaste os dados!!\n Complete por favor !!!!"
-MSGPICT
-En="The selected files must be in the format\n\t*.jpg,*.jpeg,*.jpe,*.jfif,*.png"
-Pt="O formato da imagem deve ser \n\t*.jpg,*.jpeg,*.jpe,*.jfif,*.png""*/
-			/*lblIdioma
-En -> Language	
-Pt -> Idioma
-lblEscIdioma:
-En -> Choose language - changes will be applied after restarting the app
-Pt -> Escolhe o idioma - as alterações serão feitas após reniciar a app
-lblSO:
-En -> Choose language - changes will be applied after restarting the app
-Pt -> Iniciar com o Sistema Operativo
-lblTitMini:
-En -> Minimize Application
-Pt -> Minimizar a aplicação
-lblMini:
-En -> Hitting X will make application, invisble. But is visible in taskbar
-Pt -> Se clicar no X fará a aplicação ficar escondida na barra de tarefas
-lblnotif:
-En -> Notification when change music
-Pt -> Notificação ao mudar de musica
-lblInfoMusic:
-En -> Hitting X will make application, invisble. But is visible in taskbar
-Pt -> Aparece uma mensagem a dizer o nome da musica seguinte
-chkDiscord:
-En -> Send data to discord
-Pt -> Enviar informação para o discord
-lblNomeDisc
-En -> Send name of Music
-Pt -> Enviar nome da Musica
-lblDuracao
-En -> Duration of Music
-Pt -> Duração da Musica
-lblinfoDu
-En -> If not send duration of music, send time to use application
-Pt -> Se não envia a duração, envia o tempo que está a usar a aplicação
-lbltec
-En -> KeyBind
-Pt -> Teclas de atalho
-chkAtalho
-En -> Can use keybinds
-Pt -> Poder usar teclas de Atalho
-lblAnt
-En -> Previous Music
-Pt -> Musica anterior
-lblPaRe
-En -> Pause and continue
-Pt -> Pausar e Retomar
-lblSeg
-En -> Next Music
-Pt -> Musica Seguinte
-MSGSTART
-En -> I down volume the your computer,to your security!!!\nIf not like,click in \"Não\",else click in \"Sim\" I reduce the volume!!
-Pt -> Por questões de segurança auditividas é recomendado ouvir a musica mais baixo. Se poder reduzir, clica no sim, se não clica no não.
-MSGRANDOM
-En -> At the moment,dont select playList!! \n OR \n The playList dont have musics!!!
-Pt -> De momento não selecionou nenhuma playlist \n ou \n a playlist não tem musicas de momento!!!
-MSGFLASH
-En -> Your were very fast!! Take it easy,beacuse the program dont detect playList!!
-Pt -> Foste muito rápido!! Vai com mais calma, pois assim o programa não consegue detetar a playlist!!*/
-			#endregion
 			Invalidate();
 			axWindowsMediaPlayer1.Visible = false;
 			atualizacao = false;
 			pnlSettings.BringToFront();
 			comboBox1.Text = comboBox1.Items[0].ToString();
 
-			pictureBox1.LoadAsync("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flabinator.com%2Fwp-content%2Fuploads%2F2019%2F07%2FXAMPP-Logo.png&f=1&nofb=1");
-
-			if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 			this.Tag = "AddPnl";
 
 			Process[] procs = Process.GetProcessesByName("Spotify Clone");
@@ -1317,12 +1181,14 @@ Pt -> Foste muito rápido!! Vai com mais calma, pois assim o programa não conse
 			CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
 			if (defaultPlaybackDevice.Volume >= 50)
 			{
-				if (MessageBox.Show(conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].MSGFLASH, "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				if (MessageBox.Show("I down volume the your computer,to your security!!!\nIf not like,click in \"Não\",else click in \"Sim\" I reduce the volume!!", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 				{
 					System.Diagnostics.Process.Start("sndvol.exe");
 					this.CenterToScreen();
 				}
 			}
+
+			if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 		}
 		private void SaveSettings(Settings settings)
 		{
@@ -1336,6 +1202,11 @@ Pt -> Foste muito rápido!! Vai com mais calma, pois assim o programa não conse
 				int Mini = switchMini.Checked ? Mini = 1 : Mini = 0;
 				int NotifMusic = switchMusic.Checked ? NotifMusic = 1 : NotifMusic = 0;
 				string Xampp = txtXAMPP.Text;
+				if (Xampp != "")
+				{
+					pnlXampp.Visible = true;
+					picXAMPP.LoadAsync("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flabinator.com%2Fwp-content%2Fuploads%2F2019%2F07%2FXAMPP-Logo.png&f=1&nofb=1");
+				}
 
 				Backend back = new Backend();
 				List<Settings> st = back.UpdateSettings(comboBox1.Text, SO, Discord, Enviar, Duracao, Atalho, Mini, NotifMusic, btnAnterior.Text, btnPausa.Text, btnNext.Text, txtPaths.Text, Xampp);
@@ -1355,11 +1226,17 @@ Pt -> Foste muito rápido!! Vai com mais calma, pois assim o programa não conse
 					ds = settings.AutoRun == 1 ? switchSO.Checked = true : switchSO.Checked = false;
 					ds = settings.Minimizar == 1 ? switchMini.Checked = true : switchMini.Checked = false;
 					ds = settings.NotifMusic == 1 ? switchMusic.Checked = true : switchMusic.Checked = false;
-					txtXAMPP.Text = settings.XAMPP;
+					var dss = settings.Idioma != "Português" ? comboBox1.Text = comboBox1.Items[0].ToString() : comboBox1.Text = comboBox1.Items[1].ToString();
+					if (settings.XAMPP != "")
+					{
+						txtXAMPP.Text = settings.XAMPP;
+						pnlXampp.Visible = true;
+						picXAMPP.LoadAsync("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flabinator.com%2Fwp-content%2Fuploads%2F2019%2F07%2FXAMPP-Logo.png&f=1&nofb=1");
+					}
 
-					ds = txtXAMPP.Text != "" ? pictureBox1.Visible = true: pictureBox1.Visible = false;
+					ds = txtXAMPP.Text != "" ? picXAMPP.Visible = true : picXAMPP.Visible = false;
 					if (txtXAMPP.Text != "")
-						pictureBox1.Visible = true;
+						picXAMPP.Visible = true;
 
 					if (settings.discord != null)
 					{
@@ -1375,7 +1252,7 @@ Pt -> Foste muito rápido!! Vai com mais calma, pois assim o programa não conse
 					txtPaths.Text = settings.Paths;
 					var dds = settings.Idioma == "Português" ? comboBox1.Invoke((MethodInvoker)(() => comboBox1.SelectedItem = "Português")) : comboBox1.Invoke((MethodInvoker)(() => comboBox1.SelectedItem = "Inglês"));
 				}
-				catch { }
+				catch (Exception ex){ }
 
 			}
 			RegistryKey startupKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run");
@@ -1393,6 +1270,8 @@ Pt -> Foste muito rápido!! Vai com mais calma, pois assim o programa não conse
 				startupKey.Close();
 			}
 
+				if (txtXAMPP.Text != "")//comboBox1.Invoke((MethodInvoker)(() => comboBox1.SelectedItem = "Português"))
+					picXAMPP.Invoke((MethodInvoker)(()=> picXAMPP.Visible = true));
 		}
 
 		#region give tag to toolstrip
@@ -1499,13 +1378,24 @@ Pt -> Foste muito rápido!! Vai com mais calma, pois assim o programa não conse
 
 						txtXAMPP.Tag = txtXAMPP.Tag.ToString().Remove((txtXAMPP.Tag.ToString().Length - 1));
 
-						string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
-
 						bk.Xampp(txtXAMPP.Tag.ToString(), _listInformacoes);
 
-						icnNotification.ShowBalloonTip(25, conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].ICNXAMPP, "Spotify Clone", ToolTipIcon.Info);
+						icnNotification.ShowBalloonTip(15, "Spotify Clone", conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].ICNXAMPP, ToolTipIcon.Info);
 					}
 					break;
+				case "picXAMPP":
+					Process[] processes = Process.GetProcesses();
+					//processes[0].ProcessName
+					foreach (Process process in processes)
+
+					{
+
+						//listBox1.Items.Add(process.ProcessName + " " + process.Id.ToString());
+
+					}
+					string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
+
+					break;	
 				case "picBotaoPlay":
 					labelControl2.Tag = pE.Tag;
 					picForm3.Tag = "" + IdPlayList;
