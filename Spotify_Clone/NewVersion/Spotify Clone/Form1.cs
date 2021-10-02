@@ -74,7 +74,6 @@ namespace Spotify_Clone
 			Random rd = new Random();
 			int r; r = rd.Next(0, ((_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1)));
 			pE_PauseaPlay.Image = Properties.Resources.pause; pE_PauseaPlay.Tag = "0";
-			//t = 0;
 			labelControl2.Text = string.Empty;
 			picForm3.Tag = "" + IdPlayList;
 
@@ -1143,24 +1142,6 @@ namespace Spotify_Clone
 				client.SetPresence(rp);
 			}
 		}
-		public struct Preset
-		{
-			public string ID;
-			public string Details;
-			public string State;
-			public int PartySize;
-			public int PartyMax;
-			public int Timestamps;
-			public DateTime CustomTimestamp;
-			public string LargeKey;
-			public string LargeText;
-			public string SmallKey;
-			public string SmallText;
-			public string Button1Text;
-			public string Button1URL;
-			public string Button2Text;
-			public string Button2URL;
-		}
 		#endregion
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -1270,7 +1251,7 @@ namespace Spotify_Clone
 				startupKey.Close();
 			}
 
-				if (txtXAMPP.Text != "")//comboBox1.Invoke((MethodInvoker)(() => comboBox1.SelectedItem = "Português"))
+				if (txtXAMPP.Text != "")
 					picXAMPP.Invoke((MethodInvoker)(()=> picXAMPP.Visible = true));
 		}
 
@@ -1449,7 +1430,6 @@ namespace Spotify_Clone
 				case "pE_previous":
 					EventosPE("pE_previous");
 					break;
-
 				case "pE_Random":
 					try
 					{
