@@ -163,7 +163,7 @@ namespace Spotify_Clone
 										}
 									}
 								}
-							if ((IdPlayList) == ((int)((ToolStripMenuItem)sender).Tag) && (pE_PauseaPlay.Tag.ToString()) != "0")
+							if ((int.Parse(picForm3.Tag.ToString())) == (((int)((ToolStripMenuItem)sender).Tag)) /*&& (pE_PauseaPlay.Tag.ToString()) != "0"*/)
 							{
 								labelControl2.Text = "";
 								IdPlayList = 0;
@@ -171,18 +171,21 @@ namespace Spotify_Clone
 								timer1.Stop();
 								timer2.Stop();
 								axWindowsMediaPlayer1.URL = "";
+								pE_PauseaPlay.Image = Properties.Resources.play;
 							}
 							IdPlayList = (int)((ToolStripMenuItem)sender).Tag;
 							_listInformacoes.Remove(_listInformacoes.FirstOrDefault(row => row.IDList == (int)((ToolStripMenuItem)sender).Tag));
+							int id = 1;
 							_listInformacoes.ToList().ForEach(item =>
 							{
-								if (item.IDList > 0)
-									item.IDList--;
+								item.IDList = id;
+								id++;
 							});
-							var json = JsonConvert.SerializeObject(_listInformacoes);
+							//var json = JsonConvert.SerializeObject(_listInformacoes);
 							if (txtPaths.Text == "%appdata%")
 								txtPaths.Text = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-							System.IO.File.WriteAllText(txtPaths.Text + "/SpotifyClone/Musics.json", json);
+							//System.IO.File.WriteAllText(txtPaths.Text + "/SpotifyClone/Musics.json", json);
+							bk.WriteReadMusic(false, txtPaths.Text, _listInformacoes, -1);
 							Atualiza();
 						}
 						catch { Atualiza(); }
@@ -302,6 +305,7 @@ namespace Spotify_Clone
 		}
 		private void AuxForm2(object tag)
 		{
+			int idplay = 0;
 			try
 			{
 				if (txtPaths.Text == "%appdata%")
@@ -311,12 +315,12 @@ namespace Spotify_Clone
 				{
 					if ((int)tag != 0)
 					{
-						IdPlayList = (int)tag;
+						idplay = (int)tag;
 						atualizacao = true;
 					}
 					else
 					{
-						IdPlayList = 0;
+						idplay = 0;
 						atualizacao = false;
 					}
 				}
@@ -327,11 +331,11 @@ namespace Spotify_Clone
 				}
 				Screen scrn = Screen.FromControl(this);
 				ecra = int.Parse((scrn.DeviceName.Replace("\\", "").Replace(".DISPLAY", "")));
-				Form2 form2 = new Form2(atualizacao, IdPlayList, ecra, (txtPaths.Text));
+				Form2 form2 = new Form2(atualizacao, idplay, ecra, (txtPaths.Text));
 				icnNotification.Visible = false;
 				form2.ShowDialog();
 				form2.Close();
-				_listInformacoes = bk.WriteReadMusic(true, txtPaths.Text, null, (IdPlayList - 1)).OrderBy(x => x.Caminho_da_Musica).ToList();
+				_listInformacoes = bk.WriteReadMusic(true, txtPaths.Text, null, (idplay - 1)).OrderBy(x => x.Caminho_da_Musica).ToList();
 				if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 				this.Tag = "AddPnl";
 			}
@@ -1087,7 +1091,7 @@ namespace Spotify_Clone
 					}
 					catch { }
 					Discord("Nome da Musica", 0, 0);
-					_listInformacoes = bk.WriteReadMusic(true, txtPaths.Text, null, -1).OrderBy(x => x.Caminho_da_Musica).ToList();
+					_listInformacoes = bk.WriteReadMusic(true, txtPaths.Text, null, -1).OrderBy(x => x.IDList).ToList();
 				}
 				catch
 				{
@@ -1566,10 +1570,11 @@ namespace Spotify_Clone
 						string f = NameMusic[TAMANHO - 1].Substring(0, g);
 						PlaydaLista.Add(f);
 					});
-					var json = JsonConvert.SerializeObject(_listInformacoes);
+					//var json = JsonConvert.SerializeObject(_listInformacoes);
 					string Paths = "";
 					var dss = txtPaths.Text == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = txtPaths.Text;
-					System.IO.File.WriteAllText(Paths + "/SpotifyClone/Musics.json", json);
+					//System.IO.File.WriteAllText(Paths + "/SpotifyClone/Musics.json", json);
+					bk.WriteReadMusic(false, txtPaths.Text, _listInformacoes, -1);
 					MusicaPlay();
 					break;
 				case "picDown":
