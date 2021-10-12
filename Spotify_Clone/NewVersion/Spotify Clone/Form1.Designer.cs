@@ -310,7 +310,7 @@
 			// 
 			// panel7
 			// 
-			this.panel7.BackColor = System.Drawing.Color.DarkSlateGray;
+			this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(142)))), ((int)(((byte)(144)))));
 			this.panel7.Controls.Add(this.PBC);
 			resources.ApplyResources(this.panel7, "panel7");
 			this.panel7.Name = "panel7";
@@ -859,8 +859,8 @@
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlSettings);
+			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";

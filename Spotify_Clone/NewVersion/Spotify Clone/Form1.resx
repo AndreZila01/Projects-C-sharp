@@ -3160,7 +3160,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlCont.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pnlSettings.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4600,7 +4600,7 @@ se acabares</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="icnNotification.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>557, 23</value>

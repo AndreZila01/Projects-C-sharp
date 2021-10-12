@@ -67,6 +67,7 @@ namespace Spotify_Clone.Classes
 		public string MSGRANDOM { get; set; }
 		public string MSGFLASH { get; set; }
 		public string ICNXAMPP { get; set; }
+		//public string MSGCOPY { get; set; }
 	}
 	public class Forms2
 	{
@@ -76,6 +77,11 @@ namespace Spotify_Clone.Classes
 		public string button1 { get; set; }
 		public string MSGBUTTON { get; set; }
 		public string MSGPICT { get; set; }
+	}
+	public class Xampp
+	{
+		public string NomePlay { get; set; }
+		public List<string> PathsXampp { get; set; }
 	}
 
 }

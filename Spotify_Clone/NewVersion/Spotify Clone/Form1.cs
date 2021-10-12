@@ -539,7 +539,7 @@ namespace Spotify_Clone
 							pE_PauseaPlay.Image = Properties.Resources.pause;
 							Discord(labelControl2.Text, int.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString()), int.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration.ToString()));
 							pE_PauseaPlay.Tag = "0";
-							dt = 0;
+							dt = 0; PBC.Value = 0;
 						}
 						catch (Exception ex)
 						{
@@ -594,7 +594,7 @@ namespace Spotify_Clone
 									Processo = "start";
 								}
 								fmr.timer1_Tick(senders, es);
-								timer1.Stop();
+								timer1.Stop(); 
 								var ts = pE_PauseaPlay.Tag.ToString() == "0" ? Processo = "pause" : Processo = "start";
 							}
 						}
@@ -627,12 +627,11 @@ namespace Spotify_Clone
 								Processo = "pause";
 								axwindows();
 								fmr.timer1_Tick(senders, es);
-								timer1.Stop();
 							}
 							pE_PauseaPlay.Image = Properties.Resources.pause;
 							pE_PauseaPlay.Tag = "0";
 							Discord(labelControl2.Text, int.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString()), int.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration.ToString()));
-							dt = 0;
+							dt = 0; PBC.Value = 0;
 						}
 						catch (Exception ex)
 						{
@@ -1362,23 +1361,25 @@ namespace Spotify_Clone
 								txtXAMPP.Tag += ext + '\\';
 
 						txtXAMPP.Tag = txtXAMPP.Tag.ToString().Remove((txtXAMPP.Tag.ToString().Length - 1));
-
-						bk.Xampp(txtXAMPP.Tag.ToString(), _listInformacoes);
-
-						icnNotification.ShowBalloonTip(15, "Spotify Clone", conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].ICNXAMPP, ToolTipIcon.Info);
+						if (MessageBox.Show("Ele vai mandar as musicas todas para a pasta do XAMPP!!\nPoderá demorar algum tempo ... tem a certeza que quer continuar?!!?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+						{
+							bk.Xampp(txtXAMPP.Tag.ToString(), _listInformacoes);
+							icnNotification.ShowBalloonTip(15, "Spotify Clone", conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].ICNXAMPP, ToolTipIcon.Info);
+						}
 					}
 					break;
 				case "picXAMPP":
 					Process[] processes = Process.GetProcesses();
 					//processes[0].ProcessName
 					foreach (Process process in processes)
-
 					{
 
 						//listBox1.Items.Add(process.ProcessName + " " + process.Id.ToString());
 
 					}
 					string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
+
+					Process.Start($"http://{myIP}/Spotify_Clone_Site.html");
 
 					break;	
 				case "picBotaoPlay":

@@ -108,7 +108,7 @@ namespace Spotify_Clone.Classes
 				if (!Paths.Contains("json"))
 					CheckFiles(Paths);
 			}
-			catch{}
+			catch { }
 			try
 			{
 				if (readMusic == true)
@@ -117,7 +117,7 @@ namespace Spotify_Clone.Classes
 						string myString = EncryptADeDecrypt.DecryptString(Properties.Resources.Key, File.ReadAllText(Paths + "/SpotifyClone/Musics.json"));
 						if (myString != "\"[]\"" || myString != null)
 							lstConteudo = JsonConvert.DeserializeObject<List<PlayList>>(myString.ToString());
-						
+
 					}
 				}
 				else
@@ -132,7 +132,7 @@ namespace Spotify_Clone.Classes
 		List<double> ProduceRandom = new List<double>();
 		public List<double> RandomMusic(int IdPlayList, List<PlayList> _lst)
 		{
-			
+
 			_lst[IdPlayList].Caminho_da_Musica.ToList().ForEach(item =>
 			{
 				aqui:
@@ -155,19 +155,52 @@ namespace Spotify_Clone.Classes
 
 		public void Xampp(string Paths, List<PlayList> lst)
 		{
+			List<Xampp> lstXampp = new List<Xampp>();
 			Paths += @"\htdocs";
 			if (!(File.Exists(Paths + @"\.htaccess")))
 				File.WriteAllText(Paths + @"\.htaccess", ("Header Set Access-Control-Allow-Origin \"*\""));
 			if (!(Directory.Exists(Paths + @"\Spotify_Clone_Music")))
 				Directory.CreateDirectory(Paths + @"\Spotify_Clone_Music");
 
-			lst[0].Caminho_da_Musica.ToList().ForEach(item =>
+
+			//lst.ToList().ForEach(item=>
+			//{
+			//	string[] name = item.Caminho_da_Musica[index].Split('\\');
+			//	string destinationFile = Paths + @"\Spotify_Clone_Music\" + name[(name.Length - 1)];
+			//	if (!File.Exists(destinationFile))
+			//		File.Copy(item.Caminho_da_Musica[index], destinationFile);
+			//	index++;
+			//});
+			lst.ToList().ForEach(item =>
 			{
-				string[] name = item.Split('\\');
-				string destinationFile = Paths + @"\Spotify_Clone_Music\" + name[(name.Length - 1)];
-				if (!File.Exists(destinationFile))
-					File.Copy(item, destinationFile);
+				try
+				{
+					Xampp xp = new Xampp(); List<string> st = new List<string>();
+					lst[(item.IDList - 1)].Caminho_da_Musica.ToList().ForEach(items =>
+					{
+						string[] name = items.Split('\\');
+						if (!(Directory.Exists(Paths + @"\Spotify_Clone_Music\" + lst[(item.IDList - 1)].Name + @"\" + name[name.Length - 2])))
+							Directory.CreateDirectory(Paths + @"\Spotify_Clone_Music\" + lst[(item.IDList - 1)].Name + @"\" + name[name.Length - 2]);
+						string destinationFile = Paths + @"\Spotify_Clone_Music\" + lst[(item.IDList - 1)].Name + @"\" + name[(name.Length - 2)] + @"\" + name[(name.Length - 1)];
+						if (!File.Exists(destinationFile))
+							File.Copy(items, destinationFile);
+						st.Add(destinationFile);
+					});
+					xp.NomePlay = "" + lst[(item.IDList - 1)].Name;
+					xp.PathsXampp = st;
+
+					lstXampp.Add(xp);
+				}
+				catch { }
 			});
+
+			if (lstXampp.Count > 0)
+			{
+				if (!(File.Exists(Paths + @"\Paths.json")))
+					File.Delete(Paths + @"\Paths.json");
+
+				File.WriteAllText(Paths + @"\Paths.json", (JsonConvert.SerializeObject(lstXampp)));
+			}
 		}
 	}
 }
