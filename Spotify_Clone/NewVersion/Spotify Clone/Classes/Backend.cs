@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -157,10 +158,24 @@ namespace Spotify_Clone.Classes
 		{
 			List<Xampp> lstXampp = new List<Xampp>();
 			Paths += @"\htdocs";
-			if (!(File.Exists(Paths + @"\.htaccess")))
-				File.WriteAllText(Paths + @"\.htaccess", ("Header Set Access-Control-Allow-Origin \"*\""));
-			if (!(Directory.Exists(Paths + @"\Spotify_Clone_Music")))
-				Directory.CreateDirectory(Paths + @"\Spotify_Clone_Music");
+			try
+			{
+				if (!(File.Exists(Paths + @"\.htaccess")))
+					File.WriteAllText(Paths + @"\.htaccess", ("Header Set Access-Control-Allow-Origin \"*\""));
+			}
+			catch { }
+			try
+			{
+				if (Directory.Exists(Paths + @"\Spotify_Clone_Music"))
+					Directory.Delete(Paths + @"\Spotify_Clone_Music", true);
+			}
+			catch { }
+			try
+			{
+				if (!(Directory.Exists(Paths + @"\Spotify_Clone_Music")))
+					Directory.CreateDirectory(Paths + @"\Spotify_Clone_Music");
+			}
+			catch { }
 
 
 			//lst.ToList().ForEach(item=>
@@ -171,6 +186,9 @@ namespace Spotify_Clone.Classes
 			//		File.Copy(item.Caminho_da_Musica[index], destinationFile);
 			//	index++;
 			//});
+#pragma warning disable CS0618 // Type or member is obsolete
+			string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
+#pragma warning restore CS0618 // Type or member is obsolete
 			lst.ToList().ForEach(item =>
 			{
 				try
@@ -184,15 +202,18 @@ namespace Spotify_Clone.Classes
 						string destinationFile = Paths + @"\Spotify_Clone_Music\" + lst[(item.IDList - 1)].Name + @"\" + name[(name.Length - 2)] + @"\" + name[(name.Length - 1)];
 						if (!File.Exists(destinationFile))
 							File.Copy(items, destinationFile);
-						st.Add(destinationFile);
+						st.Add("http://" + myIP + @"\Spotify_Clone_Music\" + lst[(item.IDList - 1)].Name + @"\" + name[(name.Length - 2)] + @"\" + name[(name.Length - 1)]);
 					});
 					xp.NomePlay = "" + lst[(item.IDList - 1)].Name;
 					xp.PathsXampp = st;
 
+					if (lstXampp.Count() == 0)
+						xp.IpUser = myIP;
+
 					lstXampp.Add(xp);
 				}
-				catch { }
-			});
+				catch (Exception ex) { }
+			});////"http://192.168.1.130/Spotify_Clone_site/bait.mp4";
 
 			if (lstXampp.Count > 0)
 			{
@@ -201,6 +222,11 @@ namespace Spotify_Clone.Classes
 
 				File.WriteAllText(Paths + @"\Paths.json", (JsonConvert.SerializeObject(lstXampp)));
 			}
+
+			if (!(File.Exists(Paths + @"\Spotify Clone.html")))
+				File.Delete(Paths + @"\Spotify Clone.html");
+
+			File.WriteAllText(Paths + @"\Spotify Clone.html", "<html><style>#fixo{position:fixed;bottom:0px;left:0;background:CadetBlue;margin-left:0%;}body{margin:0px;margin-bottom:0px;}img{align-items:center;margin-left:5%;height:100%;position:relative;}.child{width:80%;height:55%;text-align:center;background-color:rgb(1,154,158);}#video{text-align:center;}</style><head><meta name=\"viewport\"content=\"width=device-width,initial-scale=1.0\"><title>Spotify Clone</title><link rel=\"icon\"href=\"https://raw.githubusercontent.com/AndreZila01/Projects-C-sharp/master/Spotify_Clone/NewVersion/Spotify_Clone_Site/Spotify.webp\"></head><body name=\"Teste\"><script>var vid=document.getElementById(\"myVideo\");var index=0;var lstValue=0;var xmlHttp=new XMLHttpRequest();xmlHttp.open(\"GET\",\"http://"+myIP+ "/Paths.json\",false);xmlHttp.send(null);var lst=(JSON.parse((xmlHttp.responseText).replace(\"#\",\"%23\")));</script><div style=\"background-color:rgb(1,154,158);width:100%;height:20%;max-height:20%;\"><div style=\"top:25%;position:relative;background-color:rgb(1,154,158);\"><div style=\"max-width:50%;height:25%;position:relative;top:30%;left:25%;text-align:center;\"><label style=\"background-color:rgb(1,230,236);font-size:95%;font-family:'Times New Roman',Times,serif;\"id=\"NomeMusic\"></label></div></div></div><div style=\"background-color:rgb(1,192,197);width:100%;height:65%;max-height:65%;\"style=\"position:relative;\"><video width=\"80%\"height=\"70%\"style=\"margin-right:10%;margin-left:10%;margin-top:5%;position:relative;\"controls autoplay id=\"myVideo\"><source src=\"\"></video></div><div style=\"background-color:rgb(1,154,158);width:100%;height:15%;max-height:35%;\"id=\"fixo\"><div><div style=\"width:50%;height:25%;position:relative;bottom:20%;left:25%;right:25%;\"></div><div class=\"child\"style=\"vertical-align:middle;\"><img id=\"previou\"style=\"margin-left:25%;\"src=\"https://github.com/AndreZila01/Projects-C-sharp/blob/master/Spotify_Clone/NewVersion/Spotify%20Clone/Resources/previousB.png?raw=true\"></img><img id=\"pauseEplay\"name=\"Play\"src=\"https://github.com/AndreZila01/Projects-C-sharp/blob/master/Spotify_Clone/NewVersion/Spotify%20Clone/Resources/playB.png?raw=true\"></img><img id=\"next\"src=\"https://github.com/AndreZila01/Projects-C-sharp/blob/master/Spotify_Clone/NewVersion/Spotify%20Clone/Resources/nextB.png?raw=true\"></img></div></div></div></body><script type='text/javascript'>var vid=document.getElementById(\"myVideo\");var lblNome=document.getElementById(\"NomeMusic\");vid.volume=0.5;document.getElementById('myVideo').addEventListener('ended',myHandler,false);function myHandler(){index++;var vid=document.getElementById(\"myVideo\");if(lst[lstValue].PathsXampp.length==index){lstValue++;index=0;}vid.src=lst[lstValue].PathsXampp[index];vid.load();}window.onload=function(){var index=0;document.getElementById('myVideo').addEventListener('ended',myHandler,false);video();};document.getElementById('pauseEplay').addEventListener('click',function(e){var pct=document.getElementById(\"pauseEplay\");if(pct.name==\"Pause\"){vid.pause();pct.name=\"Play\";pct.src=\"https://github.com/AndreZila01/Projects-C-sharp/blob/master/Spotify_Clone/NewVersion/Spotify%20Clone/Resources/playB.png?raw=true\";}else{vid.play();pct.name=\"Pause\";pct.src=\"https://github.com/AndreZila01/Projects-C-sharp/blob/master/Spotify_Clone/NewVersion/Spotify%20Clone/Resources/pauseB.png?raw=true\";}});document.getElementById('next').addEventListener('click',function(e){index++;if((lst.length-1)==lstValue&&(lst[lstValue].PathsXampp.length)==index){lstValue=0;index=0;}if(lst[lstValue].PathsXampp.length==index){lstValue++;index=0;}video();var pct=document.getElementById(\"pauseEplay\");pct.src=\"https://github.com/AndreZila01/Projects-C-sharp/blob/master/Spotify_Clone/NewVersion/Spotify%20Clone/Resources/pauseB.png?raw=true\";});document.getElementById('previou').addEventListener('click',function(e){index--;if((lst[lstValue].PathsXampp.length)==index){lstValue--;index=lst[lstValue].length;}if(index==-1&&lstValue==0){lstValue=(lst.length-1);index=(lst[lstValue].PathsXampp.length-1);}if(index==-1){lstValue--;index=(lst[lstValue].PathsXampp.length-1);}video();var pct=document.getElementById(\"pauseEplay\");pct.src=\"https://github.com/AndreZila01/Projects-C-sharp/blob/master/Spotify_Clone/NewVersion/Spotify%20Clone/Resources/pauseB.png?raw=true\";});function video(){vid.src=lst[lstValue].PathsXampp[index];vid.load();var ds=lst[lstValue].PathsXampp[index].split(\"\\\\\");document.getElementById(\"NomeMusic\").innerHTML=lst[lstValue].NomePlay+\"<br>\"+ds[ds.length-1].slice(0,ds[ds.length-1].length-4).replace(\"%23\",\"#\");}</script></html>");
 		}
 	}
 }

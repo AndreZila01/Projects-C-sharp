@@ -82,6 +82,7 @@ namespace Spotify_Clone.Classes
 	{
 		public string NomePlay { get; set; }
 		public List<string> PathsXampp { get; set; }
+		public string IpUser { get; set; }
 	}
 
 }

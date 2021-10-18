@@ -594,7 +594,7 @@ namespace Spotify_Clone
 									Processo = "start";
 								}
 								fmr.timer1_Tick(senders, es);
-								timer1.Stop(); 
+								timer1.Stop();
 								var ts = pE_PauseaPlay.Tag.ToString() == "0" ? Processo = "pause" : Processo = "start";
 							}
 						}
@@ -1236,7 +1236,7 @@ namespace Spotify_Clone
 					txtPaths.Text = settings.Paths;
 					var dds = settings.Idioma == "Português" ? comboBox1.Invoke((MethodInvoker)(() => comboBox1.SelectedItem = "Português")) : comboBox1.Invoke((MethodInvoker)(() => comboBox1.SelectedItem = "Inglês"));
 				}
-				catch (Exception ex){ }
+				catch (Exception ex) { }
 
 			}
 			RegistryKey startupKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run");
@@ -1254,8 +1254,8 @@ namespace Spotify_Clone
 				startupKey.Close();
 			}
 
-				if (txtXAMPP.Text != "")
-					picXAMPP.Invoke((MethodInvoker)(()=> picXAMPP.Visible = true));
+			if (txtXAMPP.Text != "")
+				picXAMPP.Invoke((MethodInvoker)(() => picXAMPP.Visible = true));
 		}
 
 		#region give tag to toolstrip
@@ -1354,6 +1354,7 @@ namespace Spotify_Clone
 					ofds.Multiselect = false;
 					if ((ofds.ShowDialog() == DialogResult.OK) && ofds.SafeFileName.Contains("xampp-control.exe"))
 					{
+						txtXAMPP.Tag = "";
 						txtXAMPP.Text = ofds.FileName;
 						string[] pathsss = ofds.FileNames[0].Split('\\');
 						foreach (string ext in pathsss)
@@ -1375,13 +1376,14 @@ namespace Spotify_Clone
 					{
 
 						//listBox1.Items.Add(process.ProcessName + " " + process.Id.ToString());
-
 					}
+#pragma warning disable CS0618 // Type or member is obsolete
 					string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
+#pragma warning restore CS0618 // Type or member is obsolete
 
 					Process.Start($"http://{myIP}/Spotify_Clone_Site.html");
 
-					break;	
+					break;
 				case "picBotaoPlay":
 					labelControl2.Tag = pE.Tag;
 					picForm3.Tag = "" + IdPlayList;
