@@ -624,8 +624,9 @@ namespace Spotify_Clone
 								if (axWindowsMediaPlayer1.Ctlcontrols.currentPosition != 0)
 									Posicao = axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString();
 								Volume = labelControl4.Text;
-								Processo = "pause";
-								axwindows();
+								CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
+								//Processo = "pause";
+								//axwindows();
 								fmr.timer1_Tick(senders, es);
 							}
 							pE_PauseaPlay.Image = Properties.Resources.pause;
@@ -1157,11 +1158,11 @@ namespace Spotify_Clone
 
 			this.Tag = "AddPnl";
 
-			Process[] procs = Process.GetProcessesByName("Spotify Clone");
-			if (procs.Length > 1) foreach (Process proc in procs)
-				{
-					if (proc != procs[0]) proc.Kill();
-				}
+			//Process[] procs = Process.GetProcessesByName("Spotify Clone");
+			//if (procs.Length > 1) foreach (Process proc in procs)
+			//	{
+			//		if (proc != procs[0]) proc.Kill();
+			//	}
 			CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
 			if (defaultPlaybackDevice.Volume >= 50)
 			{
@@ -1236,7 +1237,7 @@ namespace Spotify_Clone
 					txtPaths.Text = settings.Paths;
 					var dds = settings.Idioma == "Português" ? comboBox1.Invoke((MethodInvoker)(() => comboBox1.SelectedItem = "Português")) : comboBox1.Invoke((MethodInvoker)(() => comboBox1.SelectedItem = "Inglês"));
 				}
-				catch (Exception ex) { }
+				catch { }
 
 			}
 			RegistryKey startupKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run");
@@ -1370,19 +1371,10 @@ namespace Spotify_Clone
 					}
 					break;
 				case "picXAMPP":
-					Process[] processes = Process.GetProcesses();
-					//processes[0].ProcessName
-					foreach (Process process in processes)
-					{
-
-						//listBox1.Items.Add(process.ProcessName + " " + process.Id.ToString());
-					}
 #pragma warning disable CS0618 // Type or member is obsolete
 					string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
 #pragma warning restore CS0618 // Type or member is obsolete
-
 					Process.Start($"http://{myIP}/Spotify_Clone_Site.html");
-
 					break;
 				case "picBotaoPlay":
 					labelControl2.Tag = pE.Tag;
@@ -1507,7 +1499,11 @@ namespace Spotify_Clone
 								frm.Show();
 							}
 							timer2.Start();
-							Discord(labelControl2.Text, int.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString()), int.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration.ToString()));
+							try
+							{
+								Discord(labelControl2.Text, int.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString()), int.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration.ToString()));
+							}
+							catch { }
 						}
 					}
 					break;
@@ -1789,18 +1785,18 @@ namespace Spotify_Clone
 					{
 						if (dt >= 12 || PBC.Value == Video.maxprogresso || PBC.Value == (PBC.Maximum - 1))
 						{
-							if (PBC.Tag != null && (PBC.Value == Video.maxprogresso))
-								if ((PBC.Value == Video.maxprogresso))
-								{
-									var dsd = (int.Parse(labelControl2.Tag.ToString()) == _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
-									Volume = labelControl4.Text;
-									Processo = "start";
-									axwindows();
-									fmr.timer1_Tick(sender, e);
-									Video.progresso = 0;
-									dt = 0;
-									PBC.Tag = null;
-								}
+							if (PBC.Tag != null && (PBC.Value == Video.maxprogresso) || PBC.Value == (PBC.Maximum - 1))
+							{
+								var dsd = (int.Parse(labelControl2.Tag.ToString()) == _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
+								Volume = labelControl4.Text;
+								Processo = "start";
+								//axwindows();
+								CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
+								fmr.timer1_Tick(sender, e);
+								Video.progresso = 0;
+								dt = 0;
+								PBC.Tag = null;
+							}
 						}
 					}
 					if (dt == 0) { PBC.Tag = Video.progresso; dt++; }

@@ -177,15 +177,6 @@ namespace Spotify_Clone.Classes
 			}
 			catch { }
 
-
-			//lst.ToList().ForEach(item=>
-			//{
-			//	string[] name = item.Caminho_da_Musica[index].Split('\\');
-			//	string destinationFile = Paths + @"\Spotify_Clone_Music\" + name[(name.Length - 1)];
-			//	if (!File.Exists(destinationFile))
-			//		File.Copy(item.Caminho_da_Musica[index], destinationFile);
-			//	index++;
-			//});
 #pragma warning disable CS0618 // Type or member is obsolete
 			string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
 #pragma warning restore CS0618 // Type or member is obsolete
@@ -212,8 +203,8 @@ namespace Spotify_Clone.Classes
 
 					lstXampp.Add(xp);
 				}
-				catch (Exception ex) { }
-			});////"http://192.168.1.130/Spotify_Clone_site/bait.mp4";
+				catch{ }
+			});
 
 			if (lstXampp.Count > 0)
 			{

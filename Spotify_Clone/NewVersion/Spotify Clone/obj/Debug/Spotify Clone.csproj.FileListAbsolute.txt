@@ -167,7 +167,6 @@ C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVers
 C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify_Clone.Properties.Resources.resources
 C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.GenerateResource.cache
 C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.CoreCompileInputs.cache
-C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.AssemblyReference.cache
 C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.exe.config
 C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.exe.manifest
 C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\bin\Debug\Spotify Clone.application
@@ -194,3 +193,4 @@ C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVers
 C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.CopyComplete
 C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.exe
 C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.pdb
+C:\Users\andre\OneDrive\Documentos\GitHub\Projects-C-sharp\Spotify_Clone\NewVersion\Spotify Clone\obj\Debug\Spotify Clone.csproj.AssemblyReference.cache
