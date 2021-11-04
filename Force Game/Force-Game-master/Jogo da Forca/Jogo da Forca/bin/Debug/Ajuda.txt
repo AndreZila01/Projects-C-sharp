@@ -1,0 +1,10 @@
+Portugues:
+
+Este jogo dá para jogar com o computador ou com outro jogador.
+Computador vs Jogador -> você tem de selecionar mais que uma categoria e depois o computador vai escolher dentro delas uma palavra. E tem de tentar acertar.
+
+Jogador vs Jogador -> o jogador1 escreve uma palavra e o jogador2 tem de tentar acertar.
+
+English :
+
+soon ...

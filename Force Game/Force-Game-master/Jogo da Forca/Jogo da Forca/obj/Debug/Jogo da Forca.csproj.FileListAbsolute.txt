@@ -1,0 +1,21 @@
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\bin\Debug\Jogo da Forca.exe.config
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\bin\Debug\Jogo da Forca.exe
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\bin\Debug\Jogo da Forca.pdb
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo da Forca.csprojAssemblyReference.cache
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo_da_Forca.Properties.Resources.resources
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo da Forca.csproj.GenerateResource.cache
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo da Forca.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo da Forca.exe
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo da Forca.pdb
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo_da_Forca.lblAviso.resources
+C:\Users\andre\source\repos\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo_da_Forca.Form2.resources
+C:\Users\André Custódio\Downloads\Jogo da Forca\Jogo da Forca\bin\Debug\Jogo da Forca.exe.config
+C:\Users\André Custódio\Downloads\Jogo da Forca\Jogo da Forca\bin\Debug\Jogo da Forca.exe
+C:\Users\André Custódio\Downloads\Jogo da Forca\Jogo da Forca\bin\Debug\Jogo da Forca.pdb
+C:\Users\André Custódio\Downloads\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo da Forca.csprojAssemblyReference.cache
+C:\Users\André Custódio\Downloads\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo_da_Forca.lblAviso.resources
+C:\Users\André Custódio\Downloads\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo_da_Forca.Form2.resources
+C:\Users\André Custódio\Downloads\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo_da_Forca.Properties.Resources.resources
+C:\Users\André Custódio\Downloads\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo da Forca.csproj.GenerateResource.cache
+C:\Users\André Custódio\Downloads\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo da Forca.exe
+C:\Users\André Custódio\Downloads\Jogo da Forca\Jogo da Forca\obj\Debug\Jogo da Forca.pdb

@@ -163,6 +163,7 @@ namespace Spotify_Clone
 										}
 									}
 								}
+							if(picForm3.Tag!=null)
 							if ((int.Parse(picForm3.Tag.ToString())) == (((int)((ToolStripMenuItem)sender).Tag)) /*&& (pE_PauseaPlay.Tag.ToString()) != "0"*/)
 							{
 								labelControl2.Text = "";
@@ -339,7 +340,7 @@ namespace Spotify_Clone
 				if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 				this.Tag = "AddPnl";
 			}
-			catch
+			catch(Exception ex)
 			{
 				return;
 			}
@@ -505,7 +506,7 @@ namespace Spotify_Clone
 
 		object senders;
 		EventArgs es;
-		private void EventosPE(string nome)
+		public void EventosPE(string nome)
 		{
 			switch (nome)
 			{
@@ -625,8 +626,6 @@ namespace Spotify_Clone
 									Posicao = axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString();
 								Volume = labelControl4.Text;
 								CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
-								//Processo = "pause";
-								//axwindows();
 								fmr.timer1_Tick(senders, es);
 							}
 							pE_PauseaPlay.Image = Properties.Resources.pause;
@@ -641,6 +640,8 @@ namespace Spotify_Clone
 						break;
 					}
 			}
+			if (FormVideo == true)
+				Video.info = "";
 		}
 		#endregion
 
@@ -1140,7 +1141,7 @@ namespace Spotify_Clone
 					}
 				};
 
-				if (!switchDuracao.Checked || duracao == 0)
+				if (switchDuracao.Checked || duracao == 0)
 					rp.Timestamps = new Timestamps(start);
 
 				client.SetPresence(rp);
@@ -1163,15 +1164,15 @@ namespace Spotify_Clone
 			//	{
 			//		if (proc != procs[0]) proc.Kill();
 			//	}
-			CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
-			if (defaultPlaybackDevice.Volume >= 50)
-			{
-				if (MessageBox.Show("I down volume the your computer,to your security!!!\nIf not like,click in \"Não\",else click in \"Sim\" I reduce the volume!!", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-				{
-					System.Diagnostics.Process.Start("sndvol.exe");
-					this.CenterToScreen();
-				}
-			}
+			//CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
+			//if (defaultPlaybackDevice.Volume >= 50)
+			//{
+			//	if (MessageBox.Show("I down volume the your computer,to your security!!!\nIf not like,click in \"Não\",else click in \"Sim\" I reduce the volume!!", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+			//	{
+			//		System.Diagnostics.Process.Start("sndvol.exe");
+			//		this.CenterToScreen();
+			//	}
+			//}
 
 			if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 		}
@@ -1371,9 +1372,9 @@ namespace Spotify_Clone
 					}
 					break;
 				case "picXAMPP":
-#pragma warning disable CS0618 // Type or member is obsolete
+#pragma warning disable CS0618 
 					string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
-#pragma warning restore CS0618 // Type or member is obsolete
+#pragma warning restore CS0618 
 					Process.Start($"http://{myIP}/Spotify_Clone_Site.html");
 					break;
 				case "picBotaoPlay":
@@ -1531,10 +1532,8 @@ namespace Spotify_Clone
 								int g = NameMusic[TAMANHO - 1].Count();
 								string f = NameMusic[TAMANHO - 1].Substring(0, g);
 								PlaydaLista.Add(f);
-								//_Caminho_Musica.OrderBy(x => x).ToList();
-								//PlaydaLista.OrderBy(x => x).ToList();
 							});
-							_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica = _Caminho_Musica.OrderBy(x => x).ToList();//Check se funciona
+							_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica = _Caminho_Musica.OrderBy(x => x).ToList();
 							bk.WriteReadMusic(false, txtPaths.Text, _listInformacoes, -1);
 						}
 						else
@@ -1569,10 +1568,8 @@ namespace Spotify_Clone
 						string f = NameMusic[TAMANHO - 1].Substring(0, g);
 						PlaydaLista.Add(f);
 					});
-					//var json = JsonConvert.SerializeObject(_listInformacoes);
 					string Paths = "";
 					var dss = txtPaths.Text == "%appdata%" ? Paths = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) : Paths = txtPaths.Text;
-					//System.IO.File.WriteAllText(Paths + "/SpotifyClone/Musics.json", json);
 					bk.WriteReadMusic(false, txtPaths.Text, _listInformacoes, -1);
 					MusicaPlay();
 					break;
@@ -1762,6 +1759,7 @@ namespace Spotify_Clone
 						{
 							axWindowsMediaPlayer1.Visible = true;
 							timer2.Stop();
+							PBC.Tag = 0;
 							axwindows();
 						}
 					}
@@ -1771,11 +1769,11 @@ namespace Spotify_Clone
 					PBC.Maximum = (int)Video.maxprogresso;
 				if (Ordem_de_Reproducao.Count > 0)
 				{
+					PBC.Tag = Video.progresso;
 					if (CaMusica != (_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]]).ToString())
 					{
-						NameMusic = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None);
+						NameMusic = CaMusica.Split(new string[] { "\\" }, StringSplitOptions.None);
 						labelControl2.Text = NameMusic[NameMusic.Length - 1].Substring(0, (NameMusic[NameMusic.Length - 1].Count() - 4));
-						//t = int.Parse(labelControl2.Tag.ToString());
 						if (Video.maxprogresso != 0)
 							PBC.Maximum = (int)Video.maxprogresso;
 					}
@@ -1790,27 +1788,27 @@ namespace Spotify_Clone
 								var dsd = (int.Parse(labelControl2.Tag.ToString()) == _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
 								Volume = labelControl4.Text;
 								Processo = "start";
-								//axwindows();
 								CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
 								fmr.timer1_Tick(sender, e);
 								Video.progresso = 0;
 								dt = 0;
 								PBC.Tag = null;
+								PBC.Value = 0;
 							}
 						}
 					}
 					if (dt == 0) { PBC.Tag = Video.progresso; dt++; }
+					if(int.Parse(PBC.Tag.ToString())==Video.progresso){dt=0;}
 					if ((dt > 0 && dt < 100) && pE_PauseaPlay.Tag.ToString() != "1")
 					{
 						dt++;
 						try
 						{
-							if ((int.Parse(PBC.Tag.ToString()) == Video.progresso && dt > 50))
+							if ((((int.Parse(PBC.Tag.ToString()) + 1) != Video.progresso || (int.Parse(PBC.Tag.ToString())) != Video.progresso) && dt > 70))
 							{
 								var dsd = (int.Parse(labelControl2.Tag.ToString()) == _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
 								Volume = labelControl4.Text;
 								Processo = "start";
-								axwindows();
 								fmr.timer1_Tick(sender, e);
 								Video.progresso = 0;
 								dt = 0;
@@ -1818,14 +1816,19 @@ namespace Spotify_Clone
 								Processo = "start";
 							}
 						}
-						catch { }
+						catch
+						{
+						}
 					}
 					else
 						dt = 0;
 				}
-				try { PBC.Value = (int)Video.progresso; }
+				try {
+					if ((int)Video.progresso != 0) 
+						PBC.Value = (int)Video.progresso; }
 				catch { }
-
+				if (Video.info != "" && Video.info != null)
+					EventosPE(Video.info);
 				timer1.Start();
 			}
 		}

@@ -66,8 +66,7 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>Spotify_Clone.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>

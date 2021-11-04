@@ -54,6 +54,16 @@ namespace Spotify_Clone
 		{
 			if (textBox1.Text != string.Empty && textBox2.Text != string.Empty && pictureBox1.Image != null)
 			{
+				Aqui:
+				char[] letter = textBox1.Text.ToCharArray();
+
+				if (letter[letter.Length - 1].ToString() == " ")
+				{
+					textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+					goto Aqui;
+				}
+				
+
 				if (Id == 0)
 				{
 					try
@@ -86,12 +96,12 @@ namespace Spotify_Clone
 					//if (caminhoImg != "" && caminhoImg == "null")
 					//	_listInformacoes[(Id - 1)].Image = caminhoImg;
 
-					play.Descrição = textBox2.Text;
-					play.Name = textBox1.Text;
+					_listInformacoes[(Id-1)].Descrição = textBox2.Text;
+					_listInformacoes[(Id-1)].Name = textBox1.Text;
+					_listInformacoes[(Id-1)].IDList = Id;
 					if (caminhoImg != "" && caminhoImg == "null")
-						play.Image = caminhoImg;
+						_listInformacoes[(Id-1)].Image = caminhoImg;
 
-					_listInformacoes[(Id)] = play;
 
 					bk.WriteReadMusic(false, paths, _listInformacoes, Id);
 					//string json = JsonConvert.SerializeObject(_listInformacoes);

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify Clone", "Spotify Clone\Spotify Clone.csproj", "{3515F892-E0CA-47EA-BC28-E589FBB78C9A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{9AB6F4E1-B08F-460B-9747-19159D315B46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3515F892-E0CA-47EA-BC28-E589FBB78C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3515F892-E0CA-47EA-BC28-E589FBB78C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3515F892-E0CA-47EA-BC28-E589FBB78C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3515F892-E0CA-47EA-BC28-E589FBB78C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB6F4E1-B08F-460B-9747-19159D315B46}.Debug|Any CPU.ActiveCfg = Debug
+		{9AB6F4E1-B08F-460B-9747-19159D315B46}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33B0E5B0-FC8E-4BA5-A7A8-3BF46721C8F2}
+	EndGlobalSection
+EndGlobal

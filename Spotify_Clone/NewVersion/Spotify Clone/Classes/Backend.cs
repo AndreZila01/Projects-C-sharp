@@ -169,7 +169,7 @@ namespace Spotify_Clone.Classes
 				if (Directory.Exists(Paths + @"\Spotify_Clone_Music"))
 					Directory.Delete(Paths + @"\Spotify_Clone_Music", true);
 			}
-			catch { }
+			catch{ }
 			try
 			{
 				if (!(Directory.Exists(Paths + @"\Spotify_Clone_Music")))
@@ -203,7 +203,7 @@ namespace Spotify_Clone.Classes
 
 					lstXampp.Add(xp);
 				}
-				catch{ }
+				catch(Exception ex){ }
 			});
 
 			if (lstXampp.Count > 0)
