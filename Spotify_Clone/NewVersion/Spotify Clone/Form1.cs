@@ -366,7 +366,7 @@ namespace Spotify_Clone
 		List<Settings> settings = new List<Settings>();
 
 		#region teste 
-		private IKeyboardMouseEvents m_Events;
+		public IKeyboardMouseEvents m_Events;
 		System.Windows.Forms.Button btnSel = new System.Windows.Forms.Button();
 
 		private void Main_Closing(object sender, CancelEventArgs e)
@@ -375,7 +375,7 @@ namespace Spotify_Clone
 		}
 		private void SubscribeGlobal()
 		{
-			Unsubscribe();
+			//Unsubscribe();
 			Subscribe(Hook.GlobalEvents());
 		}
 		private void Subscribe(IKeyboardMouseEvents events)
@@ -1141,7 +1141,7 @@ namespace Spotify_Clone
 					}
 				};
 
-				if (switchDuracao.Checked || duracao == 0)
+				if (!(switchDuracao.Checked) || duracao == 0)
 					rp.Timestamps = new Timestamps(start);
 
 				client.SetPresence(rp);
@@ -1159,20 +1159,20 @@ namespace Spotify_Clone
 
 			this.Tag = "AddPnl";
 
-			//Process[] procs = Process.GetProcessesByName("Spotify Clone");
-			//if (procs.Length > 1) foreach (Process proc in procs)
-			//	{
-			//		if (proc != procs[0]) proc.Kill();
-			//	}
-			//CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
-			//if (defaultPlaybackDevice.Volume >= 50)
-			//{
-			//	if (MessageBox.Show("I down volume the your computer,to your security!!!\nIf not like,click in \"Não\",else click in \"Sim\" I reduce the volume!!", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-			//	{
-			//		System.Diagnostics.Process.Start("sndvol.exe");
-			//		this.CenterToScreen();
-			//	}
-			//}
+			Process[] procs = Process.GetProcessesByName("Spotify Clone");
+			if (procs.Length > 1) foreach (Process proc in procs)
+				{
+					if (proc != procs[0]) proc.Kill();
+				}
+			CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
+			if (defaultPlaybackDevice.Volume >= 50)
+			{
+				if (MessageBox.Show("I down volume the your computer,to your security!!!\nIf not like,click in \"Não\",else click in \"Sim\" I reduce the volume!!", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				{
+					System.Diagnostics.Process.Start("sndvol.exe");
+					this.CenterToScreen();
+				}
+			}
 
 			if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 		}
@@ -1220,10 +1220,8 @@ namespace Spotify_Clone
 						picXAMPP.LoadAsync("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flabinator.com%2Fwp-content%2Fuploads%2F2019%2F07%2FXAMPP-Logo.png&f=1&nofb=1");
 					}
 
-					ds = txtXAMPP.Text != "" ? picXAMPP.Visible = true : picXAMPP.Visible = false;
-					if (txtXAMPP.Text != "")
-						picXAMPP.Visible = true;
-
+					var dsss = txtXAMPP.Text != "" ? picXAMPP.Invoke((MethodInvoker)(() => picXAMPP.Visible = true)) : picXAMPP.Invoke((MethodInvoker)(() => picXAMPP.Visible = false));
+					
 					if (settings.discord != null)
 					{
 						ds = settings.discord[0].Duracao == 1 ? switchDuracao.Checked = true : switchDuracao.Checked = false;
