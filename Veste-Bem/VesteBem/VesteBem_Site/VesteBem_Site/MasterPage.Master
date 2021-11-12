@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="VesteBem.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="~/bootstrap/css/navbar.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="~/bootstrap/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="~/bootstrap/css/Css.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style>
+		
+
+	</style>
+</head>
+<body>
+	<form id="form1" runat="server" style="width: 100%;">
+
+		<header id="navbar">
+			<div style="width: 100%; background-color: #fffaf0">
+				<div class="" style="width: 100%; margin-top: 0px;">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="background-color: #fff3dc; float: left; padding: 10px 10px 10px 10px; ">
+						<a href="FrmHome.aspx""><asp:Image runat="server" ImageUrl="~/Resources/LogoV.png" Width="60px" /></a>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="background-color: #fff3dc; float: left; padding-bottom: 7px; text-align: center">
+						<p style="font-family: 'Times New Roman', serif; font-size: 30px; color: #292929">
+							Veste Bem
+						</p>
+						<i style="font-family: 'Times New Roman', serif; font-size: 13px; color: black">O simples é o futuro!</i>
+					</div>
+					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" style="background-color: #fff3dc; float: right; padding: 10px 10px 10px 10px">
+						
+						
+						<a id="link" href="Facebook.html" target="_blank" class="fa fa-facebook"></a>
+						<a href="https://www.instagram.com/vestebem1212/" target="_blank" class="fa fa-instagram"></a>
+						<a onclick="document.getElementById('id01').style.display='block'"  class="fa fa-user"></a>
+						<a ></a>
+						 <div id="id01" class="modal">
+  
+  <%--<form class="modal-content animate" action="/action_page.php" method="post">--%>
+    <div class="imgcontainer">
+      <asp:Image runat="server" ImageUrl="~/Resources/avatar.png" alt="Avatar" class="avatar" Width="150px" />
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input runat="server" type="text" placeholder="Enter Username" name="uname"  id="uname">
+
+      <label for="psw"><b>Password</b></label>
+      <input runat="server" type="password"  placeholder="Enter Password" name="psw"  id="psw">
+        
+      <button runat="server" type="submit" id="Log" onserverclick="Log_Click">Login</button>
+    </div>
+
+    <div class="container" style="background-color:white">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Nova <a href="RegistoCliente.aspx">Conta?</a></span>
+    </div>
+ 
+					</div>
+
+
+			</div>
+       </div>
+					</div>
+			
+			
+
+			<div style="background-color:#fffaf0;width: 100%; float: left; margin-bottom: 10px;">
+
+				<nav class="nav" >
+					<div style="float:left; height:14px ">
+						<a class="nav-link links" href="IntermedioHomem.aspx">Homem</a>
+						<a class="nav-link links" href="IntermedioMulher.aspx">Mulher</a>
+						
+					</div>
+					<div style="float:right;margin-right:10px; height:35px ">
+                            <a class="nav-link"></a>
+                            <img class="auto-style18" src="Resources/Carrinho.png" onclick=" location.href='Carrinho.aspx' ">&nbsp;&nbsp;&nbsp;&nbsp;
+							<img class="auto-style18" src="Resources/box.png" onclick=" location.href='EncomendaFeita.aspx' ">&nbsp;&nbsp;&nbsp;
+							<img class="auto-style18" src="Resources/edit.png" onclick=" location.href='AlterarInfo.aspx' ">
+				 </div>
+					
+						
+				</nav>
+
+			</div>
+		</header>
+
+		<div>
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+			</asp:ContentPlaceHolder>
+		</div>
+		<script>
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-160px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
+        </script>
+		<script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+		<script>
+			function modifyState() {
+				let stateObj = { id: "100" };
+				window.history.replaceState(stateObj,
+					"Page 3", "https://www.facebook.com/VesteBem");
+			}
+			/*document.location.href = 'https://www.facebook.com/VesteBem';*/
+		</script>
+
+
+	</form>
+</body>
+</html>

@@ -163,17 +163,17 @@ namespace Spotify_Clone
 										}
 									}
 								}
-							if(picForm3.Tag!=null)
-							if ((int.Parse(picForm3.Tag.ToString())) == (((int)((ToolStripMenuItem)sender).Tag)) /*&& (pE_PauseaPlay.Tag.ToString()) != "0"*/)
-							{
-								labelControl2.Text = "";
-								IdPlayList = 0;
-								PBC.Value = 0;
-								timer1.Stop();
-								timer2.Stop();
-								axWindowsMediaPlayer1.URL = "";
-								pE_PauseaPlay.Image = Properties.Resources.play;
-							}
+							if (picForm3.Tag != null)
+								if ((int.Parse(picForm3.Tag.ToString())) == (((int)((ToolStripMenuItem)sender).Tag)) /*&& (pE_PauseaPlay.Tag.ToString()) != "0"*/)
+								{
+									labelControl2.Text = "";
+									IdPlayList = 0;
+									PBC.Value = 0;
+									timer1.Stop();
+									timer2.Stop();
+									axWindowsMediaPlayer1.URL = "";
+									pE_PauseaPlay.Image = Properties.Resources.play;
+								}
 							IdPlayList = (int)((ToolStripMenuItem)sender).Tag;
 							_listInformacoes.Remove(_listInformacoes.FirstOrDefault(row => row.IDList == (int)((ToolStripMenuItem)sender).Tag));
 							int id = 1;
@@ -340,7 +340,7 @@ namespace Spotify_Clone
 				if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
 				this.Tag = "AddPnl";
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
 				return;
 			}
@@ -366,146 +366,6 @@ namespace Spotify_Clone
 		List<Settings> settings = new List<Settings>();
 
 		#region teste 
-		public IKeyboardMouseEvents m_Events;
-		System.Windows.Forms.Button btnSel = new System.Windows.Forms.Button();
-
-		private void Main_Closing(object sender, CancelEventArgs e)
-		{
-			Unsubscribe();
-		}
-		private void SubscribeGlobal()
-		{
-			//Unsubscribe();
-			Subscribe(Hook.GlobalEvents());
-		}
-		private void Subscribe(IKeyboardMouseEvents events)
-		{
-			m_Events = events;
-			m_Events.KeyDown += OnKeyDown;
-			m_Events.MouseClick += Mouse;
-		}
-
-		private void Unsubscribe()
-		{
-			if (m_Events == null) return;
-			m_Events.KeyDown -= OnKeyDown;
-			m_Events.MouseClick -= Mouse;
-			m_Events.Dispose();
-			m_Events = null;
-		}
-		private void OnKeyDown(object sender, KeyEventArgs e)
-		{
-			if (chkAtalho.Checked)
-				if (pnlSettings.Visible == true)
-				{
-					try
-					{
-						if (btnSel.Name != "" && !(btnSel.Text.Contains(e.KeyCode.ToString())))
-							btnSel.Text += e.KeyCode + " + ";
-					}
-					catch { }
-				}
-				else
-				{
-					try
-					{
-						if (pnlTop.Tag == null)
-							pnlTop.Tag += e.KeyCode + ", ";
-						else if ((!pnlTop.Tag.ToString().Contains(e.KeyCode.ToString())))
-							pnlTop.Tag += e.KeyCode + ", ";
-						Debug.Print(pnlTop.Tag.ToString());
-						tmAtalho.Start();
-					}
-					catch
-					{
-
-					}
-				}
-		}
-		private void Mouse(object sender, MouseEventArgs e)
-		{
-			if (chkAtalho.Checked)
-				try
-				{
-					if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right")
-						if (btnSel.Name != null)
-						{
-							if (e.Button.ToString() != "Left" && e.Button.ToString() != "Right" && !(btnSel.Text.Contains(e.Button.ToString())))
-								btnSel.Text += e.Button + " + ";
-						}
-						else
-						{
-							try
-							{
-								if (pnlTop.Tag == null)
-									pnlTop.Tag += e.Button + ", ";
-								else if (!pnlTop.Tag.ToString().Contains(e.Button.ToString()))
-									pnlTop.Tag += e.Button + ", ";
-								tmAtalho.Start();
-							}
-							catch { }
-						}
-				}
-				catch { }
-		}
-		private void tmAtalho_Tick(object sender, EventArgs e)
-		{
-			string[] key;
-			if (chkAtalho.Checked)
-				try
-				{
-					int temp = 0;
-					bool btnAnte = true, btnNexts = true, btnPause = true;
-
-					key = pnlTop.Tag.ToString().Replace(" ", string.Empty).Split(',');
-					key = key.Where(w => w != key[(key.Length - 1)]).ToArray();
-					string[] ant = btnAnterior.Text.Replace(" ", string.Empty).Split('+');
-					string[] pau = btnPausa.Text.Replace(" ", string.Empty).Split('+');
-					string[] nex = btnNext.Text.Replace(" ", string.Empty).Split('+');
-
-					key.ToList().ForEach(item =>
-					{
-						if ((ant[temp] == item && (key.Length) == (btnAnterior.Text.Split('+').ToArray().Count())) && btnAnte == true && temp >= 0)
-							btnAnte = true;
-						else
-							btnAnte = false;
-
-						if ((pau[temp] == item && (key.Length) == (btnPausa.Text.Split('+').ToArray().Count()) && btnPause == true && temp >= 0))
-							btnPause = true;
-						else
-							btnPause = false;
-
-						if ((nex[temp] == item && (key.Length) == (btnNext.Text.Split('+').ToArray().Count()) && btnNexts == true && temp >= 0))
-							btnNexts = true;
-						else
-							btnNexts = false;
-						temp++;
-					});
-					Debug.Print("Anterior: " + btnAnte + "\t Next: " + btnNexts + "\t Pause " + btnPause);
-					if (btnNexts == true)
-						EventosPE("pE_Next");
-					else
-					if (btnAnte == true)
-						EventosPE("pE_previous");
-					else
-					if (btnPause == true)
-						EventosPE("pE_PauseaPlay");
-
-					pnlTop.Tag = "";
-					tmAtalho.Stop();
-					key = key.Where(w => w != "").ToArray();
-					temp = 0;
-
-					btnPause = false;
-					btnAnte = false;
-					btnNexts = false;
-				}
-				catch { }
-
-		}
-
-		object senders;
-		EventArgs es;
 		public void EventosPE(string nome)
 		{
 			switch (nome)
@@ -642,7 +502,11 @@ namespace Spotify_Clone
 			}
 			if (FormVideo == true)
 				Video.info = "";
+
+			pnlTop.Tag = "0";
 		}
+		object senders;
+		EventArgs es;
 		#endregion
 
 		#region Done
@@ -672,15 +536,15 @@ namespace Spotify_Clone
 
 			switch (((Label)sender).Name)
 			{
-				case "lblAnterior":
-					btnAnterior.Text = btnAnterior.Text.Remove((btnAnterior.Text.Length - 3));
-					break; ;
-				case "lblPR":
-					btnPausa.Text = btnPausa.Text.Remove((btnPausa.Text.Length - 3));
-					break;
-				case "lblSeguinte":
-					btnNext.Text = btnNext.Text.Remove((btnNext.Text.Length - 3));
-					break;
+				//case "lblAnterior":
+				//	btnAnterior.Text = btnAnterior.Text.Remove((btnAnterior.Text.Length - 3));
+				//	break; ;
+				//case "lblPR":
+				//	btnPausa.Text = btnPausa.Text.Remove((btnPausa.Text.Length - 3));
+				//	break;
+				//case "lblSeguinte":
+				//	btnNext.Text = btnNext.Text.Remove((btnNext.Text.Length - 3));
+				//	break;
 				case "lblSO":
 					var ds = switchSO.Checked == true ? switchSO.Checked = false : switchSO.Checked = true;
 					break;
@@ -707,14 +571,13 @@ namespace Spotify_Clone
 			}
 			if (((Label)sender).Name == "lblDuracao" || ((Label)sender).Name == "lblNomeDisc" || ((Label)sender).Name == "lblSO")
 				SaveSettings(null);
-			btnSel = null;
+			//btnSel = null;
 		}
 		#endregion
-
+		//System.Windows.Forms.Button btnSel;
 		private void Btn_TeclasAtalhos(object sender, EventArgs e)
 		{
-			btnSel = sender as System.Windows.Forms.Button;
-			btnSel.Text = "";
+			((System.Windows.Forms.Button)sender).Text = "";
 		}
 		private void trackBar1_ValueChanged(object sender, EventArgs e) { TrackBar track = sender as TrackBar; int d = (track.Value * 10); axWindowsMediaPlayer1.settings.volume = d; labelControl4.Text = d.ToString(); labelControl2.Focus(); if (FormVideo == true) { Volume = d.ToString(); fmr.timer1_Tick(sender, e); timer1.Stop(); } }
 		public Form1()
@@ -1086,8 +949,10 @@ namespace Spotify_Clone
 						SaveSettings(lst[0]);
 						if (lst[0].atal == 1)
 						{
-							SubscribeGlobal();
-							FormClosing += Main_Closing;
+							//SubscribeGlobal();
+							//FormClosing += Main_Closing;
+							//Ativar evento do keybind
+
 						}
 					}
 					catch { }
@@ -1221,7 +1086,7 @@ namespace Spotify_Clone
 					}
 
 					var dsss = txtXAMPP.Text != "" ? picXAMPP.Invoke((MethodInvoker)(() => picXAMPP.Visible = true)) : picXAMPP.Invoke((MethodInvoker)(() => picXAMPP.Visible = false));
-					
+
 					if (settings.discord != null)
 					{
 						ds = settings.discord[0].Duracao == 1 ? switchDuracao.Checked = true : switchDuracao.Checked = false;
@@ -1370,9 +1235,9 @@ namespace Spotify_Clone
 					}
 					break;
 				case "picXAMPP":
-#pragma warning disable CS0618 
+#pragma warning disable CS0618
 					string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
-#pragma warning restore CS0618 
+#pragma warning restore CS0618
 					Process.Start($"http://{myIP}/Spotify_Clone_Site.html");
 					break;
 				case "picBotaoPlay":
@@ -1618,6 +1483,26 @@ namespace Spotify_Clone
 			icnNotification.Visible = false;
 		}
 
+		private void btnAnterior_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (((System.Windows.Forms.Button)sender).Text == "")
+				((System.Windows.Forms.Button)sender).Text += "" + e.KeyCode.ToString();
+			else
+				((System.Windows.Forms.Button)sender).Text += " + " + e.KeyCode.ToString();
+		}
+
+		private void textBox1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (pnlTop.Tag.ToString() == "0")
+				pnlTop.Tag = "" + e.KeyCode.ToString();
+			else
+				pnlTop.Tag += " + " + e.KeyCode.ToString();
+
+			Debug.Print("" + pnlTop.Tag.ToString());
+		}
+
+
+
 
 		#endregion
 
@@ -1634,6 +1519,8 @@ namespace Spotify_Clone
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
+			if(pnlSettings.Visible != true)
+				textBox1.Focus();
 			dt++;
 			if ((int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition != 0)
 			{
@@ -1701,6 +1588,86 @@ namespace Spotify_Clone
 			}
 			catch { }
 
+
+			if (chkAtalho.Checked)
+			{
+				timer1.Tag = int.Parse(timer1.Tag.ToString()) + 1;
+				if (pnlTop.Tag.ToString() != "0")
+				{
+
+					try
+					{
+						int temp = 0;
+						bool btnAnte = true, btnNexts = true, btnPause = true;
+
+						string[] key = pnlTop.Tag.ToString()/*.Replace(" ", string.Empty)*/.Split('+');
+						if (key.Length == 1)
+							//	key = key.Where(w => w != key[(key.Length - 1)]).ToArray();
+							//else
+							key = new[] { pnlTop.Tag.ToString() };
+						string[] ant = btnAnterior.Text.Replace(" ", string.Empty).Split('+');
+						string[] pau = btnPausa.Text.Replace(" ", string.Empty).Split('+');
+						string[] nex = btnNext.Text.Replace(" ", string.Empty).Split('+');
+
+						//Debug.Print("" + key.Length);
+						if (key.Length == 2)
+							Debug.Print("");
+						key.ToList().ForEach(item =>
+						{
+							try
+							{
+
+								if ((ant[temp] == item.Replace(" ", string.Empty) && (key.Length) == ant.Length) && btnAnte == true && temp >= 0)
+									btnAnte = true;
+								else
+									btnAnte = false;
+							}
+							catch { btnAnte = false; }
+							try
+							{
+								if ((pau[temp] == item.Replace(" ", string.Empty) && (key.Length) == pau.Length) && btnPause == true && temp >= 0)
+									btnPause = true;
+								else
+									btnPause = false;
+							}
+							catch { btnPause = false; }
+
+							try
+							{
+								if ((nex[temp] == item.Replace(" ", string.Empty) && (key.Length) == nex.Length) && btnNexts == true && temp >= 0)
+									btnNexts = true;
+								else
+									btnNexts = false;
+							}
+							catch { btnNexts = false; }
+							temp++;
+						});
+						Debug.Print("Anterior: " + btnAnte + "\t Next: " + btnNexts + "\t Pause " + btnPause);
+						if (btnNexts == true)
+							EventosPE("pE_Next");
+						else
+						if (btnAnte == true)
+							EventosPE("pE_previous");
+						else
+						if (btnPause == true)
+							EventosPE("pE_PauseaPlay");
+
+						if (int.Parse(timer1.Tag.ToString()) > 40)
+						{
+							timer1.Tag = 0;
+							pnlTop.Tag = "0";
+						}
+						tmAtalho.Stop();
+						key = key.Where(w => w != "").ToArray();
+						temp = 0;
+
+						//btnPause = false;
+						//btnAnte = false;
+						//btnNexts = false;
+					}
+					catch (Exception ex) { }
+				}
+			}
 		}
 
 		private void axwindows()
@@ -1796,7 +1763,7 @@ namespace Spotify_Clone
 						}
 					}
 					if (dt == 0) { PBC.Tag = Video.progresso; dt++; }
-					if(int.Parse(PBC.Tag.ToString())==Video.progresso){dt=0;}
+					if (int.Parse(PBC.Tag.ToString()) == Video.progresso) { dt = 0; }
 					if ((dt > 0 && dt < 100) && pE_PauseaPlay.Tag.ToString() != "1")
 					{
 						dt++;
@@ -1821,9 +1788,11 @@ namespace Spotify_Clone
 					else
 						dt = 0;
 				}
-				try {
-					if ((int)Video.progresso != 0) 
-						PBC.Value = (int)Video.progresso; }
+				try
+				{
+					if ((int)Video.progresso != 0)
+						PBC.Value = (int)Video.progresso;
+				}
 				catch { }
 				if (Video.info != "" && Video.info != null)
 					EventosPE(Video.info);

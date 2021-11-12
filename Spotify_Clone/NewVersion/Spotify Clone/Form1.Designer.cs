@@ -38,8 +38,8 @@
 			this.picForm3 = new System.Windows.Forms.PictureBox();
 			this.pE_minimizar = new System.Windows.Forms.PictureBox();
 			this.pE_Close = new System.Windows.Forms.PictureBox();
+			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
 			this.pnlPrincipal = new System.Windows.Forms.Panel();
 			this.PainelControl1 = new System.Windows.Forms.Panel();
 			this.pnlPlayList = new System.Windows.Forms.Panel();
@@ -90,8 +90,6 @@
 			this.lbltec = new System.Windows.Forms.Label();
 			this.chkAtalho = new System.Windows.Forms.CheckBox();
 			this.pnlDiscord = new System.Windows.Forms.Panel();
-			this.switchDuracao = new CustomControls.RJControls.RJToggleButton();
-			this.switchNome = new CustomControls.RJControls.RJToggleButton();
 			this.lblinfoDu = new System.Windows.Forms.Label();
 			this.lblDuracao = new System.Windows.Forms.Label();
 			this.lblNomeDisc = new System.Windows.Forms.Label();
@@ -99,13 +97,10 @@
 			this.chkDiscord = new System.Windows.Forms.CheckBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel8 = new System.Windows.Forms.Panel();
-			this.switchMusic = new CustomControls.RJControls.RJToggleButton();
 			this.lblInfoMusic = new System.Windows.Forms.Label();
 			this.lblnotif = new System.Windows.Forms.Label();
-			this.switchMini = new CustomControls.RJControls.RJToggleButton();
 			this.lblMini = new System.Windows.Forms.Label();
 			this.lblTitMini = new System.Windows.Forms.Label();
-			this.switchSO = new CustomControls.RJControls.RJToggleButton();
 			this.pctPaths = new System.Windows.Forms.PictureBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.txtPaths = new System.Windows.Forms.TextBox();
@@ -124,6 +119,12 @@
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.TSMIClose = new System.Windows.Forms.ToolStripMenuItem();
 			this.tmAtalho = new System.Windows.Forms.Timer(this.components);
+			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+			this.switchDuracao = new CustomControls.RJControls.RJToggleButton();
+			this.switchNome = new CustomControls.RJControls.RJToggleButton();
+			this.switchMusic = new CustomControls.RJControls.RJToggleButton();
+			this.switchMini = new CustomControls.RJControls.RJToggleButton();
+			this.switchSO = new CustomControls.RJControls.RJToggleButton();
 			trackBar1 = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).BeginInit();
 			this.pnlTop.SuspendLayout();
@@ -134,7 +135,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).BeginInit();
 			this.panel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.PainelControl1.SuspendLayout();
 			this.pnlPlayList.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picAddPlaylist)).BeginInit();
@@ -164,6 +164,7 @@
 			this.panel8.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).BeginInit();
 			this.contextMenuStrip1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// trackBar1
@@ -187,8 +188,10 @@
 			this.pnlTop.Controls.Add(this.picForm3);
 			this.pnlTop.Controls.Add(this.pE_minimizar);
 			this.pnlTop.Controls.Add(this.pE_Close);
+			this.pnlTop.Controls.Add(this.textBox1);
 			resources.ApplyResources(this.pnlTop, "pnlTop");
 			this.pnlTop.Name = "pnlTop";
+			this.pnlTop.Tag = "0";
 			this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
 			// 
 			// picXAMPP
@@ -237,6 +240,12 @@
 			this.pE_Close.TabStop = false;
 			this.pE_Close.Click += new System.EventHandler(this.pE_Click);
 			// 
+			// textBox1
+			// 
+			resources.ApplyResources(this.textBox1, "textBox1");
+			this.textBox1.Name = "textBox1";
+			this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+			// 
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.Silver;
@@ -244,12 +253,6 @@
 			this.panel2.Controls.Add(this.pnlPrincipal);
 			resources.ApplyResources(this.panel2, "panel2");
 			this.panel2.Name = "panel2";
-			// 
-			// axWindowsMediaPlayer1
-			// 
-			resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
-			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
 			// 
 			// pnlPrincipal
 			// 
@@ -431,10 +434,12 @@
 			// 
 			// timer1
 			// 
+			this.timer1.Tag = "0";
 			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
 			// 
 			// timer2
 			// 
+			this.timer2.Tag = "0";
 			this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
 			// 
 			// bgwCarregar
@@ -544,6 +549,7 @@
 			this.btnPausa.Name = "btnPausa";
 			this.btnPausa.UseVisualStyleBackColor = true;
 			this.btnPausa.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
+			this.btnPausa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAnterior_KeyDown);
 			// 
 			// lblAnt
 			// 
@@ -556,6 +562,7 @@
 			this.btnAnterior.Name = "btnAnterior";
 			this.btnAnterior.UseVisualStyleBackColor = true;
 			this.btnAnterior.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
+			this.btnAnterior.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAnterior_KeyDown);
 			// 
 			// lblSeg
 			// 
@@ -568,6 +575,7 @@
 			this.btnNext.Name = "btnNext";
 			this.btnNext.UseVisualStyleBackColor = true;
 			this.btnNext.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
+			this.btnNext.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAnterior_KeyDown);
 			// 
 			// panel10
 			// 
@@ -597,28 +605,6 @@
 			this.pnlDiscord.Controls.Add(this.lblNomeDisc);
 			resources.ApplyResources(this.pnlDiscord, "pnlDiscord");
 			this.pnlDiscord.Name = "pnlDiscord";
-			// 
-			// switchDuracao
-			// 
-			resources.ApplyResources(this.switchDuracao, "switchDuracao");
-			this.switchDuracao.BackColor = System.Drawing.Color.Transparent;
-			this.switchDuracao.Name = "switchDuracao";
-			this.switchDuracao.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchDuracao.OffToggleColor = System.Drawing.Color.White;
-			this.switchDuracao.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchDuracao.OnToggleColor = System.Drawing.Color.White;
-			this.switchDuracao.UseVisualStyleBackColor = false;
-			// 
-			// switchNome
-			// 
-			resources.ApplyResources(this.switchNome, "switchNome");
-			this.switchNome.BackColor = System.Drawing.Color.Transparent;
-			this.switchNome.Name = "switchNome";
-			this.switchNome.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchNome.OffToggleColor = System.Drawing.Color.White;
-			this.switchNome.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchNome.OnToggleColor = System.Drawing.Color.White;
-			this.switchNome.UseVisualStyleBackColor = false;
 			// 
 			// lblinfoDu
 			// 
@@ -678,17 +664,6 @@
 			resources.ApplyResources(this.panel8, "panel8");
 			this.panel8.Name = "panel8";
 			// 
-			// switchMusic
-			// 
-			resources.ApplyResources(this.switchMusic, "switchMusic");
-			this.switchMusic.BackColor = System.Drawing.Color.Transparent;
-			this.switchMusic.Name = "switchMusic";
-			this.switchMusic.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchMusic.OffToggleColor = System.Drawing.Color.White;
-			this.switchMusic.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchMusic.OnToggleColor = System.Drawing.Color.White;
-			this.switchMusic.UseVisualStyleBackColor = false;
-			// 
 			// lblInfoMusic
 			// 
 			resources.ApplyResources(this.lblInfoMusic, "lblInfoMusic");
@@ -701,17 +676,6 @@
 			resources.ApplyResources(this.lblnotif, "lblnotif");
 			this.lblnotif.Name = "lblnotif";
 			// 
-			// switchMini
-			// 
-			resources.ApplyResources(this.switchMini, "switchMini");
-			this.switchMini.BackColor = System.Drawing.Color.Transparent;
-			this.switchMini.Name = "switchMini";
-			this.switchMini.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchMini.OffToggleColor = System.Drawing.Color.White;
-			this.switchMini.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchMini.OnToggleColor = System.Drawing.Color.White;
-			this.switchMini.UseVisualStyleBackColor = false;
-			// 
 			// lblMini
 			// 
 			resources.ApplyResources(this.lblMini, "lblMini");
@@ -723,17 +687,6 @@
 			// 
 			resources.ApplyResources(this.lblTitMini, "lblTitMini");
 			this.lblTitMini.Name = "lblTitMini";
-			// 
-			// switchSO
-			// 
-			resources.ApplyResources(this.switchSO, "switchSO");
-			this.switchSO.BackColor = System.Drawing.Color.Transparent;
-			this.switchSO.Name = "switchSO";
-			this.switchSO.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchSO.OffToggleColor = System.Drawing.Color.White;
-			this.switchSO.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchSO.OnToggleColor = System.Drawing.Color.White;
-			this.switchSO.UseVisualStyleBackColor = false;
 			// 
 			// pctPaths
 			// 
@@ -851,16 +804,73 @@
 			resources.ApplyResources(this.TSMIClose, "TSMIClose");
 			this.TSMIClose.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
 			// 
-			// tmAtalho
+			// axWindowsMediaPlayer1
 			// 
-			this.tmAtalho.Tick += new System.EventHandler(this.tmAtalho_Tick);
+			resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
+			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+			// 
+			// switchDuracao
+			// 
+			resources.ApplyResources(this.switchDuracao, "switchDuracao");
+			this.switchDuracao.BackColor = System.Drawing.Color.Transparent;
+			this.switchDuracao.Name = "switchDuracao";
+			this.switchDuracao.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchDuracao.OffToggleColor = System.Drawing.Color.White;
+			this.switchDuracao.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchDuracao.OnToggleColor = System.Drawing.Color.White;
+			this.switchDuracao.UseVisualStyleBackColor = false;
+			// 
+			// switchNome
+			// 
+			resources.ApplyResources(this.switchNome, "switchNome");
+			this.switchNome.BackColor = System.Drawing.Color.Transparent;
+			this.switchNome.Name = "switchNome";
+			this.switchNome.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchNome.OffToggleColor = System.Drawing.Color.White;
+			this.switchNome.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchNome.OnToggleColor = System.Drawing.Color.White;
+			this.switchNome.UseVisualStyleBackColor = false;
+			// 
+			// switchMusic
+			// 
+			resources.ApplyResources(this.switchMusic, "switchMusic");
+			this.switchMusic.BackColor = System.Drawing.Color.Transparent;
+			this.switchMusic.Name = "switchMusic";
+			this.switchMusic.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchMusic.OffToggleColor = System.Drawing.Color.White;
+			this.switchMusic.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchMusic.OnToggleColor = System.Drawing.Color.White;
+			this.switchMusic.UseVisualStyleBackColor = false;
+			// 
+			// switchMini
+			// 
+			resources.ApplyResources(this.switchMini, "switchMini");
+			this.switchMini.BackColor = System.Drawing.Color.Transparent;
+			this.switchMini.Name = "switchMini";
+			this.switchMini.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchMini.OffToggleColor = System.Drawing.Color.White;
+			this.switchMini.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchMini.OnToggleColor = System.Drawing.Color.White;
+			this.switchMini.UseVisualStyleBackColor = false;
+			// 
+			// switchSO
+			// 
+			resources.ApplyResources(this.switchSO, "switchSO");
+			this.switchSO.BackColor = System.Drawing.Color.Transparent;
+			this.switchSO.Name = "switchSO";
+			this.switchSO.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchSO.OffToggleColor = System.Drawing.Color.White;
+			this.switchSO.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchSO.OnToggleColor = System.Drawing.Color.White;
+			this.switchSO.UseVisualStyleBackColor = false;
 			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlSettings);
+			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
@@ -868,6 +878,7 @@
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).EndInit();
 			this.pnlTop.ResumeLayout(false);
+			this.pnlTop.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picXAMPP)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picSettings)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_MaxMin)).EndInit();
@@ -875,7 +886,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).EndInit();
 			this.panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.PainelControl1.ResumeLayout(false);
 			this.pnlPlayList.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.picAddPlaylist)).EndInit();
@@ -912,6 +922,7 @@
 			this.panel8.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).EndInit();
 			this.contextMenuStrip1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1011,6 +1022,7 @@
 		private System.Windows.Forms.Label lblVersao;
 		private System.Windows.Forms.PictureBox pctXAMPP;
 		private System.Windows.Forms.PictureBox picXAMPP;
+		private System.Windows.Forms.TextBox textBox1;
 	}
 }
 
