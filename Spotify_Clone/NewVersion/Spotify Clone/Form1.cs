@@ -330,8 +330,11 @@ namespace Spotify_Clone
 					MessageBox.Show("Your were very fast!! Take it easy,beacuse the program dont detect playList", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					return;
 				}
-				Screen scrn = Screen.FromControl(this);
-				ecra = int.Parse((scrn.DeviceName.Replace("\\", "").Replace(".DISPLAY", "")));
+				Screen scr = Screen.FromControl(this);
+				List<Screen> lstemps = new List<Screen>();
+				foreach (var screen in Screen.AllScreens)
+					lstemps.Add(screen);
+				ecra = (lstemps.FindIndex(dsssss => dsssss.DeviceName == scr.DeviceName));
 				Form2 form2 = new Form2(atualizacao, idplay, ecra, (txtPaths.Text));
 				icnNotification.Visible = false;
 				form2.ShowDialog();
@@ -1189,14 +1192,17 @@ namespace Spotify_Clone
 				case "pE_MaxMin":
 					PictureBox pct = sender as PictureBox;
 					Screen scrn = Screen.FromControl(this);
-					int n = int.Parse((scrn.DeviceName.Replace("\\", "").Replace(".DISPLAY", "")));
+					List<Screen> lstemp = new List<Screen>();
+					foreach (var screen in Screen.AllScreens)
+						lstemp.Add(screen);
+					int n = lstemp.FindIndex(dsssss => dsssss.DeviceName == scrn.DeviceName);
 					if (this.Size == new Size(800, 450))
 					{
 						FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 						Left = Top = 0;
-						Width = Screen.AllScreens[(n - 1)].WorkingArea.Width;
-						Height = Screen.AllScreens[(n - 1)].WorkingArea.Height;
-						this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
+						Width = Screen.AllScreens[n].WorkingArea.Width;
+						Height = Screen.AllScreens[n].WorkingArea.Height;
+						this.Location = Screen.AllScreens[n].WorkingArea.Location;
 					}
 					else
 					{
@@ -1204,9 +1210,9 @@ namespace Spotify_Clone
 						this.Size = new Size(800, 450);
 						Width = 800;
 						Height = 450;
-						Left = (Screen.AllScreens[(n - 1)].WorkingArea.Width) / 5;
-						Top = (Screen.AllScreens[(n - 1)].WorkingArea.Height) / 5;
-						this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
+						Left = (Screen.AllScreens[n].WorkingArea.Width) / 5;
+						Top = (Screen.AllScreens[n].WorkingArea.Height) / 5;
+						this.Location = Screen.AllScreens[n].WorkingArea.Location;
 						this.CenterToScreen();
 					}
 					break;
@@ -1343,7 +1349,10 @@ namespace Spotify_Clone
 						if (labelControl2.Text != "" && FormVideo == false)
 						{
 							Screen scr = Screen.FromControl(this);
-							ecra = int.Parse((scr.DeviceName.Replace("\\", "").Replace(".DISPLAY", "")));
+							List<Screen> lstemps = new List<Screen>();
+							foreach (var screen in Screen.AllScreens)
+								lstemps.Add(screen);
+							ecra = (lstemps.FindIndex(dsssss => dsssss.DeviceName == scr.DeviceName));
 							if (Ordem_de_Reproducao.Count() > 1)
 								CaMusica = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
 							else

@@ -136,6 +136,9 @@
     <Compile Include="Extensions\DiscordRpc.cs" />
     <Compile Include="Extensions\ExtenssionMethods.cs" />
     <Compile Include="Classes\Class.cs" />
+    <Compile Include="Extensions\PBC.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Extensions\Reflector.cs" />
     <Compile Include="Extensions\RJToggleButton.cs">
       <SubType>Component</SubType>

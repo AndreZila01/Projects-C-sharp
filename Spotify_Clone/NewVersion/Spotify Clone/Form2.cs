@@ -116,7 +116,7 @@ namespace Spotify_Clone
 		{
 			//Environment.CurrentDirectory = Environment.GetEnvironmentVariable("temp");
 			Form1 frm1 = new Form1();
-			this.Location = Screen.AllScreens[(ecra - 1)].WorkingArea.Location;
+			this.Location = Screen.AllScreens[ecra].WorkingArea.Location;
 			this.CenterToScreen();
 			try
 			{

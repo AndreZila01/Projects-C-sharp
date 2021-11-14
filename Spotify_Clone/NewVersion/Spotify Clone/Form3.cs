@@ -54,28 +54,32 @@ namespace Spotify_Clone
 		}
 		private void axWindowsMediaPlayer1_ClickEvent(object sender, AxWMPLib._WMPOCXEvents_ClickEvent e)
 		{
-			Screen scrn = Screen.FromControl(this); int n = int.Parse((scrn.DeviceName.Replace("\\", "").Replace(".DISPLAY", ""))); Left = Top = 0;
+			Screen scrn = Screen.FromControl(this); Screen scr = Screen.FromControl(this);
+			List<Screen> lstemps = new List<Screen>();
+			foreach (var screen in Screen.AllScreens)
+				lstemps.Add(screen);
+			int n = (lstemps.FindIndex(dsssss => dsssss.DeviceName == scr.DeviceName)); Left = Top = 0;
 			switch (this.Tag.ToString())
 			{
 				case "expand":
 					FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-					this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
-					Width = (Screen.AllScreens[(n - 1)].WorkingArea.Width);
-					Height = (Screen.AllScreens[(n - 1)].WorkingArea.Height);
+					this.Location = Screen.AllScreens[n].WorkingArea.Location;
+					Width = (Screen.AllScreens[n].WorkingArea.Width);
+					Height = (Screen.AllScreens[n].WorkingArea.Height);
 					this.Tag = "fullscreen";
 					break;
 				case "diminuir":
 					WindowState = FormWindowState.Normal;
 					FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
 					Width = 729; Height = 450;
-					this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
+					this.Location = Screen.AllScreens[n].WorkingArea.Location;
 					this.CenterToScreen();
 					this.Tag = "expand";
 					break;
 				case "fullscreen":
 					FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 					this.Tag = "diminuir";
-					this.Location = Screen.AllScreens[(n - 1)].WorkingArea.Location;
+					this.Location = Screen.AllScreens[n].WorkingArea.Location;
 					WindowState = FormWindowState.Maximized;
 					break;
 			}

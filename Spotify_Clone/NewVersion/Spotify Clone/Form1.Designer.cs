@@ -49,7 +49,6 @@
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.panel7 = new System.Windows.Forms.Panel();
-			this.PBC = new System.Windows.Forms.ProgressBar();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.pE_Random = new System.Windows.Forms.PictureBox();
 			this.pE_Repit = new System.Windows.Forms.PictureBox();
@@ -120,6 +119,7 @@
 			this.TSMIClose = new System.Windows.Forms.ToolStripMenuItem();
 			this.tmAtalho = new System.Windows.Forms.Timer(this.components);
 			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+			this.PBC = new Spotify_Clone.Extensions.PBC();
 			this.switchDuracao = new CustomControls.RJControls.RJToggleButton();
 			this.switchNome = new CustomControls.RJControls.RJToggleButton();
 			this.switchMusic = new CustomControls.RJControls.RJToggleButton();
@@ -188,7 +188,6 @@
 			this.pnlTop.Controls.Add(this.picForm3);
 			this.pnlTop.Controls.Add(this.pE_minimizar);
 			this.pnlTop.Controls.Add(this.pE_Close);
-			this.pnlTop.Controls.Add(this.textBox1);
 			resources.ApplyResources(this.pnlTop, "pnlTop");
 			this.pnlTop.Name = "pnlTop";
 			this.pnlTop.Tag = "0";
@@ -315,13 +314,9 @@
 			// 
 			this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(142)))), ((int)(((byte)(144)))));
 			this.panel7.Controls.Add(this.PBC);
+			this.panel7.Controls.Add(this.textBox1);
 			resources.ApplyResources(this.panel7, "panel7");
 			this.panel7.Name = "panel7";
-			// 
-			// PBC
-			// 
-			resources.ApplyResources(this.PBC, "PBC");
-			this.PBC.Name = "PBC";
 			// 
 			// panel6
 			// 
@@ -810,6 +805,22 @@
 			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
 			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
 			// 
+			// PBC
+			// 
+			resources.ApplyResources(this.PBC, "PBC");
+			this.PBC.BackColor = System.Drawing.Color.White;
+			this.PBC.ChannelColor = System.Drawing.Color.White;
+			this.PBC.ChannelHeight = 6;
+			this.PBC.ForeBackColor = System.Drawing.Color.CadetBlue;
+			this.PBC.ForeColor = System.Drawing.Color.White;
+			this.PBC.Name = "PBC";
+			this.PBC.ShowMaximun = false;
+			this.PBC.ShowValue = Spotify_Clone.Extensions.TextPosition.None;
+			this.PBC.SliderColor = System.Drawing.Color.RoyalBlue;
+			this.PBC.SliderHeight = 6;
+			this.PBC.SymbolAfter = "";
+			this.PBC.SymbolBefore = "";
+			// 
 			// switchDuracao
 			// 
 			resources.ApplyResources(this.switchDuracao, "switchDuracao");
@@ -869,8 +880,8 @@
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.pnlSettings);
 			this.Controls.Add(this.pnlCont);
+			this.Controls.Add(this.pnlSettings);
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
@@ -878,7 +889,6 @@
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).EndInit();
 			this.pnlTop.ResumeLayout(false);
-			this.pnlTop.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picXAMPP)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picSettings)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_MaxMin)).EndInit();
@@ -893,6 +903,7 @@
 			this.panel3.ResumeLayout(false);
 			this.panel5.ResumeLayout(false);
 			this.panel7.ResumeLayout(false);
+			this.panel7.PerformLayout();
 			this.panel6.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pE_Random)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Repit)).EndInit();
@@ -953,7 +964,6 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Panel panel5;
-		private System.Windows.Forms.ProgressBar PBC;
 		private System.Windows.Forms.Panel panel6;
 		private System.Windows.Forms.Panel panel7;
 		private System.Windows.Forms.PictureBox pE_Next;
@@ -1023,6 +1033,7 @@
 		private System.Windows.Forms.PictureBox pctXAMPP;
 		private System.Windows.Forms.PictureBox picXAMPP;
 		private System.Windows.Forms.TextBox textBox1;
+		private Extensions.PBC PBC;
 	}
 }
 
