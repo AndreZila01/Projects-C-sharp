@@ -85,40 +85,24 @@ namespace Spotify_Clone
 			}
 			axWindowsMediaPlayer1.Ctlcontrols.pause(); if (Form1.Processo != "start") axWindowsMediaPlayer1.Ctlcontrols.play();
 		}
-
+		DateTime dateTime;
 		private void axWindowsMediaPlayer1_MouseMoveEvent(object sender, AxWMPLib._WMPOCXEvents_MouseMoveEvent e)
 		{
 			AuxMouse.Start();
-			panel1.Visible = true;
-			if (int.Parse(timer1.Tag.ToString()) == 0 && coordenadas == ".")
-				panel2.Size = new Size((panel2.Width - panel1.Width), (panel2.Height - panel1.Height));
-			timer1.Tag = 0;
-			if (coordenadas != "." && coordenadas != "" + e.fX + "," + e.fY)
+			if (coordenadas != "" + e.fX + "," + e.fY)
 			{
-				Debug.Print("entraste");
-				axWindowsMediaPlayer1.Tag = "diferente";
+				panel1.Visible = true;
+				dateTime = DateTime.Now;
 				coordenadas = "" + e.fX + "," + e.fY;
-			}
-			else
-			{
-				axWindowsMediaPlayer1.Tag = ".";
-				coordenadas = ".";
 			}
 		}
 		string coordenadas = "inicio";
 		private void AuxMouse_Tick(object sender, EventArgs e)
 		{
-			if (int.Parse(timer1.Tag.ToString()) == 0)
-				progressBar1.Tag = coordenadas;
-			coordenadas = axWindowsMediaPlayer1.Tag.ToString();
-			timer1.Tag = int.Parse(timer1.Tag.ToString()) + 1;
-			if ((int.Parse(timer1.Tag.ToString()) >= 15) || "." == coordenadas && (int.Parse(timer1.Tag.ToString()) >= 25))
+			if ((DateTime.Now.TimeOfDay.TotalSeconds - dateTime.TimeOfDay.TotalSeconds) >= 5)
 			{
-				panel2.Size = new Size((panel2.Width + panel1.Width), (panel2.Height + panel1.Height));
+				dateTime = new DateTime();
 				panel1.Visible = false;
-				Debug.Print("Testado");
-				timer1.Tag = 0;
-				coordenadas = ".";
 			}
 		}
 		private void pictureBox1_Click(object sender, EventArgs e)

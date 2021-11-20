@@ -40,6 +40,7 @@
 			this.pE_Close = new System.Windows.Forms.PictureBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
 			this.pnlPrincipal = new System.Windows.Forms.Panel();
 			this.PainelControl1 = new System.Windows.Forms.Panel();
 			this.pnlPlayList = new System.Windows.Forms.Panel();
@@ -49,6 +50,7 @@
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.panel7 = new System.Windows.Forms.Panel();
+			this.PBC = new Spotify_Clone.Extensions.PBC();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.pE_Random = new System.Windows.Forms.PictureBox();
 			this.pE_Repit = new System.Windows.Forms.PictureBox();
@@ -89,6 +91,8 @@
 			this.lbltec = new System.Windows.Forms.Label();
 			this.chkAtalho = new System.Windows.Forms.CheckBox();
 			this.pnlDiscord = new System.Windows.Forms.Panel();
+			this.switchDuracao = new CustomControls.RJControls.RJToggleButton();
+			this.switchNome = new CustomControls.RJControls.RJToggleButton();
 			this.lblinfoDu = new System.Windows.Forms.Label();
 			this.lblDuracao = new System.Windows.Forms.Label();
 			this.lblNomeDisc = new System.Windows.Forms.Label();
@@ -96,10 +100,13 @@
 			this.chkDiscord = new System.Windows.Forms.CheckBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel8 = new System.Windows.Forms.Panel();
+			this.switchMusic = new CustomControls.RJControls.RJToggleButton();
 			this.lblInfoMusic = new System.Windows.Forms.Label();
 			this.lblnotif = new System.Windows.Forms.Label();
+			this.switchMini = new CustomControls.RJControls.RJToggleButton();
 			this.lblMini = new System.Windows.Forms.Label();
 			this.lblTitMini = new System.Windows.Forms.Label();
+			this.switchSO = new CustomControls.RJControls.RJToggleButton();
 			this.pctPaths = new System.Windows.Forms.PictureBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.txtPaths = new System.Windows.Forms.TextBox();
@@ -118,13 +125,6 @@
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.TSMIClose = new System.Windows.Forms.ToolStripMenuItem();
 			this.tmAtalho = new System.Windows.Forms.Timer(this.components);
-			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-			this.PBC = new Spotify_Clone.Extensions.PBC();
-			this.switchDuracao = new CustomControls.RJControls.RJToggleButton();
-			this.switchNome = new CustomControls.RJControls.RJToggleButton();
-			this.switchMusic = new CustomControls.RJControls.RJToggleButton();
-			this.switchMini = new CustomControls.RJControls.RJToggleButton();
-			this.switchSO = new CustomControls.RJControls.RJToggleButton();
 			trackBar1 = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(trackBar1)).BeginInit();
 			this.pnlTop.SuspendLayout();
@@ -135,6 +135,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).BeginInit();
 			this.panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.PainelControl1.SuspendLayout();
 			this.pnlPlayList.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picAddPlaylist)).BeginInit();
@@ -164,7 +165,6 @@
 			this.panel8.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).BeginInit();
 			this.contextMenuStrip1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// trackBar1
@@ -253,6 +253,12 @@
 			resources.ApplyResources(this.panel2, "panel2");
 			this.panel2.Name = "panel2";
 			// 
+			// axWindowsMediaPlayer1
+			// 
+			resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
+			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+			// 
 			// pnlPrincipal
 			// 
 			this.pnlPrincipal.BackColor = System.Drawing.Color.Transparent;
@@ -317,6 +323,22 @@
 			this.panel7.Controls.Add(this.textBox1);
 			resources.ApplyResources(this.panel7, "panel7");
 			this.panel7.Name = "panel7";
+			// 
+			// PBC
+			// 
+			resources.ApplyResources(this.PBC, "PBC");
+			this.PBC.BackColor = System.Drawing.Color.White;
+			this.PBC.ChannelColor = System.Drawing.Color.White;
+			this.PBC.ChannelHeight = 6;
+			this.PBC.ForeBackColor = System.Drawing.Color.CadetBlue;
+			this.PBC.ForeColor = System.Drawing.Color.White;
+			this.PBC.Name = "PBC";
+			this.PBC.ShowMaximun = false;
+			this.PBC.ShowValue = Spotify_Clone.Extensions.TextPosition.None;
+			this.PBC.SliderColor = System.Drawing.Color.Teal;
+			this.PBC.SliderHeight = 6;
+			this.PBC.SymbolAfter = "";
+			this.PBC.SymbolBefore = "";
 			// 
 			// panel6
 			// 
@@ -601,6 +623,28 @@
 			resources.ApplyResources(this.pnlDiscord, "pnlDiscord");
 			this.pnlDiscord.Name = "pnlDiscord";
 			// 
+			// switchDuracao
+			// 
+			resources.ApplyResources(this.switchDuracao, "switchDuracao");
+			this.switchDuracao.BackColor = System.Drawing.Color.Transparent;
+			this.switchDuracao.Name = "switchDuracao";
+			this.switchDuracao.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchDuracao.OffToggleColor = System.Drawing.Color.White;
+			this.switchDuracao.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchDuracao.OnToggleColor = System.Drawing.Color.White;
+			this.switchDuracao.UseVisualStyleBackColor = false;
+			// 
+			// switchNome
+			// 
+			resources.ApplyResources(this.switchNome, "switchNome");
+			this.switchNome.BackColor = System.Drawing.Color.Transparent;
+			this.switchNome.Name = "switchNome";
+			this.switchNome.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchNome.OffToggleColor = System.Drawing.Color.White;
+			this.switchNome.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchNome.OnToggleColor = System.Drawing.Color.White;
+			this.switchNome.UseVisualStyleBackColor = false;
+			// 
 			// lblinfoDu
 			// 
 			resources.ApplyResources(this.lblinfoDu, "lblinfoDu");
@@ -659,6 +703,17 @@
 			resources.ApplyResources(this.panel8, "panel8");
 			this.panel8.Name = "panel8";
 			// 
+			// switchMusic
+			// 
+			resources.ApplyResources(this.switchMusic, "switchMusic");
+			this.switchMusic.BackColor = System.Drawing.Color.Transparent;
+			this.switchMusic.Name = "switchMusic";
+			this.switchMusic.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchMusic.OffToggleColor = System.Drawing.Color.White;
+			this.switchMusic.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchMusic.OnToggleColor = System.Drawing.Color.White;
+			this.switchMusic.UseVisualStyleBackColor = false;
+			// 
 			// lblInfoMusic
 			// 
 			resources.ApplyResources(this.lblInfoMusic, "lblInfoMusic");
@@ -671,6 +726,17 @@
 			resources.ApplyResources(this.lblnotif, "lblnotif");
 			this.lblnotif.Name = "lblnotif";
 			// 
+			// switchMini
+			// 
+			resources.ApplyResources(this.switchMini, "switchMini");
+			this.switchMini.BackColor = System.Drawing.Color.Transparent;
+			this.switchMini.Name = "switchMini";
+			this.switchMini.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchMini.OffToggleColor = System.Drawing.Color.White;
+			this.switchMini.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchMini.OnToggleColor = System.Drawing.Color.White;
+			this.switchMini.UseVisualStyleBackColor = false;
+			// 
 			// lblMini
 			// 
 			resources.ApplyResources(this.lblMini, "lblMini");
@@ -682,6 +748,17 @@
 			// 
 			resources.ApplyResources(this.lblTitMini, "lblTitMini");
 			this.lblTitMini.Name = "lblTitMini";
+			// 
+			// switchSO
+			// 
+			resources.ApplyResources(this.switchSO, "switchSO");
+			this.switchSO.BackColor = System.Drawing.Color.Transparent;
+			this.switchSO.Name = "switchSO";
+			this.switchSO.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.switchSO.OffToggleColor = System.Drawing.Color.White;
+			this.switchSO.OnBackColor = System.Drawing.Color.DarkSlateGray;
+			this.switchSO.OnToggleColor = System.Drawing.Color.White;
+			this.switchSO.UseVisualStyleBackColor = false;
 			// 
 			// pctPaths
 			// 
@@ -799,89 +876,12 @@
 			resources.ApplyResources(this.TSMIClose, "TSMIClose");
 			this.TSMIClose.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
 			// 
-			// axWindowsMediaPlayer1
-			// 
-			resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
-			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-			// 
-			// PBC
-			// 
-			resources.ApplyResources(this.PBC, "PBC");
-			this.PBC.BackColor = System.Drawing.Color.White;
-			this.PBC.ChannelColor = System.Drawing.Color.White;
-			this.PBC.ChannelHeight = 6;
-			this.PBC.ForeBackColor = System.Drawing.Color.CadetBlue;
-			this.PBC.ForeColor = System.Drawing.Color.White;
-			this.PBC.Name = "PBC";
-			this.PBC.ShowMaximun = false;
-			this.PBC.ShowValue = Spotify_Clone.Extensions.TextPosition.None;
-			this.PBC.SliderColor = System.Drawing.Color.RoyalBlue;
-			this.PBC.SliderHeight = 6;
-			this.PBC.SymbolAfter = "";
-			this.PBC.SymbolBefore = "";
-			// 
-			// switchDuracao
-			// 
-			resources.ApplyResources(this.switchDuracao, "switchDuracao");
-			this.switchDuracao.BackColor = System.Drawing.Color.Transparent;
-			this.switchDuracao.Name = "switchDuracao";
-			this.switchDuracao.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchDuracao.OffToggleColor = System.Drawing.Color.White;
-			this.switchDuracao.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchDuracao.OnToggleColor = System.Drawing.Color.White;
-			this.switchDuracao.UseVisualStyleBackColor = false;
-			// 
-			// switchNome
-			// 
-			resources.ApplyResources(this.switchNome, "switchNome");
-			this.switchNome.BackColor = System.Drawing.Color.Transparent;
-			this.switchNome.Name = "switchNome";
-			this.switchNome.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchNome.OffToggleColor = System.Drawing.Color.White;
-			this.switchNome.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchNome.OnToggleColor = System.Drawing.Color.White;
-			this.switchNome.UseVisualStyleBackColor = false;
-			// 
-			// switchMusic
-			// 
-			resources.ApplyResources(this.switchMusic, "switchMusic");
-			this.switchMusic.BackColor = System.Drawing.Color.Transparent;
-			this.switchMusic.Name = "switchMusic";
-			this.switchMusic.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchMusic.OffToggleColor = System.Drawing.Color.White;
-			this.switchMusic.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchMusic.OnToggleColor = System.Drawing.Color.White;
-			this.switchMusic.UseVisualStyleBackColor = false;
-			// 
-			// switchMini
-			// 
-			resources.ApplyResources(this.switchMini, "switchMini");
-			this.switchMini.BackColor = System.Drawing.Color.Transparent;
-			this.switchMini.Name = "switchMini";
-			this.switchMini.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchMini.OffToggleColor = System.Drawing.Color.White;
-			this.switchMini.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchMini.OnToggleColor = System.Drawing.Color.White;
-			this.switchMini.UseVisualStyleBackColor = false;
-			// 
-			// switchSO
-			// 
-			resources.ApplyResources(this.switchSO, "switchSO");
-			this.switchSO.BackColor = System.Drawing.Color.Transparent;
-			this.switchSO.Name = "switchSO";
-			this.switchSO.OffBackColor = System.Drawing.SystemColors.ActiveBorder;
-			this.switchSO.OffToggleColor = System.Drawing.Color.White;
-			this.switchSO.OnBackColor = System.Drawing.Color.DarkSlateGray;
-			this.switchSO.OnToggleColor = System.Drawing.Color.White;
-			this.switchSO.UseVisualStyleBackColor = false;
-			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlSettings);
+			this.Controls.Add(this.pnlCont);
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
@@ -896,6 +896,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pE_minimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Close)).EndInit();
 			this.panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.PainelControl1.ResumeLayout(false);
 			this.pnlPlayList.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.picAddPlaylist)).EndInit();
@@ -933,7 +934,6 @@
 			this.panel8.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pctPaths)).EndInit();
 			this.contextMenuStrip1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.ResumeLayout(false);
 
 		}

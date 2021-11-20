@@ -35,7 +35,6 @@ namespace Spotify_Clone
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.AuxMusic = new System.Windows.Forms.Timer(this.components);
 			this.progressBar1 = new System.Windows.Forms.ProgressBar();
-			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
 			this.AuxMouse = new System.Windows.Forms.Timer(this.components);
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel5 = new System.Windows.Forms.Panel();
@@ -45,13 +44,14 @@ namespace Spotify_Clone
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
-			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
 			this.panel1.SuspendLayout();
 			this.panel5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pctPausa)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// timer1
@@ -71,52 +71,38 @@ namespace Spotify_Clone
 			this.progressBar1.TabIndex = 1;
 			this.progressBar1.Visible = false;
 			// 
-			// axWindowsMediaPlayer1
-			// 
-			this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.axWindowsMediaPlayer1.Enabled = true;
-			this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
-			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-			this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(800, 404);
-			this.axWindowsMediaPlayer1.TabIndex = 0;
-			this.axWindowsMediaPlayer1.Tag = "expand";
-			this.axWindowsMediaPlayer1.ClickEvent += new AxWMPLib._WMPOCXEvents_ClickEventHandler(this.axWindowsMediaPlayer1_ClickEvent);
-			this.axWindowsMediaPlayer1.MouseMoveEvent += new AxWMPLib._WMPOCXEvents_MouseMoveEventHandler(this.axWindowsMediaPlayer1_MouseMoveEvent);
-			// 
 			// AuxMouse
 			// 
 			this.AuxMouse.Tick += new System.EventHandler(this.AuxMouse_Tick);
 			// 
 			// panel1
 			// 
-			this.panel1.BackColor = System.Drawing.Color.DarkRed;
+			this.panel1.BackColor = System.Drawing.Color.CadetBlue;
 			this.panel1.Controls.Add(this.panel5);
 			this.panel1.Controls.Add(this.panel3);
 			this.panel1.Controls.Add(this.panel4);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel1.Location = new System.Drawing.Point(0, 404);
+			this.panel1.Location = new System.Drawing.Point(0, 365);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(800, 46);
+			this.panel1.Size = new System.Drawing.Size(713, 46);
 			this.panel1.TabIndex = 2;
-			this.panel1.Visible = false;
 			// 
 			// panel5
 			// 
 			this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.panel5.BackColor = System.Drawing.Color.DarkGray;
+			this.panel5.BackColor = System.Drawing.Color.PowderBlue;
 			this.panel5.Controls.Add(this.pictureBox3);
 			this.panel5.Controls.Add(this.pctPausa);
 			this.panel5.Controls.Add(this.pictureBox1);
-			this.panel5.Location = new System.Drawing.Point(314, 0);
+			this.panel5.Location = new System.Drawing.Point(256, 0);
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(175, 46);
+			this.panel5.Size = new System.Drawing.Size(202, 46);
 			this.panel5.TabIndex = 6;
 			// 
 			// pictureBox3
 			// 
 			this.pictureBox3.Image = global::Spotify_Clone.Properties.Resources.nextB;
-			this.pictureBox3.Location = new System.Drawing.Point(130, 3);
+			this.pictureBox3.Location = new System.Drawing.Point(154, 3);
 			this.pictureBox3.Name = "pictureBox3";
 			this.pictureBox3.Size = new System.Drawing.Size(42, 40);
 			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -128,7 +114,7 @@ namespace Spotify_Clone
 			// pctPausa
 			// 
 			this.pctPausa.Image = global::Spotify_Clone.Properties.Resources.playB;
-			this.pctPausa.Location = new System.Drawing.Point(71, 3);
+			this.pctPausa.Location = new System.Drawing.Point(87, 3);
 			this.pctPausa.Name = "pctPausa";
 			this.pctPausa.Size = new System.Drawing.Size(42, 40);
 			this.pctPausa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -151,18 +137,20 @@ namespace Spotify_Clone
 			// 
 			// panel3
 			// 
-			this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-			this.panel3.Location = new System.Drawing.Point(488, 0);
+			this.panel3.BackColor = System.Drawing.Color.CadetBlue;
+			this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+			this.panel3.Location = new System.Drawing.Point(457, 0);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(312, 46);
+			this.panel3.Size = new System.Drawing.Size(256, 46);
 			this.panel3.TabIndex = 5;
 			// 
 			// panel4
 			// 
-			this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.panel4.Location = new System.Drawing.Point(3, 0);
+			this.panel4.BackColor = System.Drawing.Color.CadetBlue;
+			this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+			this.panel4.Location = new System.Drawing.Point(0, 0);
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(312, 46);
+			this.panel4.Size = new System.Drawing.Size(256, 46);
 			this.panel4.TabIndex = 4;
 			// 
 			// panel2
@@ -171,15 +159,28 @@ namespace Spotify_Clone
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel2.Location = new System.Drawing.Point(0, 0);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(800, 404);
+			this.panel2.Size = new System.Drawing.Size(713, 365);
 			this.panel2.TabIndex = 3;
+			// 
+			// axWindowsMediaPlayer1
+			// 
+			this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.axWindowsMediaPlayer1.Enabled = true;
+			this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
+			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+			this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(713, 365);
+			this.axWindowsMediaPlayer1.TabIndex = 0;
+			this.axWindowsMediaPlayer1.Tag = "expand";
+			this.axWindowsMediaPlayer1.ClickEvent += new AxWMPLib._WMPOCXEvents_ClickEventHandler(this.axWindowsMediaPlayer1_ClickEvent);
+			this.axWindowsMediaPlayer1.MouseMoveEvent += new AxWMPLib._WMPOCXEvents_MouseMoveEventHandler(this.axWindowsMediaPlayer1_MouseMoveEvent);
 			// 
 			// Video
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(713, 411);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.progressBar1);
@@ -192,13 +193,13 @@ namespace Spotify_Clone
 			this.Tag = "expand";
 			this.Load += new System.EventHandler(this.Form3_Load);
 			this.SizeChanged += new System.EventHandler(this.Form3_SizeChanged);
-			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel5.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pctPausa)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
