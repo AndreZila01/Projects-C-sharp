@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UW+dxEZLUge3453ou4EN09s+Y9RZKfS51w2VeCrhQqc=</dsig:DigestValue>
+        <dsig:DigestValue>/3lEOo4AqWAC45icXFCVkLqk1wEZ/n+aviRr8RuBetg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pggogtSuUFoCRIEP17XUINqNwq6oTfIPiK0tadx2GZQ=</dsig:DigestValue>
+        <dsig:DigestValue>Ql8M+D+7X34JYFQilG/OARwELS4B6ETXT59HgVfpV78=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -115,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spotify Clone.exe" size="889344">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spotify Clone.exe" size="889856">
       <assemblyIdentity name="Spotify Clone" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VFeYrp92kFZrAhfs1sGhnheN0lpO/hAdsg/g9mProXM=</dsig:DigestValue>
+        <dsig:DigestValue>x5aAiLG682D3ZGnUpXY+dorzMq7F/PJ3IHb9aIE1s2Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
