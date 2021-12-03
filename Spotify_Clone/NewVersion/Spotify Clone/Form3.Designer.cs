@@ -113,7 +113,7 @@ namespace Spotify_Clone
 			// 
 			// pctPausa
 			// 
-			this.pctPausa.Image = global::Spotify_Clone.Properties.Resources.playB;
+			this.pctPausa.Image = global::Spotify_Clone.Properties.Resources.pauseB;
 			this.pctPausa.Location = new System.Drawing.Point(87, 3);
 			this.pctPausa.Name = "pctPausa";
 			this.pctPausa.Size = new System.Drawing.Size(42, 40);
