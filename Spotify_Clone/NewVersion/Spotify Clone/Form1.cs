@@ -17,6 +17,9 @@ using DiscordRPC;
 using Microsoft.Win32;
 using System.Reactive.Linq;
 using System.Net;
+using AutoClicker;
+using System.Threading;
+
 namespace Spotify_Clone
 {
 	public partial class Form1 : Form
@@ -937,7 +940,173 @@ namespace Spotify_Clone
 				}
 			this.CenterToScreen();
 			if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
+
+			clicker = new AutoClicker.AutoClicker();
+			clicker.NextClick += HandleNextClick;
+			CountHandler(null, null);
+			hotkey = System.Windows.Forms.Keys.F7;
+			SetHotkey();
 		}
+		private AutoClicker.AutoClicker clicker;
+		private Keys hotkey;
+		private Win32.fsModifiers hotkeyNodifiers;
+
+		private Thread countdownThread;
+
+
+		private void HandleNextClick(object sender, AutoClicker.AutoClicker.NextClickEventArgs e)
+		{
+			if (countdownThread == null)
+			{
+				countdownThread = new Thread(() => CountDown(e.NextClick));
+				countdownThread.Start();
+			}
+			else
+			{
+				countdownThread.Abort();
+				countdownThread = new Thread(() => CountDown(e.NextClick));
+				countdownThread.Start();
+			}
+
+
+		}
+		private void CountDown(int Milliseconds)
+		{
+			//for (int i = 0; i < Milliseconds; i += 10)
+			//{
+			//    tslStatus.Text = string.Format("Next click: {0}ms", Milliseconds - i);
+			//    Thread.Sleep(9);
+			//}
+		}
+		private void CountHandler(object sender, EventArgs e)
+		{
+			AutoClicker.AutoClicker.CountType countType;
+			int count = -1;
+
+			//if (rdbCount.Checked)
+			{
+				countType = AutoClicker.AutoClicker.CountType.Fixed;
+				count = 100;
+			}
+			//else
+			//{
+			//	countType = AutoClicker.AutoClicker.CountType.UntilStopped;
+			//}
+
+			// Toggle visibility of controls.
+			if (countType == AutoClicker.AutoClicker.CountType.Fixed)
+			{
+				//numCount.Enabled = true;
+			}
+			else
+			{
+				//numCount.Enabled = false;
+			}
+
+			clicker.UpdateCount(countType, count);
+		}
+
+		private void btnHotkeyRemove_Click(object sender, EventArgs e)
+		{
+			UnsetHotkey();
+		}
+
+		private void btnToggle_Click(object sender, EventArgs e)
+		{
+			if (!clicker.IsAlive)
+			{
+				clicker.Start();
+				//DisableControls();
+			}
+			else
+			{
+				clicker.Stop();
+				countdownThread.Abort();
+				//EnableControls();
+			}
+		}
+
+		delegate void SetButtonTextCallback(System.Windows.Forms.Button Control, string Text);
+		private void SetButtonText(System.Windows.Forms.Button Control, string Text)
+		{
+			if (Control.InvokeRequired)
+			{
+				var d = new SetButtonTextCallback(SetButtonText);
+				this.Invoke(d, Control, Text);
+			}
+			else
+			{
+				Control.Text = Text;
+			}
+		}
+
+
+		protected override void WndProc(ref Message m)
+		{
+			//Debug.Print("keybind");
+			base.WndProc(ref m);
+
+			if (m.Msg == Win32.WM_HOTKEY)
+			{
+				// Ignore the hotkey if the user is editing it.
+				//if (txtHotkey.Focused)
+				//{
+				//	return;
+				//}
+
+				Win32.fsModifiers modifiers = (Win32.fsModifiers)((int)m.LParam & 0xFFFF);
+				Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);
+				if (key == (hotkey & Keys.KeyCode) && modifiers == hotkeyNodifiers)
+				{
+					EventosPE("pE_Next");
+				}
+			}
+		}
+
+		private void txtHotkey_KeyDown(object sender, KeyEventArgs e)
+		{
+			e.SuppressKeyPress = true;
+			// Don't want to do anything if only a modifier key is pressed.
+			//     Modifiers                                 Asian keys (kana, hanja, kanji etc)       IME related keys (convert etc)           Korean alt (process)  Windows keys
+			if (!((e.KeyValue >= 16 && e.KeyValue <= 18) || (e.KeyValue >= 21 && e.KeyValue <= 25) || (e.KeyValue >= 28 && e.KeyValue <= 31) || e.KeyValue == 229 || (e.KeyValue >= 91 && e.KeyValue <= 92)))
+			{
+				Debug.Print("2");
+				Win32.UnregisterHotKey(this.Handle, (int)hotkey);
+				hotkey = e.KeyData;
+				// Extract modifiers
+				hotkeyNodifiers = 0;
+				if ((e.Modifiers & Keys.Shift) != 0)
+				{
+					hotkeyNodifiers |= Win32.fsModifiers.Shift;
+				}
+				if ((e.Modifiers & Keys.Control) != 0)
+				{
+					hotkeyNodifiers |= Win32.fsModifiers.Control;
+				}
+				if ((e.Modifiers & Keys.Alt) != 0)
+				{
+					hotkeyNodifiers |= Win32.fsModifiers.Alt;
+				}
+
+				SetHotkey();
+			}
+		}
+
+		private void SetHotkey()
+		{
+			//Debug.Print("1");
+			//txtHotkey.Text = AutoClicker.KeysConverter.Convert(hotkey);
+			Win32.RegisterHotKey(this.Handle, (int)hotkey, (uint)hotkeyNodifiers, (uint)(hotkey & Keys.KeyCode));
+			//btnHotkeyRemove.Enabled = true;
+		}
+
+		private void UnsetHotkey()
+		{
+			//Debug.Print("1");
+			Win32.UnregisterHotKey(this.Handle, (int)hotkey);
+			//btnHotkeyRemove.Enabled = false;
+		}
+
 		private void SaveSettings(Settings settings)
 		{
 			if (settings == null)
