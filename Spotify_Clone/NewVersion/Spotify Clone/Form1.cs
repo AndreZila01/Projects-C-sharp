@@ -1060,6 +1060,89 @@ namespace Spotify_Clone
 				{
 					EventosPE("pE_Next");
 				}
+				//hotkey = e.KeyData;
+				//// Extract modifiers
+				//hotkeyNodifiers = 0;
+				//if ((e.Modifiers & Keys.Shift) != 0)
+				//{
+				//	hotkeyNodifiers |= Win32.fsModifiers.Shift;
+				//}
+				//if ((e.Modifiers & Keys.Control) != 0)
+				//{
+				//	hotkeyNodifiers |= Win32.fsModifiers.Control;
+				//}
+				//if ((e.Modifiers & Keys.Alt) != 0)
+				//{
+				//	hotkeyNodifiers |= Win32.fsModifiers.Alt;
+				//}
+
+				//SetHotkey();
+
+				//if (key == (hotkey & Keys.KeyCode) && modifiers == hotkeyNodifiers)
+				//{
+				//	EventosPE("pE_Next");
+				//}
+
+				//if (chkAtalho.Checked)
+				//{
+				//	timer1.Tag = int.Parse(timer1.Tag.ToString()) + 1;
+				//	if (pnlTop.Tag.ToString() != "0")
+				//	{
+				//		try
+				//		{
+				//			int temp = 0;
+				//			bool btnAnte = true, btnNexts = true, btnPause = true;
+				//			string[] key = pnlTop.Tag.ToString().Split('+');
+				//			if (key.Length == 1) key = new[] { pnlTop.Tag.ToString() };
+				//			string[] ant = btnAnterior.Text.Replace(" ", string.Empty).Split('+');
+				//			string[] pau = btnPausa.Text.Replace(" ", string.Empty).Split('+');
+				//			string[] nex = btnNext.Text.Replace(" ", string.Empty).Split('+');
+				//			key.ToList().ForEach(item =>
+				//			{
+				//				try
+				//				{
+				//					if ((ant[temp] == item.Replace(" ", string.Empty) && (key.Length) == ant.Length) && btnAnte == true && temp >= 0) btnAnte = true;
+				//					else btnAnte = false;
+				//				}
+				//				catch
+				//				{
+				//					btnAnte = false;
+				//				}
+				//				try
+				//				{
+				//					if ((pau[temp] == item.Replace(" ", string.Empty) && (key.Length) == pau.Length) && btnPause == true && temp >= 0) btnPause = true;
+				//					else btnPause = false;
+				//				}
+				//				catch
+				//				{
+				//					btnPause = false;
+				//				}
+				//				try
+				//				{
+				//					if ((nex[temp] == item.Replace(" ", string.Empty) && (key.Length) == nex.Length) && btnNexts == true && temp >= 0) btnNexts = true;
+				//					else btnNexts = false;
+				//				}
+				//				catch
+				//				{
+				//					btnNexts = false;
+				//				}
+				//				temp++;
+				//			});
+				//			if (btnNexts == true) EventosPE("pE_Next");
+				//			else if (btnAnte == true) EventosPE("pE_previous");
+				//			else if (btnPause == true) EventosPE("pE_PauseaPlay");
+				//			if (int.Parse(timer1.Tag.ToString()) > 40)
+				//			{
+				//				timer1.Tag = 0;
+				//				pnlTop.Tag = "0";
+				//			}
+				//			tmAtalho.Stop();
+				//			key = key.Where(w => w != "").ToArray();
+				//			temp = 0;
+				//		}
+				//		catch { }
+				//	}
+				//}
 			}
 		}
 
@@ -1530,8 +1613,8 @@ namespace Spotify_Clone
 		}
 		private void textBox1_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (pnlTop.Tag.ToString() == "0") pnlTop.Tag = "" + e.KeyCode.ToString();
-			else pnlTop.Tag += "+" + e.KeyCode.ToString();
+			//if (pnlTop.Tag.ToString() == "0") pnlTop.Tag = "" + e.KeyCode.ToString();
+			//else pnlTop.Tag += "+" + e.KeyCode.ToString();
 		}
 		private void axWindowsMediaPlayer1_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
 		{
@@ -1605,70 +1688,10 @@ namespace Spotify_Clone
 			else if (PBC.Tag != null) if (dt > 15 && panel6.Tag == null && PBC.Value == int.Parse(PBC.Tag.ToString())) timer2.Start();
 			try
 			{
-				if(FormVideo!=true)
+				if (FormVideo != true)
 					Discord(labelControl2.Text, (int)(axWindowsMediaPlayer1.Ctlcontrols.currentPosition), (int)(axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration));
 			}
 			catch { }
-			if (chkAtalho.Checked)
-			{
-				timer1.Tag = int.Parse(timer1.Tag.ToString()) + 1;
-				if (pnlTop.Tag.ToString() != "0")
-				{
-					try
-					{
-						int temp = 0;
-						bool btnAnte = true, btnNexts = true, btnPause = true;
-						string[] key = pnlTop.Tag.ToString().Split('+');
-						if (key.Length == 1) key = new[] { pnlTop.Tag.ToString() };
-						string[] ant = btnAnterior.Text.Replace(" ", string.Empty).Split('+');
-						string[] pau = btnPausa.Text.Replace(" ", string.Empty).Split('+');
-						string[] nex = btnNext.Text.Replace(" ", string.Empty).Split('+');
-						key.ToList().ForEach(item =>
-						{
-							try
-							{
-								if ((ant[temp] == item.Replace(" ", string.Empty) && (key.Length) == ant.Length) && btnAnte == true && temp >= 0) btnAnte = true;
-								else btnAnte = false;
-							}
-							catch
-							{
-								btnAnte = false;
-							}
-							try
-							{
-								if ((pau[temp] == item.Replace(" ", string.Empty) && (key.Length) == pau.Length) && btnPause == true && temp >= 0) btnPause = true;
-								else btnPause = false;
-							}
-							catch
-							{
-								btnPause = false;
-							}
-							try
-							{
-								if ((nex[temp] == item.Replace(" ", string.Empty) && (key.Length) == nex.Length) && btnNexts == true && temp >= 0) btnNexts = true;
-								else btnNexts = false;
-							}
-							catch
-							{
-								btnNexts = false;
-							}
-							temp++;
-						});
-						if (btnNexts == true) EventosPE("pE_Next");
-						else if (btnAnte == true) EventosPE("pE_previous");
-						else if (btnPause == true) EventosPE("pE_PauseaPlay");
-						if (int.Parse(timer1.Tag.ToString()) > 40)
-						{
-							timer1.Tag = 0;
-							pnlTop.Tag = "0";
-						}
-						tmAtalho.Stop();
-						key = key.Where(w => w != "").ToArray();
-						temp = 0;
-					}
-					catch { }
-				}
-			}
 			if (PBC.Value != PBC.Maximum && dt > 25)
 			{
 				var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() == "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
