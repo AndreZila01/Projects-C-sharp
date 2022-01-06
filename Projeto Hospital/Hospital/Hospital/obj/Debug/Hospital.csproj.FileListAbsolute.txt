@@ -1,0 +1,16 @@
+C:\Users\andre\source\repos\Hospital\Hospital\bin\Debug\Hospital.exe.config
+C:\Users\andre\source\repos\Hospital\Hospital\bin\Debug\Hospital.exe
+C:\Users\andre\source\repos\Hospital\Hospital\bin\Debug\Hospital.pdb
+C:\Users\andre\source\repos\Hospital\Hospital\obj\Debug\Hospital.csprojAssemblyReference.cache
+C:\Users\andre\source\repos\Hospital\Hospital\obj\Debug\Hospital.Form1.resources
+C:\Users\andre\source\repos\Hospital\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+C:\Users\andre\source\repos\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
+C:\Users\andre\source\repos\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\Hospital\Hospital\obj\Debug\Hospital.exe
+C:\Users\andre\source\repos\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\andre\source\repos\Hospital\Hospital\bin\Debug\Newtonsoft.Json.dll
+C:\Users\andre\source\repos\Hospital\Hospital\bin\Debug\Newtonsoft.Json.xml
+C:\Users\andre\source\repos\Hospital\Hospital\obj\Debug\Hospital.csproj.CopyComplete
+C:\Users\andre\source\repos\Hospital\Hospital\obj\Debug\Hospital.Form2.resources
+C:\Users\andre\source\repos\Hospital\Hospital\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\andre\source\repos\Hospital\Hospital\bin\Debug\System.Net.Http.Formatting.xml
