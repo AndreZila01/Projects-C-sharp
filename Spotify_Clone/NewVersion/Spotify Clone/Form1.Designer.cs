@@ -38,7 +38,6 @@
 			this.picForm3 = new System.Windows.Forms.PictureBox();
 			this.pE_minimizar = new System.Windows.Forms.PictureBox();
 			this.pE_Close = new System.Windows.Forms.PictureBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
 			this.pnlPrincipal = new System.Windows.Forms.Panel();
@@ -239,12 +238,6 @@
 			this.pE_Close.TabStop = false;
 			this.pE_Close.Click += new System.EventHandler(this.pE_Click);
 			// 
-			// textBox1
-			// 
-			resources.ApplyResources(this.textBox1, "textBox1");
-			this.textBox1.Name = "textBox1";
-			this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-			// 
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.Silver;
@@ -321,9 +314,9 @@
 			// 
 			this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(142)))), ((int)(((byte)(144)))));
 			this.panel7.Controls.Add(this.PBC);
-			this.panel7.Controls.Add(this.textBox1);
 			resources.ApplyResources(this.panel7, "panel7");
 			this.panel7.Name = "panel7";
+			this.panel7.Tag = " ";
 			// 
 			// PBC
 			// 
@@ -566,6 +559,7 @@
 			// 
 			resources.ApplyResources(this.btnPausa, "btnPausa");
 			this.btnPausa.Name = "btnPausa";
+			this.btnPausa.Tag = " ";
 			this.btnPausa.UseVisualStyleBackColor = true;
 			this.btnPausa.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
 			this.btnPausa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAnterior_KeyDown);
@@ -579,6 +573,7 @@
 			// 
 			resources.ApplyResources(this.btnAnterior, "btnAnterior");
 			this.btnAnterior.Name = "btnAnterior";
+			this.btnAnterior.Tag = " ";
 			this.btnAnterior.UseVisualStyleBackColor = true;
 			this.btnAnterior.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
 			this.btnAnterior.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAnterior_KeyDown);
@@ -592,6 +587,7 @@
 			// 
 			resources.ApplyResources(this.btnNext, "btnNext");
 			this.btnNext.Name = "btnNext";
+			this.btnNext.Tag = " ";
 			this.btnNext.UseVisualStyleBackColor = true;
 			this.btnNext.Click += new System.EventHandler(this.Btn_TeclasAtalhos);
 			this.btnNext.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAnterior_KeyDown);
@@ -882,8 +878,8 @@
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.pnlSettings);
 			this.Controls.Add(this.pnlCont);
+			this.Controls.Add(this.pnlSettings);
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
@@ -906,7 +902,6 @@
 			this.panel3.ResumeLayout(false);
 			this.panel5.ResumeLayout(false);
 			this.panel7.ResumeLayout(false);
-			this.panel7.PerformLayout();
 			this.panel6.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pE_Random)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pE_Repit)).EndInit();
@@ -1034,7 +1029,6 @@
 		private System.Windows.Forms.Label lblVersao;
 		private System.Windows.Forms.PictureBox pctXAMPP;
 		private System.Windows.Forms.PictureBox picXAMPP;
-		private System.Windows.Forms.TextBox textBox1;
 		private Extensions.PBC PBC;
 	}
 }
