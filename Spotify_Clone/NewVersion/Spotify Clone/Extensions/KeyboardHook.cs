@@ -30,6 +30,8 @@ namespace SimpleKeyBinds
                     {
                         result = (VKeys) e.KeyCode;
                     }
+                    else if (e.KeyCode == Keys.ControlKey || e.KeyData == Keys.Menu || e.KeyData == Keys.OemQuestion || e.KeyData == Keys.Oem7 || e.KeyData == Keys.Oem1 || e.KeyData == Keys.Oemplus || e.KeyData == Keys.Oem6 || e.KeyData == Keys.OemOpenBrackets || e.KeyData == Keys.Oem5 || e.KeyData == Keys.Home || e.KeyData == Keys.Insert || e.KeyData == Keys.Delete || e.KeyData == Keys.Next || e.KeyData == Keys.PageUp|| e.KeyData == Keys.MediaNextTrack|| e.KeyData == Keys.MediaPlayPause|| e.KeyData == Keys.MediaPreviousTrack)
+                        result = (VKeys)e.KeyCode;
                     else
                     {
                         result = VKeys.UNKNOWN_KEY;
