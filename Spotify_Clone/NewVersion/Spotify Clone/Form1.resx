@@ -1409,7 +1409,7 @@
     <value>1</value>
   </data>
   <data name="PBC.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="PBC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1421,7 +1421,7 @@
     <value>283, 23</value>
   </data>
   <data name="PBC.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>99</value>
   </data>
   <data name="&gt;&gt;PBC.Name" xml:space="preserve">
     <value>PBC</value>
@@ -6436,6 +6436,9 @@ se acabares</value>
         IXeUlddxF3r7w4lwefYSfeUhfvD6yxt9qRkZGRkZGRkZGRkZGRkZGRkZt8D/A79ZZwURCebhAAAAAElF
         TkSuQmCC
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

@@ -642,7 +642,7 @@ namespace Spotify_Clone
 				pe.Image = Properties.Resources.mais;
 				pe.BackColor = Color.Transparent;
 				pe.SizeMode = PictureBoxSizeMode.Zoom;
-				pe.Anchor = AnchorStyles.Right;
+				pe.Anchor = AnchorStyles.Right | AnchorStyles.Left;
 				pe.BorderStyle = BorderStyle.None;
 				pe.Cursor = Cursors.Hand;
 				pe.Name = "picAddMusic";
@@ -941,7 +941,7 @@ namespace Spotify_Clone
 			Process[] procs = Process.GetProcessesByName("Spotify Clone");
 			if (procs.Length > 1) foreach (Process proc in procs)
 				{
-					if (proc != procs[0]) proc.Kill();
+					if (proc != procs[0]) { icnNotification.Visible = false; proc.Kill(); }
 				}
 			this.CenterToScreen();
 			if (!bgwCarregar.IsBusy) bgwCarregar.RunWorkerAsync();
@@ -956,37 +956,37 @@ namespace Spotify_Clone
 		private Thread countdownThread;
 
 
-		private void btnHotkeyRemove_Click(object sender, EventArgs e)
-		{
-			UnsetHotkey();
-		}
+		//private void btnHotkeyRemove_Click(object sender, EventArgs e)
+		//{
+		//	UnsetHotkey();
+		//}
 
-		private void btnToggle_Click(object sender, EventArgs e)
-		{
-			if (!clicker.IsAlive)
-			{
-				clicker.Start();
-			}
-			else
-			{
-				clicker.Stop();
-				countdownThread.Abort();
-			}
-		}
+		//private void btnToggle_Click(object sender, EventArgs e)
+		//{
+		//	if (!clicker.IsAlive)
+		//	{
+		//		clicker.Start();
+		//	}
+		//	else
+		//	{
+		//		clicker.Stop();
+		//		countdownThread.Abort();
+		//	}
+		//}
 
-		delegate void SetButtonTextCallback(System.Windows.Forms.Button Control, string Text);
-		private void SetButtonText(System.Windows.Forms.Button Control, string Text)
-		{
-			if (Control.InvokeRequired)
-			{
-				var d = new SetButtonTextCallback(SetButtonText);
-				this.Invoke(d, Control, Text);
-			}
-			else
-			{
-				Control.Text = Text;
-			}
-		}
+		//delegate void SetButtonTextCallback(System.Windows.Forms.Button Control, string Text);
+		//private void SetButtonText(System.Windows.Forms.Button Control, string Text)
+		//{
+		//	if (Control.InvokeRequired)
+		//	{
+		//		var d = new SetButtonTextCallback(SetButtonText);
+		//		this.Invoke(d, Control, Text);
+		//	}
+		//	else
+		//	{
+		//		Control.Text = Text;
+		//	}
+		//}
 
 
 		protected override void WndProc(ref Message m)
@@ -994,58 +994,61 @@ namespace Spotify_Clone
 			base.WndProc(ref m);
 
 
-			if (!chkAtalho.Checked)
+			if (labelControl2.Text != "")
 			{
-				Win32.fsModifiers modifiers = (Win32.fsModifiers)((int)m.LParam & 0xFFFF);
-				Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);
-
-				Debug.Print("Testar: " + key);
-				panel4.Tag = key + " + ";
+				if (!chkAtalho.Checked)
 				{
-					try
-					{
-						int temp = 0;
-						bool btnAnte = true, btnNexts = true, btnPause = true;
-						string[] keybind = panel4.Tag.ToString().Split('+');
-						if (keybind.Length == 1) keybind = new[] { pnlTop.Tag.ToString() };
-						string[] ant = btnAnterior.Text.Replace(" ", string.Empty).Split('+');
-						string[] pau = btnPausa.Text.Replace(" ", string.Empty).Split('+');
-						string[] nex = btnNext.Text.Replace(" ", string.Empty).Split('+');
-						keybind.ToList().ForEach(item =>
-						{
-							try
-							{
-								if ((ant[temp] == item.Replace(" ", string.Empty) && (keybind.Length) == ant.Length) && btnAnte == true /*&& temp >= 0*/) btnAnte = true;
-								else btnAnte = false;
-							}
-							catch
-							{
-								btnAnte = false;
-							}
-							try
-							{
-								if ((pau[temp] == item.Replace(" ", string.Empty) && (keybind.Length) == pau.Length) && btnPause == true /*&& temp >= 0*/) btnPause = true;
-								else btnPause = false;
-							}
-							catch
-							{
-								btnPause = false;
-							}
-							try
-							{
-								if ((nex[temp] == item.Replace(" ", string.Empty) && (keybind.Length) == nex.Length) && btnNexts == true /*&& temp >= 0*/) btnNexts = true;
-								else btnNexts = false;
-							}
-							catch
-							{
-								btnNexts = false;
-							}
-							temp++;
-						});
-					}
-					catch { }
-				}
+					Win32.fsModifiers modifiers = (Win32.fsModifiers)((int)m.LParam & 0xFFFF);
+					Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);
 
+					Debug.Print("Testar: " + key);
+					panel4.Tag = key + " + ";
+					{
+						try
+						{
+							int temp = 0;
+							bool btnAnte = true, btnNexts = true, btnPause = true;
+							string[] keybind = panel4.Tag.ToString().Split('+');
+							if (keybind.Length == 1) keybind = new[] { pnlTop.Tag.ToString() };
+							string[] ant = btnAnterior.Text.Replace(" ", string.Empty).Split('+');
+							string[] pau = btnPausa.Text.Replace(" ", string.Empty).Split('+');
+							string[] nex = btnNext.Text.Replace(" ", string.Empty).Split('+');
+							keybind.ToList().ForEach(item =>
+							{
+								try
+								{
+									if ((ant[temp] == item.Replace(" ", string.Empty) && (keybind.Length) == ant.Length) && btnAnte == true /*&& temp >= 0*/) btnAnte = true;
+									else btnAnte = false;
+								}
+								catch
+								{
+									btnAnte = false;
+								}
+								try
+								{
+									if ((pau[temp] == item.Replace(" ", string.Empty) && (keybind.Length) == pau.Length) && btnPause == true /*&& temp >= 0*/) btnPause = true;
+									else btnPause = false;
+								}
+								catch
+								{
+									btnPause = false;
+								}
+								try
+								{
+									if ((nex[temp] == item.Replace(" ", string.Empty) && (keybind.Length) == nex.Length) && btnNexts == true /*&& temp >= 0*/) btnNexts = true;
+									else btnNexts = false;
+								}
+								catch
+								{
+									btnNexts = false;
+								}
+								temp++;
+							});
+						}
+						catch { }
+					}
+
+				}
 			}
 		}
 
@@ -1571,11 +1574,7 @@ namespace Spotify_Clone
 			this.Visible = true;
 			this.WindowState = FormWindowState.Normal;
 		}
-		private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-		{
-			icnNotification.Visible = false;
-		}
-		string text = "";
+
 		private void btnAnterior_KeyDown(object sender, KeyEventArgs e)
 		{
 
@@ -1602,6 +1601,16 @@ namespace Spotify_Clone
 		{
 			if ((int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition != 0) PBC.Value = ((int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition);
 		}
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			try
+			{
+				icnNotification = null;
+				icnNotification.Dispose();
+			}
+			catch { }
+		}
+
 		private void pE_Close_MouseHover(object sender, EventArgs e)
 		{
 			pE_Close.Image = Properties.Resources.close_red;
@@ -1674,7 +1683,7 @@ namespace Spotify_Clone
 					Discord(labelControl2.Text, (int)(axWindowsMediaPlayer1.Ctlcontrols.currentPosition), (int)(axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration));
 			}
 			catch { }
-			if (PBC.Value != PBC.Maximum && dt > 25)
+			if (PBC.Value != PBC.Maximum && dt > 15)
 			{
 				var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() == "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
 				axwindows();
