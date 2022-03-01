@@ -35,7 +35,7 @@ namespace Hospital
 				}
 				else if(result=="Admin")
 				{
-					Hospital.
+					//Hospital.
 				}
 				else
 					MessageBox.Show("");
