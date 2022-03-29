@@ -18,7 +18,6 @@ using Microsoft.Win32;
 using System.Reactive.Linq;
 using System.Net;
 using AutoClicker;
-using System.Threading;
 using SimpleKeyBinds;
 
 namespace Spotify_Clone
@@ -898,11 +897,6 @@ namespace Spotify_Clone
 				catch { }
 			}
 		}
-		private TimeSpan time(int time)
-		{
-			TimeSpan result = TimeSpan.FromSeconds(time);
-			return result;
-		}
 		DiscordRpcClient client;
 		DateTime start = DateTime.UtcNow;
 		private void Discord(string NomeMusic, int tempoatual, int duracao)
@@ -918,17 +912,15 @@ namespace Spotify_Clone
 				string temp = "";
 				if (duracao != 0 && switchDuracao.Checked) try
 					{
-						TimeSpan timesat = time(tempoatual);
-						TimeSpan timesend = time(duracao);
-						temp = "" + timesat + "/" + timesend;
+						temp = "" + TimeSpan.FromSeconds(tempoatual) + "/" + TimeSpan.FromSeconds(duracao);
 					}
 					catch { }
 				var rp = new RichPresence() { Details = "" + NomeMusic, State = "" + temp, Assets = new Assets() { SmallImageKey = "spotifyicon", LargeImageKey = "catjam", } };
 				if (!(switchDuracao.Checked) || duracao == 0) rp.Timestamps = new Timestamps(start);
 				client.SetPresence(rp);
 			}
-			else
-				client.ClearPresence();
+			else if(client!=null)
+					client.ClearPresence();
 		}
 		private void Form1_Load(object sender, EventArgs e)
 		{
@@ -949,46 +941,8 @@ namespace Spotify_Clone
 			keyboardHook.KeyUp += KeyboardHook_KeyUp;
 			keyboardHook.Install();
 		}
-		private AutoClicker.AutoClicker clicker;
 		private Keys hotkey;
 		private Win32.fsModifiers hotkeyNodifiers;
-
-		private Thread countdownThread;
-
-
-		//private void btnHotkeyRemove_Click(object sender, EventArgs e)
-		//{
-		//	UnsetHotkey();
-		//}
-
-		//private void btnToggle_Click(object sender, EventArgs e)
-		//{
-		//	if (!clicker.IsAlive)
-		//	{
-		//		clicker.Start();
-		//	}
-		//	else
-		//	{
-		//		clicker.Stop();
-		//		countdownThread.Abort();
-		//	}
-		//}
-
-		//delegate void SetButtonTextCallback(System.Windows.Forms.Button Control, string Text);
-		//private void SetButtonText(System.Windows.Forms.Button Control, string Text)
-		//{
-		//	if (Control.InvokeRequired)
-		//	{
-		//		var d = new SetButtonTextCallback(SetButtonText);
-		//		this.Invoke(d, Control, Text);
-		//	}
-		//	else
-		//	{
-		//		Control.Text = Text;
-		//	}
-		//}
-
-
 		protected override void WndProc(ref Message m)
 		{
 			base.WndProc(ref m);
@@ -1001,7 +955,7 @@ namespace Spotify_Clone
 					Win32.fsModifiers modifiers = (Win32.fsModifiers)((int)m.LParam & 0xFFFF);
 					Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);
 
-					Debug.Print("Testar: " + key);
+					//Debug.Print("Testar: " + key);
 					panel4.Tag = key + " + ";
 					{
 						try
@@ -1057,7 +1011,7 @@ namespace Spotify_Clone
 			e.SuppressKeyPress = true;
 			if (!((e.KeyValue >= 16 && e.KeyValue <= 18) || (e.KeyValue >= 21 && e.KeyValue <= 25) || (e.KeyValue >= 28 && e.KeyValue <= 31) || e.KeyValue == 229 || (e.KeyValue >= 91 && e.KeyValue <= 92)))
 			{
-				Debug.Print("2");
+				//Debug.Print("2");
 				Win32.UnregisterHotKey(this.Handle, (int)hotkey);
 				hotkey = e.KeyData;
 				hotkeyNodifiers = 0;
@@ -1205,11 +1159,11 @@ namespace Spotify_Clone
 		{
 			if (labelControl2.Text != "" && pnlSettings.Visible == false && !panel7.Tag.ToString().Contains(key.ToString().Replace("LCONTROL", "CONTROL").Replace("LCONTROL", "CONTROL")))
 			{
-				Debug.Print("" + panel7.Tag);
+				//Debug.Print("" + panel7.Tag);
 				if (panel7.Tag.ToString() == " ") panel7.Tag += "" + key;
 				else panel7.Tag += "+" + key;
 				List<string> ds = new List<string>();
-				Debug.Print("" + key);
+				//Debug.Print("" + key);
 				ds.Add(btnAnterior.Tag.ToString()); ds.Add(btnPausa.Tag.ToString()); ds.Add(btnNext.Tag.ToString());
 
 				panel7.Tag = panel7.Tag.ToString().Replace("LCONTROL", "CONTROL").Replace("RCONTROL", "CONTROL");
@@ -1392,28 +1346,7 @@ namespace Spotify_Clone
 				case "pE_Random":
 					try
 					{
-						Ordem_de_Reproducao.Clear();
-						if (pE_Random.Tag.ToString() == "0")
-						{
-							try
-							{
-								Ordem_de_Reproducao = bk.RandomMusic((IdPlayList - 1), (_listInformacoes));
-								pE_Random.Image = Properties.Resources.random;
-							}
-							catch (Exception ex)
-							{
-								MessageBox.Show("" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-							}
-							pE_Random.Tag = "1";
-						}
-						else
-						{
-							for (int a = 0;
-				   a < _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count();
-				   a++) Ordem_de_Reproducao.Add(a);
-							pE_Random.Image = Properties.Resources.change;
-							pE_Random.Tag = "0";
-						}
+						if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync();
 					}
 					catch
 					{
@@ -1611,6 +1544,35 @@ namespace Spotify_Clone
 			catch { }
 		}
 
+		private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+		{
+			Ordem_de_Reproducao.Clear();
+			if (pE_Random.Tag.ToString() == "0")
+			{
+				icnNotification.ShowBalloonTip(25, conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].ICNRANDOMtitulo, conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].RANDOMmensagemantes, ToolTipIcon.Info);//conf
+				try
+				{
+					Ordem_de_Reproducao = bk.RandomMusic((IdPlayList - 1), (_listInformacoes));
+					pE_Random.Image = Properties.Resources.random;
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+				icnNotification.ShowBalloonTip(25, conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].ICNRANDOMtitulo, conf[comboBox1.Items.IndexOf(comboBox1.Text)].form1[0].RANDOMmensagemdepois, ToolTipIcon.Info);//conf
+				pE_Random.Tag = "1";
+
+			}
+			else
+			{
+				for (int a = 0;
+	   a < _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count();
+	   a++) Ordem_de_Reproducao.Add(a);
+				pE_Random.Image = Properties.Resources.change;
+				pE_Random.Tag = "0";
+			}
+		}
+
 		private void pE_Close_MouseHover(object sender, EventArgs e)
 		{
 			pE_Close.Image = Properties.Resources.close_red;
@@ -1637,7 +1599,7 @@ namespace Spotify_Clone
 			panel7.Tag = " ";
 			if (PBC.Value == PBC.Maximum || PBC.Maximum == 0)
 			{
-				Debug.Print("\nMusica na " + (int.Parse(labelControl2.Tag.ToString())) + "º \n");
+				//Debug.Print("\nMusica na " + (int.Parse(labelControl2.Tag.ToString())) + "º \n");
 				try
 				{
 					if ((panel6.Tag == null) && _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() != 1)
@@ -1647,7 +1609,6 @@ namespace Spotify_Clone
 						if (((int.Parse(labelControl2.Tag.ToString() + 1) != _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count()) && pE_Repit.Tag.ToString() != "1") && labelControl2.Text != _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[int.Parse(labelControl2.Tag.ToString())])
 						{
 							axWindowsMediaPlayer1.Ctlcontrols.play();
-							dt = 0;
 							if (switchMusic.Checked) icnNotification.ShowBalloonTip(25, "Next Music ", "" + labelControl2.Text, ToolTipIcon.Info);
 						}
 						PBC.Value = 0;
@@ -1676,21 +1637,20 @@ namespace Spotify_Clone
 					pE_PauseaPlay.Image = Properties.Resources.play;
 				}
 			}
-			else if (PBC.Tag != null) if (dt > 15 && panel6.Tag == null && PBC.Value == int.Parse(PBC.Tag.ToString())) timer2.Start();
+			else if (PBC.Tag != null) if (dt > 25 && panel6.Tag == null && PBC.Value == int.Parse(PBC.Tag.ToString())) timer2.Start();
 			try
 			{
 				if (FormVideo != true)
 					Discord(labelControl2.Text, (int)(axWindowsMediaPlayer1.Ctlcontrols.currentPosition), (int)(axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration));
 			}
 			catch { }
-			if (PBC.Value != PBC.Maximum && dt > 15)
+			if (PBC.Value != PBC.Maximum && dt > 25)
 			{
 				var dsd = (int.Parse(labelControl2.Tag.ToString()) >= _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count() - 1) && pE_Repit.Tag.ToString() == "1" ? labelControl2.Tag = 0 : labelControl2.Tag = (int.Parse(labelControl2.Tag.ToString())) + 1;
 				axwindows();
 				if (((int.Parse(labelControl2.Tag.ToString() + 1) != _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica.Count()) && pE_Repit.Tag.ToString() != "1") && labelControl2.Text != _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[int.Parse(labelControl2.Tag.ToString())])
 				{
 					axWindowsMediaPlayer1.Ctlcontrols.play();
-					dt = 0;
 					if (switchMusic.Checked) icnNotification.ShowBalloonTip(25, "Next Music ", "" + labelControl2.Text, ToolTipIcon.Info);
 				}
 			}
@@ -1698,9 +1658,11 @@ namespace Spotify_Clone
 		private void axwindows()
 		{
 			axWindowsMediaPlayer1.URL = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]];
+			Debug.Print(""+ labelControl2.Tag.ToString());
 			labelControl2.Text = _listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None)[NameMusic.Length - 1].Substring(0, (_listInformacoes[(IdPlayList - 1)].Caminho_da_Musica[(int)Ordem_de_Reproducao[int.Parse(labelControl2.Tag.ToString())]].Split(new string[] { "\\" }, StringSplitOptions.None)[NameMusic.Length - 1].Count() - 4));
 			Discord(labelControl2.Text, int.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString()), int.Parse(axWindowsMediaPlayer1.Ctlcontrols.currentItem.duration.ToString()));
 			timer1.Start();
+			dt = 0;
 		}
 		private void timer2_Tick(object sender, EventArgs e)
 		{
@@ -1710,7 +1672,7 @@ namespace Spotify_Clone
 				if (((PBC.Value == 0 || PBC.Value == (PBC.Maximum - 1)) || dt > 5) && pE_PauseaPlay.Tag.ToString() != "1" || dt > 10)
 				{
 					if (dt < 7 && PBC.Value != 0) PBC.Tag = "" + PBC.Value;
-					else if (dt >= 12)
+					else if (dt >= 25)
 					{
 						if (PBC.Tag != null && Ordem_de_Reproducao.Count() > 0) if (PBC.Value == int.Parse(PBC.Tag.ToString()) || PBC.Value == 0)
 							{
@@ -1718,15 +1680,12 @@ namespace Spotify_Clone
 								axwindows();
 								axWindowsMediaPlayer1.Ctlcontrols.play();
 								if (switchMusic.Checked) icnNotification.ShowBalloonTip(25, "Next Music ", "" + labelControl2.Text, ToolTipIcon.Info);
-								dt = 0;
 								timer2.Stop();
 							}
 					}
 				}
 				else if (pE_PauseaPlay.Tag.ToString() == "1")
-				{
 					dt = 0;
-				}
 			}
 			else
 			{
@@ -1785,9 +1744,7 @@ namespace Spotify_Clone
 						dt++;
 					}
 					if (int.Parse(PBC.Tag.ToString()) == Video.progresso)
-					{
 						dt = 0;
-					}
 					if ((dt > 0 && dt < 100) && pE_PauseaPlay.Tag.ToString() != "1")
 					{
 						dt++;
