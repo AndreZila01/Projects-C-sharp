@@ -751,7 +751,7 @@ namespace Spotify_Clone
 								pnl1.Controls.Add(pic);
 								Label lbl2 = new Label();
 								lbl2.Size = new Size(pnl.Width - 120, 20);
-								lbl2.BackColor = Color.Red;
+								lbl2.BackColor = Color.White;
 								lbl2.Location = new Point(50, 10);
 								lbl2.Text = "Vê todas as musicas,...";
 								lbl2.ForeColor = Color.Black;
