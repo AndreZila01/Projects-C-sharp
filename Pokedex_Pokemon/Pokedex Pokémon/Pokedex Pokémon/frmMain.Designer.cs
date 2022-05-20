@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.lblInfo = new System.Windows.Forms.Label();
 			this.lblAjuda = new System.Windows.Forms.Label();
@@ -83,7 +82,7 @@
 			this.lblInfo.Name = "lblInfo";
 			this.lblInfo.Size = new System.Drawing.Size(268, 28);
 			this.lblInfo.TabIndex = 4;
-			this.lblInfo.Text = "Sistema";
+			this.lblInfo.Text = "System";
 			this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.lblInfo.Click += new System.EventHandler(this.lblinPanel_Click);
 			// 
@@ -96,7 +95,7 @@
 			this.lblAjuda.Name = "lblAjuda";
 			this.lblAjuda.Size = new System.Drawing.Size(268, 28);
 			this.lblAjuda.TabIndex = 3;
-			this.lblAjuda.Text = "Ajuda";
+			this.lblAjuda.Text = "Help";
 			this.lblAjuda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.lblAjuda.Click += new System.EventHandler(this.lblinPanel_Click);
 			// 
@@ -109,7 +108,7 @@
 			this.lblRodar.Name = "lblRodar";
 			this.lblRodar.Size = new System.Drawing.Size(268, 28);
 			this.lblRodar.TabIndex = 2;
-			this.lblRodar.Text = "Rodar Ecra";
+			this.lblRodar.Text = "Rotate Display";
 			this.lblRodar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.lblRodar.Click += new System.EventHandler(this.lblinPanel_Click);
 			// 
@@ -122,7 +121,7 @@
 			this.lblLista.Name = "lblLista";
 			this.lblLista.Size = new System.Drawing.Size(268, 28);
 			this.lblLista.TabIndex = 1;
-			this.lblLista.Text = "Lista Pokemon";
+			this.lblLista.Text = "List Pokemon";
 			this.lblLista.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.lblLista.Click += new System.EventHandler(this.lblinPanel_Click);
 			// 
@@ -271,10 +270,9 @@
 			this.Controls.Add(this.pctGira);
 			this.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-			this.Icon = Pokedex_Pokémon.Properties.Resources.Rotom;
-			this.Name = "Pokedex";
+			this.Icon = global::Pokedex_Pokémon.Properties.Resources.Rotom;
+			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "";
 			this.TransparencyKey = System.Drawing.Color.Transparent;
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.panel1.ResumeLayout(false);

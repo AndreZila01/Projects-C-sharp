@@ -36,7 +36,7 @@
       <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/0/0b/Rock.png/revision/latest/top-crop/width/300/height/300?cb=20161013133022</Value>
     </Setting>
     <Setting Name="ice" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://l2pbomb.com/wp-content/uploads/2019/03/Skier-Medal-Pokemon-Go.png</Value>
+      <Value Profile="(Default)">https://cdn.icon-icons.com/icons2/2035/PNG/512/weather_snow_ice_icon_124163.png</Value>
     </Setting>
     <Setting Name="normal" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://vignette.wikia.nocookie.net/pokemongo/images/f/fb/Normal.png/revision/latest/scale-to-width-down/64?cb=20161013132914</Value>

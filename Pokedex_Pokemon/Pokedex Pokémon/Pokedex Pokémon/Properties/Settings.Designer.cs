@@ -12,7 +12,7 @@ namespace Pokedex_Pokémon.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -162,7 +162,7 @@ namespace Pokedex_Pokémon.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://l2pbomb.com/wp-content/uploads/2019/03/Skier-Medal-Pokemon-Go.png")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://cdn.icon-icons.com/icons2/2035/PNG/512/weather_snow_ice_icon_124163.png")]
         public string ice {
             get {
                 return ((string)(this["ice"]));
