@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +20,18 @@ namespace Pokemon_Catch_Twitch
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync();
 		}
 
 		private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
 		{
-			if (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData))
+			if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+"/Pokemon"))
 			{
 
+			}
+			else
+			{
+				Directory.CreateDirectory(Environment.SpecialFolder.ApplicationData))
 			}
 		}
 	}

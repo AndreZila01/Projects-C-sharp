@@ -133,6 +133,9 @@
     <Compile Include="Classes\Backend.cs" />
     <Compile Include="Classes\SaveData.cs" />
     <Compile Include="Extensions\AutoClicker.cs" />
+    <Compile Include="Extensions\ColorPBC.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Extensions\FolderSelectDialog.cs" />
     <Compile Include="Extensions\DiscordRpc.cs" />
     <Compile Include="Extensions\ExtenssionMethods.cs" />
