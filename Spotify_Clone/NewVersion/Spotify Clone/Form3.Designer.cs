@@ -60,6 +60,7 @@ namespace Spotify_Clone
 			// 
 			// AuxMusic
 			// 
+			this.AuxMusic.Interval = 1000;
 			this.AuxMusic.Tick += new System.EventHandler(this.AuxMusic_Tick);
 			// 
 			// progressBar1
@@ -70,10 +71,6 @@ namespace Spotify_Clone
 			this.progressBar1.Size = new System.Drawing.Size(100, 23);
 			this.progressBar1.TabIndex = 1;
 			this.progressBar1.Visible = false;
-			// 
-			// AuxMouse
-			// 
-			this.AuxMouse.Tick += new System.EventHandler(this.AuxMouse_Tick);
 			// 
 			// panel1
 			// 

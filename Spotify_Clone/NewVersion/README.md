@@ -1,14 +1,19 @@
-<html>
-  <h1>Spotify Clone</h1>
-  <h4>Note: At the moment, program have many changes... And dont work
-  <a href="https://www.youtube.com/watch?v=orP6Is934Nc&feature=youtu.be">
-  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.techadvisor.co.uk%2Fcmsdata%2Ffeatures%2F3681165%2Fyoutube-logo-png-2069_thumb800.png&f=1&nofb=1" width="200px" align="left">  </a><br>
-  <h5>Spotify Clone, its a simple application.<br>In this application I can listenning many music in differents paths.<br>Ex.: In paths Desktop and paths Downloads 
-    </h5>
-    <br>
-  <br><br>
-  <br><a href="https://mega.nz/folder/zp0E0A5L#zMyB5dzzbEqmper9HYGP6A">Download Project</a>
+
+  ## Spotify Clone
+  # <img src="https://github.com/AndreZila01/Projects-C-sharp/tree/master/Spotify_Clone/NewVersion/Fotos/Spotify-2.png" align="left">
+  Spotify Clone is a project i started develop in start quarantine(2020). It's a "simple" application that saves tracks of your songs(even in different paths) for later listening. 
+  You can create many playlist in the application. A feature of this application is that you can listen to music on your computer or cell phone, you need to have xampp installed and start apache.
   
-  <br>
-  <h5>If you see some bug, please open Issues. And I try help you</h5>
-</html>
+  ## Installation 
+     https://mega.nz/folder/h1VFFIbL#NZRTw3pOF4gJaRw1LkzIyg 
+     
+  ## Video of application
+     https://youtu.be/CnTPSkjO3ZY
+    
+  ## Some Images
+  
+  # <img src="https://github.com/AndreZila01/Projects-C-sharp/tree/master/Spotify_Clone/NewVersion/Fotos/1.png" align="left">
+  # <img src="https://github.com/AndreZila01/Projects-C-sharp/tree/master/Spotify_Clone/NewVersion/Fotos/2.png" align="left">
+  # <img src="https://github.com/AndreZila01/Projects-C-sharp/tree/master/Spotify_Clone/NewVersion/Fotos/3.png" align="left">
+  
+
