@@ -8,3 +8,13 @@ C:\Users\Botaria\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_
 C:\Users\Botaria\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\bin\Debug\Pokemon_Catch_Twitch.pdb
 C:\Users\Botaria\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.exe
 C:\Users\Botaria\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.Form1.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.Properties.Resources.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.csproj.GenerateResource.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\bin\Debug\Pokemon_Catch_Twitch.exe.config
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\bin\Debug\Pokemon_Catch_Twitch.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\bin\Debug\Pokemon_Catch_Twitch.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.csproj.AssemblyReference.cache
