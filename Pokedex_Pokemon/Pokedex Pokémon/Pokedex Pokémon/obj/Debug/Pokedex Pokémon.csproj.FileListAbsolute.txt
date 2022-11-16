@@ -38,3 +38,16 @@ C:\Users\Botaria\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Poké
 C:\Users\Botaria\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.CopyComplete
 C:\Users\Botaria\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.exe
 C:\Users\Botaria\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Pokedex Pokémon.exe.config
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Pokedex Pokémon.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Pokedex Pokémon.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\bin\Debug\Microsoft.VisualStudio.OLE.Interop.xml
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex_Pokémon.Form1.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex_Pokémon.Properties.Resources.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.GenerateResource.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.CopyComplete
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.pdb
