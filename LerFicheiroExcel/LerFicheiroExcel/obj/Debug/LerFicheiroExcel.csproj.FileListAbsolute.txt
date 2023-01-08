@@ -1,0 +1,13 @@
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\bin\Debug\LerFicheiroExcel.exe.config
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\bin\Debug\LerFicheiroExcel.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\bin\Debug\LerFicheiroExcel.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\bin\Debug\Bytescout.Spreadsheet.dll
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\bin\Debug\Bytescout.Spreadsheet.xml
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\obj\Debug\LerFicheiroExcel.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\obj\Debug\LerFicheiroExcel.Form1.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\obj\Debug\LerFicheiroExcel.Properties.Resources.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\obj\Debug\LerFicheiroExcel.csproj.GenerateResource.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\obj\Debug\LerFicheiroExcel.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\obj\Debug\LerFicheiroExcel.csproj.CopyComplete
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\obj\Debug\LerFicheiroExcel.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\LerFicheiroExcel\LerFicheiroExcel\obj\Debug\LerFicheiroExcel.pdb
