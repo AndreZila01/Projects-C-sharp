@@ -1,0 +1,10 @@
+C:\Users\Andre\Documents\GitHub\Projects-C-sharp\ReadPokemonDatabase\ReadPokemonDatabase\bin\Debug\ReadPokemonDatabase.exe.config
+C:\Users\Andre\Documents\GitHub\Projects-C-sharp\ReadPokemonDatabase\ReadPokemonDatabase\bin\Debug\ReadPokemonDatabase.exe
+C:\Users\Andre\Documents\GitHub\Projects-C-sharp\ReadPokemonDatabase\ReadPokemonDatabase\bin\Debug\ReadPokemonDatabase.pdb
+C:\Users\Andre\Documents\GitHub\Projects-C-sharp\ReadPokemonDatabase\ReadPokemonDatabase\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Andre\Documents\GitHub\Projects-C-sharp\ReadPokemonDatabase\ReadPokemonDatabase\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Andre\Documents\GitHub\Projects-C-sharp\ReadPokemonDatabase\ReadPokemonDatabase\obj\Debug\Bulbapedia.csproj.AssemblyReference.cache
+C:\Users\Andre\Documents\GitHub\Projects-C-sharp\ReadPokemonDatabase\ReadPokemonDatabase\obj\Debug\Bulbapedia.csproj.CoreCompileInputs.cache
+C:\Users\Andre\Documents\GitHub\Projects-C-sharp\ReadPokemonDatabase\ReadPokemonDatabase\obj\Debug\Bulbapedia.csproj.CopyComplete
+C:\Users\Andre\Documents\GitHub\Projects-C-sharp\ReadPokemonDatabase\ReadPokemonDatabase\obj\Debug\ReadPokemonDatabase.exe
+C:\Users\Andre\Documents\GitHub\Projects-C-sharp\ReadPokemonDatabase\ReadPokemonDatabase\obj\Debug\ReadPokemonDatabase.pdb
