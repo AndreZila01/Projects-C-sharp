@@ -1,0 +1,10 @@
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\CreateLabelOnGif\Criar texto no Gif\Criar texto no Gif\obj\Debug\Criar texto no Gif.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\CreateLabelOnGif\Criar texto no Gif\Criar texto no Gif\obj\Debug\Criar texto no Gif.csproj.SuggestedBindingRedirects.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\CreateLabelOnGif\Criar texto no Gif\Criar texto no Gif\obj\Debug\Criar_texto_no_Gif.Properties.Resources.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\CreateLabelOnGif\Criar texto no Gif\Criar texto no Gif\obj\Debug\Criar texto no Gif.csproj.GenerateResource.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\CreateLabelOnGif\Criar texto no Gif\Criar texto no Gif\obj\Debug\Criar texto no Gif.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\CreateLabelOnGif\Criar texto no Gif\Criar texto no Gif\bin\Debug\Criar texto no Gif.exe.config
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\CreateLabelOnGif\Criar texto no Gif\Criar texto no Gif\bin\Debug\Criar texto no Gif.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\CreateLabelOnGif\Criar texto no Gif\Criar texto no Gif\bin\Debug\Criar texto no Gif.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\CreateLabelOnGif\Criar texto no Gif\Criar texto no Gif\obj\Debug\Criar texto no Gif.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\CreateLabelOnGif\Criar texto no Gif\Criar texto no Gif\obj\Debug\Criar texto no Gif.pdb
