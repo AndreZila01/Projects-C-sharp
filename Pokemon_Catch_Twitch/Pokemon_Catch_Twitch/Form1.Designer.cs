@@ -34,10 +34,8 @@ namespace Pokemon_Catch_Twitch
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.tmPokeball = new System.Windows.Forms.Timer(this.components);
-			this.pictureBox8 = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// backgroundWorker1
@@ -69,22 +67,12 @@ namespace Pokemon_Catch_Twitch
 			this.tmPokeball.Interval = 150;
 			this.tmPokeball.Tick += new System.EventHandler(this.tmPokeball_Tick);
 			// 
-			// pictureBox8
-			// 
-			this.pictureBox8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.pictureBox8.Location = new System.Drawing.Point(412, 56);
-			this.pictureBox8.Name = "pictureBox8";
-			this.pictureBox8.Size = new System.Drawing.Size(210, 124);
-			this.pictureBox8.TabIndex = 7;
-			this.pictureBox8.TabStop = false;
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.pictureBox8);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.pictureBox2);
 			this.Name = "Form1";
@@ -92,7 +80,6 @@ namespace Pokemon_Catch_Twitch
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -103,7 +90,6 @@ namespace Pokemon_Catch_Twitch
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.Timer tmPokeball;
-		private System.Windows.Forms.PictureBox pictureBox8;
 	}
 }
 

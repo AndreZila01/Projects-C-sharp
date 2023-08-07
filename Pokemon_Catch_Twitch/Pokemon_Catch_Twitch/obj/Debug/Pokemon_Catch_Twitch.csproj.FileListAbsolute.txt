@@ -18,3 +18,4 @@ C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Ca
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\bin\Debug\Pokemon_Catch_Twitch.exe
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\bin\Debug\Pokemon_Catch_Twitch.pdb
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokemon_Catch_Twitch\Pokemon_Catch_Twitch\obj\Debug\Pokemon_Catch_Twitch.csproj.SuggestedBindingRedirects.cache

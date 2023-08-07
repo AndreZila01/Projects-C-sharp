@@ -1,0 +1,11 @@
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\bin\Debug\QuizSocket.exe.config
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\bin\Debug\QuizSocket.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\bin\Debug\QuizSocket.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.csproj.SuggestedBindingRedirects.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.Form1.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.Properties.Resources.resources
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.csproj.GenerateResource.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.pdb
