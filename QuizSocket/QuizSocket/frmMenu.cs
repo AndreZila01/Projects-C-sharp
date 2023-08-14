@@ -40,39 +40,36 @@ namespace QuizSocket
 			Process.Start("https://github.com/AndreZila01");
 		}
 
-		private void pctRandom_Click(object sender, EventArgs e)
-		{
-			Process.Start("https://dsc.gg/nintendistas-portugal");
-		}
-
 		private void btn_Click(object sender, EventArgs e)
 		{
+			FormCollection fc = Application.OpenForms;
 			bool check = false;
-			do
-			{
-				string ipv4 = Interaction.InputBox($"Whitch is the ip of {(((ToolStripMenuItem)sender).Name == "Host of Game" ? "guess" : "host")}");
-				System.Net.IPAddress ipAddress = null;
+			if (fc.Count == 1) {
+				if ((((ToolStripMenuItem)sender).Name != "Host of Game"))
+					do
+					{
+						string ipv4 = Interaction.InputBox($"Whitch is the ip of host");//Interaction.InputBox($"Whitch is the ip of {(((ToolStripMenuItem)sender).Name == "Host of Game" ? "guess" : "host")}");
+						System.Net.IPAddress ipAddress = null;
 
-				if (System.Net.IPAddress.TryParse(ipv4, out ipAddress) && ipv4!= ipv4ofuser && ipv4!="127.0.0.1")
-					check = true;
+						if (System.Net.IPAddress.TryParse(ipv4, out ipAddress) && ipv4 != ipv4ofuser && ipv4 != "127.0.0.1")
+							check = true;
+						else
+							MessageBox.Show("Error IPV4", "The ipv4 do you wrote are not correct!!\n Go to your command line and write \"ipconfig\", next write the ipv4 adress on textbox!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+					} while (!check);
 				else
-					MessageBox.Show("Error IPV4", "The ipv4 do you wrote are not correct!!\n Go to your command line and write \"ipconfig\", next write the ipv4 adress on textbox!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-			} while (!check);
-
+				{
+					this.Hide();
+					new frmServer().Show(); 
+				}
+			}
+			else
+				MessageBox.Show("Local Server", "You cannot played in same computer!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 		}
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
 			lblTime.Text = DateTime.Now.ToString("HH:MM:ss");
-
-			if (new Random().Next(0, 100000) < 100)
-			{
-				pctRandom.Visible = true;
-				dtMario = DateTime.Now.AddMinutes(1);
-			}
-			else if (dtMario < DateTime.Now)
-				pctRandom.Visible = false;
 		}
 
 		private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)

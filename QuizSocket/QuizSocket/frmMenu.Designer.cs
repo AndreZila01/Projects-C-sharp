@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.lblIp = new System.Windows.Forms.Label();
 			this.lblTime = new System.Windows.Forms.Label();
@@ -37,12 +36,10 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
-			this.pctRandom = new System.Windows.Forms.PictureBox();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.bgwStart = new System.ComponentModel.BackgroundWorker();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pctRandom)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -121,18 +118,6 @@
 			this.label2.Text = "Developed by Andrezila <3";
 			this.label2.Click += new System.EventHandler(this.lbl_Click);
 			// 
-			// pctRandom
-			// 
-			this.pctRandom.Image = global::QuizSocket.Properties.Resources.FortuneStMario_3747240085;
-			this.pctRandom.Location = new System.Drawing.Point(177, 81);
-			this.pctRandom.Name = "pctRandom";
-			this.pctRandom.Size = new System.Drawing.Size(124, 101);
-			this.pctRandom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pctRandom.TabIndex = 4;
-			this.pctRandom.TabStop = false;
-			this.pctRandom.Visible = false;
-			this.pctRandom.Click += new System.EventHandler(this.pctRandom_Click);
-			// 
 			// timer1
 			// 
 			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -152,9 +137,7 @@
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.pctRandom);
 			this.Controls.Add(this.panel1);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
@@ -163,7 +146,6 @@
 			this.panel1.PerformLayout();
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pctRandom)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -177,7 +159,6 @@
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.PictureBox pctRandom;
 		private System.Windows.Forms.Timer timer1;
 		private System.ComponentModel.BackgroundWorker bgwStart;
 	}
