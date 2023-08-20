@@ -19,6 +19,7 @@ namespace QuizSocket
 		public frmServer()
 		{
 			InitializeComponent();
+			lblIp.Text = frmMenu.ipv4ofuser;
 			IPEndPoint ipend = new IPEndPoint(IPAddress.Any, 5656);
 			socketServidor = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 			socketServidor.Bind(ipend);
@@ -48,6 +49,12 @@ namespace QuizSocket
 			//txtLog.AppendText(strRecebe + "\r\n");
 			clienteSocket.BeginReceive(clientData, 0, clientData.Length, SocketFlags.None,
 					new AsyncCallback(OnReceive), clienteSocket);
+		}
+
+		private void frmServer_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			socketServidor.Close();
+			Application.OpenForms[0].Show();
 		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,13 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace QuizSocket
 {
-	public partial class Form1 : Form
+	public partial class frmMenu : Form
 	{
 		public static string ipv4ofuser;
-		private DateTime dtMario;
-
-		public Form1()
+		public frmMenu()
 		{
 			InitializeComponent();
 			if (!bgwStart.IsBusy)
@@ -44,23 +42,29 @@ namespace QuizSocket
 		{
 			FormCollection fc = Application.OpenForms;
 			bool check = false;
-			if (fc.Count == 1) {
-				if ((((ToolStripMenuItem)sender).Name != "Host of Game"))
+			if (fc.Count == 1)
+			{
+				if ((((Button)sender).Text != "Host of Game"))
+				{
 					do
 					{
 						string ipv4 = Interaction.InputBox($"Whitch is the ip of host");//Interaction.InputBox($"Whitch is the ip of {(((ToolStripMenuItem)sender).Name == "Host of Game" ? "guess" : "host")}");
 						System.Net.IPAddress ipAddress = null;
 
-						if (System.Net.IPAddress.TryParse(ipv4, out ipAddress) && ipv4 != ipv4ofuser && ipv4 != "127.0.0.1")
-							check = true;
-						else
-							MessageBox.Show("Error IPV4", "The ipv4 do you wrote are not correct!!\n Go to your command line and write \"ipconfig\", next write the ipv4 adress on textbox!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						//if (System.Net.IPAddress.TryParse(ipv4, out ipAddress) && ipv4 != ipv4ofuser && ipv4 != "127.0.0.1")
+						check = true;
+						//else
+						//MessageBox.Show("Error IPV4", "The ipv4 do you wrote are not correct!!\n Go to your command line and write \"ipconfig\", next write the ipv4 adress on textbox!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 					} while (!check);
+					this.Hide();
+					new frmCliente().Show();
+				}
 				else
 				{
+					timer1.Stop();
 					this.Hide();
-					new frmServer().Show(); 
+					new frmServer().Show();
 				}
 			}
 			else

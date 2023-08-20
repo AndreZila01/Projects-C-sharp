@@ -63,30 +63,10 @@ namespace QuizSocket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FortuneStMario_3747240085 {
-            get {
-                object obj = ResourceManager.GetObject("FortuneStMario_3747240085", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ideas {
             get {
                 object obj = ResourceManager.GetObject("ideas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon ideas_KU2_icon {
-            get {
-                object obj = ResourceManager.GetObject("ideas_KU2_icon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
             }
         }
     }

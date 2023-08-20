@@ -1,6 +1,6 @@
 ﻿namespace QuizSocket
 {
-	partial class Form1
+	partial class frmMenu
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -19,7 +19,6 @@
 			}
 			base.Dispose(disposing);
 		}
-
 		#region Windows Form Designer generated code
 
 		/// <summary>
@@ -116,7 +115,6 @@
 			this.label2.Size = new System.Drawing.Size(198, 21);
 			this.label2.TabIndex = 0;
 			this.label2.Text = "Developed by Andrezila <3";
-			this.label2.Click += new System.EventHandler(this.lbl_Click);
 			// 
 			// timer1
 			// 
@@ -127,7 +125,7 @@
 			this.bgwStart.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
 			this.bgwStart.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwStart_RunWorkerCompleted);
 			// 
-			// Form1
+			// frmMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,10 +136,9 @@
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.panel1);
-			this.Name = "Form1";
+			this.Name = "frmMenu";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
-			this.Load += new System.EventHandler(this.Form1_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.panel2.ResumeLayout(false);
@@ -163,4 +160,3 @@
 		private System.ComponentModel.BackgroundWorker bgwStart;
 	}
 }
-
