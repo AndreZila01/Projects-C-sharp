@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +105,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\test.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User10.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -56,6 +56,11 @@ namespace QuizSocket
 			socketServidor.Close();
 			Application.OpenForms[0].Show();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
 
