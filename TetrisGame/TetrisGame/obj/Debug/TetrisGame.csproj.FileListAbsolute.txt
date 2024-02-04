@@ -1,0 +1,8 @@
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\bin\Debug\TetrisGame.exe.config
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\bin\Debug\TetrisGame.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\bin\Debug\TetrisGame.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.exe
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.pdb
