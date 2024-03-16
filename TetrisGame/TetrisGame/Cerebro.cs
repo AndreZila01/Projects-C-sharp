@@ -167,10 +167,10 @@ namespace TetrisGame
 
 					if (y < Tabuleiro.GetLength(0) - 1)
 					{
-						int Oy = oldvalue.Split(), Ox = ;
-						Tabuleiro[y + 1, x - 2] = 0;
-						Tabuleiro[y + 1, x - 1] = 0;
-						Tabuleiro[y + 1, x + 1] = 0;
+						int Oy = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[1]), Ox = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[0]);
+						Tabuleiro[Oy + 1, Ox - 2] = 0;
+						Tabuleiro[Oy + 1, Ox - 1] = 0;
+						Tabuleiro[Oy + 1, Ox + 1] = 0;
 					}
 				}
 				else if (OrdemPeca[Index] + 1 == 2)
@@ -185,9 +185,11 @@ namespace TetrisGame
 
 					if (y < Tabuleiro.GetLength(0) - 2)
 					{
-						Tabuleiro[y + 2, x] = 0;
-						Tabuleiro[y + 1, x + 1] = 0;
-						Tabuleiro[y + 1, x + 2] = 0;
+						int Oy = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[1]), Ox = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[0]);
+
+						Tabuleiro[Oy + 2, Ox] = 0;
+						Tabuleiro[Oy + 1, Ox + 1] = 0;
+						Tabuleiro[Oy + 1, Ox + 2] = 0;
 					}
 				}
 				else if (OrdemPeca[Index] + 1 == 3)
@@ -202,9 +204,11 @@ namespace TetrisGame
 
 					if (y < Tabuleiro.GetLength(0) - 2)
 					{
-						Tabuleiro[y + 1, x - 1] = 0;
-						Tabuleiro[y + 2, x] = 0;
-						Tabuleiro[y + 1, x - 2] = 0;
+						int Oy = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[1]), Ox = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[0]);
+
+						Tabuleiro[Oy + 1, Ox - 1] = 0;
+						Tabuleiro[Oy + 2, Ox] = 0;
+						Tabuleiro[Oy + 1, Ox - 2] = 0;
 					}
 				}
 				else if (OrdemPeca[Index] + 1 == 4)
@@ -219,9 +223,11 @@ namespace TetrisGame
 					//Já apaga o de cima
 					if (y < Tabuleiro.GetLength(0) - 2)
 					{
-						Tabuleiro[y + 2, x + 1] = 0;
-						Tabuleiro[y + 2, x] = 0;
-						Tabuleiro[y + 2, x + 1] = 0;
+						int Oy = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[1]), Ox = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[0]);
+
+						Tabuleiro[Oy + 2, Ox + 1] = 0;
+						Tabuleiro[Oy + 2, Ox] = 0;
+						Tabuleiro[Oy + 2, Ox + 1] = 0;
 					}
 				}
 				else if (OrdemPeca[Index] + 1 == 5)
@@ -238,10 +244,12 @@ namespace TetrisGame
 
 					if (y < Tabuleiro.GetLength(0) - 2)
 					{
-						Tabuleiro[y + 2, x + 1] = 0;
-						Tabuleiro[y + 2, x] = 0;
-						Tabuleiro[y + 1, x - 1] = 0;
-						Tabuleiro[y + 2, x - 1] = 0;
+						int Oy = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[1]), Ox = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[0]);
+
+						Tabuleiro[Oy + 2, Ox + 1] = 0;
+						Tabuleiro[Oy + 2, Ox] = 0;
+						Tabuleiro[Oy + 1, Ox - 1] = 0;
+						Tabuleiro[Oy + 2, Ox - 1] = 0;
 					}
 				}
 				else if (OrdemPeca[Index] + 1 == 6)
@@ -259,9 +267,11 @@ namespace TetrisGame
 
 					if (y < Tabuleiro.GetLength(0) - 2)
 					{
-						Tabuleiro[y + 2, x - 1] = 0;
-						Tabuleiro[y + 2, x] = 0;
-						Tabuleiro[y + 1, x + 1] = 0;
+						int Oy = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[1]), Ox = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[0]);
+
+						Tabuleiro[Oy + 2, Ox - 1] = 0;
+						Tabuleiro[Oy + 2, Ox] = 0;
+						Tabuleiro[Oy + 1, Ox + 1] = 0;
 					}
 				}
 				else if (OrdemPeca[Index] + 1 == 7)
@@ -279,9 +289,11 @@ namespace TetrisGame
 
 					if (y < Tabuleiro.GetLength(0) - 2)
 					{
-						Tabuleiro[y + 2, x] = 0;
-						Tabuleiro[y + 1, x - 1] = 0;
-						Tabuleiro[y + 1, x + 1] = 0;
+						int Oy = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[1]), Ox = int.Parse(oldvalue.Split(new string[] { "-" }, StringSplitOptions.None).ToArray()[0]);
+
+						Tabuleiro[Oy + 2, Ox] = 0;
+						Tabuleiro[Oy + 1, Ox - 1] = 0;
+						Tabuleiro[Oy + 1, Ox + 1] = 0;
 					}
 				}
 
@@ -302,7 +314,8 @@ namespace TetrisGame
 			else
 				jogo.indexOrder = 0;
 
-			jogo.y = jogo.Tabuleiro.GetLength(0) - 1;
+			jogo.y = jogo.Tabuleiro.GetLength(0) - 2;
+			jogo.x = (jogo.Tabuleiro.GetLength(1) / 2)-1;
 		}
 
 		public static void KeyBinds(String tecla, Jogo game)
@@ -325,7 +338,7 @@ namespace TetrisGame
 					for (int i = 0; i < ymax; i++)
 						if (CheckColocarPeca(game, x, xmax, i, game.StateOfPiece))
 						{
-							tabuleiro = ColocarPeca(game.Tabuleiro, x, i, game.Ordem, game.indexOrder, game.StateOfPiece);
+							tabuleiro = ColocarPeca(game.Tabuleiro, x, i, game.Ordem, game.indexOrder, game.StateOfPiece, $"{x}-{y}");
 							if (tabuleiro.GetLength(0) != 0)
 								game.Tabuleiro = tabuleiro;
 						}
@@ -346,7 +359,7 @@ namespace TetrisGame
 					{
 						Debug.Print($"3-{x}x{y}");
 						game.x = x;
-						tabuleiro = ColocarPeca(game.Tabuleiro, x, y, game.Ordem, game.indexOrder, game.StateOfPiece);
+						tabuleiro = ColocarPeca(game.Tabuleiro, x, y, game.Ordem, game.indexOrder, game.StateOfPiece, $"{x}-{y}");
 						if (tabuleiro.GetLength(0) != 0)
 							game.Tabuleiro = tabuleiro;
 					}
@@ -358,7 +371,7 @@ namespace TetrisGame
 					if (CheckColocarPeca(game, x, xmax, y, game.StateOfPiece))
 					{
 						game.x = x;
-						tabuleiro = ColocarPeca(game.Tabuleiro, x, y, game.Ordem, game.indexOrder, game.StateOfPiece); 
+						tabuleiro = ColocarPeca(game.Tabuleiro, x, y, game.Ordem, game.indexOrder, game.StateOfPiece, $"{x}-{y}"); 
 						if (tabuleiro.GetLength(0) != 0)
 							game.Tabuleiro = tabuleiro;
 					}

@@ -22,8 +22,8 @@ namespace TetrisGame
 				game.Tabuleiro = Cerebro.RunCode(10, 20);
 				game.indexOrder = new Random().Next(0, 7);
 				game.Ordem = Cerebro.OrdemTabuleiro();
-				game.y = game.Tabuleiro.GetLength(0)-1;
-				game.x = game.Tabuleiro.GetLength(1)/2;
+
+				Cerebro.NextPiece(game);
 			}
 
 			s.Interval = 1000;
@@ -53,7 +53,7 @@ namespace TetrisGame
 			else
 				Cerebro.NextPiece(game);
 
-			var s = Cerebro.ColocarPeca(game.Tabuleiro, game.x, game.y, game.Ordem, game.indexOrder, 0);
+			var s = Cerebro.ColocarPeca(game.Tabuleiro, game.x, game.y, game.Ordem, game.indexOrder, 0, $"{game.x}-{game.y}");
 
 			if (s.GetLength(0) == 0)
 				Cerebro.NextPiece(game);

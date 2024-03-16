@@ -14,6 +14,7 @@ namespace QuizSocket
 {
 	public partial class frmServer : Form
 	{
+		List<Jogo> lstjogo = new List<Jogo>();
 		Socket socketServidor;
 		byte[] clientData = new byte[1024];
 		public frmServer()
@@ -59,7 +60,18 @@ namespace QuizSocket
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-
+			switch((((Button)sender).Name))
+			{
+				case "btnAdd":
+					lstjogo.Add(new Jogo(txtPergunta.Text, txtCerta.Text, txtErrada1.Text, txtErrada2.Text, txtErrada3.Text, new Users()));
+					break;
+				case "btnNext":
+					break;
+				case "btnBlock":
+					break;
+				case "btnOptions":
+					break;
+			}
 		}
 	}
 }

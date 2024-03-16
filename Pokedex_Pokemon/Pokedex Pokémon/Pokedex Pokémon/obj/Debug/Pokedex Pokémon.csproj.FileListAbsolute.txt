@@ -51,3 +51,4 @@ C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémo
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.CopyComplete
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.exe
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.pdb
+C:\Users\andre\Documents\GitHub\Projects-C-sharp\Pokedex_Pokemon\Pokedex Pokémon\Pokedex Pokémon\obj\Debug\Pokedex Pokémon.csproj.SuggestedBindingRedirects.cache

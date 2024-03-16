@@ -8,30 +8,47 @@ namespace QuizSocket
 {
 	public class Jogo
 	{
+		private string text1;
+		private string text2;
+		private string text3;
+		private string text4;
+		private string text5;
+		private Users users;
+
+		public Jogo(string text1, string text2, string text3, string text4, string text5, Users users)
+		{
+			this.text1 = text1;
+			this.text2 = text2;
+			this.text3 = text3;
+			this.text4 = text4;
+			this.text5 = text5;
+			this.users = users;
+		}
+
 		/// <summary>
 		/// Perguntas que o host fez
 		/// </summary>
-		List<string> Pergunta { get; set; }
+		public string Pergunta { get; set; }
 		/// <summary>
 		/// Todas as hipoteses certas
 		/// </summary>
-		List<string> Certa { get; set; }
+		public string Certa { get; set; }
 		/// <summary>
 		/// Todas as hipoteses erradas
 		/// </summary>
-		List<string> Errada1 { get; set; }
+		public string Errada1 { get; set; }
 		/// <summary>
 		/// Todas as hipoteses erradas
 		/// </summary>
-		List<string> ErradaA2 { get; set; }
+		public string ErradaA2 { get; set; }
 		/// <summary>
 		/// Todas as hipoteses erradas
 		/// </summary>
-		List<string> Errada3 { get; set; }
+		public string Errada3 { get; set; }
 		/// <summary>
 		/// Todas as hipoteses erradas
 		/// </summary>
-		List<Users> NoJogo { get; set; }
+		public List<Users> NoJogo { get; set; }
 		//PERGUNTAS, CERTA, ERRADA, ERRADA, ERRADA, TIMER, ...
 	}
 

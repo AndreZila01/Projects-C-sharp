@@ -43,38 +43,38 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.panel8 = new System.Windows.Forms.Panel();
+			this.panel9 = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
+			this.panel7 = new System.Windows.Forms.Panel();
+			this.panel12 = new System.Windows.Forms.Panel();
+			this.lbl7Q = new System.Windows.Forms.Label();
+			this.lbl1Q = new System.Windows.Forms.Label();
+			this.lbl6Q = new System.Windows.Forms.Label();
+			this.lbl2Q = new System.Windows.Forms.Label();
+			this.lbl5Q = new System.Windows.Forms.Label();
+			this.lbl3Q = new System.Windows.Forms.Label();
+			this.lbl4Q = new System.Windows.Forms.Label();
+			this.panel11 = new System.Windows.Forms.Panel();
+			this.panel10 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.label9 = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
+			this.btnOptions = new System.Windows.Forms.Button();
+			this.btnBlock = new System.Windows.Forms.Button();
+			this.btnNext = new System.Windows.Forms.Button();
+			this.btnAdd = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.txtErrada3 = new System.Windows.Forms.TextBox();
+			this.txtErrada1 = new System.Windows.Forms.TextBox();
+			this.txtErrada2 = new System.Windows.Forms.TextBox();
+			this.txtCerta = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.txtpergunta = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.panel8 = new System.Windows.Forms.Panel();
-			this.panel7 = new System.Windows.Forms.Panel();
-			this.panel9 = new System.Windows.Forms.Panel();
-			this.lbl6Q = new System.Windows.Forms.Label();
-			this.lbl3Q = new System.Windows.Forms.Label();
-			this.lbl2Q = new System.Windows.Forms.Label();
-			this.lbl5Q = new System.Windows.Forms.Label();
-			this.lbl4Q = new System.Windows.Forms.Label();
-			this.lbl1Q = new System.Windows.Forms.Label();
-			this.panel10 = new System.Windows.Forms.Panel();
-			this.panel11 = new System.Windows.Forms.Panel();
-			this.panel12 = new System.Windows.Forms.Panel();
-			this.lbl7Q = new System.Windows.Forms.Label();
+			this.txtPergunta = new System.Windows.Forms.TextBox();
 			lbl8Q = new System.Windows.Forms.Label();
 			this.pnlData.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -83,14 +83,24 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel4.SuspendLayout();
+			this.panel8.SuspendLayout();
+			this.panel9.SuspendLayout();
+			this.panel7.SuspendLayout();
+			this.panel12.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel1.SuspendLayout();
-			this.panel8.SuspendLayout();
-			this.panel7.SuspendLayout();
-			this.panel9.SuspendLayout();
-			this.panel12.SuspendLayout();
 			this.SuspendLayout();
+			// 
+			// lbl8Q
+			// 
+			lbl8Q.AutoSize = true;
+			lbl8Q.Enabled = false;
+			lbl8Q.Location = new System.Drawing.Point(6, 21);
+			lbl8Q.Name = "lbl8Q";
+			lbl8Q.Size = new System.Drawing.Size(50, 13);
+			lbl8Q.TabIndex = 8;
+			lbl8Q.Text = "Previews";
 			// 
 			// pnlData
 			// 
@@ -207,6 +217,147 @@
 			this.panel4.Size = new System.Drawing.Size(546, 480);
 			this.panel4.TabIndex = 1;
 			// 
+			// panel8
+			// 
+			this.panel8.Controls.Add(this.panel9);
+			this.panel8.Controls.Add(this.panel7);
+			this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel8.Location = new System.Drawing.Point(0, 158);
+			this.panel8.Name = "panel8";
+			this.panel8.Size = new System.Drawing.Size(546, 322);
+			this.panel8.TabIndex = 2;
+			// 
+			// panel9
+			// 
+			this.panel9.Controls.Add(this.label2);
+			this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel9.Location = new System.Drawing.Point(0, 54);
+			this.panel9.Name = "panel9";
+			this.panel9.Size = new System.Drawing.Size(546, 268);
+			this.panel9.TabIndex = 3;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(108, 27);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(346, 13);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "Meter uma textbox para fazer a pergunta e as varias respostas possiveis";
+			// 
+			// panel7
+			// 
+			this.panel7.Controls.Add(this.panel12);
+			this.panel7.Controls.Add(this.panel11);
+			this.panel7.Controls.Add(this.panel10);
+			this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel7.Location = new System.Drawing.Point(0, 0);
+			this.panel7.Name = "panel7";
+			this.panel7.Size = new System.Drawing.Size(546, 54);
+			this.panel7.TabIndex = 2;
+			// 
+			// panel12
+			// 
+			this.panel12.Controls.Add(lbl8Q);
+			this.panel12.Controls.Add(this.lbl7Q);
+			this.panel12.Controls.Add(this.lbl1Q);
+			this.panel12.Controls.Add(this.lbl6Q);
+			this.panel12.Controls.Add(this.lbl2Q);
+			this.panel12.Controls.Add(this.lbl5Q);
+			this.panel12.Controls.Add(this.lbl3Q);
+			this.panel12.Controls.Add(this.lbl4Q);
+			this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel12.Location = new System.Drawing.Point(150, 0);
+			this.panel12.Name = "panel12";
+			this.panel12.Size = new System.Drawing.Size(246, 54);
+			this.panel12.TabIndex = 9;
+			// 
+			// lbl7Q
+			// 
+			this.lbl7Q.AutoSize = true;
+			this.lbl7Q.Enabled = false;
+			this.lbl7Q.Location = new System.Drawing.Point(214, 21);
+			this.lbl7Q.Name = "lbl7Q";
+			this.lbl7Q.Size = new System.Drawing.Size(29, 13);
+			this.lbl7Q.TabIndex = 7;
+			this.lbl7Q.Text = "Next";
+			// 
+			// lbl1Q
+			// 
+			this.lbl1Q.AutoSize = true;
+			this.lbl1Q.Enabled = false;
+			this.lbl1Q.Location = new System.Drawing.Point(60, 21);
+			this.lbl1Q.Name = "lbl1Q";
+			this.lbl1Q.Size = new System.Drawing.Size(13, 13);
+			this.lbl1Q.TabIndex = 5;
+			this.lbl1Q.Text = "1";
+			// 
+			// lbl6Q
+			// 
+			this.lbl6Q.AutoSize = true;
+			this.lbl6Q.Enabled = false;
+			this.lbl6Q.Location = new System.Drawing.Point(195, 21);
+			this.lbl6Q.Name = "lbl6Q";
+			this.lbl6Q.Size = new System.Drawing.Size(13, 13);
+			this.lbl6Q.TabIndex = 0;
+			this.lbl6Q.Text = "1";
+			// 
+			// lbl2Q
+			// 
+			this.lbl2Q.AutoSize = true;
+			this.lbl2Q.Enabled = false;
+			this.lbl2Q.Location = new System.Drawing.Point(87, 21);
+			this.lbl2Q.Name = "lbl2Q";
+			this.lbl2Q.Size = new System.Drawing.Size(13, 13);
+			this.lbl2Q.TabIndex = 2;
+			this.lbl2Q.Text = "1";
+			// 
+			// lbl5Q
+			// 
+			this.lbl5Q.AutoSize = true;
+			this.lbl5Q.Enabled = false;
+			this.lbl5Q.Location = new System.Drawing.Point(168, 21);
+			this.lbl5Q.Name = "lbl5Q";
+			this.lbl5Q.Size = new System.Drawing.Size(13, 13);
+			this.lbl5Q.TabIndex = 3;
+			this.lbl5Q.Text = "1";
+			// 
+			// lbl3Q
+			// 
+			this.lbl3Q.AutoSize = true;
+			this.lbl3Q.Enabled = false;
+			this.lbl3Q.Location = new System.Drawing.Point(114, 21);
+			this.lbl3Q.Name = "lbl3Q";
+			this.lbl3Q.Size = new System.Drawing.Size(13, 13);
+			this.lbl3Q.TabIndex = 1;
+			this.lbl3Q.Text = "1";
+			// 
+			// lbl4Q
+			// 
+			this.lbl4Q.AutoSize = true;
+			this.lbl4Q.Enabled = false;
+			this.lbl4Q.Location = new System.Drawing.Point(141, 21);
+			this.lbl4Q.Name = "lbl4Q";
+			this.lbl4Q.Size = new System.Drawing.Size(13, 13);
+			this.lbl4Q.TabIndex = 4;
+			this.lbl4Q.Text = "1";
+			// 
+			// panel11
+			// 
+			this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+			this.panel11.Location = new System.Drawing.Point(0, 0);
+			this.panel11.Name = "panel11";
+			this.panel11.Size = new System.Drawing.Size(150, 54);
+			this.panel11.TabIndex = 8;
+			// 
+			// panel10
+			// 
+			this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+			this.panel10.Location = new System.Drawing.Point(396, 0);
+			this.panel10.Name = "panel10";
+			this.panel10.Size = new System.Drawing.Size(150, 54);
+			this.panel10.TabIndex = 7;
+			// 
 			// panel3
 			// 
 			this.panel3.Controls.Add(this.label9);
@@ -228,109 +379,109 @@
 			// 
 			// panel5
 			// 
-			this.panel5.Controls.Add(this.button4);
-			this.panel5.Controls.Add(this.button3);
-			this.panel5.Controls.Add(this.button2);
-			this.panel5.Controls.Add(this.button1);
+			this.panel5.Controls.Add(this.btnOptions);
+			this.panel5.Controls.Add(this.btnBlock);
+			this.panel5.Controls.Add(this.btnNext);
+			this.panel5.Controls.Add(this.btnAdd);
 			this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel5.Location = new System.Drawing.Point(0, 0);
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(280, 50);
 			this.panel5.TabIndex = 0;
 			// 
-			// button4
+			// btnOptions
 			// 
-			this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.button4.Location = new System.Drawing.Point(214, 4);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(59, 40);
-			this.button4.TabIndex = 3;
-			this.button4.Text = "Options Question";
-			this.button4.UseVisualStyleBackColor = true;
-			this.button4.Click += new System.EventHandler(this.button1_Click);
+			this.btnOptions.Location = new System.Drawing.Point(214, 4);
+			this.btnOptions.Name = "btnOptions";
+			this.btnOptions.Size = new System.Drawing.Size(59, 40);
+			this.btnOptions.TabIndex = 3;
+			this.btnOptions.Text = "Options Question";
+			this.btnOptions.UseVisualStyleBackColor = true;
+			this.btnOptions.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// button3
+			// btnBlock
 			// 
-			this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnBlock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.button3.Location = new System.Drawing.Point(146, 4);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(59, 40);
-			this.button3.TabIndex = 2;
-			this.button3.Text = "Block Answers";
-			this.button3.UseVisualStyleBackColor = true;
-			this.button3.Click += new System.EventHandler(this.button1_Click);
+			this.btnBlock.Location = new System.Drawing.Point(146, 4);
+			this.btnBlock.Name = "btnBlock";
+			this.btnBlock.Size = new System.Drawing.Size(59, 40);
+			this.btnBlock.TabIndex = 2;
+			this.btnBlock.Text = "Block Answers";
+			this.btnBlock.UseVisualStyleBackColor = true;
+			this.btnBlock.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// button2
+			// btnNext
 			// 
-			this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-			this.button2.Location = new System.Drawing.Point(78, 4);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(59, 40);
-			this.button2.TabIndex = 1;
-			this.button2.Text = "Next Question";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button1_Click);
+			this.btnNext.Location = new System.Drawing.Point(78, 4);
+			this.btnNext.Name = "btnNext";
+			this.btnNext.Size = new System.Drawing.Size(59, 40);
+			this.btnNext.TabIndex = 1;
+			this.btnNext.Text = "Next Question";
+			this.btnNext.UseVisualStyleBackColor = true;
+			this.btnNext.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// button1
+			// btnAdd
 			// 
-			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-			this.button1.Location = new System.Drawing.Point(8, 4);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(59, 40);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "Add Question";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.btnAdd.Location = new System.Drawing.Point(8, 4);
+			this.btnAdd.Name = "btnAdd";
+			this.btnAdd.Size = new System.Drawing.Size(59, 40);
+			this.btnAdd.TabIndex = 0;
+			this.btnAdd.Text = "Add Question";
+			this.btnAdd.UseVisualStyleBackColor = true;
+			this.btnAdd.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// panel1
 			// 
-			this.panel1.Controls.Add(this.textBox4);
-			this.panel1.Controls.Add(this.textBox5);
-			this.panel1.Controls.Add(this.textBox3);
-			this.panel1.Controls.Add(this.textBox2);
+			this.panel1.Controls.Add(this.txtErrada3);
+			this.panel1.Controls.Add(this.txtErrada1);
+			this.panel1.Controls.Add(this.txtErrada2);
+			this.panel1.Controls.Add(this.txtCerta);
 			this.panel1.Controls.Add(this.label8);
 			this.panel1.Controls.Add(this.label7);
 			this.panel1.Controls.Add(this.label6);
 			this.panel1.Controls.Add(this.label5);
 			this.panel1.Controls.Add(this.label4);
-			this.panel1.Controls.Add(this.txtpergunta);
+			this.panel1.Controls.Add(this.txtPergunta);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(546, 108);
 			this.panel1.TabIndex = 2;
 			// 
-			// textBox4
+			// txtErrada3
 			// 
-			this.textBox4.Location = new System.Drawing.Point(340, 78);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(149, 20);
-			this.textBox4.TabIndex = 10;
+			this.txtErrada3.Location = new System.Drawing.Point(340, 78);
+			this.txtErrada3.Name = "txtErrada3";
+			this.txtErrada3.Size = new System.Drawing.Size(149, 20);
+			this.txtErrada3.TabIndex = 10;
 			// 
-			// textBox5
+			// txtErrada1
 			// 
-			this.textBox5.Location = new System.Drawing.Point(340, 46);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(149, 20);
-			this.textBox5.TabIndex = 9;
+			this.txtErrada1.Location = new System.Drawing.Point(340, 46);
+			this.txtErrada1.Name = "txtErrada1";
+			this.txtErrada1.Size = new System.Drawing.Size(149, 20);
+			this.txtErrada1.TabIndex = 9;
 			// 
-			// textBox3
+			// txtErrada2
 			// 
-			this.textBox3.Location = new System.Drawing.Point(96, 78);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(149, 20);
-			this.textBox3.TabIndex = 8;
+			this.txtErrada2.Location = new System.Drawing.Point(96, 78);
+			this.txtErrada2.Name = "txtErrada2";
+			this.txtErrada2.Size = new System.Drawing.Size(149, 20);
+			this.txtErrada2.TabIndex = 8;
 			// 
-			// textBox2
+			// txtCerta
 			// 
-			this.textBox2.Location = new System.Drawing.Point(96, 46);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(149, 20);
-			this.textBox2.TabIndex = 7;
+			this.txtCerta.Location = new System.Drawing.Point(96, 46);
+			this.txtCerta.Name = "txtCerta";
+			this.txtCerta.Size = new System.Drawing.Size(149, 20);
+			this.txtCerta.TabIndex = 7;
 			// 
 			// label8
 			// 
@@ -377,165 +528,14 @@
 			this.label4.TabIndex = 2;
 			this.label4.Text = "Question:";
 			// 
-			// txtpergunta
+			// txtPergunta
 			// 
-			this.txtpergunta.Location = new System.Drawing.Point(111, 5);
-			this.txtpergunta.MaxLength = 500;
-			this.txtpergunta.Multiline = true;
-			this.txtpergunta.Name = "txtpergunta";
-			this.txtpergunta.Size = new System.Drawing.Size(318, 35);
-			this.txtpergunta.TabIndex = 0;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(108, 27);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(346, 13);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Meter uma textbox para fazer a pergunta e as varias respostas possiveis";
-			// 
-			// panel8
-			// 
-			this.panel8.Controls.Add(this.panel9);
-			this.panel8.Controls.Add(this.panel7);
-			this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel8.Location = new System.Drawing.Point(0, 158);
-			this.panel8.Name = "panel8";
-			this.panel8.Size = new System.Drawing.Size(546, 322);
-			this.panel8.TabIndex = 2;
-			// 
-			// panel7
-			// 
-			this.panel7.Controls.Add(this.panel12);
-			this.panel7.Controls.Add(this.panel11);
-			this.panel7.Controls.Add(this.panel10);
-			this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel7.Location = new System.Drawing.Point(0, 0);
-			this.panel7.Name = "panel7";
-			this.panel7.Size = new System.Drawing.Size(546, 54);
-			this.panel7.TabIndex = 2;
-			// 
-			// panel9
-			// 
-			this.panel9.Controls.Add(this.label2);
-			this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel9.Location = new System.Drawing.Point(0, 54);
-			this.panel9.Name = "panel9";
-			this.panel9.Size = new System.Drawing.Size(546, 268);
-			this.panel9.TabIndex = 3;
-			// 
-			// lbl6Q
-			// 
-			this.lbl6Q.AutoSize = true;
-			this.lbl6Q.Enabled = false;
-			this.lbl6Q.Location = new System.Drawing.Point(195, 21);
-			this.lbl6Q.Name = "lbl6Q";
-			this.lbl6Q.Size = new System.Drawing.Size(13, 13);
-			this.lbl6Q.TabIndex = 0;
-			this.lbl6Q.Text = "1";
-			// 
-			// lbl3Q
-			// 
-			this.lbl3Q.AutoSize = true;
-			this.lbl3Q.Enabled = false;
-			this.lbl3Q.Location = new System.Drawing.Point(114, 21);
-			this.lbl3Q.Name = "lbl3Q";
-			this.lbl3Q.Size = new System.Drawing.Size(13, 13);
-			this.lbl3Q.TabIndex = 1;
-			this.lbl3Q.Text = "1";
-			// 
-			// lbl2Q
-			// 
-			this.lbl2Q.AutoSize = true;
-			this.lbl2Q.Enabled = false;
-			this.lbl2Q.Location = new System.Drawing.Point(87, 21);
-			this.lbl2Q.Name = "lbl2Q";
-			this.lbl2Q.Size = new System.Drawing.Size(13, 13);
-			this.lbl2Q.TabIndex = 2;
-			this.lbl2Q.Text = "1";
-			// 
-			// lbl5Q
-			// 
-			this.lbl5Q.AutoSize = true;
-			this.lbl5Q.Enabled = false;
-			this.lbl5Q.Location = new System.Drawing.Point(168, 21);
-			this.lbl5Q.Name = "lbl5Q";
-			this.lbl5Q.Size = new System.Drawing.Size(13, 13);
-			this.lbl5Q.TabIndex = 3;
-			this.lbl5Q.Text = "1";
-			// 
-			// lbl4Q
-			// 
-			this.lbl4Q.AutoSize = true;
-			this.lbl4Q.Enabled = false;
-			this.lbl4Q.Location = new System.Drawing.Point(141, 21);
-			this.lbl4Q.Name = "lbl4Q";
-			this.lbl4Q.Size = new System.Drawing.Size(13, 13);
-			this.lbl4Q.TabIndex = 4;
-			this.lbl4Q.Text = "1";
-			// 
-			// lbl1Q
-			// 
-			this.lbl1Q.AutoSize = true;
-			this.lbl1Q.Enabled = false;
-			this.lbl1Q.Location = new System.Drawing.Point(60, 21);
-			this.lbl1Q.Name = "lbl1Q";
-			this.lbl1Q.Size = new System.Drawing.Size(13, 13);
-			this.lbl1Q.TabIndex = 5;
-			this.lbl1Q.Text = "1";
-			// 
-			// panel10
-			// 
-			this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-			this.panel10.Location = new System.Drawing.Point(396, 0);
-			this.panel10.Name = "panel10";
-			this.panel10.Size = new System.Drawing.Size(150, 54);
-			this.panel10.TabIndex = 7;
-			// 
-			// panel11
-			// 
-			this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-			this.panel11.Location = new System.Drawing.Point(0, 0);
-			this.panel11.Name = "panel11";
-			this.panel11.Size = new System.Drawing.Size(150, 54);
-			this.panel11.TabIndex = 8;
-			// 
-			// panel12
-			// 
-			this.panel12.Controls.Add(lbl8Q);
-			this.panel12.Controls.Add(this.lbl7Q);
-			this.panel12.Controls.Add(this.lbl1Q);
-			this.panel12.Controls.Add(this.lbl6Q);
-			this.panel12.Controls.Add(this.lbl2Q);
-			this.panel12.Controls.Add(this.lbl5Q);
-			this.panel12.Controls.Add(this.lbl3Q);
-			this.panel12.Controls.Add(this.lbl4Q);
-			this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel12.Location = new System.Drawing.Point(150, 0);
-			this.panel12.Name = "panel12";
-			this.panel12.Size = new System.Drawing.Size(246, 54);
-			this.panel12.TabIndex = 9;
-			// 
-			// lbl7Q
-			// 
-			this.lbl7Q.AutoSize = true;
-			this.lbl7Q.Enabled = false;
-			this.lbl7Q.Location = new System.Drawing.Point(214, 21);
-			this.lbl7Q.Name = "lbl7Q";
-			this.lbl7Q.Size = new System.Drawing.Size(29, 13);
-			this.lbl7Q.TabIndex = 7;
-			this.lbl7Q.Text = "Next";
-			// 
-			// lbl8Q
-			// 
-			lbl8Q.AutoSize = true;
-			lbl8Q.Enabled = false;
-			lbl8Q.Location = new System.Drawing.Point(6, 21);
-			lbl8Q.Name = "lbl8Q";
-			lbl8Q.Size = new System.Drawing.Size(50, 13);
-			lbl8Q.TabIndex = 8;
-			lbl8Q.Text = "Previews";
+			this.txtPergunta.Location = new System.Drawing.Point(111, 5);
+			this.txtPergunta.MaxLength = 500;
+			this.txtPergunta.Multiline = true;
+			this.txtPergunta.Name = "txtPergunta";
+			this.txtPergunta.Size = new System.Drawing.Size(318, 35);
+			this.txtPergunta.TabIndex = 0;
 			// 
 			// frmServer
 			// 
@@ -558,17 +558,17 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.panel4.ResumeLayout(false);
+			this.panel8.ResumeLayout(false);
+			this.panel9.ResumeLayout(false);
+			this.panel9.PerformLayout();
+			this.panel7.ResumeLayout(false);
+			this.panel12.ResumeLayout(false);
+			this.panel12.PerformLayout();
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
 			this.panel5.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
-			this.panel8.ResumeLayout(false);
-			this.panel7.ResumeLayout(false);
-			this.panel9.ResumeLayout(false);
-			this.panel9.PerformLayout();
-			this.panel12.ResumeLayout(false);
-			this.panel12.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -590,17 +590,17 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox txtpergunta;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox txtPergunta;
+		private System.Windows.Forms.TextBox txtErrada3;
+		private System.Windows.Forms.TextBox txtErrada1;
+		private System.Windows.Forms.TextBox txtErrada2;
+		private System.Windows.Forms.TextBox txtCerta;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Panel panel5;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button btnAdd;
+		private System.Windows.Forms.Button btnNext;
+		private System.Windows.Forms.Button btnOptions;
+		private System.Windows.Forms.Button btnBlock;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 		private System.Windows.Forms.Panel panel6;
 		private System.Windows.Forms.Label label9;
