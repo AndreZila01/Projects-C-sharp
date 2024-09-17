@@ -6,3 +6,10 @@ C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.csproj.CoreCompileInputs.cache
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.exe
 C:\Users\andre\Documents\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.pdb
+E:\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\bin\Debug\TetrisGame.exe.config
+E:\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\bin\Debug\TetrisGame.exe
+E:\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\bin\Debug\TetrisGame.pdb
+E:\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.csproj.AssemblyReference.cache
+E:\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.csproj.CoreCompileInputs.cache
+E:\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.exe
+E:\GitHub\Projects-C-sharp\TetrisGame\TetrisGame\obj\Debug\TetrisGame.pdb

@@ -351,10 +351,9 @@ namespace TetrisGame
 				case "NumPad4":
 				case "A":
 				case "LeftArrow":
-					Debug.Print("1");
-					Debug.Print($"1-{x}x{y}");
-					x--;
-					Debug.Print($"2-{x}x{y}");
+					Console.WriteLine("X: " + x);
+					game.x = x--;
+					Console.WriteLine("X--: " + x);
 					if (CheckColocarPeca(game, x, xmax, y, game.StateOfPiece))
 					{
 						Debug.Print($"3-{x}x{y}");
@@ -367,7 +366,9 @@ namespace TetrisGame
 				case "NumPad6":
 				case "D":
 				case "RightArrow":
-					x++;
+					Console.WriteLine("X: " + x);
+					game.x =  x++;
+					Console.WriteLine("X++: "+x);
 					if (CheckColocarPeca(game, x, xmax, y, game.StateOfPiece))
 					{
 						game.x = x;

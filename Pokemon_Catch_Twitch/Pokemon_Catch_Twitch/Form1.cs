@@ -101,11 +101,17 @@ namespace Pokemon_Catch_Twitch
 		}
 		private async void RotateImage(PictureBox pb, Image img, float angle)
 		{
-			tmPokeball.Stop();
+			//tmPokeball.Stop();
 			pictureBox2.Visible = false;
 			bit = new Bitmap(pictureBox1.Image);
 
+			Bitmap bitD = Utilities.RotateImage(bit, 1500 / 100);
+			Bitmap bitE = Utilities.RotateImage(bit, -3004/100);
+
 			Invalidate(true);
+
+			pictureBox1.Image = bitD;
+
 
 			for (int ds = 0; ds > -3004; ds--)
 			{

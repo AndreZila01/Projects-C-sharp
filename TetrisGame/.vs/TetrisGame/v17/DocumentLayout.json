@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\GitHub\\Projects-C-sharp\\TetrisGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF624C1B-68C7-4B46-B0FC-60E825ABEE3C}|TetrisGame\\TetrisGame.csproj|e:\\github\\projects-c-sharp\\tetrisgame\\tetrisgame\\cerebro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF624C1B-68C7-4B46-B0FC-60E825ABEE3C}|TetrisGame\\TetrisGame.csproj|solutionrelative:tetrisgame\\cerebro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF624C1B-68C7-4B46-B0FC-60E825ABEE3C}|TetrisGame\\TetrisGame.csproj|E:\\GitHub\\Projects-C-sharp\\TetrisGame\\tetrisgame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF624C1B-68C7-4B46-B0FC-60E825ABEE3C}|TetrisGame\\TetrisGame.csproj|solutionrelative:tetrisgame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cerebro.cs",
+              "DocumentMoniker": "E:\\GitHub\\Projects-C-sharp\\TetrisGame\\TetrisGame\\Cerebro.cs",
+              "RelativeDocumentMoniker": "TetrisGame\\Cerebro.cs",
+              "ToolTip": "E:\\GitHub\\Projects-C-sharp\\TetrisGame\\TetrisGame\\Cerebro.cs",
+              "RelativeToolTip": "TetrisGame\\Cerebro.cs",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAEwIsAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T21:40:02.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GitHub\\Projects-C-sharp\\TetrisGame\\TetrisGame\\Program.cs",
+              "RelativeDocumentMoniker": "TetrisGame\\Program.cs",
+              "ToolTip": "E:\\GitHub\\Projects-C-sharp\\TetrisGame\\TetrisGame\\Program.cs",
+              "RelativeToolTip": "TetrisGame\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T21:40:02.176Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

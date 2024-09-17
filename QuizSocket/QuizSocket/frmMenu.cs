@@ -46,19 +46,21 @@ namespace QuizSocket
 			{
 				if ((((Button)sender).Text != "Host of Game"))
 				{
+					string ipv4 = "", username = "";
 					do
 					{
-						string ipv4 = Interaction.InputBox($"Whitch is the ip of host");//Interaction.InputBox($"Whitch is the ip of {(((ToolStripMenuItem)sender).Name == "Host of Game" ? "guess" : "host")}");
+						ipv4 = Interaction.InputBox($"Whitch is the ip of host");//Interaction.InputBox($"Whitch is the ip of {(((ToolStripMenuItem)sender).Name == "Host of Game" ? "guess" : "host")}");
+						username = Interaction.InputBox($"Your Username");
 						System.Net.IPAddress ipAddress = null;
 
-						//if (System.Net.IPAddress.TryParse(ipv4, out ipAddress) && ipv4 != ipv4ofuser && ipv4 != "127.0.0.1")
+						//if (System.Net.IPAddress.TryParse(ipv4, out ipAddress) && ipv4 != ipv4ofuser && ipv4 != "127.0.0.1" %% username != "")
 						check = true;
 						//else
 						//MessageBox.Show("Error IPV4", "The ipv4 do you wrote are not correct!!\n Go to your command line and write \"ipconfig\", next write the ipv4 adress on textbox!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 					} while (!check);
 					this.Hide();
-					new frmCliente().Show();
+					new frmCliente(ipv4, username).Show();
 				}
 				else
 				{
