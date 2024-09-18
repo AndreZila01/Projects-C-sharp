@@ -87,7 +87,10 @@ namespace QuizSocket
 
         private void bgwStart_DoWork(object sender, DoWorkEventArgs e)
         {
-            IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse(this.ipSv), 5000);
+
+            int port = 5000;
+            IPAddress ip = IPAddress.Parse(this.ipSv);
+            IPEndPoint endPoint = new IPEndPoint(ip, port);
             Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             clientSocket.Connect(endPoint);
@@ -98,13 +101,10 @@ namespace QuizSocket
 
             while (true)
             {
-                if (chbFirst.Checked || chbSecond.Checked || chbThird.Checked || chbFour.Checked)
-                {
-                    int resposta = chbFirst.Checked ? 1 : (chbSecond.Checked ? 2 : (chbThird.Checked ? 3 : (chbFour.Checked ? 4 : -1 )));
-                    string message = "{\"IdQuestion\":1, \"Option\":"+resposta+", \"Username\":\""+username+"\"}";
-                    byte[] messageBytes = Encoding.UTF8.GetBytes(message);
-                    clientSocket.Send(messageBytes);
-                }
+                int resposta = chbFirst.Checked ? 1 : (chbSecond.Checked ? 2 : (chbThird.Checked ? 3 : (chbFour.Checked ? 4 : -1)));
+                string message = "{\"IdQuestion\":1, \"Option\":" + resposta + ", \"Username\":\"" + username + "\"}";
+                byte[] messageBytes = Encoding.UTF8.GetBytes(message);
+                clientSocket.Send(messageBytes);
             }
         }
 
@@ -138,44 +138,6 @@ namespace QuizSocket
         {
 
         }
-
-		/*
-         static void Main(string[] args)
-		{
-			int port = 5000;
-			IPAddress ip = IPAddress.Parse("127.0.0.1");
-			IPEndPoint endPoint = new IPEndPoint(ip, port);
-			Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
-			clientSocket.Connect(endPoint);
-			Console.WriteLine("Conectado ao servidor...");
-
-			Thread receiveThread = new Thread(ReceiveMessages);
-			receiveThread.Start(clientSocket);
-
-			while (true)
-			{
-				string message = Console.ReadLine();
-				byte[] messageBytes = Encoding.UTF8.GetBytes(message);
-				clientSocket.Send(messageBytes);
-			}
-		}
-
-		private static void ReceiveMessages(object clientObj)
-		{
-			Socket clientSocket = (Socket)clientObj;
-			byte[] buffer = new byte[1024];
-			int bytesRead;
-
-			while ((bytesRead = clientSocket.Receive(buffer)) > 0)
-			{
-				string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-				Console.WriteLine("Mensagem recebida: " + message);
-			}
-
-			clientSocket.Close();
-		}
-         */
 	}
 
 

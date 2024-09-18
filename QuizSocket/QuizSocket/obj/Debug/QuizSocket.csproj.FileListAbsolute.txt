@@ -23,3 +23,12 @@ E:\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.csproj.Cor
 E:\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.exe
 E:\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.pdb
 E:\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\bin\Debug\QuizSocket.pdb
+C:\Users\Andre\Desktop\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.csproj.AssemblyReference.cache
+C:\Users\Andre\Desktop\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.frmCliente.resources
+C:\Users\Andre\Desktop\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.frmMenu.resources
+C:\Users\Andre\Desktop\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.frmServer.resources
+C:\Users\Andre\Desktop\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.Properties.Resources.resources
+C:\Users\Andre\Desktop\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.csproj.GenerateResource.cache
+C:\Users\Andre\Desktop\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.csproj.CoreCompileInputs.cache
+C:\Users\Andre\Desktop\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.exe
+C:\Users\Andre\Desktop\GitHub\Projects-C-sharp\QuizSocket\QuizSocket\obj\Debug\QuizSocket.pdb

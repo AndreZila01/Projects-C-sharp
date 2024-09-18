@@ -36,7 +36,7 @@ namespace QuizSocket
 			{
 				Socket clientSocket = listener.AcceptSocket();
 				var s = new Users() { User = clientSocket, AnswersRights = new List<int>(), Erradas = 0, IpUser = lblIp.Text.ToString(), NCertas = 0, UserName = "" };
-				var ss = new Question() { idPergunta = 0, Certa = "", Errada1 = "", Errada3 = "", ErradaA2 = "", Pergunta = "" };
+				var ss = new Question() { idPergunta = 0, Certa = "", Errada1 = "", Errada3 = "", Errada2 = "", Pergunta = "" };
 
 				List<Question> ssss = new List<Question>();
 				ssss.Add(ss);
@@ -91,7 +91,9 @@ namespace QuizSocket
 			switch ((((Button)sender).Name))
 			{
 				case "btnAdd":
-					//lstjogo.Add(new Question() {idPergunta = 0,Pergunta = txtPergunta.Text, Certa = txtCerta.Text, Errada1 =  txtErrada1.Text, ErradaA2= txtErrada2.Text, Errada3 = txtErrada3.Text });
+
+
+                    lstjogo.Add(new Quiz() { Perguntas = new List<Question>() { new Question() { idPergunta = 0, Pergunta = txtPergunta.Text, Certa = txtCerta.Text, Errada1 = txtErrada1.Text, Errada2 = txtErrada2.Text, Errada3 = txtErrada3.Text } } });
 					break; 
 				case "btnNext":
 					lblNext.Enabled = false;
